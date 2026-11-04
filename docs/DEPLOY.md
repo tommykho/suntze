@@ -41,7 +41,10 @@ The relay already rejects other origins and destinations that are not on the all
   `PUBLIC_RELAY_URL=https://suntze-relay.vercel.app/api/relay`.
 - **Relay:** Vercel project `suntze-relay`. It is a direct upload of `api/relay.js` + `server/relay-core.js`, with no Git link, and is public
   (Vercel Authentication off). `ALLOWED_ORIGINS=https://tommykho.github.io`.
-- One-time setting: GitHub repo → **Settings → Pages → Build and deployment → Source: GitHub Actions**. Then re-run the workflow (Actions tab → *Deploy GitHub Pages* → *Run workflow*).
+- Deploys from **`main`**. One-time settings:
+  1. **Settings → General → Default branch → `main`.** The `github-pages` environment only accepts deploys from the default branch.
+  2. **Settings → Pages → Build and deployment → Source: GitHub Actions.** Do not use "Deploy from a branch": that serves the raw repository, not the built site.
+  3. Push to `main`, or run the workflow from Actions → *Deploy GitHub Pages* → *Run workflow*.
 - Any static host works the same way. Set `BASE_PATH` when serving from a sub-path, and `PUBLIC_RELAY_URL` when the host has no functions.
 
 ## Local Cloudflare emulation (optional)

@@ -2,6 +2,8 @@
 
 *The Art of War, for the battles you actually fight.*
 
+**Live test site:** https://tommykho.github.io/suntze/ (GitHub Pages, deployed from `main`)
+
 A static website that turns Sun Tzu's 13 chapters (Giles 1910 + original Chinese) into practical tactics for work,
 career, business, family and self. It includes:
 
