@@ -7,6 +7,7 @@
 - [x] Field Challenge: 12 AI options (bring your own key, no key, on device, self-hosted), local retrieval, citation verification, manual-only mode
 - [x] 30-second podcast: Kokoro on device plus Gemini/OpenAI/ElevenLabs keys, singing-bowl intro, MP3 download
 - [x] Community board preview (stored in the browser), relay with tests, Cloudflare Pages config
+- [x] Test deployment: GitHub Pages (built from `main` by GitHub Actions) + relay on Vercel (`suntze-relay.vercel.app`)
 
 ## Decisions needed from the owner
 1. **Brand name and domain.** “Sun Tzu: The Art of War” is reportedly filed as a trademark for games and software (unverified, so check USPTO). Pick a distinctive name, e.g. *Quiet General*, *Bingfa*, or *Field Manual 兵法*, then update `src/site.config.js`.
