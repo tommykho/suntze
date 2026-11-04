@@ -1,0 +1,51 @@
+# Build the static site for GitHub Pages (project site: https://tommykho.github.io/suntze/) and deploy it
+# with the official Pages actions (no gh-pages branch). The AI relay lives on Vercel because GitHub Pages
+# has no server functions.
+# One-time setup: repo Settings → Pages → Build and deployment → Source: "GitHub Actions".
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [claude/focused-tesla-ltg55n, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - name: Build for GitHub Pages
+        run: npm run build
+        env:
+          SITE_URL: https://tommykho.github.io
+          BASE_PATH: /suntze
+          PUBLIC_RELAY_URL: https://suntze-relay.vercel.app/api/relay
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

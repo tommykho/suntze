@@ -1,3 +1,4 @@
+import { BASE as B } from '../../lib/url.js';
 // Local retrieval over the book + tactic library (no network, no key). Feeds the AI a short menu of
 // verses it is allowed to cite, and powers the "manual only" answer.
 import MiniSearch from 'minisearch';
@@ -7,7 +8,7 @@ const processTerm = (t) => { const w = t.toLowerCase(); return w.length < 3 || S
 
 let corpusPromise;
 export function loadCorpus() {
-  corpusPromise ||= fetch('/corpus.json').then((r) => { if (!r.ok) throw new Error('Could not load the book data.'); return r.json(); }).then(build);
+  corpusPromise ||= fetch(`${B}/corpus.json`).then((r) => { if (!r.ok) throw new Error('Could not load the book data.'); return r.json(); }).then(build);
   return corpusPromise;
 }
 

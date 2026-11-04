@@ -1,4 +1,5 @@
 ---
+import { u } from '../../lib/url.js';
 import Base from '../../layouts/Base.astro';
 import Seal from '../../components/Seal.astro';
 import TacticCard from '../../components/TacticCard.astro';
@@ -87,8 +88,8 @@ const principleVerses = new Set(c.principles.flatMap((p) => p.verses));
   )}
 
   <nav class="wrap ch-nav" aria-label="Chapter navigation">
-    {prev ? <a class="card" href={`/chapters/${prev.n}/`}><span class="eyebrow">← Previous</span><h3>{prev.roman}. {prev.title_en} <span class="zh muted">{prev.title_zh}</span></h3></a> : <span></span>}
-    {next ? <a class="card next" href={`/chapters/${next.n}/`}><span class="eyebrow">Next →</span><h3>{next.roman}. {next.title_en} <span class="zh muted">{next.title_zh}</span></h3></a> : <a class="card next" href="/field/"><span class="eyebrow">Finished the book →</span><h3>Bring your own battle to the Field Challenge</h3></a>}
+    {prev ? <a class="card" href={u(`/chapters/${prev.n}/`)}><span class="eyebrow">← Previous</span><h3>{prev.roman}. {prev.title_en} <span class="zh muted">{prev.title_zh}</span></h3></a> : <span></span>}
+    {next ? <a class="card next" href={u(`/chapters/${next.n}/`)}><span class="eyebrow">Next →</span><h3>{next.roman}. {next.title_en} <span class="zh muted">{next.title_zh}</span></h3></a> : <a class="card next" href={u('/field/')}><span class="eyebrow">Finished the book →</span><h3>Bring your own battle to the Field Challenge</h3></a>}
   </nav>
 </Base>
 

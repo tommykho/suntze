@@ -1,3 +1,4 @@
+import { BASE as B } from '../../lib/url.js';
 // Field Challenge controller: settings dialog, retrieval → prompt → streamed answer, citation
 // verification, manual-only mode, and the podcast studio.
 import { PROVIDERS, getProvider, streamChat, listOpenRouterFree } from './providers.js';
@@ -148,7 +149,7 @@ function renderVerification(md) {
         const q = qById.get(id);
         const badge = q ? (q.exact ? '<span class="badge ok">Exact quote</span>' : '<span class="badge warn">Paraphrased</span>') : '<span class="badge ok">Verified ID</span>';
         const [ch] = id.split('.');
-        return `<div class="vcard"><a class="vid" href="/chapters/${ch}/#v${id.replace('.', '-')}">${esc(id)} →</a>${badge}<p style="margin:6px 0 0">${esc(verse.en)}</p>${verse.zh ? `<p class="zh" lang="zh-Hant">${esc(verse.zh)}</p>` : ''}</div>`;
+        return `<div class="vcard"><a class="vid" href="${B}/chapters/${ch}/#v${id.replace('.', '-')}">${esc(id)} →</a>${badge}<p style="margin:6px 0 0">${esc(verse.en)}</p>${verse.zh ? `<p class="zh" lang="zh-Hant">${esc(verse.zh)}</p>` : ''}</div>`;
       })
       .join('');
 }
@@ -219,7 +220,7 @@ ui.manual.addEventListener('click', async () => {
   }
   ui.answer.innerHTML =
     `<div class="manual"><h3 class="ans-h">Closest tactics</h3>${r.tactics
-      .map((t) => `<a class="mt" href="/tactics/${esc(t.slug)}/"><strong>${esc(t.title)}</strong><br><span class="hint">${esc(t.situation)}</span></a>`)
+      .map((t) => `<a class="mt" href="${B}/tactics/${esc(t.slug)}/"><strong>${esc(t.title)}</strong><br><span class="hint">${esc(t.situation)}</span></a>`)
       .join('')}<h3 class="ans-h">Verses that speak to it</h3>${r.topVerses
       .map((v) => `<p><button type="button" class="cite" data-cite="${v.id}">${v.id}</button> ${esc(v.en)}</p>`)
       .join('')}</div>`;
@@ -239,7 +240,7 @@ $('[data-share]').addEventListener('click', () => {
     verses: verifyCitations(lastAnswer, db.verseById).cites.filter((c) => c.verse).map((c) => c.id),
   };
   try { localStorage.setItem('sz.community.draft', JSON.stringify(draft)); } catch { /* ignore */ }
-  location.href = '/community/#new';
+  location.href = `${B}/community/#new`;
 });
 
 // ---------------- verse popover ----------------
@@ -249,7 +250,7 @@ document.addEventListener('click', (e) => {
   const v = db?.verseById.get(btn.dataset.cite);
   if (!v) return;
   const [ch] = v.id.split('.');
-  ui.pop.innerHTML = `<p>${esc(v.en)}</p>${v.zh ? `<p class="zh" lang="zh-Hant">${esc(v.zh)}</p>` : ''}<a href="/chapters/${ch}/#v${v.id.replace('.', '-')}">Read ${esc(v.id)} in context →</a>`;
+  ui.pop.innerHTML = `<p>${esc(v.en)}</p>${v.zh ? `<p class="zh" lang="zh-Hant">${esc(v.zh)}</p>` : ''}<a href="${B}/chapters/${ch}/#v${v.id.replace('.', '-')}">Read ${esc(v.id)} in context →</a>`;
   ui.pop.hidden = false;
   const r = btn.getBoundingClientRect();
   const w = Math.min(420, innerWidth - 32);

@@ -1,10 +1,11 @@
 ---
+import { u } from '../lib/url.js';
 import { DOMAINS, chapterOf } from '../lib/content.js';
 const { t } = Astro.props;
 const ch = chapterOf(t.chapter);
 const dots = '●'.repeat(t.difficulty) + '○'.repeat(3 - t.difficulty);
 ---
-<a class="card tactic-card" href={`/tactics/${t.slug}/`} data-reveal data-domain={t.domain} data-chapter={t.chapter} data-text={`${t.title} ${t.situation} ${t.tags.join(' ')} ${t.principle}`.toLowerCase()}>
+<a class="card tactic-card" href={u(`/tactics/${t.slug}/`)} data-reveal data-domain={t.domain} data-chapter={t.chapter} data-text={`${t.title} ${t.situation} ${t.tags.join(' ')} ${t.principle}`.toLowerCase()}>
   <div class="card-meta">
     <span class="chip chip--seal">{DOMAINS[t.domain]?.label} · <span class="zh">{DOMAINS[t.domain]?.zh}</span></span>
     {t.featured && <span class="chip">Founder case</span>}

@@ -34,6 +34,16 @@ Every push to `main` deploys to production. Every pull request or branch gets it
 Security → WAF → **Rate limiting rules** (1 rule is free): match path `/api/relay`, 30 requests per 1 minute per IP, action Block.
 The relay already rejects other origins and destinations that are not on the allowlist.
 
+## Test deployment (current): GitHub Pages + Vercel relay
+
+- **Site:** https://tommykho.github.io/suntze/. Built and deployed by `.github/workflows/pages.yml` (official Pages actions) on every push.
+  It is built with `BASE_PATH=/suntze`, `SITE_URL=https://tommykho.github.io` and
+  `PUBLIC_RELAY_URL=https://suntze-relay.vercel.app/api/relay`.
+- **Relay:** Vercel project `suntze-relay`. It is a direct upload of `api/relay.js` + `server/relay-core.js`, with no Git link, and is public
+  (Vercel Authentication off). `ALLOWED_ORIGINS=https://tommykho.github.io`.
+- One-time setting: GitHub repo → **Settings → Pages → Build and deployment → Source: GitHub Actions**. Then re-run the workflow (Actions tab → *Deploy GitHub Pages* → *Run workflow*).
+- Any static host works the same way. Set `BASE_PATH` when serving from a sub-path, and `PUBLIC_RELAY_URL` when the host has no functions.
+
 ## Local Cloudflare emulation (optional)
 
 ```bash

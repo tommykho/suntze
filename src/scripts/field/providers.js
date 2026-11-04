@@ -1,3 +1,4 @@
+import { RELAY_URL } from '../../lib/url.js';
 // Bring-your-own-key LLM providers. Every call goes from the visitor's browser to the provider
 // with the visitor's own key (or no key). The site owner pays nothing. Providers that block browser
 // CORS go through /api/relay — a stateless pass-through that never stores keys.
@@ -96,7 +97,7 @@ const canRelay = (url) => RELAYABLE.some((p) => url.startsWith(p));
 // fetch() that goes through /api/relay when required, or as a fallback when the browser blocks CORS.
 export async function relayFetch(url, init, { forceRelay = false } = {}) {
   const viaRelay = () =>
-    fetch('/api/relay', { ...init, method: 'POST', headers: { ...init.headers, 'x-relay-target': url } });
+    fetch(RELAY_URL, { ...init, method: 'POST', headers: { ...init.headers, 'x-relay-target': url } });
   if (forceRelay) return viaRelay();
   try {
     return await fetch(url, init);

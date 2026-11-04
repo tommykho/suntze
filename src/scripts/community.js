@@ -1,3 +1,4 @@
+import { BASE as B } from '../lib/url.js';
 // Community board — preview mode. Demo reports ship with the site; reports and ratings a visitor adds
 // are stored in this browser only. Phase 2 swaps `store` for the Cloudflare D1 API (see docs/ROADMAP.md).
 const $ = (s, el = document) => el.querySelector(s);
@@ -40,8 +41,8 @@ function postHtml(p) {
   const stars = [1, 2, 3, 4, 5]
     .map((n) => `<button type="button" class="${n <= Math.round(s.mineVote || s.avg) ? 'on' : ''}" data-rate="${n}" data-id="${esc(p.id)}" aria-label="Rate ${n} of 5">★</button>`)
     .join('');
-  const verses = (p.verses || []).map((v) => `<a class="chip" href="/chapters/${esc(v.split('.')[0])}/#v${esc(v.replace('.', '-'))}">Verse ${esc(v)}</a>`).join(' ');
-  const tac = p.tacticSlug && tacticTitle.has(p.tacticSlug) ? `<a class="chip chip--seal" href="/tactics/${esc(p.tacticSlug)}/">${esc(tacticTitle.get(p.tacticSlug))}</a>` : '';
+  const verses = (p.verses || []).map((v) => `<a class="chip" href="${B}/chapters/${esc(v.split('.')[0])}/#v${esc(v.replace('.', '-'))}">Verse ${esc(v)}</a>`).join(' ');
+  const tac = p.tacticSlug && tacticTitle.has(p.tacticSlug) ? `<a class="chip chip--seal" href="${B}/tactics/${esc(p.tacticSlug)}/">${esc(tacticTitle.get(p.tacticSlug))}</a>` : '';
   return `<article class="post ${p.mine ? 'mine' : ''}" data-reveal-off>
     <div class="avatar" aria-hidden="true">${esc((p.alias || '?').trim()[0])}</div>
     <div>

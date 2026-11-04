@@ -1,4 +1,5 @@
 ---
+import { u } from '../lib/url.js';
 import Base from '../layouts/Base.astro';
 import Seal from '../components/Seal.astro';
 import { PROVIDERS } from '../scripts/field/providers.js';
@@ -132,7 +133,7 @@ const examples = [
       </div>
       <div class="notice">
         <span aria-hidden="true">🔒</span>
-        <span><strong>Your keys stay in this browser.</strong> They are sent only to the provider you choose. NVIDIA and Meta calls pass through this site's relay, which forwards the key and never stores or logs it. <a href="/about/#privacy">Details</a></span>
+        <span><strong>Your keys stay in this browser.</strong> They are sent only to the provider you choose. NVIDIA and Meta calls pass through this site's relay, which forwards the key and never stores or logs it. <a href={u('/about/#privacy')}>Details</a></span>
       </div>
 
       <div class="field">

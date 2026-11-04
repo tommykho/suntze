@@ -1,4 +1,5 @@
 ---
+import { u } from '../lib/url.js';
 import Base from '../layouts/Base.astro';
 import Seal from '../components/Seal.astro';
 import BrushDivider from '../components/BrushDivider.astro';
@@ -37,8 +38,8 @@ const fieldExamples = [
           Thirteen chapters of ancient strategy turned into calm, practical moves, so you can win without fighting.
         </p>
         <div class="hero-cta" data-hero-in>
-          <a class="btn btn--seal" href="/field/">Bring your battle to the General</a>
-          <a class="btn" href="/chapters/1/">Read the book</a>
+          <a class="btn btn--seal" href={u('/field/')}>Bring your battle to the General</a>
+          <a class="btn" href={u('/chapters/1/')}>Read the book</a>
         </div>
       </div>
       <div class="hero-calligraphy" aria-label="孫子兵法 — Sun Tzu's Art of War" lang="zh-Hant">
@@ -85,7 +86,7 @@ const fieldExamples = [
           const kv = getVerse(c.key_verse);
           return (
             <li class="ch-panel" data-panel>
-              <a href={`/chapters/${c.n}/`} class="ch-card">
+              <a href={u(`/chapters/${c.n}/`)} class="ch-card">
                 <div class="ch-top" data-panel-in>
                   <Seal text={ZH_NUMERALS[c.n - 1]} />
                   <span class="ch-roman">{c.roman}</span>
@@ -125,7 +126,7 @@ const fieldExamples = [
               <ol class="founder-moves">
                 {t.moves.slice(0, 4).map((m) => <li>{m.title}</li>)}
               </ol>
-              <a class="btn btn--sm" href={`/tactics/${t.slug}/`}>Open the full tactic →</a>
+              <a class="btn btn--sm" href={u(`/tactics/${t.slug}/`)}>Open the full tactic →</a>
             </div>
           </article>
         ))}
@@ -148,7 +149,7 @@ const fieldExamples = [
           <li>Your key stays in your browser. Nothing is stored on our servers.</li>
           <li>Voice generated on your device. No sign-up needed.</li>
         </ul>
-        <a class="btn btn--seal" href="/field/" data-reveal>Open the Field Challenge</a>
+        <a class="btn btn--seal" href={u('/field/')} data-reveal>Open the Field Challenge</a>
       </div>
       <div class="field-mock" data-reveal="scale" aria-hidden="true">
         <div class="mock-bar"><i></i><i></i><i></i><span>field challenge</span></div>
@@ -175,8 +176,8 @@ const fieldExamples = [
         Post the battle you faced and the tactic that worked. Rate what others tried. The best field reports rise; the reckless ones get flagged.
       </p>
       <div class="hero-cta" style="justify-content:center" data-reveal>
-        <a class="btn btn--seal" href="/community/">Read field reports</a>
-        <a class="btn" href="/tactics/">Browse all {tactics.length} tactics</a>
+        <a class="btn btn--seal" href={u('/community/')}>Read field reports</a>
+        <a class="btn" href={u('/tactics/')}>Browse all {tactics.length} tactics</a>
       </div>
     </div>
   </section>

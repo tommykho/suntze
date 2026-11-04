@@ -1,4 +1,5 @@
 ---
+import { u } from '../lib/url.js';
 import Base from '../layouts/Base.astro';
 import Seal from '../components/Seal.astro';
 import demo from '../../data/community-demo.json';
@@ -20,7 +21,7 @@ const payload = JSON.stringify({ demo, tactics: tacticOptions, domains: DOMAINS 
   <section class="wrap">
     <div class="notice" role="note">
       <span aria-hidden="true">⛩</span>
-      <span><strong>Preview mode.</strong> Reports and ratings you add are saved only in this browser for now. Phase 2 adds sign-in (Google or GitHub) with only your alias shown publicly, shared ratings, and moderation. <a href="/about/#roadmap">Roadmap</a></span>
+      <span><strong>Preview mode.</strong> Reports and ratings you add are saved only in this browser for now. Phase 2 adds sign-in (Google or GitHub) with only your alias shown publicly, shared ratings, and moderation. <a href={u('/about/#roadmap')}>Roadmap</a></span>
     </div>
 
     <div class="c-tools panel">

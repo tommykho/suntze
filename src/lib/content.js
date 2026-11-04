@@ -1,6 +1,7 @@
 // Build-time content loader. Merges the verse dataset (Giles EN + original ZH), chapter lenses and tactics.
 // Quotes are never authored by hand: every verse is rendered from data/verses.en.json + data/zh/*.json.
 import versesEn from '../../data/verses.en.json';
+import { u } from './url.js';
 
 const zhFiles = import.meta.glob('../../data/zh/ch*.json', { eager: true, import: 'default' });
 const chapterFiles = import.meta.glob('../../data/chapters/ch*.json', { eager: true, import: 'default' });
@@ -47,7 +48,7 @@ export const chapterOf = (n) => chapters[n - 1];
 export const ZH_NUMERALS = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二', '十三'];
 export const verseHref = (id) => {
   const [ch] = id.split('.');
-  return `/chapters/${ch}/#v${id.replace('.', '-')}`;
+  return u(`/chapters/${ch}/#v${id.replace('.', '-')}`);
 };
 
 export function relatedTactics(t, limit = 3) {

@@ -4,7 +4,8 @@ import { SITE } from './src/site.config.js';
 
 // Static build for Cloudflare Pages. /functions (relay) is deployed by Pages alongside dist/.
 export default defineConfig({
-  site: SITE.url,
+  site: process.env.SITE_URL || SITE.url,
+  base: process.env.BASE_PATH || '/',
   trailingSlash: 'ignore',
   integrations: [sitemap()],
   build: { inlineStylesheets: 'never' },
