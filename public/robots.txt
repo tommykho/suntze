@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://suntze.pages.dev/sitemap-index.xml

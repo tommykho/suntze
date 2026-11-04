@@ -1,0 +1,94 @@
+[
+  {
+    "slug": "win-the-repair-without-siege",
+    "title": "Win the Repair Without a Siege",
+    "situation": "Your landlord has ignored a faulty boiler for weeks, and a shouting match feels like the only option left.",
+    "domain": "personal",
+    "tags": ["landlord", "repairs", "tenancy", "written-record"],
+    "chapter": 3,
+    "principle": "Avoid the costly siege",
+    "verses": ["3.3", "3.4"],
+    "scene": "Picture this: it is the second week of a cold November, the boiler is making a grinding noise, and the repair request you sent on the third has gone unanswered. You have considered calling every day and shouting about it. Sun Tzu would call a direct assault on a fortified position the costliest choice. Your landlord's defences are a phone line nobody answers and a repair queue that never moves. Your move is to make the easier path the one with least resistance. Send one clear written request with a deadline, copy the letting agent, and state what you will do next if nothing happens. Most repairs happen once the paper trail becomes impossible to ignore.",
+    "moves": [
+      { "title": "Gather the record", "detail": "Collect every message, photo and date since the first report. Note the boiler's symptoms, the indoor temperature on cold mornings and any effect on daily life. Keep copies in a folder outside your phone. A dated record turns a complaint into a problem the landlord has to explain to someone else." },
+      { "title": "Send one written demand", "detail": "Write a short email that names the fault, the date of your first report and a repair deadline of about 14 days. Leave out insults and unrelated complaints. Refer to your photos and ask for written confirmation of a booked engineer and an appointment time." },
+      { "title": "Copy the decision-maker", "detail": "If the landlord does not respond by the deadline, send the same message to the letting agent or property manager, and to the company's registered address if you know it. Decision-makers act faster when they can see that the request is formally on record and cannot be lost in a shared inbox." },
+      { "title": "Know your escalation route", "detail": "Look up your local housing authority or tenancy advice service and note what they need before they act, usually the written demand and proof of the report. Learn the rules on deposits and rent before you do anything with money, and do not withhold rent unless local law clearly allows it and you have advice first." }
+    ],
+    "script": { "label": "Written repair demand", "text": "Dear [Landlord or agent name], I first reported a fault with the boiler on [date], and it is now [number] days later. The boiler is making a grinding noise, and the flat has been below [temperature] on cold mornings. I've attached photos from [dates]. Please arrange a qualified engineer to repair it by [date, about 14 days away] and confirm the appointment time in writing. If I don't hear back by then, I'll raise the matter with [local housing authority]. Thank you for your prompt attention." },
+    "backfire": "Not every landlord responds to paper, and some act only after formal enforcement, which takes time and strains the tenancy. This approach does not fit emergencies. If you smell gas, leave the building and call the gas emergency line first, and if there is no heating in deep winter with vulnerable people present, seek urgent help. Do not threaten things you will not do.",
+    "signals": "You receive a booking date in writing, or the landlord's reply shows that a named person now owns the repair.",
+    "effort": "hours",
+    "difficulty": 1,
+    "featured": false
+  },
+  {
+    "slug": "win-without-a-price-war",
+    "title": "Win Without a Price War",
+    "situation": "A prospect is comparing three vendors and will sign with whoever drops the price the most.",
+    "domain": "business",
+    "tags": ["sales", "pricing", "proposals", "value"],
+    "chapter": 3,
+    "principle": "Break resistance without battle",
+    "verses": ["3.2", "3.6"],
+    "scene": "Picture this: a procurement lead has sent your proposal to two competitors and asked for a final number by Friday. Every email signals one thing: lower it. You feel the pull to cut your margin by fifteen percent just to keep the conversation alive. Sun Tzu's best victory breaks resistance without battle. Here the battle is a price contest, which you rarely win. Change the terms of the decision instead. Ask what failure would cost the prospect, show how your offer reduces that cost in numbers they already track, and propose a scoped first phase with a measurable exit. You stop being the cheapest option and become the option that makes their risk smaller.",
+    "moves": [
+      { "title": "Ask what failure costs them", "detail": "In your next call, ask what happens if this project fails six months from now. Listen for the answer in money, time or reputation, and write down their exact phrases. That tells you which number matters to them, and it gives you a reason to talk about value rather than unit price." },
+      { "title": "Rebuild the proposal around their numbers", "detail": "Translate your offer into the metrics they already report, such as hours saved per month, error rates or churn. Show a simple before-and-after calculation using their own figures, and state each assumption clearly. A buyer who can explain the value to their boss will not default to the lowest bid." },
+      { "title": "Offer a smaller first step", "detail": "Propose a pilot with a fixed scope, a fixed price and a go or stop review after 30 or 60 days. This lowers their risk without discounting your core price. Write down what success looks like so both sides know exactly when the decision point arrives." },
+      { "title": "Trade, do not discount", "detail": "If they push for a lower price, avoid cutting the number outright. Offer a trade instead: a lower price for a longer contract, a case study, or a reduced scope. Make each concession conditional on something you need in return, and say the condition out loud." }
+    ],
+    "script": { "label": "Reply to a price request", "text": "Hi [Name], thanks for the feedback on our proposal. Before I change the numbers, I'd like to understand what [the project] has to achieve by [date] and what a delay would cost your team. Based on what you've shared, a pilot covering [scope] at [price] could reduce [their metric] by roughly [estimate], with a review on [date]. If that is still too much for this quarter, I can reduce the scope to [smaller scope] at [price]. Would a 20-minute call this week help us decide?" },
+    "backfire": "This does not work when the buyer has already chosen a supplier and needs only a formal quote, or when your product is not actually better. Do not invent savings figures, and do not present a subsidised pilot as free. If the market price is truly lower and your costs cannot support it, the honest choice is to decline the deal rather than sign a contract that loses money.",
+    "signals": "The prospect talks about outcomes and decision dates rather than unit cost, and any discount you agree is tied to a specific trade.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "know-facts-before-the-blame",
+    "title": "Know the Facts Before the Meeting",
+    "situation": "A teammate blames your handoff for their missed deadline, and the blame is starting to reach your manager.",
+    "domain": "work",
+    "tags": ["blame", "handoff", "documentation", "teammate"],
+    "chapter": 3,
+    "principle": "Know yourself and the other side",
+    "verses": ["3.17", "3.18"],
+    "scene": "Picture this: the launch slipped a week, and in Monday's review your teammate says the delay came from the spec you handed over on Friday. Heads turn toward you. You feel the heat of an argument rising, and you know you could tell a story in which you were right. Sun Tzu's test starts with knowing the ground and yourself. What did you actually send, when, and in what form? What did your teammate receive, acknowledge and do? Before anyone speaks again, pull the handoff timestamp, the spec version and the messages where receipt was confirmed. Know the facts, including your own gaps. Then you can answer calmly and accurately, and the blame loses its footing.",
+    "moves": [
+      { "title": "Reconstruct the timeline", "detail": "Within an hour of the meeting, write the handoff timeline in order: when you sent the spec, which version it was, where it was posted, when your teammate acknowledged it and when their work began. Use real timestamps from your tracker, email or chat. Store the timeline in a document you control." },
+      { "title": "Name your own gaps first", "detail": "Write down any genuine weakness in your handoff, such as unclear acceptance criteria or a missing dependency. Naming one concrete gap early makes it harder to pin the whole delay on you, and it shows you are reviewing the facts rather than defending yourself." },
+      { "title": "Propose a handoff template", "detail": "Suggest a short template for both of you to use going forward, covering scope, version, open questions and an acknowledgement step. Frame it as protection for the whole team rather than as proof of fault. Offer to draft it yourself so the effort is visibly shared." },
+      { "title": "Brief your manager with dates", "detail": "Send your manager a short factual note with three bullet points: what happened, the timeline, and the proposed fix. Stick to dates and artifacts. Do not characterise your teammate's motives, skills or intentions, because that turns a process question into a personal one." }
+    ],
+    "script": { "label": "Message to manager", "text": "Hi [Manager], following Monday's review of the [project] delay, I've pulled the handoff timeline. The spec was sent on [date] at [time], as version [X] in [location], and [teammate] confirmed receipt on [date]. I've also found one gap on my side: the acceptance criteria for [item] were unclear, and I'll tighten that in future handoffs. I'd like to propose a short handoff template so we avoid this next time. Could we spend 15 minutes on it this week?" },
+    "backfire": "This fails if the timeline shows that the fault is yours. In that case, own it fully and fix it rather than hunting for technicalities. Do not use the record to embarrass a colleague, or to build a file without HR advice. If the blame is part of a pattern of harassment or discrimination, the facts belong in a formal channel, not in a counter-attack.",
+    "signals": "The next review focuses on the process fix rather than on who caused the delay, and your manager refers to the timeline instead of the argument.",
+    "effort": "hours",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "step-out-of-the-group-chat",
+    "title": "Step Out of the Group Chat",
+    "situation": "A group chat has become daily sniping at one member, and every reply pulls you deeper into it.",
+    "domain": "personal",
+    "tags": ["group-chat", "boundaries", "social-conflict", "messaging"],
+    "chapter": 3,
+    "principle": "Withdraw with your strength intact",
+    "verses": ["3.7", "3.9"],
+    "scene": "Picture this: the friends' group chat used to be photos and weekend plans. Now it is a daily stream of jokes aimed at one member, and a few people escalate each thread to see who will snap. Sun Tzu advises that when you are outnumbered on ground you do not control, the wise move is to withdraw with your strength intact rather than fight every skirmish. You can keep the friendships and stop the battle. Mute the thread, send one private message to the person being targeted, and if a line is needed in the group, make it calm and single. Then stop answering the bait. The chat changes once the fighting stops getting attention.",
+    "moves": [
+      { "title": "Mute and wait a week", "detail": "Mute the group for seven days before doing anything else. Use the break to see whether the pattern continues without your replies. Many group chat fights fade once the audience stops responding, so the silence itself tells you something useful about how the others behave." },
+      { "title": "Check in privately with the target", "detail": "Message the person being targeted directly, outside the group. Keep it short and ask a real question, such as whether they are okay with how the chat has been lately. Do not promise to fix things or speak for them in the group, and respect whatever they tell you." },
+      { "title": "Set one group-level boundary", "detail": "If you feel you must speak, post one calm line that does not accuse anyone, such as 'I'm going to step back from the jokes about [name]. Hope everyone's well.' Do not quote others, list grievances or invite a debate. Send that one line and then stop." },
+      { "title": "Leave or limit if it continues", "detail": "If the pattern continues after your line, leave the group or archive it, and keep your one-to-one friendships going. Tell one friend directly why you stepped back, so the exit reads as a boundary rather than a snub." }
+    ],
+    "script": { "label": "Private check-in", "text": "Hey [Name], the group chat has been rough lately, especially the jokes about [person]. I didn't want to pile in, but I wanted to check in with you directly. How are you doing with it? If there's anything I can do, like talk to [mutual friend] or just keep you company this weekend, I'm happy to. And no pressure to reply in the group about any of this." },
+    "backfire": "This is not enough if the group is organised harassment of a person. Then support the target, keep safe copies of evidence, and use the platform's report tools or a trusted adult. Stepping back can be read as disloyalty by people who enjoy the sport, so expect some friction. Do not join the attacks to protect your position, and do not forward private messages about others.",
+    "signals": "The target replies privately, the chat's tone shifts within a couple of weeks, and you notice you no longer check it by reflex.",
+    "effort": "minutes",
+    "difficulty": 1,
+    "featured": false
+  }
+]

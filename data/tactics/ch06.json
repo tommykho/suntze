@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "silence-is-consent",
+    "title": "Silence Is Consent",
+    "situation": "Your manager stalls every decision, leaving your work blocked and your team waiting.",
+    "domain": "work",
+    "tags": ["manager", "stalling", "decisions", "initiative", "escalation"],
+    "chapter": 6,
+    "principle": "Formlessness: shape yourself to the ground",
+    "verses": ["6.7", "6.8", "6.32"],
+    "scene": "Picture this: you have a clear fix for a recurring billing error, but your manager has stalled for three weeks. Each time you ask, they need to think, want more data, or will get back to you. Meanwhile, customers are still being charged twice. Sun Tzu teaches you to understand the ground you actually stand on and to turn each obstacle into an advantage. Start by assessing the situation without emotion, and document the issue, where it starts and what it costs. You hold the operational knowledge, so use it. Stop asking for permission that never arrives. Present solutions that need their authority, and make the decision easy to say yes to.",
+    "moves": [
+      { "title": "Assess and document without emotion", "detail": "Write a one-page summary: the issue, where it originates, who it affects, what it costs each week, and what you have already tried. Stick to dates and numbers. This record protects you whichever way the decision goes, and it turns a complaint into an operational case." },
+      { "title": "Ask for decisions only they can make", "detail": "Reframe each request so it needs their specific authority: 'Can you approve the vendor change to X by Friday?' rather than 'What should we do?' Bring a recommendation and one option for them to approve. You are making the decision easy to make and harder to avoid." },
+      { "title": "Build lateral alliances", "detail": "Contact people in finance, support or operations who feel the same pain. Agree on the facts together and ask each for a short written view. A message from three departments carries more weight than your own complaint, and it lets you solve the problem without routing everything through one bottleneck." },
+      { "title": "Announce a default with a deadline", "detail": "For low-risk actions within your role, state what you will do and when, unless they direct otherwise. Use the script below and send it in writing. Give a real window of at least 48 hours, and keep the plan within your budget and scope. If they object, stop and escalate in writing." },
+      { "title": "Complete the work and report it", "detail": "Once the change is done, send a short summary to your manager and the affected teams: what changed, the measured result and how to revert it. Present it as a finished outcome with a rollback path, not a surprise. Most people accept a successful, low-risk result more readily than a request to reopen it." }
+    ],
+    "script": {
+      "label": "Proceed-unless-you-object message",
+      "text": "Hi [Manager name], I have documented the [issue] that is causing [impact], and the one-page summary is attached. I plan to [specific action] on [date] at [time], because it sits within my role and [budget or scope]. If you prefer a different approach, or want this decision made elsewhere, please tell me by [date and time] and I will change course. Otherwise I will proceed and send you the results the same day. Thanks, [Your name]"
+    },
+    "backfire": "Use this only for decisions within your role that are reversible and low-risk. Never apply it to spending above your limit, legal, security, HR or policy decisions, or anything your organization requires explicit approval for. Keep a paper trail, and if policy calls for approval, get it, even though it costs you speed. Going around a manager damages trust, so tell them before you act, not after.",
+    "signals": "Decisions start arriving in writing with dates, and stalled items move without a new fight.",
+    "effort": "days",
+    "difficulty": 3,
+    "featured": true
+  },
+  {
+    "slug": "stay-formless-at-the-table",
+    "title": "Stay Formless at the Table",
+    "situation": "In a salary talk, you reveal your floor too early and lose room to move.",
+    "domain": "career",
+    "tags": ["negotiation", "salary", "offer", "leverage", "career"],
+    "chapter": 6,
+    "principle": "Conceal your dispositions",
+    "verses": ["6.2", "6.25"],
+    "scene": "Picture this: the recruiter asks, 'What salary are you looking for?' You are nervous, so you name the number you would be happy with. The offer lands exactly there, and the conversation ends. Your real floor was higher, and the best option never reached the table. Sun Tzu says the highest skill is to conceal your dispositions, so the other side cannot prepare against what it cannot see. A negotiation works the same way. Let them reveal their range first, keep your walk-away point to yourself, and anchor on the value you bring. Your goal is not to be unpredictable for sport. It is to avoid giving away the one number that shapes every other number.",
+    "moves": [
+      { "title": "Write your floor and target privately", "detail": "Before any talk, write three numbers on paper: your target, your acceptable minimum and the point where you would walk away. Keep the sheet out of the conversation. Base the numbers on market data from comparable roles and on the concrete value you bring, not on what your bills require." },
+      { "title": "Answer the range question with a range", "detail": "When asked for expectations, answer with a range tied to the role's scope: 'Based on the scope and what I see for similar roles, I am looking in the [range] range. What budget have you set for this position?' Then stop talking. Silence after a question is a tool, and it often gets you the next number." },
+      { "title": "Ask for the full package first", "detail": "Before naming any figure, ask for the whole picture: base, bonus, equity, start date, review timing and the approval process. You learn the shape of their offer without revealing where your floor sits. Write down everything they say so the offer can be compared later." },
+      { "title": "Counter once, in writing", "detail": "When the offer arrives, reply in writing with one counter tied to specific evidence, such as scope, market data or another consideration. Make one clear counter and let them respond. If pressed for your floor, say, 'I am focused on the total package and the scope of the role.'" }
+    ],
+    "script": {
+      "label": "Counter-offer email",
+      "text": "Hi [Name], thank you for the offer of [amount] for the [role] position. I am excited about the work on [specific project]. Based on the scope of the role and [market data or other consideration], I would like to propose [counter amount] base, with [other item] if the base cannot move. I am happy to talk this through on [day]. Could you let me know what flexibility the team has?"
+    },
+    "backfire": "Concealment fails when it turns into bluffing. Never invent competing offers, fake a salary history or claim numbers you cannot defend. Some places restrict salary history questions, so know your local rules. If the employer has a fixed pay band, endless coyness only frustrates them. Stay transparent about your priorities even while keeping your floor private.",
+    "signals": "The first number they name is higher than you expected, and they respond to your counter instead of ending the talk.",
+    "effort": "hours",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "attack-the-unguarded-flank",
+    "title": "Attack the Unguarded Flank",
+    "situation": "Competitors own the broad market, and you cannot outspend them on general ads.",
+    "domain": "business",
+    "tags": ["niche", "competitors", "positioning", "market", "strategy"],
+    "chapter": 6,
+    "principle": "Strike where the enemy is not present",
+    "verses": ["6.7", "6.14"],
+    "scene": "Picture this: you run a small design agency, and every pitch sounds like the big firms: end-to-end, full-service, trusted partner. You keep losing to competitors with bigger budgets and bigger logos. Then a prospect mentions, in passing, that no one in their industry understands their compliance deadlines. That gap is the unguarded door. Sun Tzu's principle is to attack only where the enemy is not prepared to defend. You cannot out-muscle the broad market, but you can concentrate your effort on a segment with specific needs that no one serves well. Choose it, learn it deeply, and be many where your competitors are few. Own a corner before you ask for the whole map.",
+    "moves": [
+      { "title": "List segments and their unmet needs", "detail": "Write down ten customer segments you could serve, by industry, company size, region or workflow. For each, note the pain customers describe in calls, reviews and forums, and which competitors serve them. Mark the segments where the leading players are weak or absent." },
+      { "title": "Test with five conversations", "detail": "Talk to five people in your top two segments before building anything new. Ask them to describe the last time the current options failed them, and write down their exact phrases. Pick the segment where the pain is frequent, specific and costly to them." },
+      { "title": "Sharpen the offer for that niche", "detail": "Rewrite your positioning in one sentence that names the segment and the outcome, such as 'Compliance-ready onboarding for regional clinics in 30 days.' Remove features that this buyer does not care about. Price for the value they gain, not for the competitor average." },
+      { "title": "Concentrate on one channel", "detail": "Pick one place where the niche gathers: a specialist newsletter, an industry forum, a trade event or a partner's customer list. Publish one useful piece a week that addresses their problem for eight weeks, and track inbound leads from that channel only." }
+    ],
+    "script": {
+      "label": "Outreach to a niche prospect",
+      "text": "Hi [Name], I have been looking at how [segment] teams handle [specific problem], and I noticed [observation from their public material]. We built [solution] for exactly this, and [similar customer] reduced [metric] by [result]. Would you be open to a 20-minute call to tell me whether this matches what you see day to day? I will share our notes either way."
+    },
+    "backfire": "A niche can become a trap if it is too small to sustain the business, or if a larger competitor simply follows you there. Check market size before committing and set a date to revisit. Never claim a segment's needs you have not verified with real people, and never target groups in ways that exploit vulnerability or intrude on privacy. If the segment is a poor fit, walk away.",
+    "signals": "Prospects describe your offer in their own words, and inbound conversations begin with their problem, not a price question.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "redirect-their-momentum",
+    "title": "Flow Around Their Push",
+    "situation": "A relative keeps pressing you about a decision you have already made, and it is wearing you down.",
+    "domain": "family",
+    "tags": ["family", "relatives", "boundaries", "pressure", "holidays"],
+    "chapter": 6,
+    "principle": "Shape your course to the ground",
+    "verses": ["6.31", "6.29"],
+    "scene": "Picture this: at every family gathering, an aunt raises the same question about your career change, and the pressure climbs each time. You have answered three times already. Your instinct is to push back harder, which turns a quick comment into a debate in front of the whole table. Sun Tzu compares effective strategy to water. Water does not fight the slope; it finds a path around the obstacle. You can do the same. Accept that the pressure exists, decide in advance what you will say and what you will not discuss, and steer the conversation toward something you both enjoy. A short, calm answer and a change of subject leave nothing to fight about.",
+    "moves": [
+      { "title": "Decide your line in advance", "detail": "Before the next gathering, write the one-sentence answer you will give, such as 'I have made my decision and I am happy with it.' Decide which topics you will not discuss at the table. Having the line ready prevents the heated reaction that turns a comment into a scene." },
+      { "title": "Acknowledge, then redirect", "detail": "When the question comes, respond briefly and warmly: 'I know you care, and I have thought about it. I am not going to go into it today. How is the garden doing?' Then ask a genuine question so the energy moves to a new topic instead of stalling on the old one." },
+      { "title": "Move the deeper talk to a private channel", "detail": "If the pressure continues, offer a one-to-one conversation at another time: 'I would really like to hear your concerns properly. Could we get coffee next week?' This gives them a legitimate outlet and removes the audience that drives the escalation." },
+      { "title": "Set a calm limit and keep it", "detail": "If they keep pressing, step out for ten minutes, or end a call politely: 'I am going to stop this topic now, and we can talk another time.' Follow through every time. Consistency matters more than the exact wording, because a limit that is enforced once in a while is not a limit." }
+    ],
+    "script": {
+      "label": "Note to the relative before the gathering",
+      "text": "Hi [Name], I am looking forward to seeing everyone on [date]. I know you have strong views on my [decision], and I appreciate that you care. I have made my choice and I am not going to debate it at the dinner table. Could we catch up on [shared topic] instead? If you want to talk about it properly, I am happy to find a time for coffee, just the two of us."
+    },
+    "backfire": "This works for relatives who want to be heard, not for people who are abusive, controlling or threatening. If the pressure includes coercion or risk to your safety or finances, create distance and get support from a counselor or trusted person. Do not use this to cut off someone whose concern is genuine, and avoid passive-aggressive remarks that escalate the conflict.",
+    "signals": "The topic shifts within a few minutes, and the questions come less often over the next few gatherings.",
+    "effort": "minutes",
+    "difficulty": 1,
+    "featured": false
+  }
+]

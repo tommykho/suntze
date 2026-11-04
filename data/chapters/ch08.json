@@ -1,0 +1,12 @@
+{
+  "n": 8,
+  "essence": "Plans must bend to the ground, and a leader who cannot vary tactics wastes the advantage.",
+  "modern_lens": "Rigid plans fail when conditions change, and a leader who only follows the playbook wastes good people. Weigh opportunity against risk in every decision, and prepare your position so you can handle what you did not expect. Most collapses also trace back to a few personal habits, so audit those too.",
+  "key_verse": "8.12",
+  "principles": [
+    { "name": "Vary the Plan", "verses": ["8.6", "8.7"], "gloss": "Knowing the terrain is not enough. Adjust the plan as conditions shift, and weigh advantage and risk together." },
+    { "name": "Be Ready, Not Lucky", "verses": ["8.11"], "gloss": "Do not count on the other side staying away. Build your position so that any outcome is one you can handle." },
+    { "name": "Five Besetting Faults", "verses": ["8.12", "8.13"], "gloss": "Recklessness, cowardice, temper, pride and overprotectiveness quietly sink leaders. Name them before they name you." },
+    { "name": "Refuse the Trap Road", "verses": ["8.3"], "gloss": "Some routes look like progress but lead straight into a trap. Being willing to decline them is part of the strategy." }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "n": 13,
+  "essence": "Foreknowledge is the edge, and you earn it by asking people honestly.",
+  "modern_lens": "Most costly mistakes come from deciding without knowing the terrain. Sun Tzu holds that foreknowledge cannot be guessed or divined; it comes from people who know the ground. In modern life that means asking former tenants, customers and colleagues openly, checking public information, and treating those who help you with respect. The method is honest inquiry. It never means snooping into private messages, accounts or lives.",
+  "key_verse": "13.4",
+  "principles": [
+    { "name": "Foreknowledge Decides", "verses": ["13.4", "13.2"], "gloss": "Acting well requires knowing what you are walking into. A little time spent learning costs far less than the mistake it prevents." },
+    { "name": "Knowledge Comes From People", "verses": ["13.5", "13.6"], "gloss": "Guesses and spreadsheets alone cannot show how a landlord, customer or team really behaves. Talk to people with direct experience." },
+    { "name": "Verify Before Trusting", "verses": ["13.17"], "gloss": "Information from one source is a claim, not a fact. Cross-check reports before you act on them." },
+    { "name": "Reward Honest Sources", "verses": ["13.14", "13.16"], "gloss": "Good sources stay useful when treated with fairness, openness and thanks. Never use what they share against them." }
+  ]
+}

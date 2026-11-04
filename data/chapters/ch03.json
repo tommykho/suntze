@@ -1,0 +1,12 @@
+{
+  "n": 3,
+  "essence": "Win the contest before the battle, and keep your own side whole.",
+  "modern_lens": "Chapter 3 ranks outcomes: the best result costs you nothing, because the other side changes course without a fight. Modern work and personal conflicts can often be settled by reshaping the other side's options rather than out-shouting them. The chapter also insists that you know both the other party and yourself, which is the basis of any honest negotiation.",
+  "key_verse": "3.18",
+  "principles": [
+    { "name": "Win Without Fighting", "verses": ["3.2", "3.6"], "gloss": "The best result breaks resistance before any contest starts. Change the options in front of the other side rather than forcing their hand." },
+    { "name": "Avoid the Costly Siege", "verses": ["3.3", "3.4"], "gloss": "Direct assaults on entrenched positions are the most expensive route. Look for a smaller, faster way around the wall." },
+    { "name": "Know Both Sides", "verses": ["3.18"], "gloss": "Knowing the other party and knowing yourself decides most outcomes. Ignorance on either side turns every contest into a gamble." },
+    { "name": "Leave When Outmatched", "verses": ["3.7", "3.9"], "gloss": "When the odds are clearly against you, withdraw with your strength intact and choose a different ground." }
+  ]
+}

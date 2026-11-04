@@ -1,0 +1,13 @@
+{
+  "n": 7,
+  "essence": "The direct goal is often reached by an indirect route, once you control tempo and signals.",
+  "modern_lens": "Most work moves through other people's calendars, approvals and moods, so the fastest path is rarely the obvious one. Pace your effort to the energy in the room, send signals everyone can see, and do not walk into a fight the other side has chosen. Commit to a deadline only when you can keep it.",
+  "key_verse": "7.3",
+  "principles": [
+    { "name": "Indirect Route, Direct Goal", "verses": ["7.3", "7.4"], "gloss": "A longer path can beat the obvious one when it keeps the other side off balance and lets you arrive first." },
+    { "name": "Speed Has a Cost", "verses": ["7.7", "7.8"], "gloss": "Forced marches leave the strongest ahead and everyone else behind. Pace the whole team or you arrive with a fraction of it." },
+    { "name": "Read the Mood", "verses": ["7.29", "7.32"], "gloss": "Energy rises and falls across a day. Act when the other side is sluggish, and do not force a fight against a confident opponent." },
+    { "name": "Signals Everyone Can See", "verses": ["7.23", "7.26"], "gloss": "A message carried only by voice gets lost. Set up shared channels and simple signals so the whole group moves together." },
+    { "name": "Do Not Take the Bait", "verses": ["7.34", "7.35"], "gloss": "Answering a provocation spends your energy on the other side's terms. Let it pass and choose the ground yourself." }
+  ]
+}

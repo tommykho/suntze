@@ -1,0 +1,94 @@
+[
+  {
+    "slug": "price-the-office-feud",
+    "title": "Price the Office Feud",
+    "situation": "A senior colleague keeps taking credit for your work, and the feud is eating your meetings and focus.",
+    "domain": "work",
+    "tags": ["office-feud", "cost-benefit", "peer-conflict", "credit"],
+    "chapter": 2,
+    "principle": "Count the true cost",
+    "verses": ["2.1", "2.2", "2.19"],
+    "scene": "Picture this: for three months, a senior colleague has presented your analysis in meetings as their own, and you have been answering with pointed emails. Each exchange costs you an hour of drafting, a bit of sleep and some goodwill with people who only want the project shipped. Sun Tzu would still ask you to put a price on it. Add up the hours, the deliverables that slipped, and the time your manager has spent refereeing. Then ask what a clean outcome is worth and how long it would take to win. If the cost keeps rising while the prize stays small, the cheapest victory is one short, decisive move that ends the campaign.",
+    "moves": [
+      { "title": "Estimate the running cost", "detail": "For the last eight weeks, write down the hours spent on the dispute, the meetings it derailed and the deliverables it delayed. Convert the hours into a rough figure using your own hourly cost. Seeing the total makes it harder to treat the feud as free, and it gives you a baseline to compare against later." },
+      { "title": "Name the prize in one sentence", "detail": "Write what a good outcome looks like in concrete terms: an accurate credit line on the next deck, a written ownership split for shared work, or a working relationship that is merely civil. A prize you cannot describe is not worth a long campaign, so decide what you actually need." },
+      { "title": "Choose the cheapest decisive move", "detail": "Compare three options: one direct conversation, a short written proposal to your manager, or reducing contact to what your work requires. Pick the lowest-cost option that achieves the named prize. Many feuds end at the first honest conversation, and many more end once credit is written down in shared documents." },
+      { "title": "Set a limit and a stop rule", "detail": "Decide in advance that if the chosen move has not worked after two attempts over four weeks, you will stop escalating and switch to neutral, documented delivery. Put the review date in your calendar and hold to it, even if the feud still feels unfinished." }
+    ],
+    "script": { "label": "Direct conversation opener", "text": "Hi [Name], I'd like 20 minutes to clear something up before it affects the project further. In Tuesday's review, my analysis of [topic] was presented without attribution. I'd like us to agree how we credit contributions going forward, and to show sources in next week's deck. Could we talk tomorrow at [time]? My aim is to get the project right and to stop spending time on this disagreement." },
+    "backfire": "Do not use this to avoid standing up for yourself on something serious, such as harassment, discrimination or a safety issue. Those need a formal channel, not a cost calculation. Pricing the feud can also make you too quick to concede. If the prize is your reputation or your job, it may be worth a much larger spend, so be honest with yourself about the number.",
+    "signals": "Your hours on the dispute fall, the next deliverable goes out without a new incident, and attribution appears in writing.",
+    "effort": "hours",
+    "difficulty": 1,
+    "featured": false
+  },
+  {
+    "slug": "stop-feeding-the-failing-project",
+    "title": "Stop Feeding the Failing Project",
+    "situation": "An internal project has missed two milestones, yet the team keeps adding people and deadlines to rescue it.",
+    "domain": "work",
+    "tags": ["sunk-cost", "project-rescue", "escalation", "resourcing"],
+    "chapter": 2,
+    "principle": "Do not raise a second levy",
+    "verses": ["2.3", "2.8"],
+    "scene": "Picture this: your flagship internal tool was due in March, then June, then September. The team has grown, the status meetings have multiplied, and people privately agree the original design is wrong. Still, every plan asks for one more engineer and one more quarter, because stopping would mean admitting the earlier spending was a mistake. Sun Tzu's warning is about exactly this momentum. A campaign that keeps drawing on the home treasury has already lost its economics. Before you approve the next round, ask what you would do if the project were new today. If the answer differs from the plan, you have found the decision.",
+    "moves": [
+      { "title": "Separate the spent from the future", "detail": "Draw two columns: money and time already spent, and the cost plus expected benefit of the next phase. Judge the next phase using only the second column. Pull real figures from your tracker or finance system, and show both columns side by side at the review so the discussion stays on the future." },
+      { "title": "Run a fresh-start test", "detail": "Ask the sponsor and two neutral leads to answer one question in writing: if we were starting today with what we know now, would we fund this exact plan? Collect answers anonymously where you can, so people are not defending positions they took earlier." },
+      { "title": "Propose three exits", "detail": "Prepare three options for the review: stop, shrink to the smallest version that still meets the core need, or continue with explicit new success criteria and a hard review date. Attach a rough cost and risk to each. Choosing among three named options is easier for a steering group than a single yes or no." },
+      { "title": "Release resources in writing", "detail": "Once the decision is made, record it with owners and dates. If the project stops or shrinks, announce what people will work on next and thank them for the effort. Released engineers are valuable, so move them quickly rather than leaving them in limbo while the decision lingers." }
+    ],
+    "script": { "label": "Review request to sponsor", "text": "Hi [Sponsor], before we approve the next phase of [project], I'd like to put three options on the table: stop, shrink to [smaller scope], or continue with new success criteria and a review on [date]. For each, I've estimated the cost to finish and the risk. The milestones missed in [months] change the picture, and I'd rather we decide on current facts than on the original plan. Could we take 30 minutes on this at the next steering meeting?" },
+    "backfire": "Stopping is not always right. Some delays are temporary, and the remaining work may be cheap to finish. Do not use a fresh-start test to kill work that someone built out of spite or to push out a colleague. If you championed the project, expect defensiveness, and consider having a neutral person lead the review. Honest reassessment can damage careers when it is handled carelessly.",
+    "signals": "The decision is recorded with an end date, and the next status meeting is about scope and cost rather than reassurance.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "borrow-the-rivals-grain",
+    "title": "Borrow the Rival's Grain",
+    "situation": "A larger competitor's customers complain about slow support, and you want to win them without a price war.",
+    "domain": "business",
+    "tags": ["competitors", "customer-switching", "positioning", "ethics"],
+    "chapter": 2,
+    "principle": "Feed on the other side",
+    "verses": ["2.9", "2.15", "2.18"],
+    "scene": "Picture this: you run a small bookkeeping practice, and a larger rival has been losing goodwill for months. Their reviews mention missed deadlines and week-long support queues. You could match their prices and start a fight over every listing, which would squeeze your margins. Sun Tzu's logic is to bring what you need from home but to draw on what the other side has already supplied. Their unhappy customers are already looking. Your task is to make switching easy, honest and low-risk for them. Offer a clear migration path, a response time they can verify, and a careful handover of their records. Win the customer who wants to leave, and leave the rival's staff alone.",
+    "moves": [
+      { "title": "Read the rival's public complaints", "detail": "Collect every public review, forum thread and social mention about the rival from the last six months. Sort them into three to five recurring complaints, such as slow support or surprise fees, and count how often each appears. These recurring complaints are the openings your service can credibly address." },
+      { "title": "Build the switch offer around one complaint", "detail": "For the strongest complaint, design a commitment you can keep, such as a 24-hour response window, a fixed monthly fee or a free data migration. Write it on one page with exact terms and a list of what you will not do, so the customer can check every claim." },
+      { "title": "Make leaving easy and honest", "detail": "Publish a simple export guide for the common file formats the rival uses, and offer to import a customer's records at no charge. Never suggest the rival is insolvent or dishonest unless you can prove it. Let the customer's own experience carry the comparison." },
+      { "title": "Serve the customer, not the rivalry", "detail": "Approach only customers who have shown dissatisfaction, such as people who posted a complaint or asked for help. Do not recruit the rival's staff, do not use confidential or leaked information, and do not claim features you lack. Those shortcuts create legal risk and lose trust." }
+    ],
+    "script": { "label": "Reply to a public complaint", "text": "Hi [Name], sorry to hear your last month with your current provider has been frustrating. We handle [service] for teams about your size, and our support replies within [number] hours on business days. If you're weighing a change, we can import your existing records at no cost, and I can walk you through what that involves in a 15-minute call. No pressure at all, and I hope things improve where you are." },
+    "backfire": "This fails if your service cannot meet the commitment you advertise, because an unkeepable promise hurts you more than the rival does. It can also slide into a price war if you lose sight of quality. Do not solicit customers with confidential information, leaked lists or disparaging claims about the rival. Those tactics invite legal trouble and damage your reputation with the very people you want to win.",
+    "signals": "Customers who switch mention the specific complaint you addressed, and your win rate on those leads rises without deep discounting.",
+    "effort": "days",
+    "difficulty": 3,
+    "featured": false
+  },
+  {
+    "slug": "keep-the-fence-quiet",
+    "title": "Keep the Fence Quiet",
+    "situation": "A neighbour's dispute over a fence and overhanging hedge is turning every chance meeting into a shouting match.",
+    "domain": "personal",
+    "tags": ["neighbour", "dispute", "early-action", "boundaries"],
+    "chapter": 2,
+    "principle": "Act early and small",
+    "verses": ["2.2", "2.5"],
+    "scene": "Picture this: the neighbour's hedge has crept over the boundary, a fence panel leaned in the last storm, and now every chance meeting by the bins becomes a short, sharp argument. Each sigh is noticed. Each comment is repeated to someone else on the street. The temptation is to fire off a stern letter, or to wait and hope it fades. Sun Tzu warns against both haste and long delay. The clever move is a quick, small, polite step taken before the grievance hardens. Ask for one specific thing in person, confirm it in writing, and offer to look at the boundary together. Most neighbour disputes are really about feeling unheard.",
+    "moves": [
+      { "title": "Decide the actual issue", "detail": "Write down the single thing that bothers you, such as the hedge height or the fence repair, with a measurement or a dated photo. Leave out the older grievances. A narrow request is much easier for your neighbour to agree to than a list of complaints, and it keeps the conversation about a fix." },
+      { "title": "Ask in person, once, early", "detail": "Within a week, catch your neighbour when they are relaxed rather than rushing somewhere. Say what you have noticed, what you would like, and when you would like it done. Keep it under a minute, then stop talking and listen to the reply. Their answer tells you whether this is a quick fix or a longer conversation." },
+      { "title": "Confirm in writing", "detail": "Send a short message the same day that summarises what you agreed. Written confirmation prevents later 'I never said that' disputes and gives both sides a shared reference. Keep the tone friendly so the note feels like a courtesy, not a formal complaint." },
+      { "title": "Escalate in stages only if needed", "detail": "If nothing changes after two weeks, check your local rules on hedges and boundary fences, and consider a community mediation service, which many councils offer free or at low cost. Do not photograph your neighbour, post about them online, or confront them in front of others." }
+    ],
+    "script": { "label": "Friendly first note", "text": "Hi [Neighbour name], thanks for chatting on Saturday. Just to confirm what we agreed: you'll trim the hedge along the back boundary to about [height] by [date], and we'll look at the fence panel together on [day]. I know this is a nuisance on both sides, and I'd rather sort it now than let it sit. If I've got any of that wrong, just let me know and we'll adjust." },
+    "backfire": "This is not the right approach if a neighbour threatens you, harasses you or damages property. In those cases, document each incident and contact the police or your local authority. A polite first approach can also be read as weakness by someone who responds only to pressure. Do not use the friendly note to build a case you plan to spring later.",
+    "signals": "Your neighbour raises the issue first in a friendly way, and the agreed task is done or scheduled by the date you set.",
+    "effort": "hours",
+    "difficulty": 1,
+    "featured": false
+  }
+]

@@ -1,0 +1,154 @@
+[
+  {
+    "slug": "reference-check-the-landlord",
+    "title": "Check the Landlord Before Signing",
+    "situation": "You are about to sign a year's lease with a landlord whose reviews are mixed and unclear.",
+    "domain": "personal",
+    "tags": ["renting", "due-diligence", "landlord", "lease"],
+    "chapter": 13,
+    "principle": "Gather foreknowledge before a big commitment",
+    "verses": ["13.6", "13.17"],
+    "scene": "The apartment is bright, the landlord is friendly, and the lease must be signed by Friday. Something feels slightly off. The listing promises a refundable deposit, but two public reviews mention a long wait for money back and a dispute over repairs. Sun Tzu says that knowledge of the other side can only come from people who have dealt with them. So before you commit a year of your life, you ask the people who have been there. You request the lease in writing, talk to former tenants who posted publicly, check the local housing records, and put three direct questions to the landlord. You are not spying. You are doing the homework any careful tenant would do.",
+    "moves": [
+      {
+        "title": "Request the lease in advance",
+        "detail": "Ask by email for the full lease and deposit terms at least 48 hours before signing. Read the clauses on repairs, early exit, notice periods, and deposit deductions. Ask the landlord to explain any clause you do not understand, and keep their answers in writing for later."
+      },
+      {
+        "title": "Talk to former tenants",
+        "detail": "Search the building address with the word 'review' and message any former tenant who posted publicly. Keep it short and polite: I saw your review of the building and wondered about the deposit return. Would you be willing to share a few words? Accept a no gracefully and never push for details."
+      },
+      {
+        "title": "Check public records",
+        "detail": "Use your city or county's public portals to look up property registrations, tenancy tribunal outcomes, and housing complaints. These records are open to anyone. Note dates and results. A pattern of disputes tells you more than one angry review, and it is the kind of evidence a tenant can rely on."
+      },
+      {
+        "title": "Ask three direct questions",
+        "detail": "Ask how long the landlord has owned the building, how deposits are returned and how fast, and how repair requests are handled. A reasonable landlord answers plainly. Evasion, or pressure to sign before you have answers, is information too, and it should weigh heavily."
+      }
+    ],
+    "script": {
+      "label": "Pre-signing questions",
+      "text": "Hi [Name], I am very interested in [address] and would like to sign by [day]. Before I do, could you send me the lease and the deposit terms? I would also like to confirm three things: how the deposit is returned at the end of the tenancy, how repair requests are handled and the typical response time, and whether the lease allows early exit with notice. Thank you. I want to make sure this is a good fit for both of us."
+    },
+    "backfire": "This fails when research turns into harassment: repeated messages to former tenants, reading private social media accounts, or pressing people for details they prefer to keep private. Use only public records and voluntary conversations. It also fails if you treat one bad review as proof, since patterns matter more than single stories. A check reduces risk but cannot guarantee the outcome, so photograph the apartment at move-in regardless.",
+    "signals": "You can state the deposit terms, repair timeline, and exit clause in your own words, and two independent sources agree on the landlord's pattern.",
+    "effort": "hours",
+    "difficulty": 1,
+    "featured": false
+  },
+  {
+    "slug": "build-a-mentor-network",
+    "title": "Build a Mentor Network",
+    "situation": "You are changing fields and have no one inside the new work who can tell you what it is really like.",
+    "domain": "career",
+    "tags": ["mentorship", "networking", "industry-insight", "career-growth"],
+    "chapter": 13,
+    "principle": "Knowledge of the new terrain comes from people",
+    "verses": ["13.6", "13.14", "13.16"],
+    "scene": "You are three months from a move into data engineering, and every article you read contradicts the last. You know the job titles but not what a good week looks like, which skills get people promoted, or which teams are quietly struggling. Sun Tzu says knowledge of the other side can only come from other people. Your version is a small network of sources: two mentors, a few peers two years ahead, and someone inside a company you admire. You treat them with real generosity. You ask specific questions, say thank you in writing, and show them what you did with their advice. Good sources stay useful when they feel respected.",
+    "moves": [
+      {
+        "title": "List what you do not know",
+        "detail": "Write down the two or three roles you might move into, and what you do not know about each: daily work, hiring bar, typical pay range, and team dynamics. These gaps become your questions. A specific question gets a reply; 'any advice?' usually gets silence."
+      },
+      {
+        "title": "Ask for twenty minutes, once",
+        "detail": "Find people two to five years ahead of you through alumni lists, professional associations, or meetups. Send a short note asking for a 20-minute call about one specific question. Keep the promise to end on time. A small, clear request is far easier to accept than a request to become a mentor."
+      },
+      {
+        "title": "Report back and give something",
+        "detail": "Within a day of each conversation, send a thank-you note that says what you did with the advice. Share a useful article or introduce them to someone who could help them. Quarterly, send a brief update to the people who helped most. Mentors stay engaged when they see their advice working."
+      },
+      {
+        "title": "Keep a private notes file",
+        "detail": "Record each conversation's key points, the date, and the names of people involved in a notes app you control. Review it monthly to spot patterns. The same advice from three independent people is stronger evidence than one brilliant opinion, and it is the kind of foreknowledge that holds up."
+      }
+    ],
+    "script": {
+      "label": "First-contact note",
+      "text": "Hi [Name], I saw your move from [old role] to [current role] at [company], and it has stayed with me. I am planning a change into [target field] and have three specific questions: what separates strong candidates in [area], what the first six months look like, and which skill you would build first. Would you be open to a 20-minute call in the next few weeks? I am happy to work around your schedule. Thank you for considering it."
+    },
+    "backfire": "This fails when you use people for information and then disappear, which burns a network quickly. It also fails when you ask a mentor to vouch for you before they have seen your work. Never share a former employer's confidential material or internal pay data, even if a contact offers it. A good network runs on candor and reciprocity, not extraction.",
+    "signals": "Three or more contacts reply to a second message without prompting, and your answers to 'what do you know about this role' are specific.",
+    "effort": "days",
+    "difficulty": 1,
+    "featured": false
+  },
+  {
+    "slug": "interview-customers-before-launch",
+    "title": "Interview Customers Before Launch",
+    "situation": "You are about to build a feature based on what you assume customers want, without asking them.",
+    "domain": "business",
+    "tags": ["customer-research", "product-validation", "interviews", "launch"],
+    "chapter": 13,
+    "principle": "Foreknowledge comes from the people you serve",
+    "verses": ["13.2", "13.4", "13.17"],
+    "scene": "Your team has spent three months on a scheduling tool for small clinics. Everyone in the room is sure it will sell, and nobody has asked a clinic manager how they schedule today. Sun Tzu says that staying ignorant of the other side's condition, to avoid a modest outlay, is a grave error. You can buy foreknowledge cheaply. You call ten potential customers and ask them to walk you through last Tuesday's bookings. You listen for the spreadsheets and text threads they already use, and you note their exact words for the problem. Within two weeks you know whether the feature is needed, what it must do first, and which assumption to drop before writing more code.",
+    "moves": [
+      {
+        "title": "Recruit ten real prospects",
+        "detail": "Find people who have the problem today: your sales list, a search for their job title, or referrals from existing customers. Offer a small thank-you, such as a gift card or a one-page summary of what you learned. Aim for ten conversations in two weeks, spread across at least two customer types."
+      },
+      {
+        "title": "Ask about the past, not the future",
+        "detail": "Ask them to describe the last time the problem happened: walk me through how you handled last Tuesday's double bookings. Avoid 'would you buy this?' People predict their own behavior poorly but recall what they actually did with reasonable accuracy."
+      },
+      {
+        "title": "Listen for workarounds",
+        "detail": "Note every spreadsheet, text thread, and sticky note they use. Workarounds reveal the real job and the features that matter most. Ask what they tried before and why it failed. Record their exact phrases; those phrases often become the best wording for your marketing later."
+      },
+      {
+        "title": "Write the decision rule first",
+        "detail": "Before the final interview, write down what evidence would make you build, pause, or change direction. For example: at least seven of ten describe the same workaround, and three would pay a set price for a fix. Then decide from the notes, not from the mood of the room."
+      }
+    ],
+    "script": {
+      "label": "Interview invitation",
+      "text": "Hi [Name], I am working on tools for [their job area] and would value 25 minutes of your experience. I am not selling anything. I would like to hear how you handled [problem] last month, including any workarounds you tried. As a thank-you, I will send you a one-page summary of what I learned from all the conversations. Would [day] or [day] work for you? Thank you for considering it."
+    },
+    "backfire": "This fails when you lead the witness, pitch during the interview, or record people without consent. Ask permission before recording, and share only aggregated findings. It also fails with a small sample of the wrong people, such as friends who want to be kind. Interviews reduce risk but cannot prove demand, so follow them with a small paid pilot before a full build.",
+    "signals": "Customers describe the problem in their own words without prompting, and at least one offers to try a rough version.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "learn-the-unwritten-rules",
+    "title": "Learn the Unwritten Rules",
+    "situation": "You started a new job, and nobody has explained how decisions really get made.",
+    "domain": "work",
+    "tags": ["new-job", "onboarding", "workplace-culture", "decision-making"],
+    "chapter": 13,
+    "principle": "Learn the local ground from local sources",
+    "verses": ["13.6", "13.9", "13.16"],
+    "scene": "Your first month in a new role is almost over. Onboarding covered tools and benefits, but not who must approve a change, which meetings matter, or why the design lead goes quiet whenever budget comes up. You have already made two avoidable mistakes this week. Sun Tzu says local knowledge comes from the people who live in the district. Your colleagues are that local source. You ask them openly how work moves here, pick two people who can teach you the map, and listen more than you talk. You are not collecting gossip. You are learning the ground so you can move without stumbling.",
+    "moves": [
+      {
+        "title": "Ask three process questions",
+        "detail": "In your first two weeks, ask each manager: how does a decision of this size get made here, who has to agree, and where do things usually get stuck? Write the answers in one document. Most people enjoy explaining how their work moves, so these questions rarely offend."
+      },
+      {
+        "title": "Find two local guides",
+        "detail": "Pick one peer who has been there about two years and one colleague from another team. Invite each for a 30-minute coffee once a month for three months. Ask what they wish they had known in their first ninety days. Treat their time as valuable and keep what they tell you confidential."
+      },
+      {
+        "title": "Observe the recurring meetings",
+        "detail": "Attend two or three recurring meetings as a listener. Note who speaks first, which proposals get reopened, and who summarizes decisions afterward. This shows the real influence map, which often differs from the org chart. Share what you saw only with your guides, never in a team channel."
+      },
+      {
+        "title": "Test one small change",
+        "detail": "Pick a low-risk improvement and send a short proposal to the right owner, with a date for their reply. Watching how it moves teaches you more about the culture than any handbook. Adjust your approach based on what you learn, and note the result for your guides."
+      }
+    ],
+    "script": {
+      "label": "Coffee request to a colleague",
+      "text": "Hi [Name], I am three weeks into my role on [team] and I am trying to learn how things really get done here. Would you have 30 minutes for coffee in the next two weeks? I would love to hear what you wish you had known in your first few months, and which people I should get to know. I am happy to work around your calendar. Thanks for considering it."
+    },
+    "backfire": "This fails when you use what you learn to undermine people or to build alliances against a manager. Unwritten rules can include unfair norms, and learning them does not mean you must accept them. It also fails when you rely on one person for everything. If the culture asks you to hide misconduct or harm, the right move is to report it through the proper channel, not to adapt quietly.",
+    "signals": "Within a month you can name who decides what on your team, and your proposals reach the right person on the first try.",
+    "effort": "days",
+    "difficulty": 1,
+    "featured": false
+  }
+]

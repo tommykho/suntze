@@ -1,0 +1,190 @@
+[
+  {
+    "slug": "deadline-unless-advised",
+    "title": "Set the Clock, Shift the Burden",
+    "situation": "IT keeps stalling your project, and every polite follow-up disappears into the queue.",
+    "domain": "work",
+    "tags": [
+      "it requests",
+      "deadlines",
+      "escalation",
+      "documentation"
+    ],
+    "chapter": 7,
+    "principle": "Turn misfortune into gain",
+    "verses": [
+      "7.3",
+      "7.22"
+    ],
+    "scene": "Picture this: your launch date is six weeks away, and the data integration request has sat in the IT queue for twelve days. Every follow-up gets the same reply: in progress. You can no longer plan anything. Sun Tzu would not spend another week on polite reminders. He would change the terms so that the next move is clearly theirs. You document the blocker with ticket numbers and dates, put the impact in one paragraph in front of your director, and send one final message that names a compliant workaround and a date. Silence becomes a decision they must make in public.",
+    "moves": [
+      {
+        "title": "Document the blocker",
+        "detail": "Build one timeline with every ticket number, the date it was filed, each reply, and the working days it has waited. Note what it blocks: which milestone, which customer commitment, which teams sit idle. Keep it factual, with no adjectives, and save it as a single page you can forward."
+      },
+      {
+        "title": "Write the impact statement",
+        "detail": "Write one paragraph for your director covering the blocker, the date it started, the milestone it threatens, and the cost of each extra week. End with the decision you need, such as sign-off on an approved workaround or a named IT owner. Send it before you contact IT again."
+      },
+      {
+        "title": "Send the final request",
+        "detail": "Email the IT owner and copy your boss. State the specific approved option you will use, such as the vendor's standard SSO connector or the sanctioned export route, and the date you will proceed. Give at least five working days, and ask them to reply by a set date if they object."
+      },
+      {
+        "title": "Prepare a compliant, reversible workaround",
+        "detail": "Confirm that security or procurement already approves the option, or ask them to approve it first. Limit access to the minimum data needed, log what you set up, and write the steps to undo it. If the workaround requires bypassing any control, stop: that is not an option."
+      },
+      {
+        "title": "Close the loop",
+        "detail": "On the date, either proceed and send IT and your director one message with the exact status, or, if IT has fixed the blocker, thank them and drop the workaround. Record the outcome in the timeline so the next request starts from evidence."
+      }
+    ],
+    "script": {
+      "label": "Final request email",
+      "text": "Subject: Final request on ticket [ticket number]: [project name]\n\nHi [IT contact name],\n\nThank you for your replies on ticket [ticket number], filed [date]. The integration is still blocked and now affects [milestone] on [date]. The timeline and impact summary are attached, and I have shared them with [director name].\n\nUnless you advise otherwise by [date, five working days out], I will proceed with [approved option] on [date]. Everything I set up will be logged and reversible, and I will send you the configuration first.\n\nIf you have concerns with this approach, please reply by [date] and tell me what you need.\n\nThank you,\n[Your name]\ncc: [Boss name]"
+    },
+    "backfire": "Do not use this when the blocker is a security or compliance control you are not allowed to change, or when the workaround has not been approved. A deadline shift also fails if the date is unrealistic or if you send it cold, without first briefing your director. Never bypass controls or create shadow IT, even when the deadline is real. Stay courteous: this works through transparency, not threats.",
+    "signals": "IT replies with a dated plan or a named owner, or the blocker is solved. If neither happens, your director holds the record and the decision is theirs.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": true
+  },
+  {
+    "slug": "read-the-room-before-pitch",
+    "title": "Read the Room First",
+    "situation": "You are about to pitch a proposal to a senior group, and you cannot tell whether they are open or closed.",
+    "domain": "career",
+    "tags": [
+      "pitching",
+      "meetings",
+      "stakeholders",
+      "influence"
+    ],
+    "chapter": 7,
+    "principle": "Study the mood before you move",
+    "verses": [
+      "7.32",
+      "7.29"
+    ],
+    "scene": "You have ten minutes on the agenda for the budget proposal, and the VP is already scrolling through her phone. Two directors have their arms folded. The CFO asks one pointed question before you have opened your deck. Most people push harder at this point. Sun Tzu's view is that an army drawn up in calm, confident order is not the one to charge. You watch first: who leans in, who asks about timing, who asks about risk. Then you choose whether to pitch the full plan, ask for one small decision, or reschedule. The best pitch is sometimes the one you do not deliver today.",
+    "moves": [
+      {
+        "title": "Arrive early and observe",
+        "detail": "Get to the room five minutes early. Note who sits near the decision-maker, who checks devices, and how the previous presenter was received. Decide whether the room is relaxed, hurried or braced for a fight. Write three observations in your notes before you open your deck."
+      },
+      {
+        "title": "Ask one open question first",
+        "detail": "Begin with a question the room can answer in a sentence, such as: What would make this decision easy for you today? Listen closely. Answers with specific criteria mean you can go into detail; short or defensive answers mean you should narrow your ask to one decision."
+      },
+      {
+        "title": "Match your pitch to the energy",
+        "detail": "If the room is engaged, move through the plan quickly and leave time for objections. If people are tired or divided, present only the decision you need and the one risk they care about most. Do not argue with the strongest objection; acknowledge it and move on."
+      },
+      {
+        "title": "Set a fallback first",
+        "detail": "Decide in advance what you will do if the room stays closed: ask for a 20-minute follow-up with the two most skeptical people, or send a one-page memo with a date for a decision. Writing this down stops you from pushing the full deck into a bad room."
+      }
+    ],
+    "script": {
+      "label": "Follow-up after a cool room",
+      "text": "Hi [name], thank you for the time today. I could tell there were open questions on [topic], and I would rather answer them properly than rush. Could we take 20 minutes next week with you and [second name] to go through [specific concern]? I will bring a one-page summary of the options and what waiting until [date] would cost. Would [day, time] work for you?"
+    },
+    "backfire": "Reading the room is not a license to manipulate people or to hide information. If you use the mood to delay a decision that has a real deadline, or to avoid telling leaders about a risk, you are doing harm. A closed room may also reflect a bad morning rather than a bad idea. When in doubt, ask for a follow-up instead of reading silence as a no.",
+    "signals": "People answer your opening question with specifics, the decision-maker asks about next steps, and you leave with a dated follow-up or a yes.",
+    "effort": "minutes",
+    "difficulty": 1,
+    "featured": false
+  },
+  {
+    "slug": "launch-while-rivals-stretched",
+    "title": "Launch While Rivals Are Stretched",
+    "situation": "A competitor is about to ship, and your own launch date is still open to choice.",
+    "domain": "business",
+    "tags": [
+      "launch timing",
+      "competition",
+      "market",
+      "positioning"
+    ],
+    "chapter": 7,
+    "principle": "Be rested while the enemy is weary",
+    "verses": [
+      "7.31",
+      "7.30"
+    ],
+    "scene": "A rival announces a major release for the same month you planned yours. Their team is already stretched across two launches, support tickets are climbing, and their sales deck has gone quiet. You have a stable product and a few spare weeks. Sun Tzu's logic is to be well fed while the other army is famished, and to wait calmly rather than charge into their noise. You pick the window where they are busy and you are ready. The lesson is timing, not sabotage: you win by being prepared when they are not.",
+    "moves": [
+      {
+        "title": "Map the rival's calendar",
+        "detail": "List public signals: release notes, job postings, event sign-ups, conference talks and changelog frequency. Estimate when their team is busy with its own milestone. Write the estimate with your confidence level, and revisit it as new information arrives."
+      },
+      {
+        "title": "Check your readiness honestly",
+        "detail": "Ask engineering, support and sales to confirm in writing the week they can deliver. Note the gaps, such as docs not written or a pricing page unfinished. Commit to a date only when every team has signed off on the same week."
+      },
+      {
+        "title": "Pick a window with slack",
+        "detail": "Choose a launch week two to four weeks after the rival's, or ahead of it if you are clearly ready. Avoid their exact date unless your offer is meaningfully different. Put the week on the roadmap so every team plans around it."
+      },
+      {
+        "title": "Prepare your message on your terms",
+        "detail": "Write a comparison based on what your product does, with real use cases and no claims about the rival's weaknesses. Prepare talk tracks for customers who ask about the other launch. Tie every message to the customer problem, not to the rival's stumbles."
+      }
+    ],
+    "script": {
+      "label": "Internal launch-window note",
+      "text": "Hi [leadership name], based on public signals, [competitor] appears to be busy with their [event] through [month]. I recommend we move our launch to [week], when [team] will have support and docs ready and we will face less noise. The readiness checklist with sign-offs from engineering, support and sales is attached. Can we confirm [week] at Thursday's planning meeting?"
+    },
+    "backfire": "Timing is not a reason to spread rumors, copy claims or mock a rival's problems, and public signals are not proof of their plan. If your product is not ready, waiting only moves your own risk later. Do not hold a launch so long that customers wait for a feature they need now. And if a rival is genuinely ahead, a better window does not replace a better offer.",
+    "signals": "Your team is ready on the date you chose, and the customer questions you get are about your features rather than the rival's launch.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "refuse-the-in-law-bait",
+    "title": "Let the Bait Go Untouched",
+    "situation": "A relative makes a pointed remark at every family dinner, and each time you feel pulled into a fight.",
+    "domain": "family",
+    "tags": [
+      "in-laws",
+      "family dinners",
+      "conflict",
+      "boundaries"
+    ],
+    "chapter": 7,
+    "principle": "Do not swallow the enemy's bait",
+    "verses": [
+      "7.35",
+      "7.34"
+    ],
+    "scene": "Sunday dinner, and your mother-in-law says, in a voice that carries, that city life must be exhausting for you. The table goes quiet. Your partner looks at you. Your reply is already forming, sharp and well argued. You have answered this same remark four times before, and each time the evening soured. Sun Tzu warns against swallowing bait and against chasing an enemy who pretends to flee. Let the remark land. Give one calm sentence, then move the conversation somewhere else. You do not win the comment; you win the evening.",
+    "moves": [
+      {
+        "title": "Name the pattern privately",
+        "detail": "Write down the last three or four times the same remark came up, what triggered it, and how you responded. Note what you wanted each time, such as respect, a fight or simply to be left alone. Seeing the repetition makes it easier to stop reacting in the moment."
+      },
+      {
+        "title": "Choose your one-line reply",
+        "detail": "Pick a short, neutral reply you can say without heat, such as: That is one way to see it. Practice it aloud until it sounds natural. Do not add a defense or a counterattack. The goal is to close the topic, not to win it."
+      },
+      {
+        "title": "Change the ground",
+        "detail": "After your reply, move the conversation: ask someone about their garden, offer to help clear plates, or suggest a walk after dessert. A new topic or a change of room breaks the loop faster than arguing the point."
+      },
+      {
+        "title": "Agree a signal with your partner",
+        "detail": "Talk with your partner before the next gathering. Agree on a discreet signal, such as a tap on the table, that means I need you to step in. Decide who takes the remark, so neither of you is left alone with the bait."
+      }
+    ],
+    "script": {
+      "label": "Message to partner before the visit",
+      "text": "Hi [partner name], before we go to [parent name]'s on Sunday, can we agree on a plan? Last time [relative] pushed on [topic] and we both ended up stuck. My plan is to answer once, calmly, and then change the subject. If I tap the table, please step in and move us to [new topic or activity]. I want the evening to be good for both of us. Does that work for you?"
+    },
+    "backfire": "This does not work when the remark is part of a pattern of abuse, cruelty or threats, or when a child or vulnerable person is at risk. In those cases, leave the room, protect the people at risk and get support; staying calm is not required. Also do not leave your partner to manage the family alone, or bury a real problem that needs a serious conversation.",
+    "signals": "The same remark gets a shorter exchange, the evening keeps moving, and over several visits the urge to argue fades.",
+    "effort": "minutes",
+    "difficulty": 1,
+    "featured": false
+  }
+]

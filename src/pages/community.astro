@@ -1,0 +1,131 @@
+---
+import Base from '../layouts/Base.astro';
+import Seal from '../components/Seal.astro';
+import demo from '../../data/community-demo.json';
+import { tactics, DOMAINS } from '../lib/content.js';
+
+const tacticOptions = tactics.map((t) => ({ slug: t.slug, title: t.title }));
+const payload = JSON.stringify({ demo, tactics: tacticOptions, domains: DOMAINS });
+---
+<Base title="Community field reports" description="Real battles, the Sun Tzu tactic that was used, and how it turned out. Rate field reports and share your own.">
+  <header class="c-hero wrap">
+    <div>
+      <p class="eyebrow" data-reveal>Community · 眾智</p>
+      <h1 data-reveal>Field reports.</h1>
+      <p class="lede" data-reveal>Real situations, the tactic that was tried, and what happened. Rate what works. Flag what is reckless.</p>
+    </div>
+    <a class="btn btn--seal" href="#new">Post a field report</a>
+  </header>
+
+  <section class="wrap">
+    <div class="notice" role="note">
+      <span aria-hidden="true">⛩</span>
+      <span><strong>Preview mode.</strong> Reports and ratings you add are saved only in this browser for now. Phase 2 adds sign-in (Google or GitHub) with only your alias shown publicly, shared ratings, and moderation. <a href="/about/#roadmap">Roadmap</a></span>
+    </div>
+
+    <div class="c-tools panel">
+      <div class="field" style="flex:1 1 240px">
+        <label for="cq">Search</label>
+        <input id="cq" class="input" type="search" placeholder="manager, landlord, salary…" data-cq />
+      </div>
+      <div class="field">
+        <label for="csort">Sort</label>
+        <select id="csort" class="input" data-csort>
+          <option value="top">Top rated</option>
+          <option value="new">Newest</option>
+          <option value="votes">Most rated</option>
+        </select>
+      </div>
+      <div class="domains" role="group" aria-label="Domain">
+        <button class="chip" type="button" aria-pressed="true" data-cdomain="">All</button>
+        {Object.entries(DOMAINS).map(([k, d]) => <button class="chip" type="button" aria-pressed="false" data-cdomain={k}>{d.label}</button>)}
+      </div>
+    </div>
+
+    <div class="posts" data-posts aria-live="polite"></div>
+  </section>
+
+  <section class="wrap section" id="new" aria-labelledby="new-title">
+    <div class="new-grid">
+      <div>
+        <Seal text="記" size="lg" />
+        <h2 id="new-title" style="margin-top:24px">Post a field report</h2>
+        <p class="lede">Share what happened so others can learn from it.</p>
+        <ul class="rules">
+          <li>Use roles, not names: “my manager”, “Vendor A”, “my in-law”.</li>
+          <li>No company names, emails, phone numbers or screenshots. We mask obvious ones automatically.</li>
+          <li>Report what you did and how it turned out, including when it went wrong.</li>
+          <li>No harassment, revenge or deception tactics. Reports like that get flagged and hidden.</li>
+        </ul>
+      </div>
+      <form class="panel new-form" data-new>
+        <div class="pod-row">
+          <div class="field">
+            <label for="alias">Alias (shown publicly)</label>
+            <input id="alias" class="input" maxlength="32" required data-alias />
+          </div>
+          <div class="field">
+            <label for="ndomain">Domain</label>
+            <select id="ndomain" class="input" data-ndomain>
+              {Object.entries(DOMAINS).map(([k, d]) => <option value={k}>{d.label}</option>)}
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="ntitle">Title</label><input id="ntitle" class="input" maxlength="90" required data-ntitle placeholder="The manager who never says yes or no" /></div>
+        <div class="field"><label for="nsit">The situation</label><textarea id="nsit" class="input" rows="4" maxlength="1200" required data-nsit></textarea></div>
+        <div class="field"><label for="ntac">What you did (the tactic)</label><textarea id="ntac" class="input" rows="5" maxlength="2000" required data-ntac></textarea></div>
+        <div class="field"><label for="nout">How it turned out</label><textarea id="nout" class="input" rows="3" maxlength="800" data-nout placeholder="Worked, partly worked, or backfired, and what you learned."></textarea></div>
+        <div class="pod-row">
+          <div class="field">
+            <label for="nslug">Closest tactic (optional)</label>
+            <select id="nslug" class="input" data-nslug><option value="">—</option></select>
+          </div>
+          <div class="field">
+            <label for="nverses">Verses (optional, e.g. 3.18, 6.30)</label>
+            <input id="nverses" class="input" data-nverses />
+          </div>
+        </div>
+        <label class="check-row"><input type="checkbox" required data-nconsent /> I removed real names, company names and private details.</label>
+        <div class="f-actions">
+          <button class="btn btn--seal" type="submit">Post report</button>
+          <span class="hint" data-nstatus role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <div hidden data-community-payload data-json={payload}></div>
+</Base>
+
+<script src="../scripts/community.js"></script>
+
+<style>
+  .c-hero { padding: 130px 0 28px; display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; }
+  .c-tools { display: flex; flex-wrap: wrap; gap: 16px; align-items: end; margin: 18px 0; }
+  .domains { display: flex; flex-wrap: wrap; gap: 6px; flex-basis: 100%; }
+  .posts { display: grid; gap: 16px; padding-bottom: 40px; }
+  .posts :global(.post) { display: grid; grid-template-columns: 56px 1fr; gap: 18px; padding: 24px; border-radius: var(--radius); border: 1px solid var(--line); background: linear-gradient(180deg, rgba(239, 229, 207, 0.035), rgba(239, 229, 207, 0.01)); }
+  .posts :global(.post.mine) { border-color: rgba(200, 163, 90, 0.4); }
+  .posts :global(.avatar) { width: 52px; height: 52px; border-radius: 8px; display: grid; place-items: center; background: var(--ink-4); font: 700 1.3rem var(--f-brush); color: var(--paper); transform: rotate(-3deg); }
+  .posts :global(.post h3) { margin: 6px 0 6px; font-size: 1.5rem; }
+  .posts :global(.who) { font: 500 0.78rem var(--f-ui); color: var(--paper-3); display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .posts :global(.lbl) { font: 600 0.66rem var(--f-ui); letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin: 14px 0 4px; display: block; }
+  .posts :global(.post p) { margin: 0; color: var(--paper-2); white-space: pre-wrap; }
+  .posts :global(.post-foot) { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
+  .posts :global(.stars) { display: inline-flex; gap: 2px; }
+  .posts :global(.stars button) { background: none; border: 0; padding: 2px; cursor: pointer; font-size: 1.3rem; line-height: 1; color: var(--ink-4); transition: color 0.2s, transform 0.2s; }
+  .posts :global(.stars button.on) { color: var(--seal-hi); }
+  .posts :global(.stars button:hover) { transform: scale(1.2); }
+  .posts :global(.score) { font: 500 0.8rem var(--f-ui); color: var(--paper-3); }
+  .posts :global(.flag) { background: none; border: 0; color: var(--paper-4); font: 500 0.75rem var(--f-ui); cursor: pointer; }
+  .posts :global(.flag:hover) { color: var(--seal-hi); }
+  @media (max-width: 600px) { .posts :global(.post) { grid-template-columns: 1fr; } }
+  .new-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(24px, 5vw, 64px); align-items: start; }
+  @media (max-width: 900px) { .new-grid { grid-template-columns: 1fr; } }
+  .rules { padding-left: 1.1em; color: var(--paper-2); font: 400 0.92rem/1.7 var(--f-ui); }
+  .new-form { display: grid; gap: 16px; }
+  .pod-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+  .check-row { display: flex; gap: 10px; align-items: center; font: 400 0.85rem var(--f-ui); color: var(--paper-2); }
+  .check-row input { accent-color: var(--seal); width: 16px; height: 16px; }
+  .f-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+</style>

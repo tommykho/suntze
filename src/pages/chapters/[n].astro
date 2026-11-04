@@ -1,0 +1,137 @@
+---
+import Base from '../../layouts/Base.astro';
+import Seal from '../../components/Seal.astro';
+import TacticCard from '../../components/TacticCard.astro';
+import BrushDivider from '../../components/BrushDivider.astro';
+import { chapters, ZH_NUMERALS, verseHref } from '../../lib/content.js';
+
+export function getStaticPaths() {
+  return chapters.map((c) => ({ params: { n: String(c.n) }, props: { c } }));
+}
+const { c } = Astro.props;
+const prev = chapters[c.n - 2];
+const next = chapters[c.n];
+const cited = new Set(c.tactics.flatMap((t) => t.verses));
+const principleVerses = new Set(c.principles.flatMap((p) => p.verses));
+---
+<Base title={`${c.roman}. ${c.title_en} (${c.title_zh})`} description={`${c.essence} ${c.modern_lens}`.slice(0, 300)}>
+  <div class="progress" aria-hidden="true"><i data-progress></i></div>
+
+  <header class="ch-hero">
+    <div class="wrap ch-hero-grid">
+      <div>
+        <p class="eyebrow" data-reveal>Chapter {c.roman} of XIII · 第{ZH_NUMERALS[c.n - 1]}篇</p>
+        <h1 data-reveal>{c.title_en}</h1>
+        <p class="lede" data-reveal>{c.essence}</p>
+        <p class="ch-lens" data-reveal>{c.modern_lens}</p>
+      </div>
+      <div class="ch-hero-zh" lang="zh-Hant" data-reveal="scale">
+        <span class="brush">{c.title_zh}</span>
+        <Seal text={ZH_NUMERALS[c.n - 1]} size="lg" />
+      </div>
+    </div>
+  </header>
+
+  <section class="wrap principles" aria-labelledby="principles-title">
+    <h2 id="principles-title" class="sr-only">Key principles</h2>
+    <div class="grid">
+      {c.principles.map((p, i) => (
+        <article class="card principle" data-reveal>
+          <span class="principle-n">{String(i + 1).padStart(2, '0')}</span>
+          <h3>{p.name}</h3>
+          <p>{p.gloss}</p>
+          <div class="card-meta">
+            {p.verses.map((v) => <a class="chip" href={verseHref(v)}>Verse {v}</a>)}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <BrushDivider />
+
+  <section class="wrap text-section" aria-labelledby="text-title">
+    <div class="text-head">
+      <div>
+        <p class="eyebrow">The text · 原文</p>
+        <h2 id="text-title">Read the chapter</h2>
+      </div>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button class="chip" type="button" data-lang-btn="both" aria-pressed="true">EN + 中文</button>
+        <button class="chip" type="button" data-lang-btn="en" aria-pressed="false">English</button>
+        <button class="chip" type="button" data-lang-btn="zh" aria-pressed="false">中文</button>
+      </div>
+    </div>
+    <ol class="verses" data-lang="both" data-verses>
+      {c.verses.map((v) => (
+        <li class={`verse ${cited.has(v.id) || principleVerses.has(v.id) ? 'is-key' : ''}`} id={`v${v.id.replace('.', '-')}`}>
+          <a class="verse-id" href={`#v${v.id.replace('.', '-')}`} aria-label={`Verse ${v.id}`}>{c.n}.{v.label}</a>
+          <div class="verse-body">
+            <p class="verse-en">{v.en}</p>
+            {v.zh && <p class="verse-zh" lang="zh-Hant">{v.zh}</p>}
+          </div>
+        </li>
+      ))}
+    </ol>
+    <p class="hint" style="margin-top:16px">Highlighted verses are used by this chapter's tactics. English: Lionel Giles (1910). Chinese: 孫子兵法, Project Gutenberg #23864. Verse alignment is editorial.</p>
+  </section>
+
+  {c.tactics.length > 0 && (
+    <section class="section wrap" aria-labelledby="tactics-title">
+      <p class="eyebrow" data-reveal>Apply it</p>
+      <h2 id="tactics-title" data-reveal>Tactics from {c.title_en}</h2>
+      <div class="grid" style="margin-top:28px">
+        {c.tactics.map((t) => <TacticCard t={t} />)}
+      </div>
+    </section>
+  )}
+
+  <nav class="wrap ch-nav" aria-label="Chapter navigation">
+    {prev ? <a class="card" href={`/chapters/${prev.n}/`}><span class="eyebrow">← Previous</span><h3>{prev.roman}. {prev.title_en} <span class="zh muted">{prev.title_zh}</span></h3></a> : <span></span>}
+    {next ? <a class="card next" href={`/chapters/${next.n}/`}><span class="eyebrow">Next →</span><h3>{next.roman}. {next.title_en} <span class="zh muted">{next.title_zh}</span></h3></a> : <a class="card next" href="/field/"><span class="eyebrow">Finished the book →</span><h3>Bring your own battle to the Field Challenge</h3></a>}
+  </nav>
+</Base>
+
+<script>
+  const list = document.querySelector('[data-verses]');
+  const KEY = 'sz.lang';
+  const apply = (lang) => {
+    list.dataset.lang = lang;
+    document.querySelectorAll('[data-lang-btn]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.langBtn === lang)));
+  };
+  try { const saved = localStorage.getItem(KEY); if (saved) apply(saved); } catch {}
+  document.querySelectorAll('[data-lang-btn]').forEach((b) =>
+    b.addEventListener('click', () => {
+      apply(b.dataset.langBtn);
+      try { localStorage.setItem(KEY, b.dataset.langBtn); } catch {}
+      window.dispatchEvent(new Event('resize'));
+    }),
+  );
+</script>
+
+<style>
+  .progress { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 60; }
+  .progress i { display: block; height: 100%; background: var(--seal-hi); transform: scaleX(0); transform-origin: left; }
+  .ch-hero { padding: 140px 0 60px; background: radial-gradient(ellipse 60% 70% at 80% 30%, #231e16, transparent 70%); }
+  .ch-hero-grid { display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 40px; align-items: center; }
+  .ch-lens { color: var(--paper-2); max-width: 62ch; }
+  .ch-hero-zh { display: flex; flex-direction: column; align-items: center; gap: 22px; }
+  .ch-hero-zh .brush { writing-mode: vertical-rl; font-size: clamp(4rem, 9vw, 8rem); font-weight: 700; line-height: 1; letter-spacing: 0.1em; filter: url(#ink-bleed); }
+  @media (max-width: 760px) {
+    .ch-hero-grid { grid-template-columns: 1fr; }
+    .ch-hero-zh { flex-direction: row; order: -1; justify-content: flex-start; }
+    .ch-hero-zh .brush { writing-mode: horizontal-tb; font-size: 3.6rem; }
+  }
+  .principles { padding-bottom: 40px; }
+  .principle-n { font: 600 2.4rem/1 var(--f-display); color: var(--seal); }
+  .text-section { padding-block: 56px 24px; }
+  .text-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; flex-wrap: wrap; margin-bottom: 12px; position: sticky; top: 0; z-index: 5; padding: 80px 0 14px; background: linear-gradient(var(--ink-1) 82%, transparent); }
+  .text-head h2 { margin: 0; }
+  .lang-toggle { display: flex; gap: 6px; }
+  .verses { list-style: none; margin: 0; padding: 0; }
+  .verse.is-key .verse-id { background: var(--seal); color: var(--paper); border-radius: 4px; padding: 0.3em 0.4em; align-self: start; text-align: center; }
+  .ch-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding-bottom: 80px; }
+  .ch-nav .next { text-align: right; }
+  .ch-nav .next .eyebrow { justify-content: flex-end; }
+  @media (max-width: 700px) { .ch-nav { grid-template-columns: 1fr; } }
+</style>

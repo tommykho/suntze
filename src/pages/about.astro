@@ -1,0 +1,78 @@
+---
+import Base from '../layouts/Base.astro';
+import Seal from '../components/Seal.astro';
+import { chapters, tactics } from '../lib/content.js';
+const verseCount = chapters.reduce((a, c) => a + c.verses.length, 0);
+---
+<Base title="Sources, privacy & method" description="Where the text comes from, how AI answers are checked against the book, how your API keys are handled, and what is coming next.">
+  <header class="wrap a-hero">
+    <p class="eyebrow" data-reveal>About · 緣起</p>
+    <h1 data-reveal>Ancient text, modern ground.</h1>
+    <p class="lede" data-reveal>This manual applies Sun Tzu's strategy to everyday conflicts at work and at home. It favours preparation over confrontation and keeps every quote traceable to the source.</p>
+  </header>
+
+  <div class="narrow prose">
+    <section id="sources">
+      <h2>Sources</h2>
+      <ul>
+        <li><strong>English:</strong> Lionel Giles, <em>Sun Tzu on the Art of War</em> (1910), text-only edition, Project Gutenberg eBook #17405. Public domain. {verseCount} numbered verses in 13 chapters, using Giles's own numbering (combined verses such as “5, 6” use the first number).</li>
+        <li><strong>Chinese:</strong> 孫子兵法, Project Gutenberg eBook #23864. Public domain. Each Chinese passage is matched to a Giles verse. The matching was done by hand and checked by machine: every Chinese segment is an exact, in-order slice of the source, covering 100% of the text.</li>
+        <li><strong>Tactics:</strong> {tactics.length} original tactics written for this project. Each cites verse IDs only; the quote you see is always rendered from the dataset, never typed by hand.</li>
+      </ul>
+    </section>
+
+    <section id="method">
+      <h2>How AI answers are checked</h2>
+      <ol>
+        <li>Your situation is matched against the book and the tactic library <strong>in your browser</strong>.</li>
+        <li>The AI receives a short list of verses it is allowed to cite, with their IDs.</li>
+        <li>After it answers, every <code>[chapter.verse]</code> citation is checked against the dataset. Real verses are shown in full (English and 原文); invented IDs are struck through; quotes that do not match the text exactly are labelled “paraphrased”.</li>
+      </ol>
+      <p>AI can still be wrong about people and situations. Treat answers as a second opinion, not as legal, HR, medical or financial advice.</p>
+    </section>
+
+    <section id="privacy">
+      <h2>Privacy and your API keys</h2>
+      <ul>
+        <li><strong>This site has no database of your questions.</strong> Your situation goes from your browser straight to the AI provider you choose.</li>
+        <li><strong>Keys stay in your browser.</strong> By default they live in session storage and are forgotten when you close the tab. Tick “Remember” to keep them in local storage on that device. “Forget all keys” deletes them.</li>
+        <li><strong>The relay:</strong> NVIDIA NIM and Meta block requests from web pages, so those calls go through <code>/api/relay</code>. It is a stateless pass-through on Cloudflare. It forwards your request to an allow-listed provider address and streams the answer back. It does not store or log keys or text, and it refuses any other destination.</li>
+        <li><strong>Provider policies apply.</strong> Free tiers (for example Gemini's) may use prompts to improve the provider's models. Leave out names and private details.</li>
+        <li><strong>Podcast voice:</strong> the default voice (Kokoro-82M) runs on your device. If you choose Gemini, OpenAI or ElevenLabs, the script is sent to that provider with your key.</li>
+      </ul>
+    </section>
+
+    <section id="cost">
+      <h2>Why it costs the site nothing to run</h2>
+      <p>The site is static (Cloudflare Pages). AI and voice run either on your device or on your own provider account. The only server code is the small relay, which fits easily in Cloudflare's free daily quota. If that quota is ever exceeded, relay calls fail until the next day; nothing is billed.</p>
+    </section>
+
+    <section id="roadmap">
+      <h2>Roadmap</h2>
+      <ol>
+        <li><strong>Now:</strong> the book, tactic library, Field Challenge (12 AI options, bring your own key), podcast MP3, and a community board in preview mode.</li>
+        <li><strong>Next:</strong> sign-in with Google or GitHub (only your alias is shown), shared field reports and ratings on Cloudflare D1, flag-to-hide moderation, and auto-masking of names.</li>
+        <li><strong>Later:</strong> fully bilingual interface (繁體中文), daily 30-second episodes, tactic packs, and an optional supporter tier.</li>
+      </ol>
+    </section>
+
+    <section id="credits">
+      <h2>Credits and licences</h2>
+      <p class="hint">GSAP (Standard “no charge” licence) · Lenis (MIT) · MiniSearch (MIT) · Astro (MIT) · kokoro-js and Kokoro-82M (Apache-2.0) · Transformers.js and ONNX Runtime Web (Apache-2.0/MIT) · lamejs MP3 encoder (LGPL-3.0, loaded as a separate unmodified module) · Anthropic TypeScript SDK (MIT) · WebLLM (Apache-2.0, loaded on demand) · Fonts: Cormorant Garamond, EB Garamond, Inter, Noto Serif TC, LXGW WenKai TC (SIL OFL).</p>
+    </section>
+  </div>
+
+  <div class="wrap" style="display:grid;justify-items:center;padding:60px 0 100px">
+    <Seal text="不戰而屈人之兵" size="lg" vertical style="--size:140px;font-size:1.1rem" />
+    <p class="muted" style="margin-top:16px;font-style:italic">“Breaking the enemy's resistance without fighting.” 3.2</p>
+  </div>
+</Base>
+
+<style>
+  .a-hero { padding: 140px 0 40px; }
+  .prose section { padding: 36px 0; border-top: 1px solid var(--line); scroll-margin-top: 90px; }
+  .prose h2 { font-size: clamp(1.8rem, 2vw + 1rem, 2.6rem); }
+  .prose ul, .prose ol { padding-left: 1.2em; display: grid; gap: 10px; color: var(--paper-2); }
+  .prose strong { color: var(--paper); }
+  .prose code { font: 500 0.85em var(--f-ui); background: var(--ink-3); padding: 0.1em 0.4em; border-radius: 4px; }
+</style>

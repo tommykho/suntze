@@ -1,0 +1,186 @@
+[
+  {
+    "slug": "map-the-reorg-terrain",
+    "title": "Map the Reorg Terrain",
+    "situation": "A reorganization is announced, and you cannot tell which roles are safe, which are trapped and which are open.",
+    "domain": "work",
+    "tags": [
+      "reorganization",
+      "change",
+      "career map",
+      "stakeholders"
+    ],
+    "chapter": 10,
+    "principle": "Read the ground before you step",
+    "verses": [
+      "10.2",
+      "10.4"
+    ],
+    "scene": "The memo says three teams are merging into two, effective next month. Nobody has said which managers stay. You lead a project that matters to the new structure, and the chat is full of rumors. Sun Tzu describes open ground that anyone can cross, and ground that is easy to leave but hard to return to. Map the terrain before anyone else does. Find out which parts of the new structure are open to everyone and which will be hard to rejoin once you step out. A reorganization is a map being drawn. Be the person who reads it first.",
+    "moves": [
+      {
+        "title": "Sketch the new structure",
+        "detail": "Use the memo, the leadership calendar and the new team names to draw the target structure on one page. Mark who owns each budget, who reports to whom and where open roles are posted. Label facts and guesses differently so you do not mistake one for the other."
+      },
+      {
+        "title": "Identify the entangling ground",
+        "detail": "Mark the roles or projects you can leave easily but would struggle to rejoin, such as a niche specialist team with no headcount. Stay there deliberately, or exit only with a plan. Open ground is where many people can work and move freely."
+      },
+      {
+        "title": "Build relationships on the open ground",
+        "detail": "Book 20-minute conversations with the leaders of the two or three teams you most want to work with. Ask what problems they are trying to solve in the next six months and how your current project could help them."
+      },
+      {
+        "title": "Put your position in writing",
+        "detail": "Send your manager a short note: the project you lead, its outcome so far, and the role you would like in the new structure, with your reason. Ask to be considered by a specific date. A clear request is harder to ignore than a hopeful silence."
+      }
+    ],
+    "script": {
+      "label": "Request to your manager",
+      "text": "Hi [manager name], with the reorganization coming, I would like to be considered for a role on the [new team name] team. I have led [project] and delivered [result], and I want to keep working on [skill or problem]. Could we discuss the next step before [date], so I can plan my handover and keep the project on track?"
+    },
+    "backfire": "Mapping a reorg can look like playing politics, and people notice when a map is used to undercut colleagues. Do not share draft org charts you were not given, and do not recruit people away from teams before leadership decides. Some ground is simply closed. If the new structure has no room for you, find the next opening rather than forcing your way in.",
+    "signals": "You have a dated conversation with your manager about your role, and at least two leaders in the new structure know what you do.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "own-what-went-wrong",
+    "title": "Own What Went Wrong",
+    "situation": "A project slipped badly, and your team is looking to you for explanations and a fix.",
+    "domain": "work",
+    "tags": [
+      "team lead",
+      "accountability",
+      "failure",
+      "recovery"
+    ],
+    "chapter": 10,
+    "principle": "Check the faults you can control",
+    "verses": [
+      "10.14",
+      "10.18"
+    ],
+    "scene": "The vendor integration has slipped four weeks, and the steering committee wants to know who failed. Engineers blame the spec, the spec author blames product, and product blames you for accepting the timeline. Sun Tzu lists six calamities that come not from nature but from the leader's own choices: flight, insubordination, collapse, ruin, disorganization and rout. Several of them are visible in this room. Before you point elsewhere, check whether roles were clear, whether you matched people to the work, and whether you saw the risk early. A failure you own can be fixed. A failure you blame gets repeated.",
+    "moves": [
+      {
+        "title": "Write the timeline of decisions",
+        "detail": "Create a factual timeline from kickoff to today. Include each decision, who made it and what was known at the time. Mark where you agreed to a date you could not meet, or where you did not escalate a warning you had seen. Be honest about your own part."
+      },
+      {
+        "title": "Check the six calamities",
+        "detail": "Ask: Were roles and owners clear? Did the team have the skills for the work? Did you keep the strongest people on the riskiest part? Did one person's frustration drive decisions? Write a one-line answer to each question."
+      },
+      {
+        "title": "Tell your manager before they ask",
+        "detail": "Send a short message covering what happened, what your part was and the fix you propose, with dates. Do not wait for the review meeting. Early ownership is what turns a failure into a credible recovery plan."
+      },
+      {
+        "title": "Reset roles in writing",
+        "detail": "Publish a one-page recovery plan that names one owner per workstream, the decision rights, and the check-in rhythm. Ask each owner to confirm their part in the team channel. Ambiguity is the cause you can remove fastest."
+      }
+    ],
+    "script": {
+      "label": "Note to manager",
+      "text": "Hi [manager name], I have reviewed the [project] slip and I want you to hear my view first. I accepted the March date without checking it against the vendor's testing window, and I did not escalate the risk when it appeared in April. Here is the recovery plan: named owners for each workstream, a revised date of [date], and a check-in every Tuesday. I would welcome your feedback before Thursday."
+    },
+    "backfire": "Taking ownership does not mean taking all the blame. If someone else made a decision or the scope was forced on you, say so accurately. Do not use 'I own it' to dodge a conversation about performance, and do not shield a team member who is clearly causing the problem. Overcorrecting into self-blame can also make your manager reluctant to trust your plan.",
+    "signals": "The steering committee discusses the recovery plan instead of who failed, and each workstream owner confirms their role in writing.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "scout-the-ground-before-moving",
+    "title": "Scout the Ground First",
+    "situation": "You are moving to a new city or neighborhood you have never lived in, and you are deciding without local knowledge.",
+    "domain": "personal",
+    "tags": [
+      "moving",
+      "relocation",
+      "neighborhood",
+      "research"
+    ],
+    "chapter": 10,
+    "principle": "Know the ground and its guides",
+    "verses": [
+      "10.13",
+      "7.14"
+    ],
+    "scene": "The job offer comes with a relocation date six weeks away. You have a shortlist of three cities, all visited once on holiday. The listings look good, but you cannot tell which streets flood, which commute turns brutal at 8am, or which blocks go quiet at night. Sun Tzu says a leader must study the principles of the ground, and that natural advantage cannot be used without local guides. Before you sign a lease, find those guides. A map shows you the roads; a local shows you the traps.",
+    "moves": [
+      {
+        "title": "Narrow to two areas",
+        "detail": "Use a commute tool with the actual office address at your real commuting hours. Compare rent, transit access and school catchment where it matters. Pull crime maps from the local police website. Keep the two areas that fit your constraints and drop the rest."
+      },
+      {
+        "title": "Find two local guides",
+        "detail": "Message two people who live in each shortlisted area: a colleague, an old classmate, or a member of a local community group. Ask what they wish they had known before moving, where the noise or flood risks are, and which block they would avoid."
+      },
+      {
+        "title": "Visit at real living hours",
+        "detail": "Walk the route to work at 8am on a weekday, shop at the grocery store on a Saturday evening, and spend time in the area after dark. Check parking, noise and how long it takes to get a doctor's appointment. Take notes on your phone, not on the listing."
+      },
+      {
+        "title": "Read the lease closely",
+        "detail": "Before you sign, get the deposit terms, repair history and any planned building works in writing. Check local tenant rights and recent reviews. Walk away if the answers are vague or the deposit terms are unusual."
+      }
+    ],
+    "script": {
+      "label": "Question to a local guide",
+      "text": "Hi [name], I am considering moving to [neighborhood] next spring for the [job] role, and you were the first person I thought of. Would you have 20 minutes this week? I would love to hear what daily life is really like, what the commute is like, and what you wish you had known before you moved. I am happy to buy you a coffee."
+    },
+    "backfire": "Local advice reflects one person's life, so check it against two or three sources. Do not use neighborhood reputation to judge the people who live there, or to steer your search in ways that exclude people by race, religion, family status or disability; that is illegal in many places. Do not sign a lease you have not inspected just because you are short on time.",
+    "signals": "Your two local guides agree on the main trade-offs, and your commute and errands match what you saw when you visited at real hours.",
+    "effort": "days",
+    "difficulty": 1,
+    "featured": false
+  },
+  {
+    "slug": "refuse-the-stalling-bait",
+    "title": "Hold Your Ground and Wait",
+    "situation": "A vendor keeps offering small concessions and next-month promises instead of signing, and your deadline is slipping.",
+    "domain": "business",
+    "tags": [
+      "vendors",
+      "procurement",
+      "negotiation",
+      "stalling"
+    ],
+    "chapter": 10,
+    "principle": "Make the other side commit",
+    "verses": [
+      "10.6",
+      "10.7"
+    ],
+    "scene": "Your contract with a logistics vendor expired ten days ago, and they are still operating on a handshake. Each week their rep offers a small discount, a pilot extension, or a promise of a senior call next month. Every offer feels like progress, and you are tempted to accept one and see what happens. Sun Tzu describes ground where neither side gains by moving first. There, he says, do not stir forth for the bait. Hold your position, keep your alternatives warm and set a date. A stall is a choice, and you can make it expensive.",
+    "moves": [
+      {
+        "title": "Log each concession and its condition",
+        "detail": "Create a one-page sheet listing every offer the vendor has made, the date, and what they asked for in return. Note whether any offer ever appeared in writing. The pattern of conditional promises is the signal, not any single offer."
+      },
+      {
+        "title": "Keep two alternatives warm",
+        "detail": "Get a rough quote from at least one other provider, and brief your internal team on switching cost and timeline. Do not announce it. The point is that a real alternative changes how the vendor reads your patience."
+      },
+      {
+        "title": "Set a written decision date",
+        "detail": "Send the vendor the terms you require, a signing date and the consequence of missing it, such as moving to the alternative or pausing the new work. Keep it specific and reasonable: five working days is usually enough."
+      },
+      {
+        "title": "Decline the bait politely",
+        "detail": "When the vendor offers a short extension or a call next month, accept only if it comes with a signed term sheet. If an offer only postpones the decision, thank them and restate the date. Do not continue ongoing work without signed terms."
+      }
+    ],
+    "script": {
+      "label": "Deadline to vendor",
+      "text": "Hi [vendor contact], thank you for the discount proposal and the call on [date]. To move forward, we need a signed agreement on the terms we discussed by [date, five working days out]. If we do not have it by then, we will pause the [project] work and look at other options. I am keen to finish this with you, so please tell me if anything is blocking signature."
+    },
+    "backfire": "Waiting backfires if you depend on this vendor and have no plan for a gap, or if they are the only option in a regulated area. Do not bluff about unpriced alternatives or threaten legal action you will not pursue. Check your contract before stopping payment for a service you use. If they may be in trouble, ask plainly, because a sudden pause can hurt your own supply.",
+    "signals": "The vendor sends terms in writing before your date, or accepts the consequence, and you have a working alternative within reach.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": false
+  }
+]

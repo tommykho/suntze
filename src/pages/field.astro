@@ -1,0 +1,263 @@
+---
+import Base from '../layouts/Base.astro';
+import Seal from '../components/Seal.astro';
+import { PROVIDERS } from '../scripts/field/providers.js';
+import { KOKORO_VOICES } from '../scripts/field/tts.js';
+
+const groups = [...new Set(PROVIDERS.map((p) => p.group))];
+const examples = [
+  'A coworker keeps taking credit for my analysis in meetings with our director.',
+  'My manager approves nothing in writing and then blames me when plans change.',
+  'IT has ignored my access request for three weeks and my project deadline is close.',
+  'My sister-in-law criticises my parenting at every family gathering.',
+  'A competitor is undercutting our prices to win our biggest client.',
+  'My landlord ignores repair requests for a broken heater.',
+];
+---
+<Base title="Field Challenge" description="Describe your conflict and get a Sun Tzu plan with verified verse citations, ready-to-send message, backfire check and a downloadable 30-second podcast. Bring your own free AI key.">
+  <header class="f-hero wrap">
+    <div>
+      <p class="eyebrow" data-reveal>Field Challenge · 兵棋推演</p>
+      <h1 data-reveal>Describe your battlefield.</h1>
+      <p class="lede" data-reveal>An AI strategist answers with quotes checked against the original text, concrete moves, a message to send, and a 30-second podcast you can download.</p>
+    </div>
+    <Seal text="問計" size="lg" data-reveal="scale" />
+  </header>
+
+  <section class="wrap f-grid">
+    <!-- ======== INPUT ======== -->
+    <form class="panel f-input" data-form>
+      <div class="field">
+        <label for="situation">Your situation</label>
+        <textarea id="situation" class="input" rows="7" maxlength="4000" required data-situation
+          placeholder="Who is involved, what keeps happening, what you have tried, and what you want. Leave out real names."></textarea>
+        <p class="hint"><span data-chars>0</span>/4000 · Tip: replace names with roles (“my manager”, “Vendor A”).</p>
+      </div>
+      <div class="examples" aria-label="Examples">
+        {examples.map((e) => <button class="chip" type="button" data-example={e}>{e.length > 46 ? e.slice(0, 44) + '…' : e}</button>)}
+      </div>
+
+      <div class="provider-bar">
+        <div>
+          <span class="label">Strategist</span>
+          <p class="provider-now" data-provider-now>—</p>
+        </div>
+        <button class="btn btn--sm" type="button" data-open-settings>Settings &amp; keys</button>
+      </div>
+
+      <div class="f-actions">
+        <button class="btn btn--seal" type="submit" data-ask>Consult the General</button>
+        <button class="btn" type="button" data-manual>Manual only (no AI)</button>
+        <button class="btn" type="button" data-stop hidden>Stop</button>
+      </div>
+      <p class="hint" data-status role="status" aria-live="polite"></p>
+    </form>
+
+    <!-- ======== OUTPUT ======== -->
+    <section class="panel f-output" aria-labelledby="answer-title" data-output-panel>
+      <div class="out-head">
+        <h2 id="answer-title" class="label">The General's counsel</h2>
+        <div class="out-tools" hidden data-out-tools>
+          <button class="chip" type="button" data-copy-answer>Copy</button>
+          <button class="chip" type="button" data-share>Save as field report</button>
+        </div>
+      </div>
+      <div class="answer" data-answer>
+        <div class="empty-state">
+          <div class="brush empty-zh" aria-hidden="true">知己知彼</div>
+          <p>Know the other side and know yourself. Describe your situation and choose a strategist, or press <strong>Manual only</strong> to search the book and tactic library instantly, with no AI or key.</p>
+        </div>
+      </div>
+      <div class="verify" hidden data-verify></div>
+    </section>
+  </section>
+
+  <!-- ======== PODCAST ======== -->
+  <section class="wrap section podcast" id="podcast" aria-labelledby="podcast-title">
+    <div class="pod-grid">
+      <div>
+        <p class="eyebrow">30-second podcast · 兵法一分鐘</p>
+        <h2 id="podcast-title">Turn the plan into a podcast.</h2>
+        <p class="lede">The script fills in automatically from the AI answer, or from any tactic. Edit it, choose a voice, and download the MP3. The default voice runs on your device, so it is free and private.</p>
+        <ul class="ticks-sm">
+          <li><strong>On-device (Kokoro)</strong>: free, no key, about an 80 MB download the first time.</li>
+          <li><strong>Your own key</strong>: Gemini (free tier), OpenAI or ElevenLabs voices.</li>
+        </ul>
+      </div>
+      <div class="panel pod-panel">
+        <div class="field">
+          <label for="script">Script</label>
+          <textarea id="script" class="input" rows="6" data-script placeholder="Ask the General first, or open a tactic and press “Make a 30s podcast”."></textarea>
+          <p class="hint"><span data-words>0</span> words · about <span data-secs>0</span> seconds (aim for 65–80 words ≈ 30 s)</p>
+        </div>
+        <div class="pod-row">
+          <div class="field">
+            <label for="engine">Voice engine</label>
+            <select id="engine" class="input" data-engine>
+              <option value="kokoro">On-device · Kokoro (free)</option>
+              <option value="gemini">Gemini TTS (your key)</option>
+              <option value="openai">OpenAI TTS (your key)</option>
+              <option value="elevenlabs">ElevenLabs (your key)</option>
+            </select>
+          </div>
+          <div class="field" data-kokoro-only>
+            <label for="voice">Voice</label>
+            <select id="voice" class="input" data-voice>
+              {KOKORO_VOICES.map(([v, l]) => <option value={v}>{l}</option>)}
+            </select>
+          </div>
+          <div class="field" data-kokoro-only>
+            <label for="speed">Pace <span data-speed-out>1.0×</span></label>
+            <input id="speed" type="range" min="0.8" max="1.2" step="0.05" value="1" data-speed />
+          </div>
+        </div>
+        <label class="check-row"><input type="checkbox" data-intro checked /> Add a singing-bowl intro and outro</label>
+        <label class="check-row" data-kokoro-only><input type="checkbox" data-gpu /> Use the GPU (faster, larger one-time download)</label>
+        <div class="f-actions">
+          <button class="btn btn--seal" type="button" data-speak>Generate audio</button>
+          <a class="btn" hidden data-download download="sun-tzu-field-podcast.mp3">Download MP3</a>
+        </div>
+        <p class="hint" data-tts-status role="status" aria-live="polite"></p>
+        <audio controls hidden data-audio></audio>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SETTINGS DIALOG ======== -->
+  <dialog class="settings" data-settings aria-labelledby="settings-title">
+    <form method="dialog" class="settings-inner" data-settings-form>
+      <div class="settings-head">
+        <h2 id="settings-title">Settings &amp; keys</h2>
+        <button class="btn btn--sm" value="close" aria-label="Close settings">Close</button>
+      </div>
+      <div class="notice">
+        <span aria-hidden="true">🔒</span>
+        <span><strong>Your keys stay in this browser.</strong> They are sent only to the provider you choose. NVIDIA and Meta calls pass through this site's relay, which forwards the key and never stores or logs it. <a href="/about/#privacy">Details</a></span>
+      </div>
+
+      <div class="field">
+        <label for="provider">Strategist (AI provider)</label>
+        <select id="provider" class="input" data-provider>
+          {groups.map((g) => (
+            <optgroup label={g}>
+              {PROVIDERS.filter((p) => p.group === g).map((p) => <option value={p.id}>{p.label}</option>)}
+            </optgroup>
+          ))}
+        </select>
+        <p class="hint" data-provider-note></p>
+      </div>
+      <div class="field" data-key-row>
+        <label for="apikey">API key</label>
+        <div class="key-row">
+          <input id="apikey" class="input" type="password" autocomplete="off" spellcheck="false" data-key placeholder="Paste your key" />
+          <button class="btn btn--sm" type="button" data-toggle-key>Show</button>
+        </div>
+        <p class="hint"><a data-key-link target="_blank" rel="noopener">Get a key →</a></p>
+      </div>
+      <div class="field" data-base-row hidden>
+        <label for="base">Base URL</label>
+        <input id="base" class="input" type="url" data-base placeholder="https://llm.example.com/v1" />
+      </div>
+      <div class="field">
+        <label for="model">Model</label>
+        <div class="key-row">
+          <input id="model" class="input" list="model-list" data-model autocomplete="off" />
+          <button class="btn btn--sm" type="button" data-load-free hidden>Load free models</button>
+        </div>
+        <datalist id="model-list" data-model-list></datalist>
+      </div>
+
+      <details class="tts-keys">
+        <summary>Podcast voice keys (optional)</summary>
+        <div class="field"><label for="k-gemini">Gemini key (also used by the Gemini strategist)</label><input id="k-gemini" class="input" type="password" autocomplete="off" data-tkey="gemini" /></div>
+        <div class="pod-row">
+          <div class="field"><label for="g-model">Gemini TTS model</label><input id="g-model" class="input" data-tset="geminiModel" /></div>
+          <div class="field"><label for="g-voice">Gemini voice</label><input id="g-voice" class="input" data-tset="geminiVoice" /></div>
+        </div>
+        <div class="field"><label for="k-openai">OpenAI key</label><input id="k-openai" class="input" type="password" autocomplete="off" data-tkey="openai" /></div>
+        <div class="field"><label for="o-voice">OpenAI voice</label><input id="o-voice" class="input" data-tset="openaiVoice" /></div>
+        <div class="field"><label for="k-eleven">ElevenLabs key</label><input id="k-eleven" class="input" type="password" autocomplete="off" data-tkey="elevenlabs" /></div>
+        <div class="field"><label for="e-voice">ElevenLabs voice ID</label><input id="e-voice" class="input" data-tset="elevenVoice" /></div>
+      </details>
+
+      <label class="check-row"><input type="checkbox" data-remember /> Remember keys on this device (otherwise they are forgotten when you close the tab)</label>
+      <div class="f-actions">
+        <button class="btn btn--seal" value="save" data-save>Save</button>
+        <button class="btn" type="button" data-clear-keys>Forget all keys</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="verse-pop" role="dialog" aria-modal="false" hidden data-verse-pop></div>
+</Base>
+
+<script src="../scripts/field/app.js"></script>
+
+<style>
+  .f-hero { padding: 130px 0 32px; display: flex; justify-content: space-between; align-items: end; gap: 24px; }
+  @media (max-width: 700px) { .f-hero :global(.seal) { display: none; } }
+  .f-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 20px; align-items: start; }
+  @media (max-width: 960px) { .f-grid { grid-template-columns: 1fr; } }
+  .f-input { display: grid; gap: 18px; position: sticky; top: 88px; }
+  @media (max-width: 960px) { .f-input { position: static; } }
+  .examples { display: flex; flex-wrap: wrap; gap: 6px; }
+  .provider-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: rgba(9, 8, 7, 0.4); }
+  .provider-now { margin: 2px 0 0; font: 500 0.92rem var(--f-ui); color: var(--paper); }
+  .provider-now small { color: var(--paper-3); }
+  .f-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .f-output { min-height: 520px; }
+  .out-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .out-head h2 { margin: 0; }
+  .out-tools { display: flex; gap: 6px; }
+  .answer { font-size: 1.02rem; }
+  .answer :global(.ans-h) { font: 600 0.72rem var(--f-ui); letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin: 26px 0 10px; display: flex; align-items: center; gap: 10px; }
+  .answer :global(.ans-h)::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+  .answer :global(.ans-h:first-child) { margin-top: 4px; }
+  .answer :global(p), .answer :global(li) { color: var(--paper); }
+  .answer :global(ol), .answer :global(ul) { padding-left: 1.3em; margin: 0 0 1em; display: grid; gap: 6px; }
+  .answer :global(.cite) { font: 600 0.7rem var(--f-ui); padding: 0.15em 0.5em; border-radius: 999px; border: 1px solid var(--seal); background: rgba(179, 38, 30, 0.18); color: #f6c4b8; cursor: pointer; vertical-align: 0.1em; }
+  .answer :global(.cite--bad) { border-color: var(--paper-4); background: none; color: var(--paper-3); text-decoration: line-through; cursor: help; }
+  .answer :global(.cursor) { display: inline-block; width: 8px; height: 1.1em; background: var(--seal-hi); vertical-align: -0.2em; animation: blink 1s steps(2) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .empty-state { display: grid; justify-items: center; text-align: center; gap: 14px; padding: 48px 12px; color: var(--paper-2); }
+  .empty-zh { font-size: 3.4rem; color: var(--ink-4); letter-spacing: 0.1em; }
+  .answer :global(.error) { border: 1px solid rgba(217, 68, 47, 0.5); background: rgba(179, 38, 30, 0.1); border-radius: 10px; padding: 14px 16px; white-space: pre-wrap; font: 400 0.9rem/1.55 var(--f-ui); }
+  .verify { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 16px; display: grid; gap: 12px; }
+  .verify :global(h3) { font: 600 0.72rem var(--f-ui); letter-spacing: 0.2em; text-transform: uppercase; color: var(--paper-3); margin: 0; }
+  .verify :global(.vcard) { padding: 14px 16px; border-radius: 10px; border: 1px solid var(--line); background: rgba(239, 229, 207, 0.03); font-size: 0.95rem; }
+  .verify :global(.vcard .vid) { font: 600 0.7rem var(--f-ui); color: var(--seal-hi); letter-spacing: 0.1em; text-decoration: none; }
+  .verify :global(.vcard .zh) { color: var(--paper-2); margin: 6px 0 0; letter-spacing: 0.05em; }
+  .verify :global(.badge) { font: 600 0.65rem var(--f-ui); letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2em 0.6em; border-radius: 999px; margin-left: 6px; }
+  .verify :global(.badge.ok) { background: rgba(127, 160, 138, 0.18); color: #b9d6c2; }
+  .verify :global(.badge.warn) { background: rgba(200, 163, 90, 0.16); color: #e3c98f; }
+  .verify :global(.badge.bad) { background: rgba(179, 38, 30, 0.2); color: #f6c4b8; }
+  .manual :global(.mt) { display: block; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; text-decoration: none; margin-bottom: 8px; }
+  .manual :global(.mt:hover) { border-color: var(--line-2); }
+
+  .podcast { padding-top: 80px; }
+  .pod-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: clamp(24px, 5vw, 64px); align-items: start; }
+  @media (max-width: 960px) { .pod-grid { grid-template-columns: 1fr; } }
+  .pod-panel { display: grid; gap: 16px; }
+  .pod-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; align-items: end; }
+  .ticks-sm { padding-left: 1.1em; color: var(--paper-2); font: 400 0.92rem/1.6 var(--f-ui); }
+  .check-row { display: flex; gap: 10px; align-items: center; font: 400 0.85rem var(--f-ui); color: var(--paper-2); }
+  .check-row input { accent-color: var(--seal); width: 16px; height: 16px; }
+  input[type='range'] { accent-color: var(--seal); width: 100%; }
+  audio { width: 100%; }
+
+  .settings { width: min(640px, calc(100vw - 32px)); max-height: calc(100vh - 32px); padding: 0; border: 1px solid var(--line-2); border-radius: 18px; background: var(--ink-2); color: var(--paper); }
+  .settings::backdrop { background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(4px); }
+  .settings-inner { display: grid; gap: 18px; padding: 24px; }
+  .settings-head { display: flex; justify-content: space-between; align-items: center; }
+  .settings-head h2 { margin: 0; font-size: 1.8rem; }
+  .key-row { display: flex; gap: 8px; }
+  .tts-keys { border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; display: grid; gap: 12px; }
+  .tts-keys[open] { padding-bottom: 16px; }
+  .tts-keys summary { cursor: pointer; font: 600 0.8rem var(--f-ui); color: var(--paper-2); }
+  .tts-keys .field { margin-top: 10px; }
+
+  .verse-pop { position: fixed; z-index: 80; max-width: min(420px, calc(100vw - 32px)); padding: 16px 18px; border-radius: 12px; border: 1px solid var(--line-2); background: #1c1813; box-shadow: 0 24px 60px -20px #000; font-size: 0.95rem; }
+  .verse-pop :global(p) { margin: 0 0 8px; }
+  .verse-pop :global(.zh) { color: var(--paper-2); letter-spacing: 0.05em; }
+  .verse-pop :global(a) { font: 600 0.72rem var(--f-ui); color: var(--seal-hi); text-decoration: none; letter-spacing: 0.08em; }
+</style>

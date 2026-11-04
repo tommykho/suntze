@@ -1,0 +1,12 @@
+{
+  "n": 5,
+  "essence": "Momentum and timing beat brute force; build the slope, then release.",
+  "modern_lens": "Most people push hard in a straight line and then stall or burn out. Sun Tzu separates the direct approach, which gets you into the room, from the indirect one, which secures the result. Build momentum that keeps rolling on its own, and time your decisive move for when the energy is already on your side.",
+  "key_verse": "5.6",
+  "principles": [
+    { "name": "Direct to Join, Indirect to Win", "verses": ["5.5", "5.10", "5.11"], "gloss": "Make the direct ask to enter the conversation, then use indirect routes to secure the yes." },
+    { "name": "Momentum on a Slope", "verses": ["5.22", "5.23"], "gloss": "A small start with a steady slope makes progress feel almost automatic." },
+    { "name": "Hold Energy, Release Once", "verses": ["5.14", "5.15"], "gloss": "Keep your energy in reserve, then act decisively at the moment the decision is actually open." },
+    { "name": "Combined Effort Over Heroics", "verses": ["5.21"], "gloss": "Design routines and teams so combined effort carries the load, not one exhausted person." }
+  ]
+}

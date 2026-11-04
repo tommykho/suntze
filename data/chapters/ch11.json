@@ -1,0 +1,12 @@
+{
+  "n": 11,
+  "essence": "Read the type of ground first, then decide how fast and how hard to move.",
+  "modern_lens": "Every project, job search and difficult conversation sits on a different kind of ground. Some rewards speed, some punishes hesitation, and some only works when everyone acts as one body. The same move can be brilliant in one place and costly in another. Read the situation before you choose your tempo, and when an opening appears, move with speed you have already prepared.",
+  "key_verse": "11.19",
+  "principles": [
+    { "name": "Read the Ground", "verses": ["11.4", "11.5", "11.11"], "gloss": "Each situation has a type. A tactic that works in an open negotiation can fail in a heated meeting, so match your move to the setting." },
+    { "name": "Speed at the Opening", "verses": ["11.19", "11.68"], "gloss": "Wait while the other side is unready, then move quickly. Preparation makes speed possible; hesitation after the opening is the real cost." },
+    { "name": "One Body Under Pressure", "verses": ["11.30", "11.32"], "gloss": "A team in trouble acts as one when it shares one standard and one lead. Clear roles matter more than individual brilliance in a crisis." },
+    { "name": "Commit Without Drifting", "verses": ["11.23", "11.39"], "gloss": "Real commitment removes the option to quit halfway, which focuses effort. Use it deliberately, with a runway, not as a dramatic gesture." }
+  ]
+}

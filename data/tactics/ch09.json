@@ -1,0 +1,186 @@
+[
+  {
+    "slug": "read-the-signs-at-the-table",
+    "title": "Read the Signs at the Table",
+    "situation": "In a hiring or contract negotiation, warm words and shifting tone leave you unsure where you really stand.",
+    "domain": "career",
+    "tags": [
+      "interviews",
+      "negotiation",
+      "signals",
+      "hiring"
+    ],
+    "chapter": 9,
+    "principle": "Separate words from preparation",
+    "verses": [
+      "9.24",
+      "9.26"
+    ],
+    "scene": "The hiring manager has just said the salary range is firm, then asks, almost casually, whether you could start early. The tone is warmer. Yesterday the recruiter sent a long email full of promises about flexibility, but nothing in writing. Sun Tzu observes that humble words backed by visible preparation signal a move forward, while talk of peace without a binding covenant often hides a plot. Your job is to separate the two. Watch what the other side does with the timeline and the paperwork, not just what they say. A warm conversation is not a contract.",
+    "moves": [
+      {
+        "title": "Log what was said and done",
+        "detail": "After each call, write three lines: what they promised, what they did next, and when. Keep promises and actions in separate columns. A spoken assurance about flexibility is a promise; an offer letter with a start date is an action."
+      },
+      {
+        "title": "Ask for the terms in writing",
+        "detail": "Reply to the recruiter within a day, thanking them and asking for the written terms, including the remote arrangement and review timing. Then watch how quickly and how specifically they respond. Vague replies are data too."
+      },
+      {
+        "title": "Check for real preparation",
+        "detail": "Note whether they are moving: a named start date, an onboarding contact, a paperwork request, an invite to meet your future team. Those are preparations. Vague timelines and no next step are the signs of a stall."
+      },
+      {
+        "title": "Set your own decision date",
+        "detail": "Give yourself and them a decision date, such as the end of next week. If the paperwork has not arrived by then, you know the offer was less firm than the words suggested, and you can decide whether to continue."
+      }
+    ],
+    "script": {
+      "label": "Asking for written terms",
+      "text": "Hi [recruiter name], thank you for the call on Tuesday. I am very interested in the [title] role. To make sure we are aligned, could you send the written offer, including the start date, the remote arrangement and the review timing we discussed? I would like to review everything by [date] so I can give you a clear answer. Thank you."
+    },
+    "backfire": "Reading signals is not a license to judge people on a single pause or to treat every nervous silence as a bluff. Some hiring processes are slow for reasons unrelated to you. Do not invent deadlines or competing offers to pressure them; that can cost you the role and your reputation. If you cannot get terms in writing, the honest move is to walk away, not to push harder.",
+    "signals": "The other side answers your written request with specifics, and the promises from the call start appearing in documents.",
+    "effort": "minutes",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "earn-trust-then-enforce",
+    "title": "Earn Trust, Then Enforce",
+    "situation": "You are a first-time manager, and your team does not yet trust you enough to follow the process.",
+    "domain": "career",
+    "tags": [
+      "first-time manager",
+      "trust",
+      "standards",
+      "feedback"
+    ],
+    "chapter": 9,
+    "principle": "Humanity first, then steady discipline",
+    "verses": [
+      "9.43",
+      "9.44"
+    ],
+    "scene": "You were promoted three weeks ago, and the team's status updates are already slipping past deadline. Two people have stopped attending stand-up, and you have a list of corrections ready to go. Sun Tzu's view is that soldiers punished before they feel attached to you will not submit, and that rules left unenforced are useless once trust exists. The answer is to be humane first, then steady. Spend your early weeks listening and setting clear standards. Then enforce them the same way every time. Consistency is what turns warmth into respect.",
+    "moves": [
+      {
+        "title": "Listen before you correct",
+        "detail": "In your first two weeks, hold 30-minute one-on-ones with everyone. Ask what they work on, what gets in their way and what they would change. Do not correct anything in these meetings. Take notes so people can see you were listening."
+      },
+      {
+        "title": "Write your three standards",
+        "detail": "Choose three expectations that matter most, such as meeting sprint commitments, answering customer escalations within a day, and raising risks early. Write them on one page, share it, and explain why each one exists."
+      },
+      {
+        "title": "Enforce each standard the same way",
+        "detail": "When a standard slips, raise it within a day, privately, with the specific fact and the change you expect. Use the same approach for everyone, including your favorite engineer. Inconsistency is the fastest way to lose a team."
+      },
+      {
+        "title": "Recognize the behavior specifically",
+        "detail": "When someone meets a standard under pressure, name the specific action in the team channel. Praise lands best when it is specific and fairly shared, not reserved for the loudest people in the room."
+      }
+    ],
+    "script": {
+      "label": "Correction in a one-on-one",
+      "text": "Hi [name], I want to talk about the [project] update that was due on Tuesday. It arrived on Thursday, and the customer team had to chase it. I know the release testing took up that week. The standard we agreed is that updates go out one day before the review, so I need that to happen next time. What would make that easier for you?"
+    },
+    "backfire": "Consistency does not mean harshness. Enforcing rules before you understand the work makes you look arbitrary, and people may leave or go quiet. Do not stretch the listening phase into months of avoiding decisions; the team needs standards too. If someone is breaking the law or harassing others, do not wait for trust: escalate to HR right away.",
+    "signals": "Standards are met without reminders, problems reach you earlier, and no one is surprised by the feedback they receive.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "hear-the-whispers",
+    "title": "Hear the Whispers",
+    "situation": "You joined a team where meetings are quiet, side conversations are tense and nobody says what is wrong.",
+    "domain": "work",
+    "tags": [
+      "morale",
+      "new team",
+      "signals",
+      "listening"
+    ],
+    "chapter": 9,
+    "principle": "Find the discontent while it is small",
+    "verses": [
+      "9.35",
+      "9.33"
+    ],
+    "scene": "You have just taken over a product team of eight. In the first meeting, people give short answers. Two engineers are whispering by the window, and when you ask a question, everyone looks at the lead. The manager who left was known for shouting. Sun Tzu's signs are clear: people speaking in subdued tones point to discontent in the ranks, and officers who are angry and quiet mean the men are worn down. Do not treat this as background noise. Go find the disaffection now, while it is still a conversation. The quiet corners of a team hold the information you need first.",
+    "moves": [
+      {
+        "title": "Walk through the actual work",
+        "detail": "In your first week, spend 20 minutes with each person looking at their real work. Ask them to show you the tool, the ticket queue and the worst recurring problem. Note what they work around every day, because workarounds reveal the broken parts."
+      },
+      {
+        "title": "Ask about the last three weeks",
+        "detail": "In one-on-ones, ask: What happened in the last three weeks that you wish had gone differently? Specific memories surface real problems. Avoid asking whether people are happy; that question almost always gets a yes."
+      },
+      {
+        "title": "Report back what you heard",
+        "detail": "At the next team meeting, summarize three themes without naming individuals. For each one, say what you will do and by when. Then deliver at least one visible fix within two weeks. Trust rebuilds through follow-through, not promises."
+      },
+      {
+        "title": "Make room for the quiet voices",
+        "detail": "Track who speaks in meetings and who only speaks in private. If someone is silent in public but raises issues one-on-one, create a format where they can speak, such as written input before the meeting. Do not reward the person who blames others openly with more airtime."
+      }
+    ],
+    "script": {
+      "label": "Opening note to the team",
+      "text": "Hi everyone, I have spent my first two weeks listening to each of you. I heard about the release process, the on-call load and the feedback loop with design. Thank you for being candid. Over the next two weeks I will fix [one specific issue] and report back on Friday. If you would rather raise something privately, my door and calendar are open."
+    },
+    "backfire": "Reading a team's mood can slide into gossip or into profiling individuals. Do not repeat what someone told you in confidence, and do not use private comments to build a case against a colleague. Some morale problems come from pay, workload or a real conflict you cannot fix in weeks. Say so honestly rather than promising change you cannot deliver. A team that sees no action gets quieter.",
+    "signals": "People raise problems with you in the open, the whispering moves into the meeting, and a fix you delivered wins over someone who was skeptical.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "read-your-own-camp-signs",
+    "title": "Read Your Own Camp Signs",
+    "situation": "You are dragging through each day and cannot tell whether you are tired or heading toward burnout.",
+    "domain": "self",
+    "tags": [
+      "burnout",
+      "energy",
+      "self-check",
+      "recovery"
+    ],
+    "chapter": 9,
+    "principle": "Treat fatigue as information",
+    "verses": [
+      "9.29",
+      "9.31"
+    ],
+    "scene": "It is Wednesday, and you have stared at the same email for three minutes. You still answer messages, but the replies are short and a little curt. Lunch is a sandwich at your desk, and the idea of a weekend away makes you tired. Sun Tzu describes soldiers leaning on their spears, faint from want of food, and an army that fails to seize a clear opening because it is exhausted. Read yourself the same way. These signs are not weakness. They are your camp reporting its supplies. Resupply before the next push.",
+    "moves": [
+      {
+        "title": "Track three signals for two weeks",
+        "detail": "Each evening, note your hours of sleep, how many decisions you put off, and one thing you enjoyed. Keep it in a simple phone note. Patterns show up after about ten days; a single bad day means little."
+      },
+      {
+        "title": "Check for missed openings",
+        "detail": "Ask which obvious chances you have passed up lately: a follow-up you did not send, a meeting you could have shaped, an idea you dropped. A pattern of missed chances is a sign of depletion, not laziness."
+      },
+      {
+        "title": "Schedule one real recovery block",
+        "detail": "Block two hours this week that are not work, and treat them like a client meeting. Use them for a walk, a meal with someone you like, or a nap. Do not move them unless something truly urgent comes up."
+      },
+      {
+        "title": "Talk to someone, then a doctor",
+        "detail": "Tell one trusted colleague or friend that you are running low and ask what they notice. If the signs last more than four weeks, or include poor sleep or low mood, book an appointment with your doctor and describe the pattern."
+      }
+    ],
+    "script": {
+      "label": "Message to your manager",
+      "text": "Hi [manager name], I want to flag that I am running low on energy after a heavy few weeks. I would like to keep the [project] milestone on track, so I would like to talk about which two tasks I can hand off or push back by a week. Could we find 30 minutes this week to plan that?"
+    },
+    "backfire": "Self-monitoring can become a new source of anxiety, so keep it short and light. Do not use recovery time to hide a real performance problem, and do not announce burnout in a way that invites a reassignment you did not want. If you have thoughts of harming yourself or cannot function, contact a doctor, a crisis line or emergency services now.",
+    "signals": "You notice the signs earlier, you decline one thing a week, and your replies return to their usual length and tone.",
+    "effort": "days",
+    "difficulty": 1,
+    "featured": false
+  }
+]

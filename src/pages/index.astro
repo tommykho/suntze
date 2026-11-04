@@ -1,0 +1,308 @@
+---
+import Base from '../layouts/Base.astro';
+import Seal from '../components/Seal.astro';
+import BrushDivider from '../components/BrushDivider.astro';
+import VerseQuote from '../components/VerseQuote.astro';
+import { chapters, tactics, featured, getVerse, DOMAINS, ZH_NUMERALS } from '../lib/content.js';
+
+const verseCount = chapters.reduce((a, c) => a + c.verses.length, 0);
+const founderOrder = ['control-the-record', 'silence-is-consent', 'deadline-unless-advised'];
+const founders = founderOrder.map((s) => featured.find((t) => t.slug === s)).filter(Boolean);
+const fieldExamples = [
+  'My director keeps adding scope two days before every deadline.',
+  'My brother-in-law turns every family dinner into a debate.',
+  'A vendor has missed three delivery dates and keeps promising "next week".',
+];
+---
+<Base>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" data-hero>
+    <canvas class="hero-ink" data-ink aria-hidden="true"></canvas>
+    <div class="hero-mountains" aria-hidden="true" data-parallax="0.15">
+      <svg viewBox="0 0 1440 420" preserveAspectRatio="none">
+        <path d="M0 420 L0 300 C 120 250, 210 180, 320 230 C 420 275, 470 160, 600 150 C 720 140, 780 260, 900 240 C 1010 222, 1080 120, 1200 140 C 1320 160, 1380 240, 1440 230 L1440 420 Z" fill="rgba(239,229,207,0.035)" filter="url(#ink-bleed)" />
+        <path d="M0 420 L0 350 C 160 320, 260 280, 380 310 C 520 345, 600 270, 760 280 C 900 290, 980 340, 1120 320 C 1260 300, 1360 330, 1440 320 L1440 420 Z" fill="rgba(9,8,7,0.65)" filter="url(#ink-bleed)" />
+      </svg>
+    </div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow" data-hero-in>Sun Tzu · c. 500 BC · Giles translation, 1910</p>
+        <h1 class="hero-title">
+          <span class="line"><span data-hero-line>The Art of War,</span></span>
+          <span class="line"><span data-hero-line><em>for the battles</em></span></span>
+          <span class="line"><span data-hero-line>you actually fight.</span></span>
+        </h1>
+        <p class="lede" data-hero-in>
+          Blame-shifting coworkers. Stalling managers. Vendors who never deliver. Family dinners that turn into sieges.
+          Thirteen chapters of ancient strategy turned into calm, practical moves, so you can win without fighting.
+        </p>
+        <div class="hero-cta" data-hero-in>
+          <a class="btn btn--seal" href="/field/">Bring your battle to the General</a>
+          <a class="btn" href="/chapters/1/">Read the book</a>
+        </div>
+      </div>
+      <div class="hero-calligraphy" aria-label="孫子兵法 — Sun Tzu's Art of War" lang="zh-Hant">
+        <div class="callig" data-callig>
+          {['孫', '子', '兵', '法'].map((c) => <span class="callig-char" data-char>{c}</span>)}
+        </div>
+        <Seal text="知己知彼" size="lg" class="hero-seal" data-hero-seal />
+      </div>
+    </div>
+    <a class="scroll-cue" href="#manifesto" aria-label="Scroll to begin">
+      <span>Scroll</span>
+      <i aria-hidden="true"></i>
+    </a>
+  </section>
+
+  <!-- ===================== MANIFESTO ===================== -->
+  <section class="section manifesto" id="manifesto">
+    <div class="narrow">
+      <p class="eyebrow" data-reveal>Chapter III, verse 2</p>
+      <p class="manifesto-text" data-split>
+        Supreme excellence is not winning every fight. It is breaking resistance without fighting at all.
+        Most modern conflicts are lost in the first loud email. This manual is about the quiet preparation that makes the loud email unnecessary.
+      </p>
+      <VerseQuote id="3.2" />
+      <div class="stats">
+        <div data-reveal><strong data-count="13">13</strong><span>chapters</span></div>
+        <div data-reveal><strong data-count={verseCount}>{verseCount}</strong><span>verses, English &amp; 原文</span></div>
+        <div data-reveal><strong data-count={tactics.length}>{tactics.length}</strong><span>field-tested tactics</span></div>
+      </div>
+    </div>
+  </section>
+
+  <BrushDivider />
+
+  <!-- ===================== 13 CHAPTERS (pinned horizontal) ===================== -->
+  <section class="chapters-h" data-hscroll aria-labelledby="chapters-title">
+    <div class="wrap chapters-head">
+      <p class="eyebrow">The thirteen chapters · 十三篇</p>
+      <h2 id="chapters-title">One campaign, thirteen lessons.</h2>
+    </div>
+    <div class="hscroll-viewport">
+      <ol class="hscroll-track" data-hscroll-track>
+        {chapters.map((c) => {
+          const kv = getVerse(c.key_verse);
+          return (
+            <li class="ch-panel" data-panel>
+              <a href={`/chapters/${c.n}/`} class="ch-card">
+                <div class="ch-top" data-panel-in>
+                  <Seal text={ZH_NUMERALS[c.n - 1]} />
+                  <span class="ch-roman">{c.roman}</span>
+                </div>
+                <div class="ch-zh brush" lang="zh-Hant" data-panel-in>{c.title_zh}</div>
+                <h3 data-panel-in>{c.title_en}</h3>
+                <p class="ch-essence" data-panel-in>{c.essence}</p>
+                {kv && <p class="ch-verse" data-panel-in>“{kv.en.length > 150 ? kv.en.slice(0, 147) + '…' : kv.en}” <span>{c.key_verse}</span></p>}
+                <span class="ch-more" data-panel-in>{c.tactics.length} tactics →</span>
+              </a>
+            </li>
+          );
+        })}
+      </ol>
+    </div>
+    <div class="wrap"><div class="hscroll-progress"><i data-hscroll-progress></i></div></div>
+  </section>
+
+  <!-- ===================== FOUNDER CASES ===================== -->
+  <section class="section founders">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>From the field</p>
+      <h2 data-reveal>Three battles. Zero shouting.</h2>
+      <p class="lede" data-reveal>The cases that started this project. Each one turns a classic principle into steps you can take this week.</p>
+      <div class="founder-stack" data-stack>
+        {founders.map((t, i) => (
+          <article class="founder-card">
+            <div class="founder-num brush" aria-hidden="true">{['壹', '貳', '參'][i]}</div>
+            <div class="founder-body">
+              <div class="card-meta">
+                <span class="chip chip--seal">{DOMAINS[t.domain].label}</span>
+                <span class="chip">Chapter {chapters[t.chapter - 1].roman} · {chapters[t.chapter - 1].title_en}</span>
+              </div>
+              <h3>{t.title}</h3>
+              <p class="founder-situation">{t.situation}</p>
+              <p class="founder-scene">{t.scene}</p>
+              <ol class="founder-moves">
+                {t.moves.slice(0, 4).map((m) => <li>{m.title}</li>)}
+              </ol>
+              <a class="btn btn--sm" href={`/tactics/${t.slug}/`}>Open the full tactic →</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FIELD CHALLENGE TEASER ===================== -->
+  <section class="section field-teaser">
+    <div class="wrap field-grid">
+      <div>
+        <p class="eyebrow" data-reveal>Field Challenge · AI</p>
+        <h2 data-reveal>Describe your battlefield. <span class="brush-underline">Get a cited plan.<svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true" data-draw><path d="M2 8 C 50 2, 120 12, 198 4" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" /></svg></span></h2>
+        <p class="lede" data-reveal>
+          An AI strategist reads your situation, quotes the exact verse it relies on (checked against the original text), and gives you moves, a message to send, and a backfire check.
+          Then it turns the plan into a <strong>30-second podcast</strong> you can download as MP3.
+        </p>
+        <ul class="ticks" data-reveal>
+          <li>Free: bring your own key (OpenRouter, Gemini, Groq, NVIDIA…) or use a no-key option</li>
+          <li>Your key stays in your browser. Nothing is stored on our servers.</li>
+          <li>Voice generated on your device. No sign-up needed.</li>
+        </ul>
+        <a class="btn btn--seal" href="/field/" data-reveal>Open the Field Challenge</a>
+      </div>
+      <div class="field-mock" data-reveal="scale" aria-hidden="true">
+        <div class="mock-bar"><i></i><i></i><i></i><span>field challenge</span></div>
+        <div class="mock-body">
+          {fieldExamples.map((q, i) => <p class={`mock-q mock-q${i}`}>“{q}”</p>)}
+          <div class="mock-a">
+            <span class="mock-tag">Sun Tzu says</span>
+            <p>“The way is to avoid what is strong and to strike at what is weak.” <b>[6.30]</b></p>
+            <span class="mock-tag">Your moves</span>
+            <p>1. Document the pattern · 2. Offer two options · 3. Set the default with a date…</p>
+            <div class="mock-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMMUNITY TEASER ===================== -->
+  <section class="section community-teaser">
+    <div class="narrow" style="text-align:center">
+      <Seal text="眾" size="lg" data-reveal="scale" style="margin:0 auto 28px" />
+      <h2 data-reveal>A field journal written by everyone.</h2>
+      <p class="lede" data-reveal style="margin-inline:auto">
+        Post the battle you faced and the tactic that worked. Rate what others tried. The best field reports rise; the reckless ones get flagged.
+      </p>
+      <div class="hero-cta" style="justify-content:center" data-reveal>
+        <a class="btn btn--seal" href="/community/">Read field reports</a>
+        <a class="btn" href="/tactics/">Browse all {tactics.length} tactics</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<script>
+  import { startInk } from '../scripts/ink.js';
+  import gsap from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  gsap.registerPlugin(ScrollTrigger);
+
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const canvas = document.querySelector('[data-ink]');
+  if (canvas) startInk(canvas, { reduce });
+
+  if (!reduce) {
+    const tl = gsap.timeline({ defaults: { ease: 'expo.out' }, delay: 0.15 });
+    tl.from('[data-hero-line]', { yPercent: 110, duration: 1.3, stagger: 0.12 })
+      .from('[data-char]', { clipPath: 'inset(0 0 100% 0)', opacity: 0.2, duration: 1.4, stagger: 0.28, ease: 'power3.inOut' }, 0.2)
+      .from('[data-hero-in]', { y: 24, opacity: 0, duration: 1, stagger: 0.1 }, 0.6)
+      .from('[data-hero-seal]', { scale: 2.2, rotate: -30, opacity: 0, duration: 0.7, ease: 'back.out(2.2)' }, 1.5);
+
+    // hero drifts and blurs as you scroll away
+    gsap.to('[data-callig]', {
+      yPercent: 18,
+      opacity: 0.25,
+      filter: 'blur(6px)',
+      ease: 'none',
+      scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom top', scrub: true },
+    });
+  }
+</script>
+
+<style>
+  /* ---------- hero ---------- */
+  .hero { position: relative; min-height: 100svh; display: grid; align-items: center; padding-top: 96px; padding-bottom: 72px; overflow: hidden;
+    background: radial-gradient(ellipse 70% 60% at 70% 40%, #241f17 0%, var(--ink-1) 70%); }
+  .hero-ink { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.9; filter: blur(14px) saturate(1.1); }
+  .hero-mountains { position: absolute; left: 0; right: 0; bottom: 0; height: 42%; pointer-events: none; }
+  .hero-mountains svg { width: 100%; height: 100%; }
+  .hero-grid { position: relative; display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 40px; align-items: center; }
+  .hero-title { margin: 18px 0 26px; font-size: clamp(2.7rem, 6.2vw + 0.5rem, 6.4rem); line-height: 0.98; }
+  .hero-title .line { display: block; overflow: hidden; padding-bottom: 0.06em; }
+  .hero-title .line > span { display: inline-block; }
+  .hero-title em { font-style: italic; color: var(--paper-2); font-weight: 500; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .hero-calligraphy { position: relative; justify-self: center; }
+  .callig { writing-mode: vertical-rl; display: flex; gap: 0.02em; font-family: var(--f-brush); font-weight: 700; font-size: clamp(4.5rem, 10vw, 9.5rem); line-height: 1; color: var(--paper); filter: url(#ink-bleed); text-shadow: 0 0 40px rgba(239, 229, 207, 0.08); }
+  .callig-char { display: block; }
+  .hero-seal { position: absolute; left: -36%; bottom: 4%; --size: 92px; font-size: 1.15rem; }
+  .scroll-cue { position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%); display: grid; justify-items: center; gap: 8px; text-decoration: none; font: 600 0.65rem var(--f-ui); letter-spacing: 0.3em; text-transform: uppercase; color: var(--paper-3); }
+  .scroll-cue i { width: 1px; height: 46px; background: linear-gradient(var(--paper-3), transparent); animation: cue 2.2s var(--ease) infinite; transform-origin: top; }
+  @keyframes cue { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
+  @media (max-width: 860px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-calligraphy { order: -1; justify-self: end; margin-right: 4%; }
+    .callig { writing-mode: horizontal-tb; font-size: clamp(3.4rem, 17vw, 5.5rem); }
+    .hero-seal { left: auto; right: -6px; bottom: -40px; --size: 64px; font-size: 0.8rem; }
+  }
+
+  /* ---------- manifesto ---------- */
+  .manifesto-text { font-family: var(--f-display); font-size: clamp(1.7rem, 2.4vw + 1rem, 3rem); line-height: 1.22; margin: 18px 0 48px; color: var(--paper); }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; text-align: center; }
+  .stats strong { display: block; font: 600 clamp(2.4rem, 4vw, 3.6rem)/1 var(--f-display); color: var(--paper); }
+  .stats span { font: 500 0.72rem var(--f-ui); letter-spacing: 0.16em; text-transform: uppercase; color: var(--paper-3); }
+
+  /* ---------- chapters horizontal ---------- */
+  .chapters-h { padding-top: clamp(72px, 10vw, 120px); padding-bottom: 40px; overflow: hidden; }
+  .chapters-head { margin-bottom: 36px; }
+  .hscroll-viewport { overflow: visible; }
+  .hscroll-track { list-style: none; margin: 0; padding: 0 var(--gutter); display: flex; gap: 22px; width: max-content; }
+  .ch-panel { width: min(400px, 78vw); flex: none; }
+  .ch-card { display: flex; flex-direction: column; gap: 14px; height: 100%; min-height: 470px; padding: 28px; border-radius: 18px; border: 1px solid var(--line); text-decoration: none;
+    background: linear-gradient(170deg, rgba(239, 229, 207, 0.06), rgba(239, 229, 207, 0.01) 50%), var(--ink-2); transition: border-color 0.4s, transform 0.5s var(--ease); }
+  .ch-card:hover { border-color: var(--line-2); transform: translateY(-6px); color: inherit; }
+  .ch-top { display: flex; justify-content: space-between; align-items: center; }
+  .ch-roman { font: 600 3rem/1 var(--f-display); color: var(--ink-4); }
+  .ch-zh { font-size: 3.4rem; line-height: 1; letter-spacing: 0.08em; color: var(--paper); margin-top: 6px; }
+  .ch-card h3 { margin: 0; font-size: 1.7rem; }
+  .ch-essence { color: var(--paper-2); margin: 0; font-size: 1rem; }
+  .ch-verse { margin: 0; font-family: var(--f-display); font-style: italic; color: var(--paper-3); font-size: 1rem; line-height: 1.45; border-left: 2px solid var(--seal); padding-left: 12px; }
+  .ch-verse span { font: 600 0.68rem var(--f-ui); font-style: normal; color: var(--seal-hi); margin-left: 4px; }
+  .ch-more { margin-top: auto; font: 600 0.75rem var(--f-ui); letter-spacing: 0.12em; text-transform: uppercase; color: var(--paper-2); }
+  .hscroll-progress { height: 2px; background: var(--line); margin-top: 36px; overflow: hidden; }
+  .hscroll-progress i { display: block; height: 100%; background: var(--seal-hi); transform: scaleX(0); transform-origin: left; }
+  @media (max-width: 899px) {
+    .hscroll-viewport { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 12px; }
+    .ch-panel { scroll-snap-align: start; }
+    .ch-card { min-height: 420px; }
+    .hscroll-progress { display: none; }
+  }
+
+  /* ---------- founders ---------- */
+  .founder-stack { display: grid; gap: 28px; margin-top: 48px; }
+  .founder-card { position: sticky; top: 96px; display: grid; grid-template-columns: 120px 1fr; gap: 28px; padding: clamp(22px, 4vw, 44px); border-radius: 22px; border: 1px solid var(--line-2);
+    background: linear-gradient(160deg, #221d15, #14110d 60%); box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.8); transform-origin: center top; }
+  .founder-num { font-size: 6rem; line-height: 1; color: var(--seal); opacity: 0.9; filter: url(#ink-rough); }
+  .founder-body h3 { font-size: clamp(1.8rem, 2vw + 1rem, 2.6rem); margin: 14px 0 8px; }
+  .founder-situation { font: 500 0.95rem var(--f-ui); color: #f0b6a8; }
+  .founder-scene { color: var(--paper-2); max-width: 70ch; }
+  .founder-moves { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0 0 22px; counter-reset: m; }
+  .founder-moves li { counter-increment: m; font: 500 0.78rem var(--f-ui); padding: 0.45em 0.9em; border: 1px solid var(--line-2); border-radius: 999px; color: var(--paper-2); }
+  .founder-moves li::before { content: counter(m) ' · '; color: var(--seal-hi); }
+  @media (max-width: 700px) { .founder-card { grid-template-columns: 1fr; position: relative; top: 0; } .founder-num { font-size: 3.5rem; } }
+
+  /* ---------- field teaser ---------- */
+  .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
+  .ticks { list-style: none; padding: 0; margin: 0 0 30px; display: grid; gap: 10px; font: 400 0.95rem/1.5 var(--f-ui); color: var(--paper-2); }
+  .ticks li { padding-left: 26px; position: relative; }
+  .ticks li::before { content: ''; position: absolute; left: 0; top: 0.5em; width: 12px; height: 12px; border-radius: 3px; background: var(--seal); transform: rotate(-6deg); }
+  .field-mock { border-radius: 18px; border: 1px solid var(--line-2); background: #0d0b09; box-shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.02) inset; overflow: hidden; }
+  .mock-bar { display: flex; gap: 6px; align-items: center; padding: 12px 16px; border-bottom: 1px solid var(--line); font: 500 0.7rem var(--f-ui); color: var(--paper-3); letter-spacing: 0.1em; }
+  .mock-bar i { width: 10px; height: 10px; border-radius: 50%; background: var(--ink-4); }
+  .mock-bar span { margin-left: 8px; }
+  .mock-body { padding: 22px; display: grid; gap: 12px; min-height: 340px; }
+  .mock-q { margin: 0; font-style: italic; color: var(--paper-3); font-size: 0.95rem; }
+  .mock-q0 { color: var(--paper); }
+  .mock-a { margin-top: 8px; padding: 16px; border-radius: 12px; background: rgba(239, 229, 207, 0.04); border: 1px solid var(--line); font-size: 0.95rem; }
+  .mock-a p { margin: 4px 0 12px; }
+  .mock-a b { color: var(--seal-hi); font: 600 0.75rem var(--f-ui); }
+  .mock-tag { font: 600 0.62rem var(--f-ui); letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+  .mock-wave { display: flex; gap: 4px; align-items: center; height: 36px; }
+  .mock-wave i { width: 4px; border-radius: 2px; background: var(--seal-hi); animation: wave 1.2s ease-in-out infinite; }
+  .mock-wave i:nth-child(odd) { animation-delay: -0.4s; } .mock-wave i:nth-child(3n) { animation-delay: -0.8s; }
+  @keyframes wave { 0%, 100% { height: 6px; } 50% { height: 30px; } }
+  @media (max-width: 860px) { .field-grid { grid-template-columns: 1fr; } }
+
+  .community-teaser { background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(179, 38, 30, 0.08), transparent 70%); }
+</style>

@@ -1,0 +1,12 @@
+{
+  "n": 10,
+  "essence": "Know the ground and your own weak points before the fight, not during it.",
+  "modern_lens": "Every project, job, move and negotiation has terrain: its structure, its people and its constraints. Map it before you commit, and notice which moves are easy to make and hard to undo. Leaders own the outcome, so ask whether a problem comes from the environment or from their own choices.",
+  "key_verse": "10.31",
+  "principles": [
+    { "name": "Six Kinds of Ground", "verses": ["10.1", "10.2"], "gloss": "Each kind of situation calls for a different move: open, trapped, stalled, bottlenecked, steep or distant." },
+    { "name": "Easy In, Hard Out", "verses": ["10.4", "10.5"], "gloss": "Some commitments are simple to enter and hard to leave. Check your way back before you step onto the ground." },
+    { "name": "Waiting Ground", "verses": ["10.6", "10.7"], "gloss": "When neither side gains by moving first, do not chase the bait. Make the other side commit." },
+    { "name": "Own the Six Calamities", "verses": ["10.14", "10.18"], "gloss": "Most failures come from leadership choices: unclear roles, weak authority and poor judgment of the other side." }
+  ]
+}

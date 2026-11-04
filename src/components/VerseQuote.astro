@@ -1,0 +1,15 @@
+---
+import { getVerse, verseHref, chapterOf } from '../lib/content.js';
+const { id, compact = false } = Astro.props;
+const v = getVerse(id);
+const ch = v ? chapterOf(v.ch) : null;
+---
+{v && (
+  <figure class="quote" data-reveal>
+    <blockquote>
+      <p class="quote-en">{v.en}</p>
+      {v.zh && !compact && <p class="quote-zh" lang="zh-Hant">{v.zh}</p>}
+    </blockquote>
+    <cite>Sun Tzu · <a href={verseHref(id)}>{ch.roman}. {ch.title_en} · {v.label}</a> <span class="zh">({ch.title_zh})</span></cite>
+  </figure>
+)}

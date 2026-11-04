@@ -1,0 +1,6 @@
+---
+// Red cinnabar seal stamp. `text` may be 1–4 Chinese characters.
+const { text = '兵', size = 'md', vertical = false, class: cls = '', ...rest } = Astro.props;
+const sizeCls = size === 'sm' ? 'seal--sm' : size === 'lg' ? 'seal--lg' : '';
+---
+<span class={`seal ${sizeCls} ${vertical ? 'seal--vertical' : ''} ${cls}`} aria-hidden="true" {...rest}>{text}</span>

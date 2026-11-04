@@ -1,0 +1,154 @@
+[
+  {
+    "slug": "move-when-the-window-opens",
+    "title": "Move When the Window Opens",
+    "situation": "A job offer or market opening will close within days, and you are not yet ready to answer.",
+    "domain": "career",
+    "tags": ["job-search", "offer-timing", "decision-speed", "preparation"],
+    "chapter": 11,
+    "principle": "Rapidity wins once the opening appears",
+    "verses": ["11.19", "11.68"],
+    "scene": "Your phone buzzes on a Friday afternoon. A recruiter says the team wants to make an offer, and the decision is needed by next Thursday. You have hoped for a call like this for two years, and your instinct is to ask for a week. Sun Tzu's view of speed is different. The opening is real, and it closes fast. So you do not start from zero. You open the one-page sheet you wrote last month with your salary floor, your non-negotiables, and three questions. You reply the same day, name a decision date, and book a call with the hiring manager for Monday. Speed is not panic when the groundwork is done. The window stays open only while you are ready to walk through it.",
+    "moves": [
+      {
+        "title": "Pre-build your answer sheet",
+        "detail": "This week, write a one-page note with your salary floor, your must-haves for role and schedule, and three questions you will ask any employer. Keep it on your phone. When an opening appears, you fill in blanks rather than starting from zero."
+      },
+      {
+        "title": "Set a decision clock",
+        "detail": "When an opportunity appears, write the date you will answer and tell the recruiter when to expect your reply. Block one evening that week for a call with a trusted friend who will help you test the numbers. Speed comes from a fixed date, not from the urgency you feel in the moment."
+      },
+      {
+        "title": "Line up fast references",
+        "detail": "Message two former managers or colleagues today, before you need them. Ask whether they would take a call within 48 hours if a company asks. Give each a two-line summary of the role you may target, so they can speak well without preparation."
+      },
+      {
+        "title": "Reply in writing within a day",
+        "detail": "Send a short reply that confirms interest, gives your timeline, and asks for the one detail you still need. Avoid long apologies or hedges. A same-day reply often moves a process forward more than a perfect reply sent a week later."
+      }
+    ],
+    "script": {
+      "label": "Reply to a recruiter",
+      "text": "Hi [Name], thank you for the call and for moving quickly. I am very interested in the [role] position. I can give you a decision by [day]. Before then, could you confirm [the start date, the salary band, or the team I would join]? I am available for a 30-minute call on [day] at [time] if that helps. Best, [Your name]"
+    },
+    "backfire": "This fails when you rush a decision you cannot undo, such as signing a lease or a contract you have not read. Do not invent a competing offer to speed things up; that is a lie and it usually comes back. If the role has a real problem, a fast no is the correct move. Speed is a tool for good decisions, not a way to skip them.",
+    "signals": "You can answer any opportunity within 48 hours with a clear yes, no, or next-step request, and your references already agreed.",
+    "effort": "hours",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "one-body-in-a-crisis",
+    "title": "Act as One Body",
+    "situation": "During an outage, teammates work on separate fixes and contradict each other in the channel.",
+    "domain": "work",
+    "tags": ["incident-response", "team-alignment", "coordination", "crisis"],
+    "chapter": 11,
+    "principle": "One standard and one leader under pressure",
+    "verses": ["11.30", "11.32"],
+    "scene": "It is 9 a.m. on a busy day, and the checkout page is down. Three engineers post different theories in the incident channel. A support lead promises refunds that nobody approved, and the product manager asks for an ETA every five minutes. Everyone is capable. Nobody is coordinated. Sun Tzu describes a snake that answers a strike at any point with its whole body, and two enemies who help each other like hands when a storm hits their boat. Your job is to set one standard, one channel, and one owner. Name an incident lead, give each person a lane, and post every update in one place. The team becomes one body again.",
+    "moves": [
+      {
+        "title": "Name one incident lead",
+        "detail": "In the first five minutes, the most senior available person announces in the main channel that they are incident lead and all decisions route through them. Ask one other person to keep notes. The lead does not have to be the best engineer. They have to be the single point everyone reports to."
+      },
+      {
+        "title": "Split the work into lanes",
+        "detail": "Create three lanes in a shared doc: diagnosis, customer messages, and rollback or fix. Assign one named person to each and ask them to post only in their lane's thread. Anyone with a theory posts it in diagnosis, so the signal stays visible and the channel stays calm."
+      },
+      {
+        "title": "Set the update rhythm",
+        "detail": "Commit to a status update every 20 minutes, even if it says no change yet. Regular updates stop stakeholders from interrupting engineers with 'any news?' messages. Pin the next update time at the top of the channel so everyone knows when to expect it."
+      },
+      {
+        "title": "Run a short debrief",
+        "detail": "After the incident, meet for 20 minutes with the same people. Ask what was duplicated, what was delayed, and which decision had to be reversed. Write the answers into the runbook within a day, so next time the team moves together without waiting for someone to step up."
+      }
+    ],
+    "script": {
+      "label": "Incident channel announcement",
+      "text": "Everyone, I am taking incident lead for the checkout outage. Please route decisions through me. Lanes: [Name] on diagnosis, [Name] on customer messages, [Name] on rollback options. Post theories in the diagnosis thread rather than here. Next status update at [time], even if nothing has changed. Please reply with a thumbs up once you have read this. Thank you."
+    },
+    "backfire": "This fails when the lead becomes a bottleneck and stalls good ideas, so give lane owners real authority. A senior person may also refuse to yield the role; settle that with your manager afterwards, not in the middle of the incident. Lanes do not replace formal ownership when there is a security breach or legal exposure, which need a named owner and a legal contact. Do not use a crisis to push through decisions you could not defend in daylight.",
+    "signals": "Within 20 minutes, updates come from one place, no two people are fixing the same thing, and stakeholders stop asking for basic status.",
+    "effort": "minutes",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "burn-the-boats-with-a-runway",
+    "title": "Burn the Boats, Keep Your Runway",
+    "situation": "You want to leave your field, but you keep postponing the first real step.",
+    "domain": "career",
+    "tags": ["career-change", "commitment", "savings-runway", "transition"],
+    "chapter": 11,
+    "principle": "Commit once retreat is no longer the plan",
+    "verses": ["11.23", "11.39", "11.58"],
+    "scene": "For three years you have said you will switch into product design. You bookmark portfolio examples, watch course videos, and return to the same job every Monday. The plan never fails because it never starts. Sun Tzu's commander marches deep into hostile land, breaks the cooking pots, and leaves no quiet road home. You can borrow the spirit without the recklessness. Put a date on the calendar, tell two people, and build a six-month savings runway before you resign. Then make one commitment that closes the old door a little, such as a paid course or a freelance project. Half-commitment is the most expensive option you have.",
+    "moves": [
+      {
+        "title": "Fix the runway first",
+        "detail": "Add up your monthly essentials and multiply by six. Save toward that figure before you move, or set a date to reach it. The aim is not to stay safe forever. It is to remove the fear that drags you back to the old job the first time the new plan gets hard."
+      },
+      {
+        "title": "Make one irreversible commitment",
+        "detail": "Pick a step that cannot be quietly undone: pay for a course with a start date, sign a freelance agreement, or announce a project deadline. Keep the cost proportional to your savings. A commitment you can afford to honor beats a dramatic one you cannot."
+      },
+      {
+        "title": "Tell the people who need to know",
+        "detail": "Share the plan with your partner or closest family first, then with one mentor already in the new field. Ask for something specific: a portfolio review, an introduction, or a weekly check-in. Public commitment makes retreat costly in a healthy way and gives you people to report progress to."
+      },
+      {
+        "title": "Schedule a ninety-day review",
+        "detail": "Put a formal review on the calendar for day ninety. Ask three questions: did I ship real work, did I get honest feedback, and is the runway still on track? If two answers are yes, continue. If not, change the route, not the destination, and decide the next move with the numbers in front of you."
+      }
+    ],
+    "script": {
+      "label": "Message to a mentor",
+      "text": "Hi [Name], I have decided to move into [new field] and my target is a first paid project by [month]. I have six months of savings planned and a course starts on [date]. Could I have 30 minutes to review my portfolio and tell me the one gap you would fix first? I will send my current work beforehand. Thank you for being direct with me; that is what I need most right now."
+    },
+    "backfire": "This fails when savings are thin, dependents rely on your income, or the new field has no paid demand you can test. Do not borrow against a home or family security to prove a point. Sun Tzu's bold move assumes a clear objective and an army that can survive the cost. If your test shows the market is closed, a planned change of direction is wise, not cowardly.",
+    "signals": "Within a quarter you have a real-world test, a dated review, and a savings figure you check monthly.",
+    "effort": "days",
+    "difficulty": 3,
+    "featured": false
+  },
+  {
+    "slug": "choose-neutral-ground",
+    "title": "Choose the Ground First",
+    "situation": "A hard talk with a parent or sibling keeps turning into the same argument at the same table.",
+    "domain": "family",
+    "tags": ["family-conflict", "hard-conversations", "setting", "communication"],
+    "chapter": 11,
+    "principle": "Read the ground before you engage",
+    "verses": ["11.4", "11.5", "11.11"],
+    "scene": "Every holiday, the same argument starts at the same table. Your father raises your decision to leave the family business, your sister joins in, and within ten minutes voices are rising and someone leaves the room. Sun Tzu sorts ground by what it does to the fight. A dinner with an audience is ground where nobody can back down without losing face. A walk, a coffee, or a scheduled call gives both sides room to move. So you choose the setting before the words. You invite your father to talk, keep it to forty minutes, and agree that either of you can pause. The argument changes when the place changes.",
+    "moves": [
+      {
+        "title": "Name the purpose in one sentence",
+        "detail": "Before you invite anyone, write one sentence about the outcome you want, such as: I want us to talk about my decision without re-arguing it. Keep it short. A clear purpose stops the talk from drifting into every grievance from the last twenty years."
+      },
+      {
+        "title": "Move to neutral ground",
+        "detail": "Propose a walk, a coffee shop, or a video call instead of a family meal. Avoid holidays and crowded days. Invite one person at a time when you can, because a group setting raises the stakes for everyone and makes it harder to listen."
+      },
+      {
+        "title": "Agree on time and a pause word",
+        "detail": "Set a length of about 40 minutes and say so at the start. Agree that either person can say 'let us pause' and return later. A fixed end point lowers the stakes, so each side can listen longer than usual without feeling trapped."
+      },
+      {
+        "title": "Reflect before you respond",
+        "detail": "Let the other person speak for two minutes without interruption. Then restate what you heard before giving your view: so the worry is that the business loses its name. This stops the debate from becoming a contest and shows you are listening, not waiting for your turn."
+      }
+    ],
+    "script": {
+      "label": "Invitation to neutral ground",
+      "text": "Dad, I want to talk about my decision to leave the business, and I want to do it properly rather than at dinner where we both get stuck. Would you join me for a walk on Saturday morning, around 10? Let us keep it to about 40 minutes, and either of us can pause whenever we need to. I really want to understand your concerns. Let me know if that works for you."
+    },
+    "backfire": "This fails when the other person treats any change of setting as a trap, or when there is abuse or a safety risk. In those cases, choose a public place with another trusted adult, or a written message, or outside support. Do not use a walk to ambush someone; say openly that you want to talk. This tactic does not make an unwelcome decision welcome. It only lowers the temperature so the conversation can happen at all.",
+    "signals": "The talk ends with each person able to state the other's concern, even if you still disagree.",
+    "effort": "minutes",
+    "difficulty": 1,
+    "featured": false
+  }
+]

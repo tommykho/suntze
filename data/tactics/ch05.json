@@ -1,0 +1,106 @@
+[
+  {
+    "slug": "roll-the-stone-downhill",
+    "title": "Let the Slope Do the Work",
+    "situation": "You start a new habit with big plans, stall within two weeks and feel like you failed.",
+    "domain": "self",
+    "tags": ["habits", "fitness", "routine", "momentum", "consistency"],
+    "chapter": 5,
+    "principle": "Build momentum that carries itself",
+    "verses": ["5.22", "5.23"],
+    "scene": "Picture this: you buy the running shoes, download a plan and run five miles on Monday. By Thursday you are on the couch, and by the next Monday you are back at zero, wondering what is wrong with you. Nothing is wrong with you. You pushed a flat stone uphill, which is the hardest way to move it. Sun Tzu describes a round stone that sits still on level ground and rolls once it reaches a slope. The trick is not more willpower on the flat. It is a short, easy start and a slope that keeps the stone moving. Make the first step small enough that you cannot refuse it, and let consistency carry the weight.",
+    "moves": [
+      { "title": "Start below your ability", "detail": "Choose a version of the habit you can finish on your worst day: ten push-ups, a ten-minute walk, one page of reading. Write the minimum in a single sentence. For the first three weeks, the goal is completion, not performance. Increase the dose only after you have a streak going." },
+      { "title": "Attach it to an existing routine", "detail": "Link the habit to something you already do every day, such as after your morning coffee or before opening your laptop. Write the link in the form 'After I [existing action], I will [new habit] at [place].' The existing routine supplies the push, so you do not have to decide each time." },
+      { "title": "Track streaks, not totals", "detail": "Mark each day you complete the minimum on a paper calendar or a simple app. Protect the chain rather than chasing big numbers. The rule is never to miss twice in a row. One missed day is an accident; two is the start of a new habit, and that is what breaks momentum." },
+      { "title": "Raise the grade in small steps", "detail": "Every four weeks, add one small increment, such as five more minutes or one more set. Only do this if you completed at least 80 percent of sessions in the last month. If you did not, stay at the current level until the rhythm feels automatic." }
+    ],
+    "script": {
+      "label": "Check-in request to a buddy",
+      "text": "Hey [Name], I am starting a minimum routine: [habit] for [X] minutes, at [time], five days a week. Could you check in with me each Sunday? Just reply with how many days I hit. If I miss two in a row, call me out on it. Thanks."
+    },
+    "backfire": "Small starts can become a comfortable plateau if you never raise the bar. This is not a plan for medical goals, so check with a clinician before strenuous exercise or if you have symptoms. Avoid stacking several new habits at once, which leaves each one underpowered. If the habit starts harming your sleep, health or relationships, stop and reset the goal.",
+    "signals": "You stop deciding whether to do it and simply do it, and a missed day starts to feel wrong rather than fine.",
+    "effort": "days",
+    "difficulty": 1,
+    "featured": false
+  },
+  {
+    "slug": "direct-ask-indirect-win",
+    "title": "Ask Directly, Win Indirectly",
+    "situation": "You need investors or buyers to say yes, but cold asks keep getting polite refusals.",
+    "domain": "business",
+    "tags": ["fundraising", "sales", "outreach", "pitch", "negotiation"],
+    "chapter": 5,
+    "principle": "Use the direct method to join, the indirect to win",
+    "verses": ["5.5", "5.10", "5.11"],
+    "scene": "Picture this: you have a good product and a solid deck, but your inbox is full of 'not right now' replies. You keep pitching head-on, and every investor or buyer files you as one more request. Sun Tzu says the direct method is how you join battle, while indirect methods are what secure the victory. You need both. Make one clear direct ask, with a specific size and timing. Then work the indirect path: a paid pilot for one customer, a warm introduction from someone they trust, or a small test that proves demand. Each indirect move gives the other side a reason to say yes on their own terms.",
+    "moves": [
+      { "title": "Make one clear direct ask", "detail": "Send each target one concise request: what you are asking for, the size, the timing and why them. For a buyer, ask for a named pilot with a price. For an investor, ask for a 30-minute call on a specific decision. Avoid vague requests like 'would love your thoughts,' which invite a polite non-answer." },
+      { "title": "Offer a small indirect proof", "detail": "Give a low-risk route to yes: a paid pilot, a limited-scope trial, or a letter of intent for a modest amount. Define success with one metric and a fixed end date. The indirect route lets the other side say yes without betting their whole budget on an unknown." },
+      { "title": "Borrow trust through introductions", "detail": "Ask two or three existing customers or advisers for a warm introduction to a target. Write them a two-line note they can forward, explaining why the connection is useful to the target. A referral is an indirect route that carries credibility a cold email cannot." },
+      { "title": "Track each route and follow up", "detail": "Keep one sheet with each target, the direct ask sent, the indirect route offered and the next date. Follow up on a fixed rhythm, such as every ten business days, and bring one new piece of evidence each time: a metric, a customer quote or a short case study." }
+    ],
+    "script": {
+      "label": "Pilot offer to a buyer",
+      "text": "Hi [Name], [company] has [specific problem], and [product] cut [metric] by [result] for [similar customer]. I would like to propose a four-week pilot for your [team], with [success metric] as the test and a fixed price of [amount]. If the pilot does not reach [target], you pay nothing. Would a 20-minute call on [day] help us see whether the scope fits?"
+    },
+    "backfire": "Indirect offers can become giveaways that train buyers to expect free trials, so price the pilot even when it is small and set a clear end date. Never promise results you cannot measure, and never invent customer references or quotes. If the product does not yet solve the problem, no route will win the deal; fix the product first.",
+    "signals": "Replies move from 'not now' to a specific date, and someone outside your team starts asking about pilot scope.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "release-on-the-pause",
+    "title": "Release on the Pause",
+    "situation": "One person dominates every meeting, and your useful points get talked over.",
+    "domain": "work",
+    "tags": ["meetings", "dominant", "speaking", "colleague", "influence"],
+    "chapter": 5,
+    "principle": "Hold your energy, then release it once",
+    "verses": ["5.14", "5.15"],
+    "scene": "Picture this: the weekly planning call has one regular who speaks for most of the hour. Each time you open your mouth, the conversation swerves back to their ideas, and by the time they stop, the decision is already made. You could interrupt, but that spends your energy on a fight in the room. Sun Tzu compares energy to a drawn crossbow: you hold the tension, then release it at the moment of decision. Before the meeting, write one sharp point and one question. Let the talker finish. In the first clean pause, say your point in a single sentence, then ask the question that needs an answer.",
+    "moves": [
+      { "title": "Prepare one point and one question", "detail": "Before the meeting, write your position in one sentence and one question that forces a decision, such as 'Can we agree on option B by Friday?' Keep both in your notes. Prepared brevity is much harder to talk over than an improvised point that trails off." },
+      { "title": "Use the first clean pause", "detail": "Watch for the natural break: a breath, a 'so,' or the moment they look down at their notes. Lean in and say, 'Before we move on, I want to add one point,' then deliver your sentence. Do not wait for permission. Wait for the gap, then take it." },
+      { "title": "Ask for a named owner", "detail": "After you speak, turn to the group and ask, 'Who is taking the next step on that?' If the dominant speaker volunteers, thank them and confirm the date in the notes. This moves the conversation from opinion to ownership and gives quieter people a clear role in the follow-up." },
+      { "title": "Bring the quieter voices in", "detail": "Before the meeting, message one or two colleagues who share your view. Ask them to add their perspective if they agree. Their backing gives your point weight and gives the room a second voice without turning the meeting into a contest." }
+    ],
+    "script": {
+      "label": "Pre-meeting message to a colleague",
+      "text": "Hi [Name], I plan to raise [point] in tomorrow's call, specifically whether we should [decision]. I think it affects [impact on the team]. If you see it the same way, would you be willing to add a line on it? No pressure if you would rather not."
+    },
+    "backfire": "Do not use this to shut down people with useful input or to score points against a colleague. In an open brainstorm, a timing tactic can cut off ideas the group needs. For persistent disruption, a one-to-one talk about meeting norms works better than in-meeting maneuvers. Never line up private allies to embarrass someone in front of others.",
+    "signals": "Your point makes it into the notes, and the group names an owner for the next step.",
+    "effort": "minutes",
+    "difficulty": 1,
+    "featured": false
+  },
+  {
+    "slug": "pick-the-moment",
+    "title": "Pick the Moment, Not the Fight",
+    "situation": "You need to raise a money or chore issue with your partner, and every attempt blows up.",
+    "domain": "personal",
+    "tags": ["partner", "conversation", "timing", "conflict", "relationship"],
+    "chapter": 5,
+    "principle": "Strike with a well-timed decision",
+    "verses": ["5.13", "5.14"],
+    "scene": "Picture this: it is 11 p.m., your partner has just walked in, and you start talking about the monthly budget. Within five minutes you are both tired, defensive and talking past each other. The subject was fair. The timing was not. Sun Tzu describes a falcon that swoops at the right moment, not whenever it feels eager. A hard conversation has the same shape: choose a window with energy to spare, a clear question and enough time to finish. Name the topic in advance. Then arrive with one concrete proposal. Good timing does not make the issue smaller. It makes a decision possible.",
+    "moves": [
+      { "title": "Signal the topic ahead", "detail": "Give a heads-up a day or two before, in one sentence that names the subject and a time limit: 'I would like 30 minutes on the holiday budget.' This removes the feeling of an ambush and gives your partner time to prepare, which lowers defensiveness on both sides." },
+      { "title": "Check for a window", "detail": "Before starting, ask, 'Are you in a good place to talk now?' Avoid late nights, hunger and the hour right after a stressful event. If the answer is no, agree on a specific time rather than dropping the subject altogether." },
+      { "title": "Arrive with one proposal", "detail": "Write the problem in one sentence and bring one concrete option, such as 'Could we move $300 a month from dining into a shared travel fund?' A single option turns an open-ended complaint into a decision you can make together." },
+      { "title": "Close with a written decision", "detail": "End by restating what you agreed in one sentence and setting a date to check it. Send a short text afterward with the same wording. This turns a passing conversation into a decision both of you can point to later, which prevents the same argument from starting over." }
+    ],
+    "script": {
+      "label": "Setting up the conversation",
+      "text": "Hi [Name], I would like to talk about [topic] this weekend. Could we sit down for about 30 minutes on [day], after [activity]? I am not looking to fight about it. I have one idea about [specific option] that I would like your input on. Does [time] work, or would another time suit you better?"
+    },
+    "backfire": "Timing cannot fix an unsafe dynamic. If you feel afraid, if your partner threatens you, or if money is being controlled in coercive ways, seek a counselor or support service rather than negotiating on a schedule. Also, do not use good timing to postpone indefinitely. If a window never opens, the postponement itself is the problem to address.",
+    "signals": "The conversation ends with a decision and a check-in date, not a truce that lasts only until the next argument.",
+    "effort": "minutes",
+    "difficulty": 1,
+    "featured": false
+  }
+]

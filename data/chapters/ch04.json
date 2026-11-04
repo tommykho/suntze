@@ -1,0 +1,12 @@
+{
+  "n": 4,
+  "essence": "Secure your own position first; the win follows from the preparation.",
+  "modern_lens": "At work and at home, most losses come from positions you never secured: unclear ownership, a thin cushion, unfinished proof. Sun Tzu's first move is to remove the chance of defeat, which is in your hands, and only then to watch for the opening the other side will give you. Do the preparation so completely that the eventual contest feels settled.",
+  "key_verse": "4.1",
+  "principles": [
+    { "name": "Secure Yourself First", "verses": ["4.1", "4.2"], "gloss": "Your own preparation is the part of the game you fully control, so start there before any contest." },
+    { "name": "Certainty Comes From No Mistakes", "verses": ["4.13"], "gloss": "Win by removing avoidable errors; a clean record makes the outcome close to certain." },
+    { "name": "Fight After the Win Is Set", "verses": ["4.15"], "gloss": "Do the groundwork so the conversation or launch is the last step, not the first." },
+    { "name": "Defend Until the Surplus Appears", "verses": ["4.5", "4.6"], "gloss": "Hold your ground while you build strength, and push only when you have more than you need." }
+  ]
+}

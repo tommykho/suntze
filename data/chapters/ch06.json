@@ -1,0 +1,12 @@
+{
+  "n": 6,
+  "essence": "Be formless: strike where they are unprepared and shape yourself to the ground.",
+  "modern_lens": "Plans rarely fail because you were too weak; they fail because you were predictable and the other side knew where you would push. Sun Tzu teaches you to reveal only what is needed, to probe before you commit, and to adapt to the ground you actually have. Spend your effort where no one is defending, and stay flexible about the route.",
+  "key_verse": "6.30",
+  "principles": [
+    { "name": "Attack the Undefended", "verses": ["6.7", "6.8"], "gloss": "Move where the other side has not prepared a defense, and you meet less resistance." },
+    { "name": "Conceal Your Dispositions", "verses": ["6.2", "6.25"], "gloss": "Keep your limits and plans private so others cannot prepare against what they cannot see." },
+    { "name": "Water Adapts to the Ground", "verses": ["6.31", "6.32"], "gloss": "Shape your approach to the situation in front of you, not to the plan you wrote last month." },
+    { "name": "Stretch Their Attention", "verses": ["6.14", "6.17"], "gloss": "Force others to defend many fronts, and they become weak on each one." }
+  ]
+}

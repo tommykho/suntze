@@ -1,0 +1,12 @@
+{
+  "n": 1,
+  "essence": "Win on paper before you walk into the room.",
+  "modern_lens": "Chapter 1 says most outcomes are settled before the contest begins, by how honestly you assess the terrain, the people and your own readiness. Modern work and personal conflicts reward the same habit: count the factors, test your assumptions and plan several moves ahead. Its point about deception concerns focus and framing, never lying.",
+  "key_verse": "1.18",
+  "principles": [
+    { "name": "The Five Factors", "verses": ["1.3", "1.4"], "gloss": "Test any big move against five questions: shared purpose, timing, the terrain, your own capability and the discipline of your process." },
+    { "name": "Count Before You Move", "verses": ["1.26"], "gloss": "Thorough preparation predicts most results. Do the homework before the meeting, not during it." },
+    { "name": "Know the Scorecard", "verses": ["1.13", "1.14"], "gloss": "Compare yourself with the other side on concrete questions, then forecast the outcome from the answers you actually have." },
+    { "name": "Adapt the Plan", "verses": ["1.17"], "gloss": "Keep the goal fixed and change the method when new facts arrive. A plan is a tool for results, not a promise to keep." }
+  ]
+}

@@ -1,0 +1,8 @@
+# Cloudflare Pages project config (used by `wrangler pages dev` / `wrangler pages deploy`).
+name = "suntze"
+pages_build_output_dir = "./dist"
+compatibility_date = "2026-10-01"
+
+[vars]
+# Extra origins allowed to call /api/relay (comma-separated). The site's own origin is always allowed.
+ALLOWED_ORIGINS = ""

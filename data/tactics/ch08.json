@@ -1,0 +1,185 @@
+[
+  {
+    "slug": "audit-your-five-faults",
+    "title": "Audit Your Five Faults",
+    "situation": "A project failed in a way that makes you wonder what you did as a team lead.",
+    "domain": "work",
+    "tags": [
+      "leadership",
+      "self-review",
+      "decisions",
+      "team lead"
+    ],
+    "chapter": 8,
+    "principle": "Know your own besetting faults",
+    "verses": [
+      "8.12",
+      "8.14"
+    ],
+    "scene": "The release went out late, a client escalated, and your team is looking at you in Monday's stand-up. Your first instinct is to defend the schedule or to push everyone harder. Sun Tzu names five faults that ruin a commander: recklessness, cowardice, a hasty temper, too much sensitivity to shame, and over-concern for one's men. When an army falls, he says, the cause is usually among them. So before you assign blame, you check your own record. The lesson: the greatest risk to a team is often the leader's habit.",
+    "moves": [
+      {
+        "title": "Write the last three big decisions",
+        "detail": "List three significant calls you made in the last quarter, including the one that went wrong. For each, write what you knew, what you chose and why. Be specific about timing: did you commit before you had the facts, or after the window had closed?"
+      },
+      {
+        "title": "Score each decision by fault",
+        "detail": "For each decision, mark whether recklessness, cowardice, temper, pride or over-protection shaped it. Recklessness ignores risk. Cowardice avoids a hard call. Temper reacts in the room. Pride refuses to admit error. Over-protection hides truths people need to do their jobs."
+      },
+      {
+        "title": "Pick one fault to correct",
+        "detail": "Choose the fault that shows up most often and write one concrete rule for yourself, such as: I will not approve a deadline without a named risk owner, or I will wait 24 hours before answering a provoked email."
+      },
+      {
+        "title": "Ask for one data point",
+        "detail": "In your next one-on-one, ask one direct question: Where did I make it harder for you to do your job last month? Listen without defending, thank the person, and note the answer. Do not promise a fix on the spot."
+      }
+    ],
+    "script": {
+      "label": "One-on-one question",
+      "text": "Hi [name], I am working on how I lead, and I would value your honest view. Looking at the [project] launch, what is one thing I did, or did not do, that made your work harder? I will not respond in the moment. I will think about it and come back to you on [date] with what I am changing."
+    },
+    "backfire": "A self-audit can become self-punishment, which leads to freezing or overcorrecting. Do not use it to shift blame onto your team, and do not turn the review into a discussion of your feelings. Your team's view is one input, not a verdict. If the feedback is a complaint about a protected issue, take it to HR or your manager, not a one-on-one.",
+    "signals": "You can name the fault behind a decision before you make it, and your team starts raising problems earlier.",
+    "effort": "hours",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "decline-the-trap-role",
+    "title": "Refuse the Trap Road",
+    "situation": "A promotion or job offer looks like progress but would hold you in a role with no path forward.",
+    "domain": "career",
+    "tags": [
+      "job offers",
+      "career",
+      "declining",
+      "negotiation"
+    ],
+    "chapter": 8,
+    "principle": "Some roads must not be taken",
+    "verses": [
+      "8.3",
+      "8.4"
+    ],
+    "scene": "The recruiter calls with a title upgrade, a bigger salary and a team that is clearly struggling. Everyone around you says to take it. You can already see the trap: a manager who will not approve transfers, a product being sunset, a budget that will not grow. Sun Tzu lists roads that must not be followed, even when they look like progress. You can only spot them if you decided in advance what you want. Before you answer, write down the three conditions the role must meet. The lesson: a good offer moves you toward your goal, not just away from your current job.",
+    "moves": [
+      {
+        "title": "Write your three non-negotiables",
+        "detail": "Before the offer call, list three conditions any role must meet: for example, a path to a specific skill, a manager you respect, and a team with a stable mandate. Keep the list on your phone, and read it again after you hear the full details."
+      },
+      {
+        "title": "Ask questions that reveal terrain",
+        "detail": "Ask why the role is open, what happened to the last person, what the budget looks like for next year, and what success looks like at twelve months. Ask the hiring manager and, if you can, someone who has left the team."
+      },
+      {
+        "title": "Test their story against the evidence",
+        "detail": "Check the team's recent launches, its turnover on professional networks, and whether the product is funded in the next planning cycle. Compare what you were told with what you find. Gaps between the two are information."
+      },
+      {
+        "title": "Negotiate or decline, clearly",
+        "detail": "If the role fails a condition, ask for a change that fixes it, such as a defined project or a six-month review of scope. If they will not move, decline politely and keep the relationship warm for a future opening."
+      }
+    ],
+    "script": {
+      "label": "Declining the offer",
+      "text": "Hi [recruiter name], thank you for the offer for the [title] role and for the time you and [hiring manager name] gave me. I have thought about it carefully. The role does not yet meet my needs around [specific condition, such as a clear path to leading the platform work]. I would be glad to stay in touch and to talk again if the scope changes. Thank you again."
+    },
+    "backfire": "Declining a promising offer can cost real income and a foothold at a company you like, and your read of the situation may be wrong. Do not use this as a reason to avoid every stretch role. Never invent competing offers to create pressure. If you need the paycheck, a role with a clear exit can still be sound, as long as you go in clear-eyed.",
+    "signals": "You can name the exact condition the role fails, and the employer either changes it or you decline without regret.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "pivot-when-plan-breaks",
+    "title": "Blend Gain With Risk",
+    "situation": "Mid-project, your plan stops working, and the team is waiting for someone to decide what happens next.",
+    "domain": "business",
+    "tags": [
+      "pivot",
+      "planning",
+      "risk",
+      "decisions"
+    ],
+    "chapter": 8,
+    "principle": "Weigh advantage and danger together",
+    "verses": [
+      "8.7",
+      "8.9"
+    ],
+    "scene": "Your pilot for a new subscription tier is six weeks in, and conversion is half of what you forecast. The team wants to keep executing the original plan because it is what was approved. A competitor has just cut its price, and a key customer is asking for a feature you never planned. Sun Tzu says the wise leader blends advantage and disadvantage in one plan, and seizes an opening even in trouble. You hold the plan loosely, name the signal that would make you change course, and test a smaller bet. A plan is a hypothesis, and a good leader updates it.",
+    "moves": [
+      {
+        "title": "Name what changed",
+        "detail": "Put the original assumptions next to the current data and mark each one as holding, weakened or broken. Be exact: the conversion rate, the price point, the customer need. A short table in the team document is enough to start the conversation."
+      },
+      {
+        "title": "Set a decision trigger",
+        "detail": "Agree with your sponsor on a specific signal that will trigger a change, such as conversion staying under 2.5 percent after four more weeks. Write it into the plan, so that a pivot is a decision, not a panic."
+      },
+      {
+        "title": "Run a small test",
+        "detail": "Pick one alternative, such as a discounted annual plan or the requested feature for one segment. Limit it to two weeks and a fixed budget. Define success before you start so you can read the result honestly."
+      },
+      {
+        "title": "Communicate the trade-off",
+        "detail": "Send stakeholders a short note: what changed, what you will test, what you will keep doing, and the cost of waiting. Name the risk of pivoting as well as the risk of staying put. Ask for a decision by a specific date."
+      }
+    ],
+    "script": {
+      "label": "Pivot update to sponsor",
+      "text": "Hi [sponsor name], the pilot's conversion is at [X] percent, against the [Y] percent we planned. Three assumptions have weakened: [assumption one] and [assumption two]. I propose we keep the current tier running and test [specific alternative] with [segment] for two weeks, with a budget of [amount]. If conversion stays below [threshold] at week [N], we shift the full launch. Can we agree on this by [date]?"
+    },
+    "backfire": "Pivoting too often is its own failure: the team never finishes anything and customers stop trusting the product. Do not change direction because the most senior person is bored or because one unhappy customer was loud. Do not design a test that is built to produce the answer you already want. If the core plan is sound and only execution is weak, fix the execution instead.",
+    "signals": "The team argues about the trigger and the test rather than whether the plan is still real, and the decision lands on a date.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "make-your-position-unassailable",
+    "title": "Make the Position Unassailable",
+    "situation": "Your roommate leaves pointed notes and small slights, and you are tired of guessing where you stand.",
+    "domain": "personal",
+    "tags": [
+      "roommate",
+      "boundaries",
+      "conflict",
+      "shared home"
+    ],
+    "chapter": 8,
+    "principle": "Prepare so their move cannot hurt",
+    "verses": [
+      "8.11"
+    ],
+    "scene": "The dishwasher note is back, written in capital letters and taped to the cabinet. Your roommate has stopped speaking to you directly, and the rent split is due on Friday. You feel the urge to wait for them to move first, or to answer with a sharper note of your own. Sun Tzu says the wise leader does not rely on the other side failing to act, but makes the position strong enough that any move can be handled. You put the issues on the table, agree the rules together, and the notes lose their power. The lesson: prepare the ground so the slights have nowhere to land.",
+    "moves": [
+      {
+        "title": "Write down the specific issues",
+        "detail": "List the five or six recurring problems with dates and examples, such as dishes, shared bills and guests. Keep it neutral: what happened and what you need. Do not write about their character. This list becomes the agenda for one conversation, not a weapon."
+      },
+      {
+        "title": "Request one direct conversation",
+        "detail": "Send a calm message asking for 20 minutes this week in a neutral place. Say what you want to discuss, not how they have behaved. Avoid notes, group chats and confronting them in the kitchen at midnight."
+      },
+      {
+        "title": "Agree on written house rules",
+        "detail": "In the meeting, propose three to five specific rules: a dish rota, a fixed bill-split date, and a guest policy with notice. Write them in a shared note or on the fridge. Agree on a 15-minute check-in each month to review them."
+      },
+      {
+        "title": "Answer the next note plainly",
+        "detail": "When a passive-aggressive note appears, reply once, in writing, pointing to the agreed rule: Per our list, the dishes are on your rota this week. After that, ignore the tone and respond only to the facts."
+      }
+    ],
+    "script": {
+      "label": "Request for a house meeting",
+      "text": "Hi [roommate name], I would like us to sit down for 20 minutes this week to sort out how we share the flat. I have noticed a few things that are not working for me, including [dishes] and [the bill date]. I would also like to hear what is working for you, and then agree on a few simple rules we can both follow. Does Thursday at 8 work?"
+    },
+    "backfire": "This fails if the roommate is unsafe, controlling or threatening. In that case you need a safer option and possibly your landlord or a support service, not a rules document. It also fails if you use the list to build a case for eviction or to gather evidence secretly. Do not read their messages or track them; that crosses a line. Fair agreements work only when both people are willing.",
+    "signals": "The notes stop, or they start addressing the rules instead of the person, and the monthly check-in becomes routine.",
+    "effort": "hours",
+    "difficulty": 1,
+    "featured": false
+  }
+]

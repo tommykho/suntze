@@ -1,0 +1,154 @@
+[
+  {
+    "slug": "never-send-the-angry-email",
+    "title": "Never Send the Angry Email",
+    "situation": "You have drafted a cutting reply to a colleague, and your cursor is on the send button.",
+    "domain": "work",
+    "tags": ["email-conflict", "anger", "cooling-off", "written-record"],
+    "chapter": 12,
+    "principle": "Anger is no reason to move your troops",
+    "verses": ["12.18", "12.20", "12.22"],
+    "scene": "A manager's message lands at 4:47 p.m. It questions your work in front of the whole team, and within two minutes you have written a reply listing every error they have ever made. The draft feels sharp and satisfying. Sun Tzu warns that no general should fight simply out of pique. Anger often softens, and a record written in a hot moment lasts forever. So you do not send it. You move the draft into a folder, step away, and come back with a plan rather than a grudge. The reply you finally send is short, specific, and written by the person who still has to work with this manager tomorrow.",
+    "moves": [
+      {
+        "title": "Move the draft out of reach",
+        "detail": "Copy the draft into a notes file or drafts folder, then close the email window. Do not delete it; you may want to reread it in a week. Setting it aside breaks the rhythm of reply and counter-reply, which is where most workplace escalations begin."
+      },
+      {
+        "title": "Use a fixed cooling-off period",
+        "detail": "Adopt a rule: no reply to anything written in anger until at least the next morning, or two hours minimum for less urgent items. Set a calendar reminder titled 'Reply to [Name], facts only.' Use the gap to take a walk or talk to someone who is not involved."
+      },
+      {
+        "title": "Strip the draft to facts",
+        "detail": "Reread the draft and delete every adjective and every claim about intent, such as 'you always' or 'you clearly wanted this.' Keep dates, decisions, and what you need next. If a sentence cannot be checked against a record, it does not belong in the reply."
+      },
+      {
+        "title": "Propose a call for complex issues",
+        "detail": "When the issue is emotional or tangled, offer a 15-minute conversation. A call lets both people correct misunderstandings in real time. Follow it with a short written summary of agreed next steps, so the record is clear without another round of argument."
+      }
+    ],
+    "script": {
+      "label": "Calmer reply",
+      "text": "Hi [Name], thanks for flagging the issues with the [project] report. I reviewed it again this morning. Here is what I can confirm: the figures came from [source] on [date], and I did not receive the updated version before the deadline. Could we take 15 minutes today to agree on the correct numbers and who signs off next time? I want to get this right for the team. Thanks, [Your name]"
+    },
+    "backfire": "This fails when the message describes a real emergency, such as a safety risk or a cost that lands within the hour. In that case, reply quickly with facts and a time you will follow up in full. It also fails if you use the cooling-off period to build a private case rather than to calm down. Never forward the draft around the office, and never use it to plan retaliation against anyone who raises a concern through proper channels.",
+    "signals": "You send a reply you would be happy to read aloud to the team, and the next message is about the work rather than the tone.",
+    "effort": "minutes",
+    "difficulty": 1,
+    "featured": false
+  },
+  {
+    "slug": "escalate-a-complaint-stepwise",
+    "title": "Escalate One Step at a Time",
+    "situation": "A company refuses to fix a billing error, and each support agent closes your ticket without a refund.",
+    "domain": "personal",
+    "tags": ["consumer-dispute", "billing", "escalation", "paper-trail"],
+    "chapter": 12,
+    "principle": "Move only when each step gains ground",
+    "verses": ["12.16", "12.17", "12.19"],
+    "scene": "A streaming service charged you twice in March. Three chat agents have apologized, promised a refund, and closed the ticket with none. You are furious, and you feel the pull to post a scathing review and cancel in the same hour. Sun Tzu's rule is to move only when there is a clear gain. So each step gets a purpose, a written record, and a date on the calendar. You start with a written demand, not another chat. When the deadline passes, you climb one level and cite every earlier ticket number. By the third step, the person handling your case has a file that makes the refund the easy decision. The record is your force.",
+    "moves": [
+      {
+        "title": "Assemble the evidence",
+        "detail": "Collect the bank statement lines, the dates of each chat or call, the ticket numbers, and the agent names. Put them in one document in date order, with screenshots where useful. Clear evidence lets the next person fix the problem in one step rather than asking you to explain it again."
+      },
+      {
+        "title": "Send a written demand with a deadline",
+        "detail": "Email support, not chat. Include the account details, the duplicate charge, the transaction IDs, and the exact remedy you want, such as a refund within 14 days. Ask for written confirmation. Chat transcripts can vanish from view; email gives you the paper trail you need for the next step."
+      },
+      {
+        "title": "Climb one level at a time",
+        "detail": "If the deadline passes, reply in the same thread and ask for the billing dispute team by name, citing earlier ticket numbers. Move up one level per step and log each response with its date. Skipping straight to public complaints wastes the leverage your record is building."
+      },
+      {
+        "title": "Use formal routes when stuck",
+        "detail": "After several weeks and three or four internal attempts, file a dispute with your card issuer, which often has its own deadlines and process. Depending on where you live, a consumer protection office may also take the complaint. Keep your tone factual; the people reviewing these cases read many complaints a day."
+      }
+    ],
+    "script": {
+      "label": "Written escalation to support",
+      "text": "Hello, I was charged twice on [date] for [amount], transaction IDs [ID1] and [ID2]. Three earlier chats on [dates], under tickets [numbers], promised a refund that has not arrived. Please refund the duplicate charge of [amount] to my card within 14 days and confirm in writing. If I do not have confirmation by [date], I will ask for escalation to your billing dispute team. Thank you. [Name], [account email]"
+    },
+    "backfire": "This fails when the amount is small compared with the time you will spend, so pick battles worth the effort. It also fails when you threaten steps you will not take or claim facts you cannot document. Do not imply you are a lawyer or regulator in your messages. Escalation can be slow, so accept a partial win if it arrives quickly and close the matter there.",
+    "signals": "A specific remedy is confirmed in writing, or the next level has a dated commitment you can track.",
+    "effort": "days",
+    "difficulty": 1,
+    "featured": false
+  },
+  {
+    "slug": "let-the-deadline-do-the-work",
+    "title": "Let the Deadline Do the Work",
+    "situation": "A vendor is slow-walking a renewal while your current pricing quietly expires.",
+    "domain": "business",
+    "tags": ["negotiation", "deadlines", "vendor-contracts", "leverage"],
+    "chapter": 12,
+    "principle": "Strike when the season favors you",
+    "verses": ["12.3", "12.17"],
+    "scene": "The vendor's renewal proposal has a valid-until line and a 20 percent increase. Your own calendar has a real deadline too: your budget closes on the 30th, and your current contract ends that month. You have been stalling, hoping the price will drop on its own. Sun Tzu says fire works when the season is right and the wind is rising. The vendor's clock is not your leverage. The date you already have is. You set a decision date that falls before your budget closes, make the timing visible, and ask for specific terms while conditions favor you. You move only when the terms are good, and you move on schedule.",
+    "moves": [
+      {
+        "title": "Map your real deadlines",
+        "detail": "List every date that truly matters: budget close, contract expiry, a launch, a hiring decision. Mark them in a shared calendar with an owner for each. Ignore urgency the other side invents. Leverage only works when your deadline is genuine and you can show it to the other party if asked."
+      },
+      {
+        "title": "Learn the vendor's quarter",
+        "detail": "Ask your account manager what they need to close before the end of their month or quarter. Listen for specifics such as a renewal target or a discount approval step. Knowing when they need a signature tells you when a concession is most likely, without any tricks or pretense."
+      },
+      {
+        "title": "Send a dated proposal",
+        "detail": "Write a short proposal with a decision date you choose and the terms you want: last year's price held for a two-year term, or extra seats included. A specific date is easier for them to push through internally than an open-ended conversation that can drift for months."
+      },
+      {
+        "title": "Prepare the walk-away on schedule",
+        "detail": "Before the date, have a credible alternative ready: a competing quote, or a smaller plan you could run in-house. If terms are not met by the deadline, let the offer lapse and execute the alternative. Real walk-away power is the lever; the deadline only gives it a time to matter."
+      }
+    ],
+    "script": {
+      "label": "Dated proposal to vendor",
+      "text": "Hi [Name], thank you for the renewal proposal. We want to renew, and our budget for this line closes on [date]. To decide by then, we need the price held at [current amount] for a two-year term, plus [extra seats or support]. If we agree on these terms by [date], we will sign this week. If not, we will move forward with [alternative] in the next cycle. Could you confirm by [date]?"
+    },
+    "backfire": "This fails when your deadline is invented or your walk-away is a bluff. Vendors often test bluffs quickly, and a false deadline costs trust in every future negotiation. Do not manufacture urgency or hide that the date is flexible if it is. Use this only when both sides can see the real dates and the alternative is one you would actually take. Leverage is a fair tool, not a trap.",
+    "signals": "The vendor offers a concession by your date, or you have a signed agreement or a documented alternative you are ready to use.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "plan-five-launch-outcomes",
+    "title": "Plan Five Outcomes Before Launch",
+    "situation": "A product launch is set for next month, and the plan only covers what happens if everything goes well.",
+    "domain": "business",
+    "tags": ["launch-planning", "scenarios", "risk", "product-launch"],
+    "chapter": 12,
+    "principle": "Prepare the five developments before striking",
+    "verses": ["12.5", "12.8", "12.10"],
+    "scene": "Your team has spent six months on a new feature, and the launch date is locked. The plan is one page and describes only the good outcome. Sun Tzu's commander prepares for five possible developments before using fire. Some outcomes are strong, some are quiet, some erupt, and each needs a different response. So you write what you will do in each case: a traffic surge, a silent launch, a production bug, customer backlash, and a competitor's counter-move. You assign an owner to each branch and set thresholds for when to act. You also position the launch so that the risk drifts away from your customers rather than toward them.",
+    "moves": [
+      {
+        "title": "Write five outcome branches",
+        "detail": "Create a one-page document with five headings: strong uptake, quiet launch, technical failure, customer backlash, and competitor response. Under each, write what you would observe and the first three actions. Keep every branch short enough that an on-call person could follow it at midnight."
+      },
+      {
+        "title": "Assign an owner per branch",
+        "detail": "Name one person responsible for each branch, plus a backup, with phone numbers in the document. The owner does not have to solve everything. They must decide whether to trigger the next step and whom to call. Ambiguity about who decides is what turns a small problem into a launch-day crisis."
+      },
+      {
+        "title": "Set trigger thresholds",
+        "detail": "Decide measurable thresholds in advance, such as an error rate above 2 percent for ten minutes, or support tickets doubling within an hour. Write down what each threshold triggers. This stops the team debating whether a problem is real while customers are already affected."
+      },
+      {
+        "title": "Rehearse one branch",
+        "detail": "Run a 30-minute tabletop exercise with the team on the technical failure branch. Walk through the steps as if it were happening now. Note where people hesitate or lack access, fix those gaps before launch, and update the document with what you learned."
+      }
+    ],
+    "script": {
+      "label": "Launch-readiness message",
+      "text": "Team, before Thursday's launch I have written a one-page plan covering five outcomes: strong uptake, quiet launch, technical failure, customer backlash, and competitor response. Each has an owner and a trigger. Please read your branch by [day] and reply with any missing access or contacts. We will rehearse the technical failure branch on [day] for 30 minutes. Thank you for preparing this carefully."
+    },
+    "backfire": "This fails when planning becomes a way to avoid shipping. Five branches can grow into fifty, and a team that prepares forever never launches. Keep the document to one page and time-box the exercise. It also fails if a branch involves customer harm you are unwilling to disclose. A response plan must include honest customer communication, not spin or hidden defects.",
+    "signals": "On launch day, the on-call owner identifies the right branch within ten minutes, and nobody has to ask who is in charge.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": false
+  }
+]

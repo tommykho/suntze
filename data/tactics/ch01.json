@@ -1,0 +1,96 @@
+[
+  {
+    "slug": "count-before-you-ask",
+    "title": "Count Before You Ask",
+    "situation": "You want a raise but have not checked whether this is the right time or whether your case is strong.",
+    "domain": "career",
+    "tags": ["raise", "preparation", "manager", "compensation"],
+    "chapter": 1,
+    "principle": "Count before you move",
+    "verses": ["1.13", "1.14", "1.26"],
+    "scene": "Picture this: you have done solid work for a year, and you have a vague feeling you deserve more money. Your instinct says to walk into your manager's office on Thursday and just ask. Sun Tzu would stop you at the door. Before any conversation about money, you need the scorecard: what the team budget looks like this cycle, what your manager is measured on, what you delivered that can be verified, and what comparable roles pay. Gather those answers on paper first. A request built on a clear count gets a yes, a no with reasons, or a dated plan. A request built on hope gets a polite 'let's see.' Count first, then ask.",
+    "moves": [
+      { "title": "Write your case as numbers", "detail": "List three to five outcomes you delivered this year, each with a measurable result such as revenue touched, hours saved, a deadline met or a risk removed. Pull the figures from dashboards, tickets or emails rather than memory. Keep each line to one sentence so your manager can repeat it upward without editing." },
+      { "title": "Check the budget calendar", "detail": "Find out when salary budgets and reviews are set for your team. Ask a peer who went through the last cycle, or check the calendar your HR team publishes. If the budget is already locked, ask now for a clear path and a review date rather than expecting a decision today." },
+      { "title": "Map what your manager needs", "detail": "Write down what your manager is judged on this quarter, such as retention, delivery dates or cost. Connect your case to one of those goals. Your request should answer 'why does paying me more help my manager win?' as well as 'why do I deserve it?'" },
+      { "title": "Set your range and walk-away", "detail": "Look at two or three external benchmarks for your role and level. Write down a target, a reasonable minimum, and one non-salary item you would accept instead, such as a title change, a bonus or an earlier review. Keep these notes private and fixed before the meeting starts." }
+    ],
+    "script": { "label": "Meeting request", "text": "Hi [Manager], I'd like 30 minutes next week to talk about my compensation and how my role has grown this year. Before we meet, I'll send a one-page summary of the outcomes I delivered between [month] and [month], along with the benchmarks I looked at. My goal is to agree on a clear path to [target role or salary range] and on what I need to deliver to get there. Would Tuesday or Wednesday afternoon work for you?" },
+    "backfire": "Do not use this if your numbers are thin or inflated; an overstated outcome gets checked, and it will end your credibility. If your manager has no budget authority, the count may show that the answer is no for now. Then the honest move is to ask for criteria and a timeline, or to start looking elsewhere. Do not threaten to leave unless you are truly ready to go.",
+    "signals": "You get a specific yes, a specific no with reasons, or a dated plan, and your manager repeats your numbers back in their own words.",
+    "effort": "hours",
+    "difficulty": 1,
+    "featured": false
+  },
+  {
+    "slug": "run-the-five-factor-check",
+    "title": "Run the Five-Factor Check",
+    "situation": "You have an idea for a side business and want to launch before testing the basics.",
+    "domain": "business",
+    "tags": ["side-business", "validation", "planning", "startup"],
+    "chapter": 1,
+    "principle": "Assess the five factors",
+    "verses": ["1.3", "1.4", "1.11"],
+    "scene": "Picture this: a spreadsheet for your side business is open on your laptop, with a logo draft and a launch date in the first week of next month. Sun Tzu would ask you to hold the excitement for one week and run five checks. Does the offer solve a problem people already pay to solve? What does the ground look like, with competitors, channels and the rules for your field? Can you deliver it with the hours you really have? And is your money, process and paperwork sound enough to survive a slow month? Write one line of evidence under each question. If three are blank, you are not ready to launch. You are ready to test.",
+    "moves": [
+      { "title": "Write the purpose in one sentence", "detail": "Describe who the buyer is, what problem you solve for them and why they would pay now. Test the sentence by asking three possible buyers whether they would pay for it. Record their exact words, because those words become your first marketing copy and show whether the problem is real." },
+      { "title": "Scan the terrain", "detail": "List five alternatives customers use today, including doing nothing. Note how each is priced, where it is sold and which complaints recur in reviews. Find one gap you can credibly fill. If you cannot name a gap, the venture may still be worth doing, but plan it as a hobby with a small budget." },
+      { "title": "Measure your real capacity", "detail": "Count the hours you can give each week for the next three months after your job and family commitments. Multiply by the number of weeks. If the total is smaller than what the first paying customer needs, shrink the offer rather than promise more than you can deliver." },
+      { "title": "Check the method and the money", "detail": "Set a budget you can lose without harm, and list the minimum tools, bank account, insurance and tax registration your location requires. Ask an accountant or licensing office one specific question per item. A precise question gets a useful answer faster than a general consultation." },
+      { "title": "Run a test with a stop rule", "detail": "Run a small test, such as a landing page with a waitlist or three paid pilot clients, over four to six weeks. Before you start, write down the result that means go and the result that means stop. Keep that note where you will see it when the test ends." }
+    ],
+    "script": { "label": "Ask three potential buyers", "text": "Hi [Name], I'm testing an idea for [one-line description] that would help with [problem]. You deal with this regularly, so I'd value your honest view. Would you pay around [price] for this each [month or project]? If not, what would make it worth paying for, and what do you use today? I'm not selling anything this week. I just want to learn before I build more. Thanks for being straight with me." },
+    "backfire": "This check can become an excuse to never start, so set a deadline for the test and act on the result. It does not replace a required licence: in regulated fields the legal check is a hard gate that comes first. Do not take payments for something that does not exist yet unless you say clearly what is and is not ready.",
+    "signals": "Three or more potential buyers describe the problem in similar words, and your go or stop number was written down before the test began.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "split-the-family-argument",
+    "title": "Split the Family Argument",
+    "situation": "The same fight with a sibling or parent restarts at every holiday and nobody can stop it.",
+    "domain": "family",
+    "tags": ["family", "repeat-argument", "de-escalation", "siblings"],
+    "chapter": 1,
+    "principle": "Do not feed a hot temper",
+    "verses": ["1.22", "1.23"],
+    "scene": "Picture this: the argument starts again over the holiday table. It covers who hosts, who visits Mum enough, and who was always the favourite. Your sister's voice rises, and your jaw tightens as you prepare the comeback you have rehearsed for ten years. Sun Tzu's lesson is sharper than your rehearsal. A temper that is fed grows, and a group that stands together is hard to move. So step out of the fight in the moment, then separate the tangled grievances into single, solvable requests on another day. You are not trying to win the old argument. You are trying to stop it from running the family.",
+    "moves": [
+      { "title": "Notice your own trigger first", "detail": "Before the next gathering, write down the two phrases that reliably start the fight and what your body does when you hear them. Choose one exact response, such as a short sentence, a glass of water or ten minutes outside. Practise saying the sentence aloud once so it comes out steadily when you need it." },
+      { "title": "Refuse to escalate in the moment", "detail": "When the voice rises, do not match its volume or answer every point. Say one calm line, such as 'I want to get this right, so let's pause and come back to it.' Then change the subject or step outside. A fight loses energy quickly when nobody feeds it." },
+      { "title": "Pull the bundle apart", "detail": "Write the grievances on paper and group them into separate issues, such as the hosting schedule, money for care and old hurts. Turn each issue into one question that can end in a yes, a no or a date. Name the old hurts and agree they are off the table for this round, because they rarely get solved in a single meeting." },
+      { "title": "Hold a one-issue conversation", "detail": "Pick a neutral time about a week later, away from food and other relatives. Raise one issue with a specific request, such as 'Can you host one of the two December dinners?' Keep the talk to thirty minutes and close by restating the one decision you agreed on." }
+    ],
+    "script": { "label": "Reset message to sibling", "text": "Hi [Sibling name], the argument at Christmas was painful for both of us, and I don't want that to be how we spend time together. I'd like to talk about just one thing: the December hosting schedule. Could we do thirty minutes on [day] at [time], without Mum or Dad in the room? Before then, I'd like us to agree not to bring up the older stuff. If another time suits you better, tell me what works and I'll make it fit." },
+    "backfire": "This fails when calm is used as a tool to control the conversation, or when the situation involves abuse or safety, which needs outside support rather than a reset. Do not use the pause to avoid every hard topic indefinitely. If a relative refuses contact after several honest attempts, accept the distance rather than pressuring them.",
+    "signals": "The conversation runs for thirty minutes without sliding back to the old grievances, and one concrete decision is recorded.",
+    "effort": "hours",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "plan-the-interview-campaign",
+    "title": "Run the Interview as a Campaign",
+    "situation": "A job interview is ten days away and your preparation so far is rereading your CV.",
+    "domain": "career",
+    "tags": ["job-interview", "preparation", "career-change", "hiring"],
+    "chapter": 1,
+    "principle": "Plan, then adapt",
+    "verses": ["1.17", "1.26"],
+    "scene": "Picture this: the interview is on Thursday, and your preparation so far is reading your CV twice and hoping the questions are easy. The team is a guess, and the role probably exists to fix a problem nobody has named for you yet. Sun Tzu would call this entering unfamiliar ground without a map. Treat the interview as a campaign with one objective: show that you can solve this team's specific problem. Learn what pressures the team faces, prepare three stories that map to them, and decide in advance which two questions you need answered. Then adapt as the conversation shifts. Prepare the ground, and the interview becomes a working conversation between two people.",
+    "moves": [
+      { "title": "Define the objective in one sentence", "detail": "From the job posting, the company's recent news and any public talks by its leaders, write the problem this role exists to solve. Phrase it as 'they need someone who can do X within Y months.' Everything you prepare should serve that sentence, and anything that does not can be cut." },
+      { "title": "Build three evidence stories", "detail": "Prepare three short stories from past work, each with a situation, your action and a measurable result. Choose stories that match the objective rather than your favourite project. Practise each one aloud in under two minutes, since interviewers lose track of long answers." },
+      { "title": "Pick two diagnostic questions", "detail": "Choose two questions you genuinely need answered, such as how success is measured in the first ninety days or what made the last person in this role struggle. Ask them near the end. The answers tell you whether to accept, and they show the interviewer that you think like someone already on the team." },
+      { "title": "Adapt during the conversation", "detail": "If the interviewer shifts focus, drop the planned story and answer the question they actually asked. Listen for repeated words and concerns, and address them before the end. Within ten minutes of finishing, write down the three most important things they said." },
+      { "title": "Send a short follow-up", "detail": "Within 24 hours, send a brief thank-you that restates the team's problem and one concrete first step you would take. Keep it under 150 words so it reads as a working note rather than a sales pitch, and do not attach anything." }
+    ],
+    "script": { "label": "Thank-you note", "text": "Hi [Name], thank you for the conversation about the [role] role today. You described the main challenge as [their problem in their words], and that is the part of the job I'd most like to work on. One thing I'd start with is [specific first step, for example reviewing the onboarding process with the team in the first two weeks]. I'd be glad to talk through how I'd approach it if that would help in the next round. Thanks again for your time." },
+    "backfire": "This takes more preparation than many candidates have time for, and it can make you sound rehearsed if you memorise scripts word for word. Do not invent problems about the company that you cannot support; say 'from what I read, I'd guess' rather than asserting. If the interview reveals that the role is misdescribed, the campaign has done its job, so be ready to decline the offer.",
+    "signals": "The interviewer engages with your stories, uses your framing of the problem, and you leave with clear answers to your two diagnostic questions.",
+    "effort": "hours",
+    "difficulty": 2,
+    "featured": false
+  }
+]

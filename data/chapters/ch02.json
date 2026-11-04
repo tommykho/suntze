@@ -1,0 +1,12 @@
+{
+  "n": 2,
+  "essence": "Long fights cost more than any prize. Keep them short and use what you find.",
+  "modern_lens": "Chapter 2 is about the hidden bill for prolonged effort: attention, money, morale and goodwill wear down while you wait for a result. Drawn-out disputes, failing projects and stalled negotiations charge the same bill. The chapter also advises winning with what the situation already offers, rather than hauling every resource in from home.",
+  "key_verse": "2.19",
+  "principles": [
+    { "name": "Count the True Cost", "verses": ["2.1", "2.2", "2.3"], "gloss": "Price a conflict in time, money, morale and goodwill before you commit. The visible bill is only part of the total." },
+    { "name": "Do Not Reinforce Losses", "verses": ["2.8"], "gloss": "Do not keep pouring resources into a failing effort. A second round of investment needs a new reason, not just momentum." },
+    { "name": "Speed Over Stubbornness", "verses": ["2.5", "2.19"], "gloss": "A quick, decisive resolution beats a long campaign. Delay drains the people who depend on the outcome." },
+    { "name": "Use the Other Side's Resources", "verses": ["2.15", "2.18"], "gloss": "Where you can, turn what the other party already provides into your own advantage, ethically and within the rules." }
+  ]
+}

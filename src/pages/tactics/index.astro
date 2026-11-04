@@ -1,0 +1,76 @@
+---
+import Base from '../../layouts/Base.astro';
+import TacticCard from '../../components/TacticCard.astro';
+import { tactics, chapters, DOMAINS } from '../../lib/content.js';
+---
+<Base title="Tactic library" description={`${tactics.length} practical Sun Tzu tactics for work, career, business, family and self — each with steps, a ready-to-send script and a backfire check.`}>
+  <header class="lib-hero wrap">
+    <p class="eyebrow" data-reveal>Tactic library · 兵法實戰</p>
+    <h1 data-reveal>{tactics.length} moves for modern battles.</h1>
+    <p class="lede" data-reveal>Each tactic is anchored to a verse, broken into steps, paired with a message you can send today, and ends with an honest backfire check.</p>
+  </header>
+
+  <section class="wrap lib">
+    <div class="filters panel" data-filters>
+      <div class="field" style="flex:1 1 260px">
+        <label for="q">Search</label>
+        <input id="q" class="input" type="search" placeholder="manager, deadline, landlord, salary…" autocomplete="off" data-q />
+      </div>
+      <div class="field">
+        <label for="ch">Chapter</label>
+        <select id="ch" class="input" data-ch>
+          <option value="">All chapters</option>
+          {chapters.map((c) => <option value={c.n}>{c.roman}. {c.title_en}</option>)}
+        </select>
+      </div>
+      <div class="domains" role="group" aria-label="Domain">
+        <button class="chip" type="button" aria-pressed="true" data-domain="">All</button>
+        {Object.entries(DOMAINS).map(([k, d]) => <button class="chip" type="button" aria-pressed="false" data-domain={k}>{d.label} <span class="zh">{d.zh}</span></button>)}
+      </div>
+    </div>
+    <p class="hint" aria-live="polite" data-count>{tactics.length} tactics</p>
+    <div class="grid" data-grid>
+      {tactics.map((t) => <TacticCard t={t} />)}
+    </div>
+    <p class="empty" hidden data-empty>No tactic matches yet. Try the <a href="/field/">Field Challenge</a> and describe your situation in your own words.</p>
+  </section>
+</Base>
+
+<script>
+  const cards = [...document.querySelectorAll('[data-grid] > .tactic-card')];
+  const q = document.querySelector('[data-q]');
+  const ch = document.querySelector('[data-ch]');
+  const count = document.querySelector('[data-count]');
+  const empty = document.querySelector('[data-empty]');
+  let domain = '';
+  const params = new URLSearchParams(location.search);
+  if (params.get('q')) q.value = params.get('q');
+  if (params.get('domain')) domain = params.get('domain');
+
+  const run = () => {
+    const terms = q.value.toLowerCase().split(/\s+/).filter(Boolean);
+    let shown = 0;
+    for (const c of cards) {
+      const ok = (!domain || c.dataset.domain === domain) && (!ch.value || c.dataset.chapter === ch.value) && terms.every((t) => c.dataset.text.includes(t));
+      c.hidden = !ok;
+      if (ok) { shown++; c.style.opacity = 1; c.style.transform = 'none'; }
+    }
+    count.textContent = `${shown} tactic${shown === 1 ? '' : 's'}`;
+    empty.hidden = shown > 0;
+    document.querySelectorAll('[data-domain]').forEach((b) => b.tagName === 'BUTTON' && b.setAttribute('aria-pressed', String(b.dataset.domain === domain)));
+    window.dispatchEvent(new Event('resize'));
+  };
+  q.addEventListener('input', run);
+  ch.addEventListener('change', run);
+  document.querySelectorAll('button[data-domain]').forEach((b) => b.addEventListener('click', () => { domain = b.dataset.domain; run(); }));
+  if (q.value || domain) run();
+</script>
+
+<style>
+  .lib-hero { padding: 140px 0 32px; }
+  .filters { display: flex; flex-wrap: wrap; gap: 16px; align-items: end; margin-bottom: 14px; position: relative; z-index: 2; }
+  .domains { display: flex; flex-wrap: wrap; gap: 6px; flex-basis: 100%; }
+  .lib { padding-bottom: 100px; }
+  .lib .grid { margin-top: 18px; }
+  .empty { padding: 40px 0; color: var(--paper-2); }
+</style>

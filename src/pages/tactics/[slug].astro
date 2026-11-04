@@ -1,0 +1,138 @@
+---
+import Base from '../../layouts/Base.astro';
+import Seal from '../../components/Seal.astro';
+import VerseQuote from '../../components/VerseQuote.astro';
+import TacticCard from '../../components/TacticCard.astro';
+import { tactics, chapterOf, relatedTactics, DOMAINS, ZH_NUMERALS } from '../../lib/content.js';
+
+export function getStaticPaths() {
+  return tactics.map((t) => ({ params: { slug: t.slug }, props: { t } }));
+}
+const { t } = Astro.props;
+const ch = chapterOf(t.chapter);
+const related = relatedTactics(t, 3);
+const effortLabel = { minutes: 'Minutes to apply', hours: 'A few hours', days: 'Over several days' }[t.effort];
+const diffLabel = ['', 'Easy', 'Moderate', 'Advanced'][t.difficulty];
+---
+<Base title={t.title} description={`${t.situation} ${t.principle}. Sun Tzu, Chapter ${ch.roman}.`}>
+  <article class="tactic">
+    <header class="t-hero">
+      <div class="wrap t-hero-grid">
+        <div>
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="/tactics/">Tactics</a> / <a href={`/chapters/${ch.n}/`}>{ch.roman}. {ch.title_en}</a></nav>
+          <h1 data-reveal>{t.title}</h1>
+          <p class="t-situation" data-reveal>{t.situation}</p>
+          <div class="card-meta" data-reveal>
+            <span class="chip chip--seal">{DOMAINS[t.domain].label} · <span class="zh">{DOMAINS[t.domain].zh}</span></span>
+            <span class="chip">{diffLabel}</span>
+            <span class="chip">{effortLabel}</span>
+            <span class="chip">Principle: {t.principle}</span>
+          </div>
+        </div>
+        <div class="t-seal" data-reveal="scale"><Seal text={ch.title_zh} size="lg" /><span class="muted">第{ZH_NUMERALS[ch.n - 1]}篇</span></div>
+      </div>
+    </header>
+
+    <section class="narrow t-scene">
+      <p data-split>{t.scene}</p>
+    </section>
+
+    <section class="narrow">
+      <p class="eyebrow" data-reveal>Sun Tzu says</p>
+      <div class="t-verses">
+        {t.verses.map((id) => <VerseQuote id={id} />)}
+      </div>
+    </section>
+
+    <section class="narrow t-moves" aria-labelledby="moves-title">
+      <p class="eyebrow" data-reveal>The moves</p>
+      <h2 id="moves-title" data-reveal>How to apply it</h2>
+      <ol class="moves">
+        {t.moves.map((m, i) => (
+          <li class="move" data-reveal="left">
+            <span class="move-n brush" aria-hidden="true">{ZH_NUMERALS[i]}</span>
+            <div>
+              <h3>{m.title}</h3>
+              <p>{m.detail}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="narrow">
+      <div class="script panel" data-reveal>
+        <div class="script-head">
+          <p class="eyebrow">{t.script.label}</p>
+          <button class="btn btn--sm" type="button" data-copy="#script-text">Copy</button>
+        </div>
+        <pre id="script-text">{t.script.text}</pre>
+      </div>
+    </section>
+
+    <section class="narrow t-checks">
+      <div class="check check--backfire" data-reveal>
+        <h3><span aria-hidden="true">⚠</span> Backfire check</h3>
+        <p>{t.backfire}</p>
+      </div>
+      <div class="check check--signals" data-reveal>
+        <h3><span aria-hidden="true">✓</span> Signs it is working</h3>
+        <p>{t.signals}</p>
+      </div>
+    </section>
+
+    <section class="narrow t-cta" data-reveal>
+      <div class="panel cta-panel">
+        <div>
+          <h3>Your version is different?</h3>
+          <p class="muted">Describe your exact situation and get a verse-cited plan, or turn this tactic into a 30-second podcast.</p>
+        </div>
+        <div class="cta-btns">
+          <a class="btn btn--seal btn--sm" href={`/field/?q=${encodeURIComponent(t.situation)}`}>Ask the General</a>
+          <a class="btn btn--sm" href={`/field/?tactic=${t.slug}#podcast`}>Make a 30s podcast</a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <section class="section wrap" aria-labelledby="related-title">
+    <p class="eyebrow">Related</p>
+    <h2 id="related-title">Next moves</h2>
+    <div class="grid" style="margin-top:24px">{related.map((r) => <TacticCard t={r} />)}</div>
+  </section>
+</Base>
+
+<style>
+  .t-hero { padding: 140px 0 40px; background: radial-gradient(ellipse 55% 70% at 85% 20%, #261f16, transparent 70%); }
+  .t-hero-grid { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: end; }
+  .crumbs { font: 500 0.78rem var(--f-ui); color: var(--paper-3); margin-bottom: 18px; }
+  .crumbs a { text-decoration: none; color: var(--paper-2); }
+  .t-situation { font-size: clamp(1.2rem, 1vw + 1rem, 1.5rem); color: #f0b6a8; max-width: 52ch; }
+  .t-seal { display: grid; justify-items: center; gap: 10px; font: 500 0.8rem var(--f-zh); }
+  .t-seal :global(.seal) { --size: 112px; font-size: 1.6rem; writing-mode: vertical-rl; }
+  @media (max-width: 700px) { .t-hero-grid { grid-template-columns: 1fr; } .t-seal { justify-items: start; order: -1; } .t-seal :global(.seal) { --size: 76px; font-size: 1.05rem; } }
+  .t-scene { padding-block: 40px 56px; }
+  .t-scene p { font-family: var(--f-display); font-size: clamp(1.45rem, 1.4vw + 1rem, 2.1rem); line-height: 1.35; margin: 0; }
+  .t-verses { display: grid; gap: 18px; margin: 16px 0 64px; }
+  .moves { list-style: none; padding: 0; margin: 28px 0 56px; display: grid; gap: 0; }
+  .move { display: grid; grid-template-columns: 64px 1fr; gap: 18px; padding: 22px 0; border-top: 1px solid var(--line); position: relative; }
+  .move-n { font-size: 2.6rem; line-height: 1; color: var(--seal); }
+  .move h3 { margin: 0 0 6px; font-size: 1.45rem; }
+  .move p { margin: 0; color: var(--paper-2); }
+  .script { margin-bottom: 40px; }
+  .script-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .script pre { margin: 0; white-space: pre-wrap; font: 400 0.98rem/1.65 var(--f-ui); color: var(--paper); background: rgba(9, 8, 7, 0.5); padding: 18px; border-radius: 10px; border: 1px dashed var(--line-2); }
+  .t-checks { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 40px; }
+  .check { padding: 22px; border-radius: var(--radius); border: 1px solid var(--line); }
+  .check h3 { font-size: 1.2rem; margin-bottom: 8px; }
+  .check p { margin: 0; color: var(--paper-2); font-size: 0.98rem; }
+  .check--backfire { border-color: rgba(217, 68, 47, 0.45); background: rgba(179, 38, 30, 0.07); }
+  .check--backfire h3 span { color: var(--seal-hi); }
+  .check--signals { border-color: rgba(127, 160, 138, 0.4); background: rgba(127, 160, 138, 0.06); }
+  .check--signals h3 span { color: var(--jade); }
+  @media (max-width: 700px) { .t-checks { grid-template-columns: 1fr; } }
+  .cta-panel { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .cta-panel h3 { margin-bottom: 4px; }
+  .cta-panel p { margin: 0; }
+  .cta-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+</style>

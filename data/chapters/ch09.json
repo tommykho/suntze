@@ -1,0 +1,12 @@
+{
+  "n": 9,
+  "essence": "Read the signs around you: what people do tells you more than what they say.",
+  "modern_lens": "Most of what happens at work arrives as small signals: a hurried reply, a change in tone, a team that goes quiet. Learn to read them early and test them against the facts before you act. Keep your own people's morale in view too, because a tired or unsure team cannot carry out a plan.",
+  "key_verse": "9.24",
+  "principles": [
+    { "name": "Words Versus Actions", "verses": ["9.24", "9.26"], "gloss": "Soft language backed by visible preparation signals a move forward. Talk of peace without binding terms often hides a delay." },
+    { "name": "Read the Team's Mood", "verses": ["9.33", "9.35"], "gloss": "Disorder, whispering and angry leaders reveal problems before anyone reports them. Investigate early, while it is still a conversation." },
+    { "name": "Discipline After Trust", "verses": ["9.43", "9.44"], "gloss": "Earn trust first, then enforce the rules the same way every time. Harsh discipline before trust gets you nothing." },
+    { "name": "Watch Your Own Reserves", "verses": ["9.29", "9.31"], "gloss": "Leaning on the spear and missing a clear opening are signs of exhaustion, in your team and in yourself." }
+  ]
+}

@@ -1,0 +1,106 @@
+[
+  {
+    "slug": "control-the-record",
+    "title": "Control the Record",
+    "situation": "A coworker deflects blame and turns every discussion into a shouting match.",
+    "domain": "work",
+    "tags": ["blame", "coworker", "documentation", "accountability", "conflict"],
+    "chapter": 4,
+    "principle": "Make yourself invincible first",
+    "verses": ["4.1", "4.15"],
+    "scene": "Picture this: every project review with one colleague turns into a shouting match. Someone asks why the report slipped, and suddenly the blame lands on you, your team, and last quarter's numbers. You could match their volume, but you would lose the room. Sun Tzu's answer is to win before the argument starts. Write down what was agreed, who owns each step, and when it is due, so the facts exist before the fight. When the deflection comes, you do not need to raise your voice. You calmly point to the record. The conflict does not vanish, but it loses its power. You win by controlling the narrative, and the preparation does the arguing for you.",
+    "moves": [
+      { "title": "Document every detail as it happens", "detail": "Move decisions, promises and handoffs into writing the same day: a comment in the ticket, a line in the project doc, or a short follow-up after each call. Use dates and names rather than adjectives. Keep the notes factual: what was said, what was decided, what changed. Store them where you can find them in thirty seconds." },
+      { "title": "Establish clear accountability", "detail": "In every shared tool, assign one owner and one due date to each task. In meetings, ask 'Who is taking that, and by when?' and confirm the answer in the tracker before the call ends. Vague ownership is where blame grows, so remove the vagueness before the work starts." },
+      { "title": "Neutralize with facts in a calm recap", "detail": "After any disputed conversation, send a neutral written recap within one working day. List the agreed actions, owners, dates and open questions. Stick to observable facts. If someone disputes the recap, reply with the relevant line from the record rather than debating their tone or intent." },
+      { "title": "Never match their volume", "detail": "When the conversation heats up, slow your pace and shorten your sentences. Say 'Let's look at the timeline' instead of arguing about motives. If the meeting spirals, propose moving the discussion to writing with a follow-up call and the manager present. Calm is the strongest position you have." }
+    ],
+    "script": {
+      "label": "Neutral follow-up recap",
+      "text": "Hi [Name], thanks for the discussion on [project] today. So we stay aligned, here is what I have noted:\n- Decided: [decision]\n- Owner: [name], due [date]\n- Open question: [question], to be answered by [person] by [date]\nIf I have missed anything, or these notes don't match your understanding, reply with the correction and I will update the tracker. Thanks, [Your name]"
+    },
+    "backfire": "Documentation is for clarity, not surveillance. Do not log a colleague's personal life, keep a secret file on them, or use messages you were never meant to see. If the behavior is harassment, discrimination or threats, stop building a case alone and take it to HR or your manager. A record also looks defensive if your own tone is hostile, so keep every note neutral.",
+    "signals": "Meetings end with named owners and dates, and disputes shrink to a quick check of the record instead of a fight.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": true
+  },
+  {
+    "slug": "win-the-case-first",
+    "title": "Win the Case Before the Ask",
+    "situation": "You want a promotion, but your results are scattered across memory and chat threads.",
+    "domain": "career",
+    "tags": ["promotion", "career", "portfolio", "evidence", "manager"],
+    "chapter": 4,
+    "principle": "Make defeat impossible before the decision",
+    "verses": ["4.13", "4.14"],
+    "scene": "Picture this: you have carried more than your title for a year, but when you raise it with your manager, you get a polite 'let's revisit next cycle.' The problem is not your talent. Your evidence lives in old chat threads and in your memory. Sun Tzu says the skillful fighter puts himself where defeat is impossible before he seeks the battle. So for the next two months, stop asking for a promotion and start building a case that makes yes the easy decision. Collect outcomes, map them to the next level's expectations, and make the ask a formality. A clean record does the persuading, and the win arrives already prepared.",
+    "moves": [
+      { "title": "Keep a running outcomes log", "detail": "Each Friday, write three lines: what you shipped, what changed because of it, and who noticed. Add numbers where you have them, such as hours saved, revenue touched or errors removed. Keep the log in one document you own, not scattered across emails. The goal is a record you could hand to a stranger and have them understand it." },
+      { "title": "Map the work to the next level", "detail": "Ask your manager for the written expectations of the role above yours. Put each expectation in a column and match it to an item in your log. Circle the gaps. Those gaps are your real plan for the next quarter, replacing vague goals like 'show more leadership.'" },
+      { "title": "Close one gap with visible work", "detail": "Pick the gap that matters most and take on work that demonstrates it: leading a cross-team review, writing a decision document, or running a recurring meeting. Put the assignment in writing so it enters the record. Aim to finish something within six to eight weeks." },
+      { "title": "Ask for a decision date, not a verdict", "detail": "Book 30 minutes with your manager. Send the one-page summary beforehand, then ask: 'What would need to be true for this to be a yes, and by when could we review it?' Write the answer down and send it back to them as a recap so the criteria are on record." }
+    ],
+    "script": {
+      "label": "Promotion case request",
+      "text": "Hi [Manager name], I would like 30 minutes in the next two weeks to talk about my path to [target role]. I have put together a one-page summary of my outcomes from [period], mapped against the expectations for that role. Could you look at it before we meet? I would like to leave with a clear answer on what would need to be true, and a date by which we review it. Does [day and time] work for you?"
+    },
+    "backfire": "This works only when there is a real path to promotion. If the role is frozen, budget-capped or politically closed, a strong file will not open it, and you may need to look outside. Never inflate outcomes or claim a teammate's work, because a record that collapses in a reference check does more harm than no record. Avoid making the request feel like an ultimatum.",
+    "signals": "Your manager starts using your log's language, and the conversation moves from whether to when.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": false
+  },
+  {
+    "slug": "build-the-reserve-first",
+    "title": "Build the Reserve First",
+    "situation": "One layoff, car repair or medical bill could knock your whole plan off course.",
+    "domain": "self",
+    "tags": ["savings", "emergency-fund", "money", "security", "budget"],
+    "chapter": 4,
+    "principle": "Security against defeat lies in your own hands",
+    "verses": ["4.2", "4.3"],
+    "scene": "Picture this: you are three months into a job search when the car breaks down the same week rent is due. Every decision suddenly feels like an emergency, and you say yes to offers you would otherwise decline. The risk was never the car. The risk was having no reserve to absorb it. Sun Tzu teaches that safety from defeat is something you build yourself, long before the attack arrives. An emergency fund is not a sign of fear. It is the position that lets you wait for the right opportunity instead of taking the first one. Build it quietly, one transfer at a time, and the next shock becomes an inconvenience.",
+    "moves": [
+      { "title": "Set a starter target", "detail": "Set the first goal at one month of essential expenses: rent, food, utilities, transport and minimum debt payments. Write the number down, then divide it by the weeks left in the next quarter to get a weekly amount. Keep that figure visible where you check your balance." },
+      { "title": "Automate the transfer", "detail": "Schedule an automatic transfer to a separate savings account on the day after each payday. Name the account something like Reserve. Treat the transfer like a bill you cannot skip. If the amount strains the budget, lower it rather than stopping the transfer altogether." },
+      { "title": "Define what the reserve is for", "detail": "Write a short list of what counts as an emergency: job loss, urgent repairs, medical costs. Put everything else on a separate budget line. This keeps the reserve from being raided for sales and holidays, which is how most emergency funds quietly disappear." },
+      { "title": "Raise the reserve in steps", "detail": "Once you reach one month, aim for three months, and six if your income is irregular or others depend on you. Review the target every quarter. After any withdrawal, rebuild the balance before taking on new discretionary spending." }
+    ],
+    "script": {
+      "label": "Reserve rule for your notes app",
+      "text": "Reserve rule, effective [date]: [amount] moves to the Reserve account on the day after each payday. The Reserve is for job loss, urgent repairs and medical costs only. Target: one month of essential expenses by [date], then three months. Any withdrawal gets rebuilt before new discretionary spending. Review on the first Sunday of each quarter."
+    },
+    "backfire": "Do not hold the reserve in investments that can fall sharply when you need cash, and do not let saving excuse high-interest debt; paying down a 25 percent card often beats saving at 4 percent. If income is too thin to save, cut costs or raise income first rather than forcing transfers that trigger overdrafts. This is not advice on tax or debt.",
+    "signals": "A surprise bill gets paid from the reserve without panic, and you stop taking jobs or deals out of fear.",
+    "effort": "hours",
+    "difficulty": 1,
+    "featured": false
+  },
+  {
+    "slug": "launch-from-strength",
+    "title": "Launch Only From Strength",
+    "situation": "Your product launch keeps slipping, and every new bug feels like the start of a crisis.",
+    "domain": "business",
+    "tags": ["launch", "product", "quality", "readiness", "checklist"],
+    "chapter": 4,
+    "principle": "Hold the defense, then attack from surplus",
+    "verses": ["4.5", "4.6", "4.13"],
+    "scene": "Picture this: the launch date is on the calendar, the press list is booked, and the team is still finding bugs in checkout. Every week someone proposes shipping 'just to get feedback,' and every week the fixes create new problems. Sun Tzu says standing on the defensive shows insufficient strength, while attacking shows a surplus. You are not ready to attack yet. Decide what ready means in writing: the core flow works end to end, support can answer the top questions, and the rollback plan has been tested. Ship when those gates are green, not when the date arrives. Strength, not nerve, is what makes a launch hold.",
+    "moves": [
+      { "title": "Write a readiness gate", "detail": "List five to seven conditions the launch must meet: core flow tested, payment and data paths verified, support scripts written, analytics firing, rollback tested. Put the list in a shared doc, mark each item yes or no, and get the product lead to agree to it before the next sprint, not in the middle of a crisis." },
+      { "title": "Run a limited release first", "detail": "Instead of a full public launch, release to ten to fifty real users or one region. Watch error rates, support volume and conversion for two weeks. Before you start, write down the stop criteria, such as an error rate above a set threshold, and who has the authority to pause the release." },
+      { "title": "Triage defects by risk", "detail": "Sort open bugs into three piles: blocks the core flow, harms data or money, and cosmetic. Only the first two can delay launch. Give the cosmetic pile a named owner and a post-launch date so it does not reopen the argument at every standup." },
+      { "title": "Announce the date after the gate passes", "detail": "Keep public dates loose until the gate is green. Once it passes, announce with a 48-hour lead time and assign one person to decide on rollback during launch week. Send sales and press the same written update so nobody works from rumor." }
+    ],
+    "script": {
+      "label": "Gate status to the product lead",
+      "text": "Hi [Name], before we commit to [date], I'd like to review the readiness gate. Right now [X of 6] items are green. The two open items are [item 1] and [item 2], and both block the core flow. I propose we hold the public announcement until both are closed, and run a limited release to [group] on [date] instead. If we hit [stop criterion] in that release, we pause and roll back. Can we review the gate in Thursday's meeting?"
+    },
+    "backfire": "Gates can become an excuse to never ship. Set a deadline for the gate review itself, and override the gate only with a named owner and a written reason. This fails when waiting has a real cost, such as a regulatory deadline or a competitor already in market. Never hide known safety, security or data issues to protect a date; that is a liability, not readiness.",
+    "signals": "Launch week brings fewer emergency calls, and the team stops arguing about whether they are ready.",
+    "effort": "days",
+    "difficulty": 2,
+    "featured": false
+  }
+]
