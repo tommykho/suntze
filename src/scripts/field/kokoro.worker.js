@@ -9,13 +9,22 @@ self.onmessage = async (e) => {
   const { id, text, voice, speed, device } = e.data;
   try {
     if (!tts || loadedDevice !== device) {
-      tts = await KokoroTTS.from_pretrained('onnx-community/Kokoro-82M-v1.0-ONNX', {
-        dtype: device === 'webgpu' ? 'fp32' : 'q8',
-        device,
-        progress_callback: (p) => {
-          if (p.status === 'progress' && p.total) self.postMessage({ id, type: 'progress', loaded: p.loaded, total: p.total, file: p.file });
-        },
-      });
+      const load = (dev) =>
+        KokoroTTS.from_pretrained('onnx-community/Kokoro-82M-v1.0-ONNX', {
+          dtype: dev === 'webgpu' ? 'fp32' : 'q8',
+          device: dev,
+          progress_callback: (p) => {
+            if (p.status === 'progress' && p.total) self.postMessage({ id, type: 'progress', loaded: p.loaded, total: p.total, file: p.file });
+          },
+        });
+      try {
+        tts = await load(device);
+      } catch (err) {
+        if (device !== 'webgpu') throw err;
+        // WebGPU advertised but unusable (driver/flag): fall back to the CPU (WASM) build.
+        self.postMessage({ id, type: 'status', text: 'GPU not available, switching to CPU voice engine…' });
+        tts = await load('wasm');
+      }
       loadedDevice = device;
     }
     // Generate sentence groups separately (keeps each chunk well under the model's token limit).

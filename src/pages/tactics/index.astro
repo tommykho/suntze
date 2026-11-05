@@ -33,7 +33,7 @@ import { tactics, chapters, DOMAINS } from '../../lib/content.js';
     <div class="grid" data-grid>
       {tactics.map((t) => <TacticCard t={t} />)}
     </div>
-    <p class="empty" hidden data-empty>No tactic matches yet. Try the <a href={u('/field/')}>Field Challenge</a> and describe your situation in your own words.</p>
+    <p class="empty" hidden data-empty>No tactic matches yet. <a href={u('/ask/')}>Ask the General</a> and describe your situation in your own words.</p>
   </section>
 </Base>
 

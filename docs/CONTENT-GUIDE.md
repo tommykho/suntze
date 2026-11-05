@@ -87,3 +87,45 @@ Domain mix per batch: ≥ 40% `work`/`career`, ≥ 25% `personal`/`family`/`self
   Do not modernise, simplify, re-punctuate or add characters. Segments appear in source order and do
   not overlap.
 - If a verse has no Chinese counterpart, use `""`. Validator reports coverage; target ≥ 95%.
+
+---
+
+## 4. Field Challenge questions — `data/challenge/setN.json` (array)
+
+The Field Challenge is a 20-question skill test. Each question is a modern scenario with **5 candidate moves**;
+the player selects every move Sun Tzu would make. Score per question = share of correct moves found, minus half a
+share per wrong pick (never below 0).
+
+```json
+[
+  {
+    "id": "c-credit-thief",
+    "chapter": 3,
+    "domain": "work",
+    "difficulty": 2,
+    "title": "The Credit Thief",
+    "scenario": "50–110 words, second person, present tense, concrete details (who, what, stakes).",
+    "options": [
+      { "text": "Imperative move, at most 22 words.", "correct": true, "why": "At most 35 words: why this fits or breaks Sun Tzu's principle." },
+      { "text": "…", "correct": false, "why": "…" }
+    ],
+    "verses": ["3.2"],
+    "tactic": "know-facts-before-the-blame",
+    "lesson": "One-line takeaway, at most 140 characters."
+  }
+]
+```
+
+Rules
+- `id`: `c-` + kebab-case, unique across all sets, at most 40 characters.
+- `chapter` 1–13, `domain` one of `work`, `career`, `business`, `personal`, `family`, `self`, `difficulty` 1–3.
+- `title`: at most 6 words.
+- `options`: exactly 5. Correct moves: 1, 2 or 3 (aim for about 20% / 50% / 30% of questions). Never “all of the above”.
+- Wrong moves must be **plausible human reactions** that break a Sun Tzu principle: escalating in anger, fighting
+  a long war of attrition, attacking where the other side is strongest, revealing your hand, acting without
+  information, humiliating someone publicly, or unethical deception. Do not make them silly.
+- Correct moves must be ethical and practical: preparation, positioning, timing, indirect approach, information, unity.
+- `why`: explain the principle in plain words; mention the idea, not a quote.
+- `verses`: 1–2 IDs from `data/verses.en.json`; at least one from the question's `chapter`. Never type quotes.
+- `tactic`: optional slug of an existing tactic in `data/tactics/` that teaches the same idea (or `""`).
+- Mix domains: at least 40% work/career, at least 25% personal/family/self.

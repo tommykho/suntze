@@ -1,0 +1,272 @@
+[
+  {
+    "id": "c-one-goal-scattered-team",
+    "chapter": 11,
+    "domain": "work",
+    "difficulty": 1,
+    "title": "One Goal for a Scattered Team",
+    "scenario": "You have just inherited a product team of eleven people after a reorganization. Three sub-groups still defend their old roadmaps, and in planning meetings people say a cross-team bug is not their area whenever it lands on their desk. Most of them are guarding familiar turf. Launch is in six weeks, and the next planning review is on Monday. You need the whole team pulling in the same direction.",
+    "options": [
+      { "text": "Write one launch goal in a single sentence, and ask every group to show how its work serves it on Monday.", "correct": true, "why": "On familiar ground people defend their own turf. One shared purpose gives scattered groups a single direction to pull toward, and it holds them together." },
+      { "text": "Move every cross-team decision into one shared review, so no group negotiates its roadmap alone with you.", "correct": true, "why": "Keeping all parts of the team linked stops them drifting apart. When decisions happen in one room, no subgroup can quietly pursue its own agenda." },
+      { "text": "Warn all three group leads that anyone protecting an old roadmap will be removed from the launch team.", "correct": false, "why": "Threats make people defend their turf harder. Fear may produce compliance on paper, but it deepens the division underneath and weakens the unity you need." },
+      { "text": "Let each group keep its roadmap, and plan to reconcile the differences during launch week itself.", "correct": false, "why": "Waiting until pressure peaks means the team meets the crisis still scattered. Unity has to be built before the fight starts, not during it." },
+      { "text": "Send every disputed feature to the most senior executive and accept whatever decision comes back.", "correct": false, "why": "Passing every fight upward slows decisions and leaves the groups unconnected. The team needs to act as one body, not wait for a verdict from above." }
+    ],
+    "verses": ["11.2", "11.46"],
+    "tactic": "",
+    "lesson": "On familiar ground people defend their own turf, so unite scattered teams around one shared purpose before pressure arrives."
+  },
+  {
+    "id": "c-side-door-hiring-window",
+    "chapter": 11,
+    "domain": "career",
+    "difficulty": 2,
+    "title": "Strike Through the Side Door",
+    "scenario": "A product manager role at a mid-sized logistics company has closed its public application, but the hiring manager is still reviewing candidates. Dana, a former colleague, now works two levels below that manager, and she has offered to pass along something from you. Most applicants are waiting in the portal for the standard timeline. You have a one-page analysis of the company's delivery-tracking app ready to send today.",
+    "options": [
+      { "text": "Send the one-page analysis today through Dana, with a two-line note on why you studied their delivery-tracking app.", "correct": true, "why": "Rapidity means reaching the decision-maker by a route others are not using, while they are still deciding. A short, specific note stands out from the portal queue." },
+      { "text": "Ask Dana how many finalists remain and what the team is still undecided about, then tailor your note to that gap.", "correct": true, "why": "Strike at the point where the other side is still unsure. Knowing the open question lets you act quickly and precisely, instead of sending a generic message." },
+      { "text": "Re-submit the standard application through the portal tonight, then wait for the normal screening calendar.", "correct": false, "why": "The usual route at the usual pace means you arrive after the shortlist takes shape. Waiting in the queue is the opposite of speed." },
+      { "text": "Message fifty recruiters on the platform with the same generic pitch, hoping one of them reaches the team.", "correct": false, "why": "Scattering effort without information wastes it and signals desperation. A broad, blind blast gives you no advantage over a specific opening." },
+      { "text": "Tell Dana you already hold a competing offer, so the hiring manager feels pressed to move faster.", "correct": false, "why": "Inventing a competing offer is deception that can end the chance and damage your reputation. Speed never justifies a false claim." }
+    ],
+    "verses": ["11.19", "11.20"],
+    "tactic": "move-when-the-window-opens",
+    "lesson": "Speed wins when you reach the decision by a direct route, with specific information, before the other side is ready."
+  },
+  {
+    "id": "c-shore-up-contested-renewal",
+    "chapter": 11,
+    "domain": "work",
+    "difficulty": 2,
+    "title": "Shore Up Before You Contest",
+    "scenario": "Your company and a rival vendor both want the same three-year renewal with a regional hospital network. The procurement lead wants a revised proposal in ten days. Two of your current contracts are behind schedule, and support tickets have doubled this month. Your account director wants to open Monday with a steep price cut across the board to scare the rival off. You know the hospital cares most about reliable delivery.",
+    "options": [
+      { "text": "Clear the support backlog and bring the two delayed contracts back on schedule before you submit the revised proposal.", "correct": true, "why": "On contested ground, secure your own rear first. The hospital is buying reliable delivery, so a clean delivery record is the strongest part of your bid." },
+      { "text": "Build the proposal around the hospital's stated concerns, with dated commitments you can actually keep.", "correct": true, "why": "Contest the prize on ground the buyer values. Achievable promises beat a price fight that a bigger rival can always match." },
+      { "text": "Ask the procurement lead which risks worry the committee most, and answer each one in writing.", "correct": true, "why": "Learning where the other side is strong and where it is worried lets you hold your ground where it matters. Asking openly is honest and gives you real information." },
+      { "text": "Open Monday with a steep price cut across all accounts, so the rival is scared off before reaching the committee.", "correct": false, "why": "A price war on contested ground invites a long fight you may not outlast. You cut margins everywhere and still carry two late contracts." },
+      { "text": "Quietly contact the hospital's board members to pressure the procurement lead before the decision is made.", "correct": false, "why": "Going around the process damages trust and can disqualify your bid. Influence through the proper channel keeps your position honest and defensible." }
+    ],
+    "verses": ["11.4", "11.47"],
+    "tactic": "",
+    "lesson": "On contested ground, secure your own rear and compete on what the buyer values, not on a price war you cannot sustain."
+  },
+  {
+    "id": "c-siblings-cover-each-other",
+    "chapter": 11,
+    "domain": "family",
+    "difficulty": 2,
+    "title": "Siblings Who Cover Each Other",
+    "scenario": "Your mother comes home Friday after a hip replacement. You and your two siblings live in three different cities, and last week two grocery deliveries were double-booked while nobody picked up her prescriptions. Each of you sends long messages about what the others should be doing. Your mother asks who is in charge. You need the three of you to look after her as one unit, even though you have never agreed on anything about her care.",
+    "options": [
+      { "text": "Put every task on one shared list, and assign each sibling the gaps the others keep missing.", "correct": true, "why": "A team that works as one body covers each other's blind spots. Shared tasks mean no part of your mother's care is left exposed." },
+      { "text": "Name one point person for your mother's daily needs, and have the others back that person's decisions.", "correct": true, "why": "A team acts as one body only when each member supports the others' moves. Clear roles remove the confusion that caused the missed pickups." },
+      { "text": "Ask the sibling carrying the most right now what would help, and take on that task this week.", "correct": true, "why": "Members of one body help each other in a storm without waiting to be asked. Shifting load to whoever is stretched keeps the whole unit working." },
+      { "text": "Hire a private care service without telling your siblings, and send them the bill afterward.", "correct": false, "why": "Acting alone and presenting costs later breeds resentment and breaks the unity you need. A plan others never saw will fail under pressure." },
+      { "text": "Send a long group message listing each sibling's failures from the last year, so everyone sees the pattern.", "correct": false, "why": "Blame divides a team in a crisis. Each sibling defends themselves, and the pickups still go unclaimed while the argument goes on." }
+    ],
+    "verses": ["11.30", "11.34"],
+    "tactic": "one-body-in-a-crisis",
+    "lesson": "A team in a storm works like one body: each part covers the gaps of the others, so no task falls through."
+  },
+  {
+    "id": "c-commit-with-supply-line",
+    "chapter": 11,
+    "domain": "career",
+    "difficulty": 3,
+    "title": "Commit Fully, Keep a Supply Line",
+    "scenario": "You are a senior engineer at a company whose billing system is slow and fragile. Leadership approves a full rewrite with one year to ship, and you are asked to lead it. Some colleagues privately doubt it will work. The current system still processes every invoice, and you have six months of savings. You have decided to commit fully. The question now is how to commit so the rewrite succeeds without taking billing down.",
+    "options": [
+      { "text": "Write the goal, deadline and each person's decision rights down, and ask every engineer to commit to one piece.", "correct": true, "why": "Full commitment means each person is pulled in with clear expectations. Vague stakes let people hedge quietly, which weakens the whole effort." },
+      { "text": "Keep the old billing system running and migrate customers in stages, so any failed stage can be reversed.", "correct": true, "why": "Commit fully to the aim but keep a supply line. A safety net lets you stake the plan without betting every customer's invoices on day one." },
+      { "text": "Shut down the old system on day one, so nobody can fall back, and make the new one the only option.", "correct": false, "why": "Removing every retreat before the new system is tested is reckless, not brave. Cutting the supply line risks real harm to customers." },
+      { "text": "Call it a rewrite, but keep one foot in the old system, so no one is blamed if it fails.", "correct": false, "why": "Hedging on purpose signals doubt. People stop fighting for an outcome their leader is already preparing to abandon." },
+      { "text": "Drop the rewrite, patch the old system for another year, and wait until a perfect plan appears.", "correct": false, "why": "Waiting for certainty is its own failure. A battle deferred forever leaves your position stagnant and your people idle." }
+    ],
+    "verses": ["11.58", "11.49"],
+    "tactic": "burn-the-boats-with-a-runway",
+    "lesson": "Commit fully once you have chosen the fight, but keep a supply line so one failed step cannot bring everything down."
+  },
+  {
+    "id": "c-strike-when-camp-burns",
+    "chapter": 12,
+    "domain": "business",
+    "difficulty": 2,
+    "title": "Strike When Their Camp Burns",
+    "scenario": "Your largest competitor is in visible chaos. Three senior engineers left this month, their status page lists incidents every few days, and their CEO is feuding publicly with investors. You have a migration offer ready for their customers, and your sales lead wants a campaign launched today. Some of those customers are already posting complaints. You must decide whether to move now, wait, or respond to the internal fight directly.",
+    "options": [
+      { "text": "Keep the migration offer ready, and contact the accounts that have publicly complained, while their disruption is still unfolding.", "correct": true, "why": "When the rival's camp is already burning, strike from outside at the right moment. Prepared resources let you act at once instead of scrambling." },
+      { "text": "Agree to pause the campaign if their incidents stop for two weeks, so you do not push into a stable base.", "correct": true, "why": "Strike when the advantage is real, and hold back when it is not. Advancing into a calm camp wastes resources and invites a long fight." },
+      { "text": "Publish a chart this afternoon mocking their outages and their engineers' departures, so customers see the chaos.", "correct": false, "why": "Mocking a rival's staff is spite, not strategy. It shows your own motives and makes customers wonder how you will treat them." },
+      { "text": "Fund a six-month price war, cutting prices below cost until they collapse, whatever their customers do.", "correct": false, "why": "A long war of attrition drains your own resources. Price cuts with no sign of their weakness commit you to a fight that may never pay." },
+      { "text": "Pass reporters an unverified rumor that their CEO will be fired this month, before they can respond.", "correct": false, "why": "Spreading unverified claims is deception and can backfire badly. Use the real public signals instead of inventing a story." }
+    ],
+    "verses": ["12.6", "12.8"],
+    "tactic": "",
+    "lesson": "When a rival's camp is burning, strike from outside at the right moment, and hold back when the fire dies down."
+  },
+  {
+    "id": "c-hold-fire-then-move",
+    "chapter": 12,
+    "domain": "work",
+    "difficulty": 1,
+    "title": "Hold Your Fire, Then Move",
+    "scenario": "Your manager just announced in the team meeting that your three-month project is canceled. The decision came after a ten-minute review, and your usage data never came up. Your face is hot and your jaw is tight. You want to reply in the team thread right now with a long list of why the decision is wrong. Your manager has already moved on to the next agenda item.",
+    "options": [
+      { "text": "Wait until the anger passes, then ask for a 15-minute meeting with a one-page summary of the usage data.", "correct": true, "why": "Move only when you can gain something, and not while your temper is up. A calm request with data gives the decision a fair hearing." },
+      { "text": "Post a sharp reply in the team thread, listing every flaw in the decision so the room sees it was rushed.", "correct": false, "why": "Acting from anger turns a private disagreement into a public contest. Others see your reaction, not the data, and your manager sets the terms." },
+      { "text": "Tell peers after the meeting that management does not care about the team, and see who agrees.", "correct": false, "why": "Recruiting allies through grievance creates a faction. It feels like support, but it splits the team and gets back to the decision-maker." },
+      { "text": "Go straight to the director this afternoon to complain about how the meeting was run.", "correct": false, "why": "A grievance raised in heat, skipping your manager, looks like spite. Choose the moment and the channel, not your first reaction." },
+      { "text": "Quietly slow your work on the project's remaining tasks, so the team feels the cost of the cancellation.", "correct": false, "why": "Withdrawing effort to punish is revenge in slow motion. It harms the team and your reputation, and it makes your data argument impossible to hear." }
+    ],
+    "verses": ["12.18", "12.19"],
+    "tactic": "never-send-the-angry-email",
+    "lesson": "Act from the data after the anger passes. A reply sent in heat hands the other side the story and sets the terms."
+  },
+  {
+    "id": "c-cool-down-before-ledger",
+    "chapter": 12,
+    "domain": "personal",
+    "difficulty": 1,
+    "title": "Cool Down Before the Ledger",
+    "scenario": "A close friend borrowed 1,200 dollars last spring for a car repair and has repaid nothing. Tonight at 1:40 a.m. you see a photo of them on a weekend trip. You are furious, and you have typed a long text listing every missed promise since March. Your phone sits on the nightstand. The group chat, where mutual friends know about the loan, is still active.",
+    "options": [
+      { "text": "Put the text away, sleep on it, then send a private message proposing a written repayment schedule with set monthly amounts.", "correct": true, "why": "Move when you have a clear position, not while your temper is up. A calm, specific plan is far more likely to get repaid than a burning accusation." },
+      { "text": "Decide your own limit for future loans, and state it calmly the next time money comes up.", "correct": true, "why": "Caution protects both the friendship and your finances. A boundary set in advance gives you a plan instead of a reaction." },
+      { "text": "Post the story and a screenshot of the trip in the group chat, so mutual friends can judge.", "correct": false, "why": "Public shaming makes repayment less likely and drags everyone into the fight. It turns a money problem into a social war." },
+      { "text": "Send a message demanding full payment this week, and threaten to contact their employer.", "correct": false, "why": "Threatening someone's job to force payment is coercion. It can expose you to legal trouble and ends any chance of repayment." },
+      { "text": "Send them the list of every missed promise since March, right now, while you are still angry.", "correct": false, "why": "The same ledger sent in anger reads as an attack. It invites defense rather than repayment, and it spends your standing before you have a plan." }
+    ],
+    "verses": ["12.18", "12.22"],
+    "tactic": "",
+    "lesson": "Anger writes a ledger of grievances; calm writes a repayment plan. Wait for the calm before you move."
+  },
+  {
+    "id": "c-build-exit-before-renewal",
+    "chapter": 12,
+    "domain": "business",
+    "difficulty": 3,
+    "title": "Build the Exit Before Renewal",
+    "scenario": "You run operations at a 40-person bakery chain. Your main delivery vendor missed two drop-offs this quarter, which cost you a weekend of sales. The contract renews in six months, and their account manager is pressing for a three-year deal at a higher rate. You have quietly tested a second carrier on one route, and it works. Your CFO wants a decision within a month.",
+    "options": [
+      { "text": "Use the next four months to bring the second carrier onto the remaining routes, with a tested fallback for each one.", "correct": true, "why": "Lay plans well ahead and build your resources before you need them. Leverage at renewal comes from readiness, not from a sudden threat." },
+      { "text": "Give written notice under the contract terms, and offer a defined transition period rather than an abrupt cutoff.", "correct": true, "why": "A clean, rule-based exit keeps your options open and avoids destroying the vendor. A relationship wrecked in anger cannot be rebuilt." },
+      { "text": "Tell the account manager now, in writing, which service levels you need to renew, with dates they can meet.", "correct": true, "why": "Make your demands clear and specific so the other side can respond. A firm standard backed by a real alternative is leverage; vague anger is not." },
+      { "text": "Cut all orders to the vendor the day the second carrier signs, so they fail before the renewal date.", "correct": false, "why": "Starving a vendor on purpose is deliberate destruction. It strands your own customers and breaks the terms you agreed to." },
+      { "text": "Renew at the higher rate for three years, to avoid the conflict and the work of a transition.", "correct": false, "why": "Renewing without using your alternative gives up the leverage you built. Short-term calm costs you years of the same price." }
+    ],
+    "verses": ["12.16", "12.21"],
+    "tactic": "let-the-deadline-do-the-work",
+    "lesson": "Build your alternative early and exit by the rules. A vendor destroyed in anger cannot be recovered, and cannot serve you again."
+  },
+  {
+    "id": "c-rumor-answer-with-facts",
+    "chapter": 12,
+    "domain": "career",
+    "difficulty": 2,
+    "title": "Answer a Rumor With Facts",
+    "scenario": "You and a colleague, Marcus, are both shortlisted for the team lead role. A friend tells you that Marcus has been saying you missed two deadlines last year, which is false. The decision meeting is in three weeks. You feel the pull to start a counter-rumor about his late arrivals, and to tell your manager that he is not serious about the job. Your own record is strong, but you have not yet shown it on paper.",
+    "options": [
+      { "text": "Ask your manager what criteria will decide the role, then bring a dated record of your delivered results against them.", "correct": true, "why": "Move only when the move gains you something. Clear criteria and facts beat rumor, and they keep attention on the work the decision actually turns on." },
+      { "text": "Spread a story about Marcus's late arrivals, so the team has something to weigh against his rumor.", "correct": false, "why": "A counter-rumor copies his tactic and makes you the same kind of player. Once the team sees a fight, both candidates look unfit for the role." },
+      { "text": "Confront Marcus at the next standup and ask him, in front of the team, who told him about the deadlines.", "correct": false, "why": "Confronting in public, in the heat of the moment, turns a personal conflict into a spectacle. It forces him to defend himself and costs you credibility." },
+      { "text": "Tell your manager that Marcus is not serious about the job and cannot be trusted with the team.", "correct": false, "why": "Attacking a rival's character without evidence is pique, not strategy. It makes you look like the one fighting over the role, not the one who earned it." },
+      { "text": "Ask a friend on the team to tell others the rumor was a misunderstanding, so it comes from a neutral source.", "correct": false, "why": "Routing your defense through a friend still repeats the rumor and drags a third person into a fight that is not theirs." }
+    ],
+    "verses": ["12.17", "12.18"],
+    "tactic": "",
+    "lesson": "Do not answer a rumor with a rumor. Ask for the criteria, show your results, and act where the decision really turns."
+  },
+  {
+    "id": "c-ask-agency-insiders",
+    "chapter": 13,
+    "domain": "career",
+    "difficulty": 1,
+    "title": "Ask Those Who Worked There",
+    "scenario": "A design agency offers you a six-month retainer that pays about 30 percent more than your current freelance rate. You like the work, but you have heard that the agency pays late and changes scope in the middle of projects. You cannot afford another month of unpaid invoices. Before you sign, you want the real story about how this agency treats the people who work for it.",
+    "options": [
+      { "text": "Ask two freelancers who finished projects with the agency how they were paid and how scope changes were handled.", "correct": true, "why": "Knowledge of the other side comes from people who have been inside it. Ask for specifics like payment timing and revision limits, and listen closely." },
+      { "text": "Ask the agency for two client references you can call, and check its public business registration.", "correct": true, "why": "Asking openly and checking public records is ethical and fast. Verified references turn a rumor into facts you can weigh before signing." },
+      { "text": "Read recent public reviews on several platforms, looking for repeated patterns about payment, not single angry posts.", "correct": true, "why": "Public information is fair to use. Repeated patterns across sources are more reliable than one dramatic review, so cross-check before believing any of them." },
+      { "text": "Ask a former staffer who still has friends at the agency to forward you its internal payment history.", "correct": false, "why": "Obtaining private financial records through a contact means snooping on people who never agreed to share them. It is unethical and risky." },
+      { "text": "Create a fake client profile to ask the agency's staff questions, so they say more than they would to a freelancer.", "correct": false, "why": "A false identity is harmful deception. Even if it yields answers, it damages trust and can expose you to legal and ethical trouble." }
+    ],
+    "verses": ["13.6", "13.17"],
+    "tactic": "",
+    "lesson": "Get the real story by asking people who did the work and checking public records. Never use a false identity or private files."
+  },
+  {
+    "id": "c-learn-before-you-build",
+    "chapter": 13,
+    "domain": "self",
+    "difficulty": 2,
+    "title": "Learn Before You Build",
+    "scenario": "You are about to start a meal-prep service from your apartment kitchen. You have a plan for ten dishes a week, a logo, and a price list. You have not yet asked a single potential customer what they eat, what they pay for prepared food, or what makes them cancel. Launch is in three weeks, and you have about 400 dollars for ingredients and packaging that you would rather not waste.",
+    "options": [
+      { "text": "Interview eight to ten people who buy prepared meals now, asking what they buy, what they pay, and why they stopped.", "correct": true, "why": "Foreknowledge comes from people, not from your assumptions. Real customers reveal costs and habits that no planning exercise can predict." },
+      { "text": "Read public reviews of existing meal-prep services, plus complaints people post openly in local community groups.", "correct": true, "why": "Public information is fair intelligence. Reading what people already say openly shows where competitors fall short, and where you can do better." },
+      { "text": "Buy 5,000 local email addresses from a broker and send an unsolicited survey to every one of them.", "correct": false, "why": "Buying contact lists without consent is spam and invites complaints. Unwilling strangers teach you far less than a few real conversations." },
+      { "text": "Use a friend's old login to read private messages in a neighborhood group and copy what people wrote.", "correct": false, "why": "Reading private messages is snooping. It is unethical, and if discovered it destroys the trust your business depends on." },
+      { "text": "Skip research and spend the 400 dollars on a bigger first batch, so you never run short of inventory.", "correct": false, "why": "Refusing to spend a little on learning is false economy. Most of the money is at risk without knowing what customers actually want." }
+    ],
+    "verses": ["13.2", "13.4"],
+    "tactic": "interview-customers-before-launch",
+    "lesson": "Ask real customers before you build. A few honest conversations reveal what no amount of planning can predict."
+  },
+  {
+    "id": "c-real-price-floor",
+    "chapter": 13,
+    "domain": "work",
+    "difficulty": 2,
+    "title": "Find the Real Price Floor",
+    "scenario": "Your software supplier wants a 22 percent increase at renewal, and the account rep calls it the standard rate. You suspect other companies pay less, but you cannot prove it. You have two weeks to respond, and your finance director wants a number to plan around. You need to understand the supplier's real flexibility before the negotiation meeting on Thursday.",
+    "options": [
+      { "text": "Contact two companies that use this supplier, ask what they have negotiated, then ask your rep what drives the increase.", "correct": true, "why": "Peers who negotiated with the same supplier give honest ground truth. Asking the rep openly also shows which parts of the price are truly fixed." },
+      { "text": "Ask a sales contact you know at the supplier to send you their internal discount matrix, marked confidential.", "correct": false, "why": "Getting confidential pricing from someone bound to secrecy is unethical and may breach their contract. It also puts your contact at real risk." },
+      { "text": "Open with a counteroffer of zero increase, so they reveal their limits before you reveal yours.", "correct": false, "why": "An opening demand with no basis spends trust and signals that you have no information. It reveals your weakness more than their limits." },
+      { "text": "Accept the 22 percent increase now, so you avoid delay and the risk of an even bigger rise later.", "correct": false, "why": "Accepting with no information gives away your leverage. A number your board never tested becomes the baseline for every future renewal." },
+      { "text": "Have an IT contractor you know use your old login to look inside the supplier's shared pricing portal.", "correct": false, "why": "Entering a supplier's system with old credentials is unauthorized access. The information is tainted, and the legal exposure is serious." }
+    ],
+    "verses": ["13.6", "13.17"],
+    "tactic": "",
+    "lesson": "Learn real pricing from people who negotiated with the same supplier, and from open questions. Never from confidential files or old logins."
+  },
+  {
+    "id": "c-verify-contractor-deposit",
+    "chapter": 13,
+    "domain": "family",
+    "difficulty": 1,
+    "title": "Verify Before the Deposit",
+    "scenario": "Your father, 78, is about to sign a 14,000-dollar roofing contract with a company that knocked on his door after a storm. The salesman is friendly and wants a deposit by Friday. You have your phone, a state contractor-license lookup, and a family group chat already split between trust him and do not trust him. Your father is looking to you to decide what to do.",
+    "options": [
+      { "text": "Check the state contractor license and complaint records, and call two recent customers from the company's references.", "correct": true, "why": "Public licensing records and independent references are ordinary, ethical checks. Cross-checking several sources tests the salesman's claims instead of your gut." },
+      { "text": "Ask your father to hold off on any deposit, and sit with him while the written scope and warranty are explained.", "correct": true, "why": "Move only when the position is clear. Written scope and time to think protect against pressure, which storm sales depend on." },
+      { "text": "Dig through the salesman's personal social media and use anything embarrassing to pressure him on price.", "correct": false, "why": "Digging through a stranger's private life for leverage is harassment-adjacent and makes you the problem. Business facts are what matter." },
+      { "text": "Install a tracking app on the salesman's phone to see whether he visits other homes on your street.", "correct": false, "why": "Tracking another person without consent is illegal surveillance. It would harm you more than the roofer and proves nothing about the contract." },
+      { "text": "Let your father sign now, then cancel by phone at the first sign of trouble.", "correct": false, "why": "Signing under pressure hands over money and control. Cancellation windows are often short, so hoping to undo it later is weak protection." }
+    ],
+    "verses": ["13.17", "13.6"],
+    "tactic": "reference-check-the-landlord",
+    "lesson": "Verify a pushy offer with public records and independent references before any deposit. Check the claims, not just the friendliness."
+  },
+  {
+    "id": "c-track-rival-openly",
+    "chapter": 13,
+    "domain": "business",
+    "difficulty": 3,
+    "title": "Track the Rival in the Open",
+    "scenario": "Your three-person startup launches a scheduling tool for dental clinics in five weeks. A larger competitor just posted two job listings for real-time sync engineers and opened a beta sign-up page. Your co-founder wants to know exactly what they are building. Your budget is small, and your advisers warn you not to walk into launch blind about what a rival will ship.",
+    "options": [
+      { "text": "Track their public changelogs, pricing page and job postings, and record what changes each week.", "correct": true, "why": "Public signals show direction without intrusion. Dated, consistent notes reveal patterns that a single rumor cannot." },
+      { "text": "Talk with clinic managers who have used both tools, and ask what they wish each product did.", "correct": true, "why": "Foreknowledge comes from people. Conversations with customers reveal what the rival fails to do, which is the gap you can fill." },
+      { "text": "Attend their public webinar or conference talk, take careful notes, and log what they say about customers and roadmap.", "correct": true, "why": "Public events are open to everyone. Listening closely to what a competitor says on stage is legitimate and costs little." },
+      { "text": "Sign up for their beta using a fake clinic name, then read the private dashboards for unannounced features.", "correct": false, "why": "A false identity to get inside a system is deception and likely unauthorized access. Stolen insight is also a legal trap for your launch." },
+      { "text": "Leak a rumor to tech blogs that the rival's beta fails security checks, to slow their launch.", "correct": false, "why": "Spreading an unverified claim to harm a competitor is unethical and may be defamatory. It tends to come back on the person who started it." }
+    ],
+    "verses": ["13.4", "13.6"],
+    "tactic": "",
+    "lesson": "Learn about rivals from public signals and from the people who use them. Never from false identities, private dashboards or invented rumors."
+  }
+]

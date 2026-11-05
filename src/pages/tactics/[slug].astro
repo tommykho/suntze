@@ -89,8 +89,8 @@ const diffLabel = ['', 'Easy', 'Moderate', 'Advanced'][t.difficulty];
           <p class="muted">Describe your exact situation and get a verse-cited plan, or turn this tactic into a 30-second podcast.</p>
         </div>
         <div class="cta-btns">
-          <a class="btn btn--seal btn--sm" href={u(`/field/?q=${encodeURIComponent(t.situation)}`)}>Ask the General</a>
-          <a class="btn btn--sm" href={u(`/field/?tactic=${t.slug}#podcast`)}>Make a 30s podcast</a>
+          <a class="btn btn--seal btn--sm" href={u(`/ask/?q=${encodeURIComponent(t.situation)}`)}>Ask the General</a>
+          <a class="btn btn--sm" href={u(`/ask/?tactic=${t.slug}#podcast`)}>Make a 30s podcast</a>
         </div>
       </div>
     </section>

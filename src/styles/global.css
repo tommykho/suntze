@@ -205,6 +205,7 @@ button.chip { cursor: pointer; }
 .nav-links a::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--seal-hi); transform: scaleX(0); transform-origin: left; transition: transform 0.4s var(--ease); }
 .nav-links a:hover::after, .nav-links a[aria-current='page']::after { transform: scaleX(1); }
 .nav-links a[aria-current='page'] { color: var(--paper); }
+.nav-links .mobile-only { display: none; }
 .nav-toggle { display: none; background: none; border: 1px solid var(--line-2); color: var(--paper); border-radius: 10px; width: 44px; height: 40px; cursor: pointer; }
 @media (max-width: 860px) {
   .nav-toggle { display: inline-grid; place-items: center; }
@@ -223,6 +224,7 @@ button.chip { cursor: pointer; }
     transition: opacity 0.3s, transform 0.3s var(--ease);
   }
   .nav-links a { display: block; padding: 14px 0; font-size: 1rem; border-bottom: 1px solid var(--line); }
+  .nav-links .mobile-only { display: block; }
   .site-header.is-open .nav-links { opacity: 1; transform: none; pointer-events: auto; }
 }
 

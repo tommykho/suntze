@@ -1,0 +1,272 @@
+[
+  {
+    "id": "c-ch4-blame-shift-record",
+    "chapter": 4,
+    "domain": "work",
+    "difficulty": 2,
+    "title": "The Coworker Who Shifts the Blame",
+    "scenario": "Your colleague Dana missed the vendor deadline, and in Thursday's project review she told the director your data feed was late. The director turns to you and asks why. You know the feed arrived on time, but your memory of who agreed to what at kickoff is fuzzy, and the room is restless. Your co-lead Sam has already said he will not get involved. The next review is in six days, and your standing depends on how the facts look by then.",
+    "options": [
+      { "text": "Tonight, write a dated timeline of the feed delivery, the kickoff decisions and each owner's sign-off, and send it to the director.", "correct": true, "why": "Facts written down and dated outweigh a louder account. Putting ownership on record turns the question from who said what into what was agreed, neutralising the blame without a fight." },
+      { "text": "Ask Dana to confirm in writing which dates and owners she believes were agreed, so her claim has to be specific.", "correct": true, "why": "Vague blame cannot survive a request for specifics. Forcing the other side to commit in writing fixes the ground, and you never had to raise your voice to make that happen." },
+      { "text": "At the next review, present the timeline in one calm slide and let the dates speak, without commenting on Dana's motives.", "correct": true, "why": "Keep the temperature low and let the record carry the argument. Calm, factual presentation makes the accusation look like what it is, and gives the room no fight to join." },
+      { "text": "Reply-all to the thread, listing every missed deadline Dana has caused this year, so everyone sees who is responsible.", "correct": false, "why": "Public accusation escalates the fight and makes you look like the aggressor. Sun Tzu wins before the argument starts; a shouting match is a battle you only win by losing the room." },
+      { "text": "Stay silent and let the blame fade on its own, trusting the team to see the truth without any written record.", "correct": false, "why": "Silence without preparation is not defence. With no record, the loudest account stands by default, so secure the facts first rather than hoping they will be noticed." }
+    ],
+    "verses": ["4.13", "4.15"],
+    "tactic": "control-the-record",
+    "lesson": "Win the record before the room: dated facts and written ownership neutralise blame without a shouting match."
+  },
+  {
+    "id": "c-ch4-quit-after-reserve",
+    "chapter": 4,
+    "domain": "career",
+    "difficulty": 2,
+    "title": "Leaving Before the Side Business Stands",
+    "scenario": "Your boss has taken credit for your analytics work three times this year, and you are furious. Your freelance data-cleaning side project paid $1,400 last month, and two past clients have asked about new work. Savings cover about two months of expenses. Right now your manager is tearing apart a deck you built, and you are thinking about walking out and sending a resignation tonight. Your partner has asked you to wait until you have a plan.",
+    "options": [
+      { "text": "Bank six months of expenses and sign two paying clients before giving notice, so one bad month cannot force your exit.", "correct": true, "why": "Security against defeat lies in your own hands. A reserve and proven demand let you leave on your timing, so the next setback cannot choose your moves for you." },
+      { "text": "Test demand with real offers in your evenings, and keep the salary until side income covers costs for three months.", "correct": true, "why": "Proof beats hope. Testing the business while still employed reveals whether the opportunity is real, and you advance only once the numbers show it." },
+      { "text": "Resign at the end of this meeting while the anger is fresh, so your manager feels the loss.", "correct": false, "why": "Acting in anger reveals your hand at the worst moment. Sun Tzu's order is to be secure first and then move; a fresh grudge is a poor time to commit your last reserve." },
+      { "text": "Stay in the job indefinitely, telling yourself the side project will become real someday without setting any milestones.", "correct": false, "why": "Waiting without a plan is not patience. Without milestones you neither secure yourself nor move toward a victory you can measure, and drift quietly becomes the decision." },
+      { "text": "Demand a title change this afternoon, backed by your grievance list, and threaten to walk if it is refused today.", "correct": false, "why": "An ultimatum with no alternative ground exposes your weakness. You have not secured the position behind your demand, so a refusal leaves you with an exit you cannot yet afford." }
+    ],
+    "verses": ["4.2", "4.3"],
+    "tactic": "build-the-reserve-first",
+    "lesson": "Secure your own reserve and proven demand before you leave; positions you have made safe let you choose the timing."
+  },
+  {
+    "id": "c-ch4-candle-launch-hold",
+    "chapter": 4,
+    "domain": "business",
+    "difficulty": 2,
+    "title": "Holding the Launch Date",
+    "scenario": "Your candle shop has a new scented line, a newsletter list of 2,000 people and a pop-up market booked for the first Saturday in December. Two weeks out, the supplier delivers only 60 percent of the wax order, and the labels for the new line have a spelling error. Your co-founder wants to announce the line today anyway, promising a restock soon. You have plenty of the classic candles and a waitlist of about 200 people. Pre-orders have not opened yet.",
+    "options": [
+      { "text": "Pause the announcement, sell the classic candles at the market, and open a small pre-order list for the new line.", "correct": true, "why": "Sell from ground you hold. Proven stock keeps revenue flowing while the new line is not ready, and a pre-order list gauges demand without promising supply you cannot deliver." },
+      { "text": "Release the new line to the 200-person waitlist first, then widen it once labels and supply are fixed.", "correct": true, "why": "Advance from surplus in stages. A smaller, controlled release lets you deliver flawlessly, so the wider launch rests on a product that has already proved itself." },
+      { "text": "Announce to all 2,000 subscribers today and promise a restock, locking in demand before the supply problem surfaces.", "correct": false, "why": "Announcing before you can deliver invites a public crisis. Creating demand you cannot hold exposes your weakness; attack only when your supply and ground are secure." },
+      { "text": "Keep the labels as printed and sell everything at the market, since a sold-out first day looks like success.", "correct": false, "why": "Launching with known defects is acting without full information. You trade a small delay for a visible failure, and a typo on every jar will outlast the sold-out day." },
+      { "text": "Cancel the market and hold the whole new line for a year, waiting until supply is perfect before anything reaches customers.", "correct": false, "why": "Perfection is another kind of defeat. Standing only on the defensive shows insufficient strength; you can still advance with a smaller, ready offer instead of abandoning the moment." }
+    ],
+    "verses": ["4.5", "4.6"],
+    "tactic": "launch-from-strength",
+    "lesson": "Hold the launch until the defence is solid, then advance from surplus, staging the release to match your strength."
+  },
+  {
+    "id": "c-ch4-landlord-deposit-evidence",
+    "chapter": 4,
+    "domain": "personal",
+    "difficulty": 1,
+    "title": "Getting the Deposit Back",
+    "scenario": "You move out of your rental after three years. The landlord says he will keep $900 from your deposit for carpet damage and wants the money settled by Friday. You remember the flat was clean at move-out, but you have no move-in photos or written inventory. The lease says deductions need itemised receipts. You are angry and tempted to send a long message listing everything wrong with his property and his character.",
+    "options": [
+      { "text": "Gather move-out photos, the lease deduction clause and your messages, then send a short written dispute citing deposit rules.", "correct": true, "why": "Win before the fight starts. Assemble evidence and the governing rule first, so your position is hard to defeat. A calm, documented claim beats an angry one every time." },
+      { "text": "Send the long message now, listing every flaw in the flat and what you think of him as a landlord.", "correct": false, "why": "Venting escalates and hands him the moral high ground. You are fighting without evidence and showing your temper, the opposite of making defeat impossible first." },
+      { "text": "Pay the $900 to end it, since you have no proof anyway, and avoid the stress of any dispute.", "correct": false, "why": "Accepting the loss without testing your evidence gives up ground you may still hold. Check what you have before you concede anything, even when conflict is tiring." },
+      { "text": "Withhold your last month's rent as leverage until he admits the deduction is unfair.", "correct": false, "why": "Retaliation creates a second dispute on your weakest footing. You have not secured your position, and he now has a grievance to counter with his own records." },
+      { "text": "Post a furious public review of the flat and the landlord before you have any documents to back your account.", "correct": false, "why": "Public attack without evidence invites a defamation dispute and reveals your strategy early. It wins sympathy in the wrong place and costs you the cleaner claim." }
+    ],
+    "verses": ["4.13", "4.14"],
+    "tactic": "win-the-case-first",
+    "lesson": "Assemble evidence and the governing rule before you confront anyone; a calm written claim beats anger."
+  },
+  {
+    "id": "c-ch4-sister-cosign-limit",
+    "chapter": 4,
+    "domain": "family",
+    "difficulty": 3,
+    "title": "Asked to Co-Sign a Loan",
+    "scenario": "Your younger sister wants you to co-sign a $22,000 car loan for her new business van. She says the business is basically guaranteed and that the family will be let down if you say no. You have a modest emergency fund and a mortgage of your own. You have not seen her business plan or her bank statements. She wants an answer by Sunday's family dinner, where your parents will be present.",
+    "options": [
+      { "text": "Ask for the business plan, three months of bank statements and the loan terms, then decide once you have the numbers.", "correct": true, "why": "Decide on information you have verified. The opportunity is only real once you can see the figures; refusing to commit blind is the strong position, not the timid one." },
+      { "text": "Decide the most you could lose without harming your own household, and state that limit calmly rather than answering under pressure.", "correct": true, "why": "Know your security boundary before the conversation. A stated limit keeps family pressure from designing your commitment, and it shows the decision is yours to make." },
+      { "text": "Say yes at dinner to keep the peace, and plan to sort out any repayment trouble privately later.", "correct": false, "why": "Committing under pressure hands the other side control of your timing. You would fight a battle you cannot yet afford, and the trouble you avoid today returns with interest." },
+      { "text": "Refuse flatly in the family group chat and say she is irresponsible with money.", "correct": false, "why": "Public judgment escalates the conflict before any facts are on the table. You may win the argument and lose the family's goodwill, a defeat that is slow to recover from." },
+      { "text": "Offer $2,000 as an unconditional gift now, so the matter closes without anyone looking at her finances.", "correct": false, "why": "Acting without information only feels like avoidance. Spending resources on a plan you have not measured is still a blind move, and it leaves the real risk untested." }
+    ],
+    "verses": ["4.2", "4.16"],
+    "tactic": "",
+    "lesson": "Verify before you commit under pressure; set your own limit so family expectations cannot set your terms."
+  },
+  {
+    "id": "c-ch5-bait-supplier-terms",
+    "chapter": 5,
+    "domain": "business",
+    "difficulty": 2,
+    "title": "Offering a Bait in Supplier Talks",
+    "scenario": "You run a small online pet-food shop, and your packaging supplier wants a 12-month contract at a price that squeezes your margin. You are not sure how much room they have. From past emails, you think they care most about volume commitments and about being paid on time. You could say you need a big cut, or accept their terms as they stand. You would rather learn what they will give up before you reveal your ceiling.",
+    "options": [
+      { "text": "Offer a 90-day commitment at slightly higher volume for a lower unit price, and watch which term they defend hardest.", "correct": true, "why": "Offer a bait to see what the other side will sacrifice. Their reaction shows their real priorities, so you learn their terms before revealing your own limit." },
+      { "text": "Lay out your offer, then quietly collect a second supplier quote, so you can walk away from a worse deal.", "correct": true, "why": "Keep force in reserve. An alternative prepared in advance changes the power of your offer; a quote in hand is leverage, while a threat without one is only noise." },
+      { "text": "Tell them your full budget and the highest price you could pay, so they know you are serious and stop haggling.", "correct": false, "why": "Revealing your ceiling removes all leverage. They will price to the edge you just showed them, so concealing your limit is what keeps the negotiation open." },
+      { "text": "Threaten to switch to a competitor tomorrow, although you have no quotes yet, hoping the bluff is enough.", "correct": false, "why": "A bluff without a prepared alternative is empty. When they call it, you have spent your leverage and must accept worse terms, with your credibility damaged." },
+      { "text": "Accept the 12-month contract as offered, since haggling feels aggressive and the margin hit is manageable.", "correct": false, "why": "Accepting first terms without testing their flexibility gives away the advantage. You never learn what they would have given up, so you pay the full price for silence." }
+    ],
+    "verses": ["5.19", "5.20"],
+    "tactic": "",
+    "lesson": "Offer a bait to see what the other side will give up, then keep alternatives ready before you press."
+  },
+  {
+    "id": "c-ch5-hedge-calm-moment",
+    "chapter": 5,
+    "domain": "personal",
+    "difficulty": 1,
+    "title": "Raising the Hedge Problem",
+    "scenario": "Your neighbour's overgrown hedge blocks half the footpath and the light into your kitchen. You want to say something every time you walk past, but on Saturday he is loading his car in a hurry, and on Monday your bins are still in the way. You have been stewing for a month and the frustration is rising. You want the hedge cut back without starting a feud on the street.",
+    "options": [
+      { "text": "Wait for a relaxed evening, then knock with one specific request: trim the hedge by the footpath by a set date.", "correct": true, "why": "The well-timed strike works. A calm, prepared, short request at a moment of readiness beats a sudden confrontation, and a set date gives him an easy way to say yes." },
+      { "text": "Shout over the fence when he is outside, listing how long the hedge has bothered you and his character flaws.", "correct": false, "why": "Confronting him in anger, during his rushed moment, invites defensiveness. Emotion spends your energy without effect and turns a small problem into a feud you will live beside." },
+      { "text": "Post a complaint in the neighbourhood group chat and let the street pressure him into cutting it back.", "correct": false, "why": "Public pressure makes a private matter a campaign. He will dig in to save face, and you lose the goodwill you may need when the bins or the parking next become an issue." },
+      { "text": "Cut the hedge back yourself over the boundary tonight, without telling him, so he finds it already done.", "correct": false, "why": "Acting without speaking risks damage, a boundary dispute and a bigger fight. You reveal your hand in the most confrontational way, with no information about his side of the line." },
+      { "text": "Put the conversation off indefinitely, hoping he notices the hedge himself, and let the resentment build quietly.", "correct": false, "why": "Waiting without action is not patience. Your frustration grows and the problem stays. Choose the moment on purpose instead of letting the grievance decide it for you." }
+    ],
+    "verses": ["5.13", "5.14"],
+    "tactic": "pick-the-moment",
+    "lesson": "Choose a calm, specific moment for a hard request; a short prepared ask beats a shout over the fence."
+  },
+  {
+    "id": "c-ch5-cfo-budget-pilot",
+    "chapter": 5,
+    "domain": "work",
+    "difficulty": 2,
+    "title": "Winning the Budget Vote",
+    "scenario": "You need $35,000 for a support tool that would halve your team's ticket backlog. Your CFO has refused the request twice, saying the budget is locked for the year. In the planning meeting she is open to new ideas, but she keeps asking for hard numbers. Your team lead says to just email her again. You do have three months of backlog data, a free trial result, and a peer at another firm who used the tool well.",
+    "options": [
+      { "text": "Make the request directly in the planning meeting, with a one-page ask, so the decision is recorded rather than drifting.", "correct": true, "why": "The direct method is how you join battle: state the request openly and clearly. Putting it on record stops the matter drifting into a vague 'maybe next quarter'." },
+      { "text": "Pilot the tool with one team for a month, using the trial data, so the case rests on results rather than promises.", "correct": true, "why": "Indirect methods secure victory. A small, low-cost test lets her approve something already proven, turning an unbudgeted request into a measured, reversible step she can defend." },
+      { "text": "Prepare the numbers first: backlog trend, cost per ticket and projected savings, so every objection has an answer ready.", "correct": true, "why": "Calculate before you fight. Knowing the figures better than the objections makes your case hard to defeat, and you can concede exactly what the data does not support." },
+      { "text": "Email the CFO again with the same request and a note about how urgent it is for the team.", "correct": false, "why": "Repeating a failed request with no new angle wastes energy and makes you look like a pest. Direct force without new information simply meets the same wall." },
+      { "text": "Raise it at the next all-hands, asking the room to back the tool, so the CFO feels pressure from everyone.", "correct": false, "why": "Publicly pressing an authority figure burns credibility and puts her on the defensive. A victory won by public pressure rarely survives the budget cycle intact." }
+    ],
+    "verses": ["5.5", "5.11"],
+    "tactic": "direct-ask-indirect-win",
+    "lesson": "Make the request openly, prove it with a small test, and arrive with numbers ready for every objection."
+  },
+  {
+    "id": "c-ch5-savings-automatic-slope",
+    "chapter": 5,
+    "domain": "self",
+    "difficulty": 1,
+    "title": "Saving Without Daily Willpower",
+    "scenario": "You want to save $300 a month, but right now the plan lives in your head. Every payday you look at the balance, feel tempted by a weekend trip or a new jacket, and decide again whether this is the month to save. Some months you manage it, most months you do not. Your rent and bills are covered, and your current account has no automatic transfers at all.",
+    "options": [
+      { "text": "Set up an automatic transfer for payday, so the $300 moves before you see the balance and needs no fresh decision.", "correct": true, "why": "Build a slope that carries you. When the saving runs without a monthly choice, progress continues on the days willpower is low, the way a round stone keeps rolling once it is set in motion." },
+      { "text": "Decide each payday from scratch how much you feel like saving, and move that amount whenever you remember.", "correct": false, "why": "Relying on fresh willpower each month is pushing a flat stone uphill. Every decision is a chance to stall, and momentum never builds." },
+      { "text": "Cut every treat, subscription and outing at once, starting tomorrow, and track each penny in a spreadsheet.", "correct": false, "why": "A heavy all-at-once push exhausts you, and the rebound usually erases the savings. Sun Tzu holds energy and releases it deliberately, rather than spending it in one reckless charge." },
+      { "text": "Wait until your income rises, since saving a fixed amount from your current pay is not worth the stress yet.", "correct": false, "why": "Waiting for a better moment means there is no momentum at all. Start small, on the level ground you already have, and let the habit build from there." },
+      { "text": "Save whatever is left at month's end, trusting leftovers to grow over time without any fixed plan.", "correct": false, "why": "Leftover saving depends on what the month allows, which is rarely much. Without a fixed starting push, nothing rolls, and the plan never gains the strength to move." }
+    ],
+    "verses": ["5.22", "5.23"],
+    "tactic": "",
+    "lesson": "Automate the first step so progress needs no fresh willpower; design the slope, then let momentum carry."
+  },
+  {
+    "id": "c-ch5-migration-combined-energy",
+    "chapter": 5,
+    "domain": "work",
+    "difficulty": 3,
+    "title": "Leading the Platform Migration",
+    "scenario": "You lead a platform migration with five engineers across three teams. Priya is brilliant but overloaded, Marco is steady but slow, and two newcomers are unsure what to do. The deadline is fixed. Last month the release slipped because you personally reviewed every change, and now everything waits on you. Your director expects a plan by Monday. You can reshape the work, but nobody wants to be told exactly how to do their part.",
+    "options": [
+      { "text": "Split the migration into self-contained modules with named owners, so each engineer's strengths carry a piece that moves on its own.", "correct": true, "why": "Make the force combined. Dividing the job into well-shaped units lets each person roll forward without you pushing every step, so no single individual carries the whole load." },
+      { "text": "Agree on simple signals, like a daily status line and one go/no-go gate, so people act without waiting for permission.", "correct": true, "why": "Large forces are governed by signs and signals. Clear, simple coordination lets the team respond quickly, and you save your attention for the points that truly need it." },
+      { "text": "Review only the riskiest modules yourself, and let peers review the rest, so momentum no longer depends on your calendar.", "correct": true, "why": "Do not require too much from individuals. Stop being the bottleneck; checks on what matters, delegated for the rest, keep the work rolling without exhausting you." },
+      { "text": "Pair with Priya on every module, since her output is the only reliable source of speed for the whole project.", "correct": false, "why": "Leaning on one exceptional person creates a single point of failure. Requiring too much from one individual wastes the combined energy the rest of the team could provide." },
+      { "text": "Give each engineer an hour-by-hour task list and check progress twice daily, so everyone follows the same exact plan.", "correct": false, "why": "Micromanaging every step drains energy and removes initiative. Combined energy comes from shaping the terrain, not from dictating every move, and it stalls the moment you look away." }
+    ],
+    "verses": ["5.21", "5.22"],
+    "tactic": "",
+    "lesson": "Shape the work into owned modules with clear signals; a team rolls on its own once you stop being the bottleneck."
+  },
+  {
+    "id": "c-ch6-stalled-approval-manager",
+    "chapter": 6,
+    "domain": "work",
+    "difficulty": 3,
+    "title": "The Manager Who Keeps Waiting",
+    "scenario": "Your manager, Ruth, has sat on two decisions for three weeks. The first is a $60,000 vendor contract your team needs, which only she can approve. The second is a change to your own team's dashboard refresh schedule, which is inside your remit and easy to reverse. Each time you ask, she says she needs more data. Customers are still waiting, and your messages are getting sharper. The ops lead, who depends on the same vendor, has been quietly frustrated too.",
+    "options": [
+      { "text": "Write a calm one-page note: what the delay costs, what she likely fears, and two options she must choose between by Friday.", "correct": true, "why": "Assess without heat. Reduce the stall to costs and bounded choices that need her authority; owners decide when handed a clear decision rather than a general complaint." },
+      { "text": "Tell her you will switch the dashboard refresh on Thursday unless she objects by Wednesday, and include the one-step rollback.", "correct": true, "why": "Proceed unless objected to, but only for reversible work inside your remit. Silence becomes consent, you keep the initiative, and you seize no authority that is not yours." },
+      { "text": "Ask the ops lead, who also waits on this vendor, to co-sign a shared request that shows the cost to both teams.", "correct": true, "why": "Build lateral alliances. A peer facing the same bottleneck adds weight your manager cannot easily dismiss, and combined forces face fewer defences than a lone request." },
+      { "text": "Sign the vendor contract yourself this week, since the terms look good, and tell Ruth once it is done.", "correct": false, "why": "This is a fait accompli on high-stakes ground outside your authority. Fait accompli suits low-risk, reversible moves; here it spends the trust you will need for everything after." },
+      { "text": "Post in the team channel that Ruth is blocking everything, and copy the VP so the whole company can see the delay.", "correct": false, "why": "A public accusation turns a stall into a fight over face. Sun Tzu wins the contest quietly, before it begins; a channel post gives her a reason to defend, not to decide." }
+    ],
+    "verses": ["6.22", "6.2"],
+    "tactic": "silence-is-consent",
+    "lesson": "Hand the owner a bounded choice, share the weight with peers, and proceed only where the change is reversible and in scope."
+  },
+  {
+    "id": "c-ch6-offer-floor-hidden",
+    "chapter": 6,
+    "domain": "career",
+    "difficulty": 2,
+    "title": "Asked About the Other Offer",
+    "scenario": "You have a competing offer from another firm: $8,000 more, with a senior title. Your current manager, Ian, catches you after standup and asks, casually, whether there is another offer he should know about. You want to stay and you like your team, but you do not know whether he will counter. Your answer will shape his next move, and you have not yet decided your own minimum.",
+    "options": [
+      { "text": "Say you are weighing options, then ask what Ian could offer on pay, title and scope before naming any figure.", "correct": true, "why": "Stay formless about your position. Asking for his full offer first keeps your floor hidden and lets you see what he is willing to give before you reveal anything." },
+      { "text": "Decide your private walk-away figure, then ask for the full package in writing before disclosing the competing number.", "correct": true, "why": "Impose your terms rather than reacting to his. Concealing your dispositions keeps the initiative with you, and you reveal the competing number only when it helps you." },
+      { "text": "Tell him the exact competing figure and title, so he feels the pressure and matches it on the spot.", "correct": false, "why": "Showing your full position lets him calibrate a counter to your edge. Spilling the numbers hands over the initiative, and he may simply accept a smaller gap." },
+      { "text": "Invent a stronger offer with a higher salary to scare him into a bigger counter.", "correct": false, "why": "Fabricated leverage is deception and fragile. If he asks for proof you have nothing, your credibility is gone, and the working relationship you wanted to keep is damaged." },
+      { "text": "Say nothing, let the question pass, and quietly send your resignation without a conversation to avoid the awkwardness.", "correct": false, "why": "Silence that leaves your manager uninformed wastes goodwill. Concealment should be deliberate; this is simply being unprepared, and it lets him learn about your exit from someone else." }
+    ],
+    "verses": ["6.2", "6.25"],
+    "tactic": "stay-formless-at-the-table",
+    "lesson": "Keep your floor private and ask for their full offer first; concealed positions keep the initiative with you."
+  },
+  {
+    "id": "c-ch6-bookkeeper-niche-gap",
+    "chapter": 6,
+    "domain": "business",
+    "difficulty": 2,
+    "title": "The Niche the Big Firms Miss",
+    "scenario": "You run a one-person bookkeeping service. Local searches bring up large accounting firms with polished sites and fixed packages, and you keep losing bids on price. Last week a client who owns three food trucks told you the big firms never understand the tax rules for vehicle-based businesses, and she spends hours chasing them. You have six years of experience and a list of food-business contacts you have not used.",
+    "options": [
+      { "text": "Position the service around mobile food businesses, and publish a short guide to their vehicle and sales-tax rules.", "correct": true, "why": "Attack where the opponent is absent. The big firms cannot match a specialist's depth in one niche, so a focused offer wins bids that generic packages keep losing." },
+      { "text": "Ask your food-truck client for introductions to three owners, and offer a fixed package built around their tax calendar.", "correct": true, "why": "Strike where the enemy does not defend. Referrals inside a niche bypass the price contest, and a package built on a specific calendar answers needs generalists never address." },
+      { "text": "Cut your rates to match the big firms' fixed packages, hoping volume makes up for the thinner margin across all clients.", "correct": false, "why": "Competing head-on on the enemy's strongest ground, with their scale and price, is a war of attrition you cannot sustain. You trade margin for a contest you cannot win." },
+      { "text": "Add more generic service tiers and raise the ad budget, so you appear in every search the large firms appear in.", "correct": false, "why": "Spreading thin into the strongest territory rarely helps a small firm. Sun Tzu prefers the places the opponent has left open, not a broader fight on their terms." },
+      { "text": "Spend the month cold-calling every business in the city, and only learn their tax situation after they say yes.", "correct": false, "why": "Acting without information wastes effort and tests the market blindly. Find the gap first, then strike it; otherwise you are guessing at weak points you have not located." }
+    ],
+    "verses": ["6.7", "6.8"],
+    "tactic": "attack-the-unguarded-flank",
+    "lesson": "Find the niche the big firms ignore and build your offer around its specific needs, not around their scale."
+  },
+  {
+    "id": "c-ch6-son-curfew-adapt",
+    "chapter": 6,
+    "domain": "family",
+    "difficulty": 3,
+    "title": "The Curfew Your Son Ignores",
+    "scenario": "Your 16-year-old son has been coming home at midnight, breaking the 10:30 curfew you set last spring. Each time you raise it, he slams his door, and each time you respond with a new rule, the gap widens. He has a part-time job that ends at 9 p.m. on weekdays and sometimes runs late. You are worried about where he goes, and you want the rule respected without losing him to a daily war.",
+    "options": [
+      { "text": "When things are calm, ask what the late nights give him, and listen fully before you propose any new rule.", "correct": true, "why": "Learn the principle behind his activity before you act. Understanding what he gets from those hours shows you the real ground, so you can shape a rule that actually fits it." },
+      { "text": "Offer a trade: later weekend nights if he texts when he leaves work and keeps the weekday limit, so both sides gain.", "correct": true, "why": "Adapt to the terrain rather than pushing against it. A trade gives him a stake in the rule, and you get the predictability you want without a daily contest." },
+      { "text": "Replace the fixed 10:30 rule with a limit based on his real shift times, agreed together and written down.", "correct": true, "why": "Water takes the shape of the ground. A rule built on his actual schedule stops being a target he attacks; agreed in writing, it holds without constant enforcement." },
+      { "text": "Take his phone for a month and warn that any further lateness brings the same penalty, so he learns who decides.", "correct": false, "why": "Escalating rules in response to resistance hardens him. You win this round and lose the cooperation you need to keep him safe when you are not there." },
+      { "text": "Track his phone location each night without telling him, so you can confront him with the facts when he is late.", "correct": false, "why": "Secret tracking tells you where he is, not why, and it destroys trust if discovered. Acting covertly reveals your hand at the most sensitive point in the relationship." }
+    ],
+    "verses": ["6.23", "6.31"],
+    "tactic": "redirect-their-momentum",
+    "lesson": "Learn what the rule protects before adding penalties; adapt the course to the ground your son actually walks."
+  },
+  {
+    "id": "c-ch6-client-scope-shifts",
+    "chapter": 6,
+    "domain": "work",
+    "difficulty": 2,
+    "title": "A Client Whose Requirements Keep Moving",
+    "scenario": "You are building a reporting dashboard for a logistics client. Their operations director changes requirements almost every week, and features from last sprint are now obsolete. Your team is frustrated and wants to refuse new requests or hand over a list of rules. The contract is firm and the director holds real authority. The milestone review is in two weeks, and you need the scope to stop moving before then.",
+    "options": [
+      { "text": "Rebuild the dashboard as a modular core with swappable panels, so each weekly change plugs in without reopening the whole project.", "correct": true, "why": "Reshape the work to fit changing ground. A stable core with replaceable parts absorbs change without collapse, so the next requirement costs a panel rather than a rewrite." },
+      { "text": "Ask the director to rank this week's changes against the milestone date, so trade-offs are visible and the scope can settle.", "correct": true, "why": "Make the shifting conditions visible. When the director sees what each change costs against the deadline, the choice is theirs and the scope gains a way to settle." },
+      { "text": "Tell the director in writing that the changes are unreasonable, and that future requests will be refused unless the contract is amended.", "correct": false, "why": "An ultimatum turns shifting ground into a standoff. You need their cooperation at the review, and a rule-based refusal invites them to route around you to your team." },
+      { "text": "Absorb every change quietly and work nights to deliver them all, hoping the director eventually stops asking for more.", "correct": false, "why": "Hiding the strain wears your team down without shaping anything. Silence does not settle scope; each new change simply lands on top of the last one." },
+      { "text": "Keep the original specification exactly as signed, ignore new requests until the review, and let them complain.", "correct": false, "why": "Holding a fixed form when conditions have changed is rigidity. The milestone the director needs cannot be met by defending an obsolete plan." }
+    ],
+    "verses": ["6.31", "6.32"],
+    "tactic": "",
+    "lesson": "When the ground keeps shifting, reshape the work into a stable core and make trade-offs visible to settle scope."
+  }
+]

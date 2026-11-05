@@ -1,264 +1,199 @@
 ---
-import { u } from '../lib/url.js';
 import Base from '../layouts/Base.astro';
 import Seal from '../components/Seal.astro';
-import { PROVIDERS } from '../scripts/field/providers.js';
-import { KOKORO_VOICES } from '../scripts/field/tts.js';
-
-const groups = [...new Set(PROVIDERS.map((p) => p.group))];
-const examples = [
-  'A coworker keeps taking credit for my analysis in meetings with our director.',
-  'My manager approves nothing in writing and then blames me when plans change.',
-  'IT has ignored my access request for three weeks and my project deadline is close.',
-  'My sister-in-law criticises my parenting at every family gathering.',
-  'A competitor is undercutting our prices to win our biggest client.',
-  'My landlord ignores repair requests for a broken heater.',
-];
+import { u } from '../lib/url.js';
+import { RANKS } from '../lib/ranks.js';
 ---
-<Base title="Field Challenge" description="Describe your conflict and get a Sun Tzu plan with verified verse citations, ready-to-send message, backfire check and a downloadable 30-second podcast. Bring your own free AI key.">
-  <header class="f-hero wrap">
-    <div>
-      <p class="eyebrow" data-reveal>Field Challenge · 兵棋推演</p>
-      <h1 data-reveal>Describe your battlefield.</h1>
-      <p class="lede" data-reveal>An AI strategist answers with quotes checked against the original text, concrete moves, a message to send, and a 30-second podcast you can download.</p>
-    </div>
-    <Seal text="問計" size="lg" data-reveal="scale" />
-  </header>
-
-  <section class="wrap f-grid">
-    <!-- ======== INPUT ======== -->
-    <form class="panel f-input" data-form>
-      <div class="field">
-        <label for="situation">Your situation</label>
-        <textarea id="situation" class="input" rows="7" maxlength="4000" required data-situation
-          placeholder="Who is involved, what keeps happening, what you have tried, and what you want. Leave out real names."></textarea>
-        <p class="hint"><span data-chars>0</span>/4000 · Tip: replace names with roles (“my manager”, “Vendor A”).</p>
-      </div>
-      <div class="examples" aria-label="Examples">
-        {examples.map((e) => <button class="chip" type="button" data-example={e}>{e.length > 46 ? e.slice(0, 44) + '…' : e}</button>)}
-      </div>
-
-      <div class="provider-bar">
-        <div>
-          <span class="label">Strategist</span>
-          <p class="provider-now" data-provider-now>—</p>
-        </div>
-        <button class="btn btn--sm" type="button" data-open-settings>Settings &amp; keys</button>
-      </div>
-
-      <div class="f-actions">
-        <button class="btn btn--seal" type="submit" data-ask>Consult the General</button>
-        <button class="btn" type="button" data-manual>Manual only (no AI)</button>
-        <button class="btn" type="button" data-stop hidden>Stop</button>
-      </div>
-      <p class="hint" data-status role="status" aria-live="polite"></p>
-    </form>
-
-    <!-- ======== OUTPUT ======== -->
-    <section class="panel f-output" aria-labelledby="answer-title" data-output-panel>
-      <div class="out-head">
-        <h2 id="answer-title" class="label">The General's counsel</h2>
-        <div class="out-tools" hidden data-out-tools>
-          <button class="chip" type="button" data-copy-answer>Copy</button>
-          <button class="chip" type="button" data-share>Save as field report</button>
-        </div>
-      </div>
-      <div class="answer" data-answer>
-        <div class="empty-state">
-          <div class="brush empty-zh" aria-hidden="true">知己知彼</div>
-          <p>Know the other side and know yourself. Describe your situation and choose a strategist, or press <strong>Manual only</strong> to search the book and tactic library instantly, with no AI or key.</p>
-        </div>
-      </div>
-      <div class="verify" hidden data-verify></div>
-    </section>
-  </section>
-
-  <!-- ======== PODCAST ======== -->
-  <section class="wrap section podcast" id="podcast" aria-labelledby="podcast-title">
-    <div class="pod-grid">
+<Base title="Field Challenge" description="Twenty modern battles. Pick every move Sun Tzu would make, get a score and earn your rank, from Rural General to Empire General.">
+  <!-- ================= INTRO ================= -->
+  <section class="wrap fc-intro" data-stage="intro">
+    <div class="fc-intro-grid">
       <div>
-        <p class="eyebrow">30-second podcast · 兵法一分鐘</p>
-        <h2 id="podcast-title">Turn the plan into a podcast.</h2>
-        <p class="lede">The script fills in automatically from the AI answer, or from any tactic. Edit it, choose a voice, and download the MP3. The default voice runs on your device, so it is free and private.</p>
-        <ul class="ticks-sm">
-          <li><strong>On-device (Kokoro)</strong>: free, no key, about an 80 MB download the first time.</li>
-          <li><strong>Your own key</strong>: Gemini (free tier), OpenAI or ElevenLabs voices.</li>
+        <p class="eyebrow" data-reveal>Field Challenge · 兵法試煉</p>
+        <h1 data-reveal>Twenty battles. <em>How would Sun Tzu fight them?</em></h1>
+        <p class="lede" data-reveal>
+          Each scenario is a real modern conflict. Pick <strong>every</strong> move Sun Tzu would make: there may be one, two or three.
+          Your score is the share of right moves you find, and every reckless move you pick costs you.
+        </p>
+        <ul class="fc-rules" data-reveal>
+          <li><b>20</b> scenarios, one or more from every chapter of the book</li>
+          <li>Each right move found = an equal share of that scenario's 100%</li>
+          <li>Each wrong move picked = minus half a share (never below 0%)</li>
+          <li>Your average decides your rank, from Rural General 鄉 to Empire General 帝</li>
         </ul>
+        <div class="fc-cta" data-reveal>
+          <button class="btn btn--seal" type="button" data-start>Begin the campaign</button>
+          <a class="btn" href={u('/chapters/1/')}>Study the book first</a>
+        </div>
+        <p class="hint" data-best></p>
       </div>
-      <div class="panel pod-panel">
-        <div class="field">
-          <label for="script">Script</label>
-          <textarea id="script" class="input" rows="6" data-script placeholder="Ask the General first, or open a tactic and press “Make a 30s podcast”."></textarea>
-          <p class="hint"><span data-words>0</span> words · about <span data-secs>0</span> seconds (aim for 65–80 words ≈ 30 s)</p>
-        </div>
-        <div class="pod-row">
-          <div class="field">
-            <label for="engine">Voice engine</label>
-            <select id="engine" class="input" data-engine>
-              <option value="kokoro">On-device · Kokoro (free)</option>
-              <option value="gemini">Gemini TTS (your key)</option>
-              <option value="openai">OpenAI TTS (your key)</option>
-              <option value="elevenlabs">ElevenLabs (your key)</option>
-            </select>
+      <ol class="ladder" aria-label="Ranks" data-reveal="scale">
+        {[...RANKS].reverse().map((r) => (
+          <li class="ladder-step">
+            <span class="ladder-seal">{r.zh}</span>
+            <span class="ladder-name">{r.en}</span>
+            <span class="ladder-min">{r.min === 0 ? 'under 40%' : `${r.min}%+`}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= QUIZ ================= -->
+  <section class="wrap fc-quiz" hidden data-stage="quiz" aria-live="polite">
+    <div class="fc-top">
+      <div class="fc-progress">
+        <span class="label" data-counter>Scenario 1 / 20</span>
+        <ol class="pips" data-pips aria-hidden="true"></ol>
+      </div>
+      <div class="fc-running"><span class="label">Score so far</span><strong data-running>–</strong></div>
+    </div>
+
+    <div class="fc-grid">
+      <article class="panel scenario" data-scenario-card>
+        <div class="scn-head">
+          <span class="scn-seal" data-q-seal>一</span>
+          <div>
+            <p class="eyebrow" data-q-chapter>Chapter I · Laying Plans</p>
+            <div class="card-meta"><span class="chip chip--seal" data-q-domain>Work</span><span class="chip" data-q-diff>●○○</span></div>
           </div>
-          <div class="field" data-kokoro-only>
-            <label for="voice">Voice</label>
-            <select id="voice" class="input" data-voice>
-              {KOKORO_VOICES.map(([v, l]) => <option value={v}>{l}</option>)}
-            </select>
-          </div>
-          <div class="field" data-kokoro-only>
-            <label for="speed">Pace <span data-speed-out>1.0×</span></label>
-            <input id="speed" type="range" min="0.8" max="1.2" step="0.05" value="1" data-speed />
-          </div>
         </div>
-        <label class="check-row"><input type="checkbox" data-intro checked /> Add a singing-bowl intro and outro</label>
-        <label class="check-row" data-kokoro-only><input type="checkbox" data-gpu /> Use the GPU (faster, larger one-time download)</label>
-        <div class="f-actions">
-          <button class="btn btn--seal" type="button" data-speak>Generate audio</button>
-          <a class="btn" hidden data-download download="sun-tzu-field-podcast.mp3">Download MP3</a>
+        <h2 class="scn-title" data-q-title>—</h2>
+        <p class="scn-text" data-q-text></p>
+        <p class="scn-ask">Select <strong>every</strong> move Sun Tzu would make.</p>
+        <div class="outcome" hidden data-outcome></div>
+      </article>
+
+      <div class="moves-col">
+        <fieldset class="moves-set" data-options>
+          <legend class="label">Possible moves</legend>
+        </fieldset>
+        <div class="fc-actions">
+          <button class="btn btn--seal" type="button" data-confirm disabled>Confirm moves</button>
+          <button class="btn btn--seal" type="button" data-next hidden>Next scenario →</button>
+          <span class="hint keys-hint">Keys: 1–5 toggle · Enter confirm</span>
         </div>
-        <p class="hint" data-tts-status role="status" aria-live="polite"></p>
-        <audio controls hidden data-audio></audio>
       </div>
     </div>
   </section>
 
-  <!-- ======== SETTINGS DIALOG ======== -->
-  <dialog class="settings" data-settings aria-labelledby="settings-title">
-    <form method="dialog" class="settings-inner" data-settings-form>
-      <div class="settings-head">
-        <h2 id="settings-title">Settings &amp; keys</h2>
-        <button class="btn btn--sm" value="close" aria-label="Close settings">Close</button>
-      </div>
-      <div class="notice">
-        <span aria-hidden="true">🔒</span>
-        <span><strong>Your keys stay in this browser.</strong> They are sent only to the provider you choose. NVIDIA and Meta calls pass through this site's relay, which forwards the key and never stores or logs it. <a href={u('/about/#privacy')}>Details</a></span>
-      </div>
-
-      <div class="field">
-        <label for="provider">Strategist (AI provider)</label>
-        <select id="provider" class="input" data-provider>
-          {groups.map((g) => (
-            <optgroup label={g}>
-              {PROVIDERS.filter((p) => p.group === g).map((p) => <option value={p.id}>{p.label}</option>)}
-            </optgroup>
-          ))}
-        </select>
-        <p class="hint" data-provider-note></p>
-      </div>
-      <div class="field" data-key-row>
-        <label for="apikey">API key</label>
-        <div class="key-row">
-          <input id="apikey" class="input" type="password" autocomplete="off" spellcheck="false" data-key placeholder="Paste your key" />
-          <button class="btn btn--sm" type="button" data-toggle-key>Show</button>
+  <!-- ================= RESULTS ================= -->
+  <section class="wrap fc-results" hidden data-stage="results">
+    <div class="res-hero">
+      <div class="res-seal" data-res-seal>州</div>
+      <div>
+        <p class="eyebrow">Campaign complete · 戰果</p>
+        <h1><span data-res-score>0</span>%</h1>
+        <p class="res-rank" data-res-rank>Province General</p>
+        <p class="lede" data-res-blurb></p>
+        <div class="fc-cta">
+          <button class="btn btn--seal" type="button" data-restart>Fight 20 new battles</button>
+          <button class="btn" type="button" data-copy-result>Copy my result</button>
+          <a class="btn" href={u('/ask/')}>Ask the General about a real battle</a>
         </div>
-        <p class="hint"><a data-key-link target="_blank" rel="noopener">Get a key →</a></p>
       </div>
-      <div class="field" data-base-row hidden>
-        <label for="base">Base URL</label>
-        <input id="base" class="input" type="url" data-base placeholder="https://llm.example.com/v1" />
-      </div>
-      <div class="field">
-        <label for="model">Model</label>
-        <div class="key-row">
-          <input id="model" class="input" list="model-list" data-model autocomplete="off" />
-          <button class="btn btn--sm" type="button" data-load-free hidden>Load free models</button>
-        </div>
-        <datalist id="model-list" data-model-list></datalist>
-      </div>
-
-      <details class="tts-keys">
-        <summary>Podcast voice keys (optional)</summary>
-        <div class="field"><label for="k-gemini">Gemini key (also used by the Gemini strategist)</label><input id="k-gemini" class="input" type="password" autocomplete="off" data-tkey="gemini" /></div>
-        <div class="pod-row">
-          <div class="field"><label for="g-model">Gemini TTS model</label><input id="g-model" class="input" data-tset="geminiModel" /></div>
-          <div class="field"><label for="g-voice">Gemini voice</label><input id="g-voice" class="input" data-tset="geminiVoice" /></div>
-        </div>
-        <div class="field"><label for="k-openai">OpenAI key</label><input id="k-openai" class="input" type="password" autocomplete="off" data-tkey="openai" /></div>
-        <div class="field"><label for="o-voice">OpenAI voice</label><input id="o-voice" class="input" data-tset="openaiVoice" /></div>
-        <div class="field"><label for="k-eleven">ElevenLabs key</label><input id="k-eleven" class="input" type="password" autocomplete="off" data-tkey="elevenlabs" /></div>
-        <div class="field"><label for="e-voice">ElevenLabs voice ID</label><input id="e-voice" class="input" data-tset="elevenVoice" /></div>
-      </details>
-
-      <label class="check-row"><input type="checkbox" data-remember /> Remember keys on this device (otherwise they are forgotten when you close the tab)</label>
-      <div class="f-actions">
-        <button class="btn btn--seal" value="save" data-save>Save</button>
-        <button class="btn" type="button" data-clear-keys>Forget all keys</button>
-      </div>
-    </form>
-  </dialog>
-
-  <div class="verse-pop" role="dialog" aria-modal="false" hidden data-verse-pop></div>
+    </div>
+    <div class="res-stats" data-res-stats></div>
+    <h2 class="res-h">Your campaign</h2>
+    <ol class="res-list" data-res-list></ol>
+  </section>
 </Base>
 
-<script src="../scripts/field/app.js"></script>
+<script src="../scripts/challenge.js"></script>
 
 <style>
-  .f-hero { padding: 130px 0 32px; display: flex; justify-content: space-between; align-items: end; gap: 24px; }
-  @media (max-width: 700px) { .f-hero :global(.seal) { display: none; } }
-  .f-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 20px; align-items: start; }
-  @media (max-width: 960px) { .f-grid { grid-template-columns: 1fr; } }
-  .f-input { display: grid; gap: 18px; position: sticky; top: 88px; }
-  @media (max-width: 960px) { .f-input { position: static; } }
-  .examples { display: flex; flex-wrap: wrap; gap: 6px; }
-  .provider-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: rgba(9, 8, 7, 0.4); }
-  .provider-now { margin: 2px 0 0; font: 500 0.92rem var(--f-ui); color: var(--paper); }
-  .provider-now small { color: var(--paper-3); }
-  .f-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-  .f-output { min-height: 520px; }
-  .out-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-  .out-head h2 { margin: 0; }
-  .out-tools { display: flex; gap: 6px; }
-  .answer { font-size: 1.02rem; }
-  .answer :global(.ans-h) { font: 600 0.72rem var(--f-ui); letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin: 26px 0 10px; display: flex; align-items: center; gap: 10px; }
-  .answer :global(.ans-h)::after { content: ''; flex: 1; height: 1px; background: var(--line); }
-  .answer :global(.ans-h:first-child) { margin-top: 4px; }
-  .answer :global(p), .answer :global(li) { color: var(--paper); }
-  .answer :global(ol), .answer :global(ul) { padding-left: 1.3em; margin: 0 0 1em; display: grid; gap: 6px; }
-  .answer :global(.cite) { font: 600 0.7rem var(--f-ui); padding: 0.15em 0.5em; border-radius: 999px; border: 1px solid var(--seal); background: rgba(179, 38, 30, 0.18); color: #f6c4b8; cursor: pointer; vertical-align: 0.1em; }
-  .answer :global(.cite--bad) { border-color: var(--paper-4); background: none; color: var(--paper-3); text-decoration: line-through; cursor: help; }
-  .answer :global(.cursor) { display: inline-block; width: 8px; height: 1.1em; background: var(--seal-hi); vertical-align: -0.2em; animation: blink 1s steps(2) infinite; }
-  @keyframes blink { 50% { opacity: 0; } }
-  .empty-state { display: grid; justify-items: center; text-align: center; gap: 14px; padding: 48px 12px; color: var(--paper-2); }
-  .empty-zh { font-size: 3.4rem; color: var(--ink-4); letter-spacing: 0.1em; }
-  .answer :global(.error) { border: 1px solid rgba(217, 68, 47, 0.5); background: rgba(179, 38, 30, 0.1); border-radius: 10px; padding: 14px 16px; white-space: pre-wrap; font: 400 0.9rem/1.55 var(--f-ui); }
-  .verify { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 16px; display: grid; gap: 12px; }
-  .verify :global(h3) { font: 600 0.72rem var(--f-ui); letter-spacing: 0.2em; text-transform: uppercase; color: var(--paper-3); margin: 0; }
-  .verify :global(.vcard) { padding: 14px 16px; border-radius: 10px; border: 1px solid var(--line); background: rgba(239, 229, 207, 0.03); font-size: 0.95rem; }
-  .verify :global(.vcard .vid) { font: 600 0.7rem var(--f-ui); color: var(--seal-hi); letter-spacing: 0.1em; text-decoration: none; }
-  .verify :global(.vcard .zh) { color: var(--paper-2); margin: 6px 0 0; letter-spacing: 0.05em; }
-  .verify :global(.badge) { font: 600 0.65rem var(--f-ui); letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2em 0.6em; border-radius: 999px; margin-left: 6px; }
-  .verify :global(.badge.ok) { background: rgba(127, 160, 138, 0.18); color: #b9d6c2; }
-  .verify :global(.badge.warn) { background: rgba(200, 163, 90, 0.16); color: #e3c98f; }
-  .verify :global(.badge.bad) { background: rgba(179, 38, 30, 0.2); color: #f6c4b8; }
-  .manual :global(.mt) { display: block; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; text-decoration: none; margin-bottom: 8px; }
-  .manual :global(.mt:hover) { border-color: var(--line-2); }
+  .fc-intro { padding: 130px 0 80px; }
+  .fc-intro-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: clamp(28px, 6vw, 80px); align-items: center; }
+  .fc-intro h1 em { font-style: italic; color: var(--paper-2); font-weight: 500; }
+  .fc-rules { list-style: none; padding: 0; margin: 0 0 28px; display: grid; gap: 10px; font: 400 0.95rem/1.5 var(--f-ui); color: var(--paper-2); }
+  .fc-rules li { padding-left: 26px; position: relative; }
+  .fc-rules li::before { content: ''; position: absolute; left: 0; top: 0.5em; width: 12px; height: 12px; border-radius: 3px; background: var(--seal); transform: rotate(-6deg); }
+  .fc-rules b { color: var(--paper); }
+  .fc-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 14px; }
+  .ladder { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .ladder-step { display: grid; grid-template-columns: 44px 1fr auto; gap: 14px; align-items: center; padding: 10px 14px; border: 1px solid var(--line); border-radius: 12px; background: rgba(239, 229, 207, 0.03); }
+  .ladder-step:first-child { border-color: rgba(217, 68, 47, 0.5); background: rgba(179, 38, 30, 0.08); }
+  .ladder-seal { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 5px; background: var(--seal); color: var(--paper); font: 700 1.25rem var(--f-brush); transform: rotate(-4deg); filter: url(#ink-rough); }
+  .ladder-name { font: 600 1.05rem var(--f-display); }
+  .ladder-min { font: 500 0.75rem var(--f-ui); color: var(--paper-3); }
+  @media (max-width: 900px) { .fc-intro-grid { grid-template-columns: 1fr; } }
 
-  .podcast { padding-top: 80px; }
-  .pod-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: clamp(24px, 5vw, 64px); align-items: start; }
-  @media (max-width: 960px) { .pod-grid { grid-template-columns: 1fr; } }
-  .pod-panel { display: grid; gap: 16px; }
-  .pod-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; align-items: end; }
-  .ticks-sm { padding-left: 1.1em; color: var(--paper-2); font: 400 0.92rem/1.6 var(--f-ui); }
-  .check-row { display: flex; gap: 10px; align-items: center; font: 400 0.85rem var(--f-ui); color: var(--paper-2); }
-  .check-row input { accent-color: var(--seal); width: 16px; height: 16px; }
-  input[type='range'] { accent-color: var(--seal); width: 100%; }
-  audio { width: 100%; }
+  .fc-quiz { padding: 110px 0 80px; }
+  .fc-top { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 18px; flex-wrap: wrap; }
+  .fc-progress { flex: 1; min-width: 240px; }
+  .pips { list-style: none; display: grid; grid-template-columns: repeat(20, 1fr); gap: 4px; padding: 0; margin: 8px 0 0; }
+  .pips :global(li) { height: 6px; border-radius: 3px; background: var(--ink-4); transition: background 0.4s; }
+  .pips :global(li.now) { background: var(--paper-2); }
+  .pips :global(li.s-perfect) { background: var(--jade); }
+  .pips :global(li.s-part) { background: var(--gold); }
+  .pips :global(li.s-zero) { background: var(--seal); }
+  .fc-running { text-align: right; }
+  .fc-running strong { display: block; font: 600 2rem/1 var(--f-display); }
+  .fc-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+  @media (max-width: 900px) { .fc-grid { grid-template-columns: 1fr; } }
+  .scenario { position: sticky; top: 88px; }
+  @media (max-width: 900px) { .scenario { position: static; } }
+  .scn-head { display: flex; gap: 14px; align-items: center; margin-bottom: 14px; }
+  .scn-head .eyebrow { margin-bottom: 6px; }
+  .scn-seal { width: 56px; height: 56px; flex: none; display: grid; place-items: center; border-radius: 6px; background: var(--seal); color: var(--paper); font: 700 1.05rem/1.05 var(--f-brush); writing-mode: vertical-rl; letter-spacing: 0.05em; transform: rotate(-4deg); filter: url(#ink-rough); }
+  .scn-title { font-size: clamp(1.8rem, 2vw + 1rem, 2.6rem); margin: 0 0 12px; }
+  .scn-text { font-family: var(--f-display); font-size: clamp(1.15rem, 0.6vw + 1rem, 1.35rem); line-height: 1.5; color: var(--paper); }
+  .scn-ask { font: 500 0.88rem var(--f-ui); color: var(--gold); margin: 0; }
+  .outcome { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); display: grid; gap: 14px; }
+  .outcome :global(.oc-score) { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .outcome :global(.oc-score strong) { font: 600 2.6rem/1 var(--f-display); }
+  .outcome :global(.oc-score span) { font: 500 0.85rem var(--f-ui); color: var(--paper-2); }
+  .outcome :global(.oc-lesson) { font-family: var(--f-display); font-size: 1.2rem; font-style: italic; margin: 0; }
+  .outcome :global(.oc-verse) { padding: 14px 16px; border-left: 2px solid var(--seal); background: rgba(239, 229, 207, 0.03); border-radius: 0 10px 10px 0; }
+  .outcome :global(.oc-verse p) { margin: 0 0 6px; font-size: 0.98rem; }
+  .outcome :global(.oc-verse .zh) { color: var(--paper-2); letter-spacing: 0.05em; }
+  .outcome :global(.oc-verse a) { font: 600 0.72rem var(--f-ui); color: var(--seal-hi); text-decoration: none; letter-spacing: 0.08em; }
+  .outcome :global(.oc-links) { display: flex; gap: 8px; flex-wrap: wrap; }
 
-  .settings { width: min(640px, calc(100vw - 32px)); max-height: calc(100vh - 32px); padding: 0; border: 1px solid var(--line-2); border-radius: 18px; background: var(--ink-2); color: var(--paper); }
-  .settings::backdrop { background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(4px); }
-  .settings-inner { display: grid; gap: 18px; padding: 24px; }
-  .settings-head { display: flex; justify-content: space-between; align-items: center; }
-  .settings-head h2 { margin: 0; font-size: 1.8rem; }
-  .key-row { display: flex; gap: 8px; }
-  .tts-keys { border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; display: grid; gap: 12px; }
-  .tts-keys[open] { padding-bottom: 16px; }
-  .tts-keys summary { cursor: pointer; font: 600 0.8rem var(--f-ui); color: var(--paper-2); }
-  .tts-keys .field { margin-top: 10px; }
+  .moves-set { border: 0; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .moves-set legend { margin-bottom: 10px; padding: 0; }
+  .moves-set :global(.move-opt) { position: relative; display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; padding: 16px 18px; border: 1px solid var(--line-2); border-radius: 14px; background: rgba(23, 20, 15, 0.8); cursor: pointer; transition: border-color 0.25s, background 0.25s, transform 0.25s var(--ease); }
+  .moves-set :global(.move-opt:hover) { border-color: var(--paper-3); transform: translateX(3px); }
+  .moves-set :global(.move-opt input) { position: absolute; opacity: 0; pointer-events: none; }
+  .moves-set :global(.move-key) { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 8px; border: 1px solid var(--line-2); font: 600 0.8rem var(--f-ui); color: var(--paper-2); transition: all 0.25s; }
+  .moves-set :global(.move-text) { font-size: 1.02rem; line-height: 1.45; }
+  .moves-set :global(.move-why) { grid-column: 2; margin: 6px 0 0; font: 400 0.85rem/1.5 var(--f-ui); color: var(--paper-2); }
+  .moves-set :global(.move-tag) { grid-column: 2; font: 600 0.66rem var(--f-ui); letter-spacing: 0.14em; text-transform: uppercase; }
+  .moves-set :global(.move-opt.is-on) { border-color: var(--paper); background: rgba(239, 229, 207, 0.07); }
+  .moves-set :global(.move-opt.is-on .move-key) { background: var(--paper); color: var(--ink-1); border-color: var(--paper); }
+  .moves-set :global(.move-opt:focus-within) { outline: 2px solid var(--seal-hi); outline-offset: 2px; }
+  .moves-set.is-locked :global(.move-opt) { cursor: default; transform: none; }
+  .moves-set :global(.move-opt.r-hit) { border-color: var(--jade); background: rgba(127, 160, 138, 0.1); }
+  .moves-set :global(.move-opt.r-hit .move-key) { background: var(--jade); border-color: var(--jade); color: var(--ink-1); }
+  .moves-set :global(.move-opt.r-hit .move-tag) { color: #b9d6c2; }
+  .moves-set :global(.move-opt.r-miss) { border-color: var(--gold); border-style: dashed; }
+  .moves-set :global(.move-opt.r-miss .move-tag) { color: #e3c98f; }
+  .moves-set :global(.move-opt.r-wrong) { border-color: var(--seal-hi); background: rgba(179, 38, 30, 0.1); }
+  .moves-set :global(.move-opt.r-wrong .move-key) { background: var(--seal); border-color: var(--seal); color: var(--paper); }
+  .moves-set :global(.move-opt.r-wrong .move-tag) { color: #f6c4b8; }
+  .moves-set :global(.move-opt.r-ok) { opacity: 0.7; }
+  .moves-set :global(.move-opt.r-ok .move-tag) { color: var(--paper-3); }
+  .fc-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 16px; }
+  .keys-hint { margin-left: auto; }
+  @media (max-width: 700px) { .keys-hint { display: none; } }
 
-  .verse-pop { position: fixed; z-index: 80; max-width: min(420px, calc(100vw - 32px)); padding: 16px 18px; border-radius: 12px; border: 1px solid var(--line-2); background: #1c1813; box-shadow: 0 24px 60px -20px #000; font-size: 0.95rem; }
-  .verse-pop :global(p) { margin: 0 0 8px; }
-  .verse-pop :global(.zh) { color: var(--paper-2); letter-spacing: 0.05em; }
-  .verse-pop :global(a) { font: 600 0.72rem var(--f-ui); color: var(--seal-hi); text-decoration: none; letter-spacing: 0.08em; }
+  .fc-results { padding: 120px 0 100px; }
+  .res-hero { display: grid; grid-template-columns: auto 1fr; gap: clamp(20px, 5vw, 56px); align-items: center; margin-bottom: 40px; }
+  .res-seal { width: clamp(120px, 18vw, 190px); aspect-ratio: 1; display: grid; place-items: center; border-radius: 12px; background: var(--seal); color: var(--paper); font: 700 clamp(4rem, 9vw, 6.5rem)/1 var(--f-brush); box-shadow: inset 0 0 0 6px var(--seal), inset 0 0 0 9px rgba(243, 233, 210, 0.85), 0 30px 60px -25px var(--seal-glow); transform: rotate(-5deg); filter: url(#ink-rough); }
+  .res-hero h1 { margin: 6px 0 0; font-size: clamp(4rem, 10vw, 7.5rem); line-height: 1; }
+  .res-rank { font: 600 clamp(1.4rem, 2vw + 1rem, 2.2rem) var(--f-display); color: var(--gold); margin: 6px 0 10px; }
+  @media (max-width: 640px) { .res-hero { grid-template-columns: 1fr; } }
+  .res-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 40px; }
+  .res-stats :global(div) { padding: 16px 18px; border: 1px solid var(--line); border-radius: 12px; background: rgba(239, 229, 207, 0.03); }
+  .res-stats :global(strong) { display: block; font: 600 2rem/1.1 var(--f-display); }
+  .res-stats :global(span) { font: 500 0.72rem var(--f-ui); letter-spacing: 0.12em; text-transform: uppercase; color: var(--paper-3); }
+  .res-h { font-size: 1.8rem; }
+  .res-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+  .res-list :global(li) { display: grid; grid-template-columns: 64px 1fr auto; gap: 14px; align-items: center; padding: 12px 16px; border: 1px solid var(--line); border-radius: 12px; }
+  .res-list :global(.rl-pct) { font: 600 1.3rem var(--f-display); }
+  .res-list :global(.rl-pct.p100) { color: var(--jade); }
+  .res-list :global(.rl-pct.p0) { color: var(--seal-hi); }
+  .res-list :global(.rl-title) { font: 600 1.05rem var(--f-display); }
+  .res-list :global(.rl-meta) { display: block; font: 500 0.75rem var(--f-ui); color: var(--paper-3); }
+  .res-list :global(a) { font: 600 0.72rem var(--f-ui); letter-spacing: 0.08em; text-transform: uppercase; color: var(--paper-2); text-decoration: none; white-space: nowrap; }
 </style>

@@ -3,11 +3,11 @@
 import { relayFetch, explainHttpError } from './providers.js';
 
 export const KOKORO_VOICES = [
+  ['af_heart', 'Heart — US, female, warm (default)'],
   ['am_michael', 'Michael — US, male, steady'],
   ['am_fenrir', 'Fenrir — US, male, deep'],
   ['bm_george', 'George — UK, male, mature'],
   ['bm_fable', 'Fable — UK, male, storyteller'],
-  ['af_heart', 'Heart — US, female, warm'],
   ['af_bella', 'Bella — US, female, bright'],
   ['bf_emma', 'Emma — UK, female, calm'],
   ['bf_isabella', 'Isabella — UK, female, clear'],

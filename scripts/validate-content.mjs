@@ -75,6 +75,42 @@ if (!only || only === 'zh') for (const f of files('data/zh')) {
   else if (cov < 0.999) warns.push(`${at}: coverage ${(cov * 100).toFixed(1)}%`);
 }
 
+// ---------- Field Challenge questions ----------
+const tacticSlugs = new Set(files('data/tactics').flatMap((f) => j(`data/tactics/${f}`).map((t) => t.slug)));
+const challengeFiles = existsSync(join(root, 'data/challenge')) ? readdirSync(join(root, 'data/challenge')).filter((f) => /^set\d+\.json$/.test(f)).sort() : [];
+const qids = new Map();
+if (!only || only === 'challenge') for (const f of challengeFiles) {
+  let arr;
+  try { arr = j(`data/challenge/${f}`); } catch (e) { errors.push(`challenge/${f}: invalid JSON (${e.message})`); continue; }
+  if (!Array.isArray(arr)) { errors.push(`challenge/${f}: not an array`); continue; }
+  for (const q of arr) {
+    const at = `challenge/${f}:${q.id}`;
+    if (!/^c-[a-z0-9]+(-[a-z0-9]+)*$/.test(q.id || '') || q.id.length > 40) errors.push(`${at}: bad id`);
+    if (qids.has(q.id)) errors.push(`${at}: duplicate id (also in ${qids.get(q.id)})`); else qids.set(q.id, f);
+    if (!Number.isInteger(q.chapter) || q.chapter < 1 || q.chapter > 13) errors.push(`${at}: chapter invalid`);
+    if (!DOMAINS.includes(q.domain)) errors.push(`${at}: domain "${q.domain}" invalid`);
+    if (![1, 2, 3].includes(q.difficulty)) errors.push(`${at}: difficulty invalid`);
+    if (!q.title || words(q.title) > 6) errors.push(`${at}: title missing or > 6 words`);
+    const sw = words(q.scenario); if (sw < 40 || sw > 130) errors.push(`${at}: scenario ${sw} words (40–130)`);
+    if (!Array.isArray(q.options) || q.options.length !== 5) { errors.push(`${at}: needs exactly 5 options`); continue; }
+    const nCorrect = q.options.filter((o) => o.correct === true).length;
+    if (nCorrect < 1 || nCorrect > 3) errors.push(`${at}: ${nCorrect} correct options (need 1–3)`);
+    for (const o of q.options) {
+      if (!o.text || typeof o.correct !== 'boolean' || !o.why) errors.push(`${at}: option missing text/correct/why`);
+      else {
+        if (words(o.text) > 26) warns.push(`${at}: option text ${words(o.text)} words`);
+        if (words(o.why) > 45) warns.push(`${at}: why ${words(o.why)} words`);
+        if (/all of the above|none of the above/i.test(o.text)) errors.push(`${at}: "all/none of the above" not allowed`);
+      }
+    }
+    if (!Array.isArray(q.verses) || q.verses.length < 1 || q.verses.length > 2) errors.push(`${at}: verses must be 1–2`);
+    for (const v of q.verses || []) if (!ids.has(v)) errors.push(`${at}: verse ${v} unknown`);
+    if (!(q.verses || []).some((v) => v.startsWith(`${q.chapter}.`))) errors.push(`${at}: needs a verse from its own chapter`);
+    if (q.tactic && !tacticSlugs.has(q.tactic)) errors.push(`${at}: tactic "${q.tactic}" unknown`);
+    if (!q.lesson || q.lesson.length > 160) errors.push(`${at}: lesson missing or > 160 chars`);
+  }
+}
+
 for (const w of warns) console.log('warn  ' + w);
 for (const e of errors) console.log('ERROR ' + e);
 console.log(errors.length ? `${errors.length} error(s)` : 'OK');

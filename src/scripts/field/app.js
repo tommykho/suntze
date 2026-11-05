@@ -1,6 +1,7 @@
 import { BASE as B } from '../../lib/url.js';
-// Field Challenge controller: settings dialog, retrieval → prompt → streamed answer, citation
-// verification, manual-only mode, and the podcast studio.
+import { generalRank, stars } from '../../lib/ranks.js';
+// Ask the General controller: settings dialog, general ranks and ratings, retrieval → prompt →
+// streamed answer, citation verification, manual-only mode, and the podcast studio.
 import { PROVIDERS, getProvider, streamChat, listOpenRouterFree } from './providers.js';
 import { loadSettings, saveSettings, loadKeys, saveKeys, clearKeys } from './settings.js';
 import { loadCorpus, retrieve } from './retrieval.js';
@@ -30,16 +31,45 @@ const ui = {
   speed: $('[data-speed]'), speedOut: $('[data-speed-out]'), intro: $('[data-intro]'), gpu: $('[data-gpu]'),
   speak: $('[data-speak]'), download: $('[data-download]'), ttsStatus: $('[data-tts-status]'), audio: $('[data-audio]'),
   pop: $('[data-verse-pop]'),
+  rankSeal: $('[data-rank-seal]'), rankLine: $('[data-rank-line]'), modelRank: $('[data-model-rank]'),
+  answerTitle: $('[data-answer-title]'), rate: $('[data-rate]'), rateNote: $('[data-rate-note]'),
 };
 
 const modelFor = (p) => settings.models[p.id] || p.model;
 const baseFor = (p) => settings.bases[p.id] || p.base;
 
+// ---------------- your own ratings of each general (this browser only) ----------------
+const RATINGS = 'sz.ratings.v1';
+const readRatings = () => { try { return JSON.parse(localStorage.getItem(RATINGS)) || {}; } catch { return {}; } };
+const ratingKey = (p) => `${p.id}|${modelFor(p) || 'default'}`;
+function myRating(p) {
+  const r = readRatings()[ratingKey(p)];
+  return r && r.n ? { avg: r.sum / r.n, n: r.n } : null;
+}
+function addRating(p, starsGiven, previous) {
+  const all = readRatings();
+  const r = all[ratingKey(p)] || { sum: 0, n: 0 };
+  if (previous) r.sum -= previous; else r.n += 1; // re-rating the same answer replaces the old vote
+  r.sum += starsGiven;
+  all[ratingKey(p)] = r;
+  try { localStorage.setItem(RATINGS, JSON.stringify(all)); } catch { /* storage blocked */ }
+}
+
 // ---------------- provider summary ----------------
 function showProviderNow() {
   const p = getProvider(settings.provider);
   const hasKey = !p.needsKey || !!keys[p.id];
+  const rank = generalRank(p.id, modelFor(p));
   ui.providerNow.innerHTML = `${esc(p.label)} <small>· ${esc(modelFor(p) || 'default model')}</small>${hasKey ? '' : ' <small style="color:#f6c4b8">· key needed</small>'}`;
+  ui.rankSeal.textContent = rank.zh;
+  ui.rankSeal.classList.toggle('is-unranked', rank.id === 'mercenary');
+  ui.rankSeal.title = rank.en;
+  const mine = myRating(p);
+  ui.rankLine.innerHTML = `${esc(rank.en)} <span aria-label="${esc(rank.en)}">${stars(rank)}</span>${mine ? `<span class="mine">· your rating ${mine.avg.toFixed(1)}/5 (${mine.n})</span>` : ''}`;
+}
+function showModelRank() {
+  const r = generalRank(ui.provider.value, ui.model.value.trim());
+  ui.modelRank.textContent = `${r.zh} ${r.en} ${stars(r)} · ${r.blurb}`;
 }
 
 // ---------------- settings dialog ----------------
@@ -56,6 +86,7 @@ function fillProvider(id) {
   ui.model.value = modelFor(p);
   ui.modelList.innerHTML = (p.models || []).map((m) => `<option value="${esc(m)}"></option>`).join('');
   ui.loadFree.hidden = !p.listFree;
+  showModelRank();
 }
 
 function openSettings() {
@@ -83,6 +114,7 @@ function saveFromDialog() {
 }
 
 ui.provider.addEventListener('change', () => fillProvider(ui.provider.value));
+ui.model.addEventListener('input', showModelRank);
 $('[data-open-settings]').addEventListener('click', openSettings);
 $('[data-save]').addEventListener('click', saveFromDialog);
 $('[data-toggle-key]').addEventListener('click', (e) => {
@@ -154,6 +186,29 @@ function renderVerification(md) {
       .join('');
 }
 
+// ---------------- rate this general's counsel ----------------
+let ratedThisAnswer = 0;
+function paintStars(n) { $$('[data-star]').forEach((b) => b.classList.toggle('on', Number(b.dataset.star) <= n)); }
+function showRating(p) {
+  ratedThisAnswer = 0;
+  paintStars(0);
+  const r = generalRank(p.id, modelFor(p));
+  ui.rateNote.textContent = `How good was this ${r.en}'s advice?`;
+  ui.rate.hidden = false;
+}
+$$('[data-star]').forEach((b) =>
+  b.addEventListener('click', () => {
+    const p = getProvider(settings.provider);
+    const n = Number(b.dataset.star);
+    addRating(p, n, ratedThisAnswer);
+    ratedThisAnswer = n;
+    paintStars(n);
+    const mine = myRating(p);
+    ui.rateNote.textContent = `Saved. Your average for this general: ${mine.avg.toFixed(1)}/5 over ${mine.n} answer${mine.n === 1 ? '' : 's'}.`;
+    showProviderNow();
+  }),
+);
+
 // ---------------- consult ----------------
 ui.form.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -168,12 +223,15 @@ ui.form.addEventListener('submit', async (e) => {
   lastSituation = situation;
   ui.verify.hidden = true;
   ui.outTools.hidden = true;
+  ui.rate.hidden = true;
+  const rank = generalRank(p.id, modelFor(p));
+  ui.answerTitle.textContent = `Counsel of the ${rank.en} ${rank.zh}`;
   ui.answer.innerHTML = '<p class="hint">Reading the field…</p>';
   try {
     await getDb();
     const r = retrieve(db, situation);
     const user = buildUserPrompt(situation, r);
-    setStatus(`Consulting ${p.label}…`);
+    setStatus(`Consulting the ${rank.en} (${p.label})…`);
     let pending = false;
     let finished = false;
     const paint = () => { pending = false; if (!finished) ui.answer.innerHTML = renderMarkdown(lastAnswer, db.verseById) + '<span class="cursor"></span>'; };
@@ -190,6 +248,7 @@ ui.form.addEventListener('submit', async (e) => {
     ui.answer.innerHTML = renderMarkdown(lastAnswer, db.verseById);
     renderVerification(lastAnswer);
     ui.outTools.hidden = false;
+    showRating(p);
     const pod = parseSections(lastAnswer)['Podcast Script'];
     if (pod) { ui.script.value = pod.replace(/^[-*]\s*/gm, '').trim(); updateWords(); }
     setStatus(controller.signal.aborted ? 'Stopped.' : 'Done. Scroll down to turn the plan into a podcast.');

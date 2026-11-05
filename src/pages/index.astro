@@ -38,7 +38,7 @@ const fieldExamples = [
           Thirteen chapters of ancient strategy turned into calm, practical moves, so you can win without fighting.
         </p>
         <div class="hero-cta" data-hero-in>
-          <a class="btn btn--seal" href={u('/field/')}>Bring your battle to the General</a>
+          <a class="btn btn--seal" href={u('/ask/')}>Bring your battle to the General</a>
           <a class="btn" href={u('/chapters/1/')}>Read the book</a>
         </div>
       </div>
@@ -134,11 +134,35 @@ const fieldExamples = [
     </div>
   </section>
 
-  <!-- ===================== FIELD CHALLENGE TEASER ===================== -->
+  <!-- ===================== FIELD CHALLENGE (QUIZ) TEASER ===================== -->
+  <section class="section quiz-teaser">
+    <div class="wrap quiz-grid">
+      <div class="quiz-mock" data-reveal="scale" aria-hidden="true">
+        <p class="eyebrow">Scenario 7 / 20 · Chapter VI</p>
+        <h3>The Stalled Approval</h3>
+        <p class="qm-text">Your manager has sat on your fix for three weeks while customers are double-charged…</p>
+        <div class="qm-opt qm-hit"><b>A</b> Document the cost and send a dated "unless you object" note</div>
+        <div class="qm-opt qm-wrong"><b>B</b> Complain about them in the team channel</div>
+        <div class="qm-opt qm-hit"><b>C</b> Line up finance and support to co-sign the case</div>
+        <div class="qm-score"><strong>75%</strong><span>Found 2 of 2 · 1 reckless pick</span></div>
+      </div>
+      <div>
+        <p class="eyebrow" data-reveal>Field Challenge · 兵法試煉</p>
+        <h2 data-reveal>Twenty battles. Earn your rank.</h2>
+        <p class="lede" data-reveal>
+          Read a modern conflict, pick every move Sun Tzu would make, and see what you missed. Score high enough to rise from
+          <strong>Rural General 鄉</strong> to <strong>Empire General 帝</strong>.
+        </p>
+        <a class="btn btn--seal" href={u('/field/')} data-reveal>Take the Field Challenge</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ASK THE GENERAL TEASER ===================== -->
   <section class="section field-teaser">
     <div class="wrap field-grid">
       <div>
-        <p class="eyebrow" data-reveal>Field Challenge · AI</p>
+        <p class="eyebrow" data-reveal>Ask the General · AI</p>
         <h2 data-reveal>Describe your battlefield. <span class="brush-underline">Get a cited plan.<svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true" data-draw><path d="M2 8 C 50 2, 120 12, 198 4" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" /></svg></span></h2>
         <p class="lede" data-reveal>
           An AI strategist reads your situation, quotes the exact verse it relies on (checked against the original text), and gives you moves, a message to send, and a backfire check.
@@ -149,10 +173,10 @@ const fieldExamples = [
           <li>Your key stays in your browser. Nothing is stored on our servers.</li>
           <li>Voice generated on your device. No sign-up needed.</li>
         </ul>
-        <a class="btn btn--seal" href={u('/field/')} data-reveal>Open the Field Challenge</a>
+        <a class="btn btn--seal" href={u('/ask/')} data-reveal>Ask the General</a>
       </div>
       <div class="field-mock" data-reveal="scale" aria-hidden="true">
-        <div class="mock-bar"><i></i><i></i><i></i><span>field challenge</span></div>
+        <div class="mock-bar"><i></i><i></i><i></i><span>ask the general</span></div>
         <div class="mock-body">
           {fieldExamples.map((q, i) => <p class={`mock-q mock-q${i}`}>“{q}”</p>)}
           <div class="mock-a">
@@ -305,5 +329,19 @@ const fieldExamples = [
   @keyframes wave { 0%, 100% { height: 6px; } 50% { height: 30px; } }
   @media (max-width: 860px) { .field-grid { grid-template-columns: 1fr; } }
 
+  .quiz-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
+  @media (max-width: 860px) { .quiz-grid { grid-template-columns: 1fr; } }
+  .quiz-mock { padding: 26px; border-radius: 18px; border: 1px solid var(--line-2); background: linear-gradient(160deg, #221d15, #14110d 60%); box-shadow: 0 40px 80px -40px #000; }
+  .quiz-mock h3 { margin: 6px 0 8px; }
+  .qm-text { color: var(--paper-2); font-size: 0.98rem; }
+  .qm-opt { display: flex; gap: 10px; align-items: center; padding: 10px 14px; margin-top: 8px; border-radius: 10px; border: 1px solid var(--line-2); font: 400 0.88rem/1.4 var(--f-ui); }
+  .qm-opt b { width: 24px; height: 24px; flex: none; display: grid; place-items: center; border-radius: 6px; font-size: 0.75rem; }
+  .qm-hit { border-color: var(--jade); background: rgba(127, 160, 138, 0.1); }
+  .qm-hit b { background: var(--jade); color: var(--ink-1); }
+  .qm-wrong { border-color: var(--seal-hi); background: rgba(179, 38, 30, 0.1); }
+  .qm-wrong b { background: var(--seal); }
+  .qm-score { display: flex; align-items: baseline; gap: 12px; margin-top: 16px; }
+  .qm-score strong { font: 600 2.4rem/1 var(--f-display); }
+  .qm-score span { font: 500 0.8rem var(--f-ui); color: var(--paper-3); }
   .community-teaser { background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(179, 38, 30, 0.08), transparent 70%); }
 </style>

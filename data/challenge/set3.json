@@ -1,0 +1,290 @@
+[
+  {
+    "id": "c-stalled-it-request",
+    "chapter": 7,
+    "domain": "work",
+    "difficulty": 2,
+    "title": "The Stalled IT Request",
+    "scenario": "Your product launch is six weeks out, and the database access request you filed with IT twelve days ago still reads 'in progress' after every follow-up. Your director wants a status update tomorrow morning, and all you have is a ticket queue. A friend on the infrastructure team offers to flip the permission quietly. You are tempted to keep sending polite reminders until someone finally answers.",
+    "options": [
+      { "text": "Build a dated record of every request, reply and blocker, with ticket numbers, so the delay shows up as fact.", "correct": true, "why": "Information first. A precise timeline turns vague frustration into a fact others must answer for, and it protects you if the delay grows." },
+      { "text": "Send your director a short impact statement: which milestone slips, by how many days, and the one decision you need from them.", "correct": true, "why": "Bring the terrain to the commander. Naming the cost lets someone with authority move the blocker, instead of you pleading alone." },
+      { "text": "Send IT one final written request that copies your director, offers a compliant workaround and sets a date unless they advise otherwise.", "correct": true, "why": "Make the next move theirs in public. A date, a legitimate alternative and a copied senior person turn silence into a visible decision." },
+      { "text": "Accept your friend's offer to grant the access quietly, and file the paperwork afterward.", "correct": false, "why": "Bypassing security policy looks like progress but exposes you, your friend and the company, and gives the process a reason to strike back." },
+      { "text": "Wait silently for the queue to reach your ticket, and avoid anything that could look like pressure.", "correct": false, "why": "Waiting silently lets the delay set the terms. Without a date or a record, your launch stalls while the other side keeps every option." }
+    ],
+    "verses": ["7.3", "7.22"],
+    "tactic": "deadline-unless-advised",
+    "lesson": "When a blocker stalls you, document it, name the cost to your boss, and set a dated, compliant next step the other side must answer."
+  },
+  {
+    "id": "c-winding-budget-route",
+    "chapter": 7,
+    "domain": "career",
+    "difficulty": 1,
+    "title": "The Winding Road to Budget",
+    "scenario": "Your team needs a 40,000 dollar analytics tool. The finance committee has rejected your direct request twice, citing risk. The chair is a careful former auditor who has never seen your numbers. A peer on the committee has hinted at what she would need to see before saying yes. You have three months of data and a small pilot you could start inside the current budget.",
+    "options": [
+      { "text": "Run a small pilot inside the current budget, report results against the metric the committee already tracks, then ask for the expansion.", "correct": true, "why": "Take the indirect route. A pilot that answers the committee's own risk question makes the larger request feel like a conclusion they already reached." },
+      { "text": "Ask the sympathetic peer which criteria she will judge by, and build your next proposal around exactly those criteria.", "correct": true, "why": "Learn the terrain from someone who sees it. Knowing the criteria before you move means you arrive first with the evidence that counts." },
+      { "text": "Raise the request again at the next meeting and insist the chair explain the rejection in front of everyone.", "correct": false, "why": "Public pressure on a careful chair makes saying yes more costly. Repeating the same direct ask in front of an audience invites a firm no." },
+      { "text": "Forward the rejection emails to the CEO with a sarcastic subject line about the committee's caution.", "correct": false, "why": "Mocking the committee in a wider circle shows frustration and ends goodwill. You need these people on your side for the next round." },
+      { "text": "Tell the committee that a competitor offers the same tool for free, even though you have not checked that claim.", "correct": false, "why": "An unverified competitor claim is deception, and it would be exposed quickly. It breaks trust, the one asset a budget cycle cannot rebuild." }
+    ],
+    "verses": ["7.4", "7.3"],
+    "tactic": "",
+    "lesson": "When a direct request keeps failing, take the indirect route: prove the point on a small scale, using the other side's own criteria."
+  },
+  {
+    "id": "c-forced-march-sprint",
+    "chapter": 7,
+    "domain": "work",
+    "difficulty": 3,
+    "title": "The Forced March Sprint",
+    "scenario": "Your startup has eight engineers. A competitor has announced an overlapping feature, and your CEO wants to ship in three weeks instead of eight. She asks everyone to work nights and weekends. Two engineers have already cut their sleep, one is quietly job-hunting, and your QA lead says the test suite needs at least a month of runs before anyone can trust it.",
+    "options": [
+      { "text": "Set a pace the slowest of your team can sustain, cut the feature set to fit it, and put the trade-off to the CEO in writing.", "correct": true, "why": "Fit the march to the weakest. Forced marches strip out stragglers and leave the leader without an army. A smaller release that arrives whole beats a fast one that arrives in pieces." },
+      { "text": "Double the weekend hours for three weeks and give the strongest engineers the hardest tasks.", "correct": false, "why": "This is the forced march. The strongest fall back under load too, and the team arrives exhausted, losing its best people on the way." },
+      { "text": "Keep the three-week date and quietly skip the QA runs so the release is not delayed.", "correct": false, "why": "Skipping verification to save time creates a hidden loss. Bugs found by customers cost far more than the delay you avoided." },
+      { "text": "Tell the CEO the date is impossible and halt all work until she revises the plan.", "correct": false, "why": "Refusing to move at all abandons the front and hands the initiative to the rival. A realistic option, offered with engagement, beats a standoff." },
+      { "text": "Move the two tired engineers to lighter tasks and let the rest of the team carry on at full speed.", "correct": false, "why": "Easing two people while the rest keep the same pace still burns out everyone else. The one who is job-hunting will leave anyway." }
+    ],
+    "verses": ["7.7", "7.8"],
+    "tactic": "",
+    "lesson": "A forced march costs the stragglers and then the leader. Set a pace the whole team can hold, and trade scope for arrival."
+  },
+  {
+    "id": "c-keep-real-ask-quiet",
+    "chapter": 7,
+    "domain": "work",
+    "difficulty": 2,
+    "title": "Keep Your Real Ask Quiet",
+    "scenario": "A reorganization will merge your team into a larger group, and two of the three leadership roles are still undecided. Your director has asked each candidate for a preference in private. Meanwhile, colleagues in the group chat are asking everyone what they want. You want the lead role. Your one private conversation with the director is Thursday, and a rival candidate is lobbying loudly in the hallway.",
+    "options": [
+      { "text": "Keep your real preference between you and the director, and share only the agreed public position with peers.", "correct": true, "why": "Practice concealment where it protects you. Revealing your full plan lets rivals counter it, while a quiet, prepared position keeps your options open." },
+      { "text": "Prepare your case fully before Thursday, then make your ask in the first minutes of the conversation.", "correct": true, "why": "Move with speed once the moment is ripe. Acting decisively when the opening arrives beats repeating your pitch to everyone and losing the initiative." },
+      { "text": "Post your full pitch and the reasons you deserve the role in the group chat, so people can back you.", "correct": false, "why": "Broadcasting your plan hands rivals your arguments to answer and turns every colleague into a negotiator. Open campaigns invite open opposition." },
+      { "text": "Tell colleagues you have a competing offer from another firm, to make the director nervous about losing you.", "correct": false, "why": "An invented competing offer is deception. If anyone checks, it destroys your credibility with the director for this reorganization and beyond." },
+      { "text": "Argue at every team meeting that the rival is unqualified, and keep pressing until people stop listening to him.", "correct": false, "why": "Loud, repeated attacks read as anger, not judgment. They spend your credibility and make the director wonder whether you can lead calmly." }
+    ],
+    "verses": ["7.15", "7.17"],
+    "tactic": "",
+    "lesson": "Keep your real position private until the decisive moment, then act fast. Broadcasting your plan only gives rivals time to answer it."
+  },
+  {
+    "id": "c-adapt-legacy-playbook",
+    "chapter": 8,
+    "domain": "career",
+    "difficulty": 2,
+    "title": "Adapt the Playbook to the Client",
+    "scenario": "You are the senior engineer leading a data migration for a regional hospital network. Your team's playbook worked perfectly for three retail clients. This hospital's records use a legacy format, its night shifts cannot tolerate downtime, and the vendor who owns the old system is unreachable until next week. Your project manager asks you to run the playbook exactly, to keep the schedule intact.",
+    "options": [
+      { "text": "Keep the playbook's proven core, but change the cutover window, the rollback plan and the record mapping to fit this hospital.", "correct": true, "why": "Vary the plan without abandoning the map. Known principles help only when adapted to the actual ground; the same sequence will fail on different terrain." },
+      { "text": "Ask two colleagues who have migrated legacy clinical systems what they changed, and fold their adjustments into your plan.", "correct": true, "why": "Gain advantage from variations others have tested. Experience from other ground shows which steps can bend and which must never move." },
+      { "text": "Run the playbook exactly as written to protect the schedule, and handle surprises as they come up.", "correct": false, "why": "Running a proven plan unchanged on unfamiliar ground mistakes familiarity for skill. Surprises during a night shift are costly." },
+      { "text": "Tell the project manager the hospital is too risky and step off the project until the vendor responds.", "correct": false, "why": "Withdrawing abandons the leader's responsibility. The right response is to adapt and keep the project moving, not to step away from it." },
+      { "text": "Schedule the cutover for the busiest night of the month so the team finishes in one concentrated push.", "correct": false, "why": "Concentrating the risk at peak demand ignores the local constraint. A patient, well-timed cutover respects the ground instead of forcing the schedule." }
+    ],
+    "verses": ["8.6", "8.5"],
+    "tactic": "",
+    "lesson": "A proven playbook is a map, not a route. Vary the cutover, the rollback and the mapping to fit the ground you are actually on."
+  },
+  {
+    "id": "c-supplier-fallback-plan",
+    "chapter": 8,
+    "domain": "business",
+    "difficulty": 2,
+    "title": "Plan Beyond the Supplier's Promise",
+    "scenario": "Your small food company buys sixty percent of its packaging from one supplier. The account manager, whom you trust, says prices will stay flat at the next renewal, and your budget assumes it. But a regional packaging plant nearby is running at half capacity. The renewal is five months away, and your supplier has missed two delivery dates this year. You have not yet tested any alternative.",
+    "options": [
+      { "text": "Qualify a second packaging supplier now, even though you do not plan to switch, so the option is real when you need it.", "correct": true, "why": "Prepare so their move cannot hurt you. A tested alternative means your position does not depend on hoping a promise holds." },
+      { "text": "Write a price-review clause and a delivery-penalty term into the renewal, and budget with a modest contingency.", "correct": true, "why": "Turn verbal assurance into commitments on paper. Protecting the downside in the contract keeps your plan intact whether or not the flat price holds." },
+      { "text": "Plan the budget on the account manager's word, since a long relationship is worth more than a few percent.", "correct": false, "why": "Relationship trust is real, but a budget built on verbal assurance leaves you exposed. Loyalty is not a protection clause." },
+      { "text": "Post a public complaint about the missed deliveries on the supplier's review page to pressure them into flat prices.", "correct": false, "why": "Public shaming makes the supplier defensive and damages a relationship you may still need. It spends goodwill and gains no real leverage." },
+      { "text": "Accept any increase quickly, to keep the account manager happy and avoid another difficult conversation.", "correct": false, "why": "Conceding before you know your options gives away leverage you have not yet used. Speed here costs money you could have protected." }
+    ],
+    "verses": ["8.11", "8.7"],
+    "tactic": "",
+    "lesson": "Do not budget on a supplier's word. Build a real alternative and put the protection on paper before you need it."
+  },
+  {
+    "id": "c-five-faults-failed-cutover",
+    "chapter": 8,
+    "domain": "work",
+    "difficulty": 3,
+    "title": "Finding Your Own Faults",
+    "scenario": "The payroll system cutover failed on Friday night, and forty staff were paid two days late. The VP wants a root cause and an owner by Monday. Two people on your team say you pushed the go-live date after test results were incomplete. One says you snapped at them in standup when they raised the risk. Some of that is true, and you know it.",
+    "options": [
+      { "text": "Examine your own decisions honestly, asking whether haste, avoidance of a hard call, or anger shaped the go-live choice.", "correct": true, "why": "Know your own besetting faults. Leaders usually fail through a few repeated habits, so finding yours first is the fastest way to stop the next failure." },
+      { "text": "Tell the VP the facts, including the go-live decision you made, without naming individuals to shield yourself.", "correct": true, "why": "Accept the ground you chose. Owning your part plainly builds credibility, and blaming subordinates would destroy the trust recovery depends on." },
+      { "text": "Apologize to the team for the standup outburst, and ask the person who raised the risk to help write the next readiness checklist.", "correct": true, "why": "Correct your temper and listen to dissent. Inviting the risk-raiser in turns a warning sign into a safeguard for the next release." },
+      { "text": "Name the engineer who skipped the rollback test, so the VP has a clear answer and the rest of the team is spared.", "correct": false, "why": "Public blame of one person to protect yourself is unfair and humiliating. It also teaches the team that raising problems gets them punished." },
+      { "text": "Reply to the VP within the hour with a defensive list of why the vendor and the deadline were unfair to you.", "correct": false, "why": "A heated, defensive reply is the hot-temper reaction. It shifts attention from the failure to your feelings and wastes the credibility you still have." }
+    ],
+    "verses": ["8.12", "8.13"],
+    "tactic": "",
+    "lesson": "After a failure, check your own repeated habits before you assign blame, then own your part plainly and listen to the warnings."
+  },
+  {
+    "id": "c-weigh-remote-offer",
+    "chapter": 8,
+    "domain": "family",
+    "difficulty": 2,
+    "title": "Weigh the Remote Offer",
+    "scenario": "Your father had a stroke in March and now lives alone two hours away. A remote job offer arrives this week. It would let you move closer and work from his town, but the pay is fifteen percent lower and the contract runs only twelve months. Your sister says to accept at once. Your partner wants to read the contract terms first. You have three days to answer.",
+    "options": [
+      { "text": "Weigh gains and risks together: what being closer is worth, what a short contract could cost, and what would make the offer safe to accept.", "correct": true, "why": "Blend advantage with disadvantage. An opportunity is only as good as its honest balance, so list both sides before you decide." },
+      { "text": "Ask the recruiter whether the contract can be extended or converted, and whether a review date can offset the lower pay.", "correct": true, "why": "Seek advantage within the terms. Negotiating one specific condition can turn a risky offer into a workable plan." },
+      { "text": "Set a fallback plan for the end of the contract, with savings targets and a list of local roles, before you say yes.", "correct": true, "why": "Prepare for the downside you can foresee. A fallback plan means the risk is managed rather than hoped away." },
+      { "text": "Accept immediately because your sister is right and the chance to be near your father is too rare to question.", "correct": false, "why": "Acting on one emotional pull ignores the disadvantage. Quick certainty often hides a shorter, costlier commitment than it first appears." },
+      { "text": "Decline outright, since a pay cut and a short contract would make you look unreliable to future employers.", "correct": false, "why": "Refusing on a single worry ignores the advantage. Dismissing the offer without testing its conditions closes the road that brings you closer to your father." }
+    ],
+    "verses": ["8.7", "8.8"],
+    "tactic": "pivot-when-plan-breaks",
+    "lesson": "Weigh advantage against danger together, negotiate the terms that matter, and plan for the downside before you commit."
+  },
+  {
+    "id": "c-warm-words-acquisition",
+    "chapter": 9,
+    "domain": "work",
+    "difficulty": 2,
+    "title": "Warm Words, Quiet Calendars",
+    "scenario": "Your company is being acquired by a larger firm. The acquirer's VP of operations tells your team at a town hall that every role is safe and that she wants your group to lead integration. Yet the integration calendar is rebuilt every week, two of your vendors have received quiet termination notices, and a recruiter keeps calling former colleagues. Nothing about the deal has been put in writing yet.",
+    "options": [
+      { "text": "Compare what leaders do, such as calendars, hiring and vendor moves, with what they say, and track the gap.", "correct": true, "why": "Separate words from preparation. Warm statements mean little if the actions point somewhere else, so watch the activity, not only the speech." },
+      { "text": "Ask the VP for role commitments in writing, and keep your contingency plan and job search active until they arrive.", "correct": true, "why": "Get the peace on paper. A written commitment is what binds an offer, and until one exists, a sensible fallback is just prudence." },
+      { "text": "Accept the warm words, tell your team there is nothing to worry about, and drop your contingency plan.", "correct": false, "why": "Taking reassurance at face value ignores signs of preparation. Dropping your fallback now leaves you no room if the calendar points the other way." },
+      { "text": "Confront the VP in front of the whole town-hall audience about whether her promises are sincere.", "correct": false, "why": "Public confrontation makes her defend her image and costs you allies. A private, factual question gets far better information." },
+      { "text": "Let a rumor circulate that you have an outside offer, to see how the VP reacts to losing you.", "correct": false, "why": "Spreading an invented rumor is deception. It tests nothing reliable and damages your reputation if the acquirer hears it." }
+    ],
+    "verses": ["9.26", "9.24"],
+    "tactic": "",
+    "lesson": "Warm words are not preparation. Judge leaders by their calendars and vendor moves, and get any commitment in writing."
+  },
+  {
+    "id": "c-burnout-fatigue-signs",
+    "chapter": 9,
+    "domain": "self",
+    "difficulty": 1,
+    "title": "Read Your Own Fatigue",
+    "scenario": "For six weeks you have worked eleven-hour days to finish a grant report. Each night you reward yourself with takeout and an extra episode, then sleep badly and wake up dreading the inbox. A friend asks how you are doing, and you say fine. Yesterday you forgot a standing meeting. The report is due in nine days, and the deadline cannot move.",
+    "options": [
+      { "text": "Treat the dread and the lapses as information: check your sleep and meals, and ask your manager to drop one task this week.", "correct": true, "why": "Read the signs in your own camp. Dread and forgetfulness are warnings. Reducing load and restoring basics protects the work you still have to finish." },
+      { "text": "Add a bigger reward each night, such as a weekend trip you cannot afford, to keep your spirits up for nine more days.", "correct": false, "why": "Rewards handed out too often signal resources running out. Stacking bigger treats on exhaustion borrows against a crash that will arrive sooner." },
+      { "text": "Push through the next nine days without change, then take a long rest once the report is submitted.", "correct": false, "why": "Ignoring the signs makes the crash more likely before the deadline. Recovery planned after the work is often too late to matter." },
+      { "text": "Resign this week without a plan, since feeling this tired proves the job is wrong for you.", "correct": false, "why": "A rash exit under fatigue mistakes a warning for a verdict. Exhaustion distorts judgment, so big decisions made in this state are often regretted." },
+      { "text": "Stop mentioning how you feel to friends, since admitting strain would make people doubt your reliability.", "correct": false, "why": "Hiding strain removes the people who could help and makes the signals harder to read. Concealing exhaustion is not toughness." }
+    ],
+    "verses": ["9.29", "9.36"],
+    "tactic": "read-your-own-camp-signs",
+    "lesson": "Fatigue that shows up as dread and lapses is information. Restore the basics and cut load before the crash makes the choice for you."
+  },
+  {
+    "id": "c-teen-curfew-trust",
+    "chapter": 9,
+    "domain": "family",
+    "difficulty": 1,
+    "title": "Trust Before the Curfew Rule",
+    "scenario": "Your sixteen-year-old came home after midnight twice this month. You are furious, and your partner wants a new rule with strict penalties starting tonight. But your teen has been quieter lately and recently mentioned a friend's family trouble. You want the rule to hold, and you do not want your child to stop talking to you.",
+    "options": [
+      { "text": "Talk first about what is going on in your teen's life, then set one clear curfew with consequences you will apply every time.", "correct": true, "why": "Humanity first, then steady discipline. Teens who feel cared for accept limits; rules without connection breed hiding and resentment." },
+      { "text": "Agree with your partner on the rule and the consequence, and deliver them in one calm conversation with both of you present.", "correct": true, "why": "Keep discipline consistent and unified. Parents who agree on a line and enforce it calmly show that the rule is not a mood." },
+      { "text": "Take the phone and car immediately with no conversation, and announce a list of punishments for every future violation.", "correct": false, "why": "Harsh penalties before any connection invite defiance. A long list of punishments signals anger rather than a rule you will keep." },
+      { "text": "Drop the rule altogether this month so your teen stays relaxed and keeps confiding in you.", "correct": false, "why": "Avoiding limits to stay liked tells your teen the rules do not hold. Warmth without expectations weakens both trust and safety." },
+      { "text": "Ask the friend's parents to tell your teen what you think, so the lecture comes from someone outside the house.", "correct": false, "why": "Going around your teen through others undermines the trust you need. It treats your child as a problem to manage, not a person to talk with." }
+    ],
+    "verses": ["9.42", "9.43"],
+    "tactic": "",
+    "lesson": "Show care before you enforce. A clear, consistent rule, agreed with your partner, holds better than harsh penalties or no rule."
+  },
+  {
+    "id": "c-bluster-numbers-review",
+    "chapter": 9,
+    "domain": "work",
+    "difficulty": 2,
+    "title": "Check the Bluster Before Answering",
+    "scenario": "In your quarterly review, a newly hired vice president calls your team's launch plan a timid guess and says a competitor already has twice your customer count. He is loud, and two colleagues look away. You have not seen his competitor data, and your own customer figures are three weeks old. He wants an answer on the spot.",
+    "options": [
+      { "text": "Ask him for the source of the competitor figure, and say you will check it against your own data before answering.", "correct": true, "why": "Do not make light of the opponent, but test the claim. Asking for the source separates bluster from fact without escalating the room." },
+      { "text": "Reply in writing after the meeting with your current numbers, and note the uncertainty in both his figures and yours.", "correct": true, "why": "Keep your footing calm and prepared. A written reply with checked data is harder to bluster over than a rushed answer given under pressure." },
+      { "text": "Dismiss his claim as posturing and carry on with the launch plan without checking anything he said.", "correct": false, "why": "Treating an opponent as harmless is the error to avoid. A claim that sounds like bluster may still be true, and ignoring it is a blind move." },
+      { "text": "Concede at once, promise to expand the launch scope, and accept his figures without asking where they came from.", "correct": false, "why": "Panicking at a bigger number and abandoning your plan hands control to the loudest voice. Caving without facts is as risky as ignoring them." },
+      { "text": "Counter with a louder claim that your product will win within a quarter, to restore the room's confidence.", "correct": false, "why": "Matching bluster with bluster invites a contest you cannot verify. Credibility comes from evidence, not volume." }
+    ],
+    "verses": ["9.37", "9.41"],
+    "tactic": "",
+    "lesson": "Do not dismiss an opponent's loud claim, and do not fold to it. Ask for the source, check it, and answer with evidence."
+  },
+  {
+    "id": "c-cofounder-standoff-test",
+    "chapter": 10,
+    "domain": "business",
+    "difficulty": 3,
+    "title": "Hold Ground in a Standoff",
+    "scenario": "You and your co-founder are deadlocked on whether to launch the product in two markets or one. Each of you has already described your version to investors. Neither of you gains by moving first, and the investors are asking for a decision. Your co-founder has offered a small concession: a pilot in the second market with no budget, which she says proves she is flexible.",
+    "options": [
+      { "text": "Decline the token pilot as a substitute for a decision, and say clearly what commitment would count as real movement.", "correct": true, "why": "Do not swallow the bait. A small concession with no resources is a hook; naming the real condition keeps the standoff honest and moves it." },
+      { "text": "Propose a joint test with defined resources, a date and a shared success metric, so neither founder must concede the whole argument.", "correct": true, "why": "Create a position that forces commitment. A structured test with agreed criteria gives both sides a way forward without anyone losing face first." },
+      { "text": "Show the investors exactly where you disagree, with both options costed, so they can weigh in on the real choice.", "correct": true, "why": "Information and terrain. Letting the people who fund the choice see both costs lets outside judgment break the deadlock without anyone blinking first." },
+      { "text": "Give your co-founder an ultimatum with a deadline, and say you will launch alone in one market if she disagrees.", "correct": false, "why": "An ultimatum in a standoff usually hardens positions and can split the company. Forcing the first move hands her a reason to resist." },
+      { "text": "Accept the pilot to end the tension, and quietly plan the one-market launch anyway behind her back.", "correct": false, "why": "Pretending agreement while planning behind someone's back is deception. The fallout will damage trust far more than the disagreement did." }
+    ],
+    "verses": ["10.6", "10.7"],
+    "tactic": "refuse-the-stalling-bait",
+    "lesson": "In a standoff, do not take the small bait. Set the real condition for movement and make the choice visible to those who must decide."
+  },
+  {
+    "id": "c-reach-approver-first",
+    "chapter": 10,
+    "domain": "career",
+    "difficulty": 3,
+    "title": "Reach the Approver First",
+    "scenario": "You have a proposal to fund a new customer-onboarding program. The budget approver, Dana, has already heard a rival team's pitch and seems committed to it. She has one review slot left before the decision in two weeks. Your rival is lobbying informally in the hallways. Only Dana's manager can reopen the decision, and he has never met you.",
+    "options": [
+      { "text": "Ask Dana for a short slot in her next review, and bring a brief that answers the rival's pitch on its merits without naming it.", "correct": true, "why": "Occupy the pass first. Securing the approver's attention before the decision closes gives you the ground and avoids a direct clash with the rival." },
+      { "text": "Build a case showing how Dana's own priorities are better served by your program, and give her a reason to ask her manager to revisit.", "correct": true, "why": "If the rival holds the high ground, do not charge it. Give the approver a reason to come toward your position so she moves on her own." },
+      { "text": "Storm into Dana's office and demand she reject the rival's proposal before she has heard yours.", "correct": false, "why": "A confrontational charge at a committed approver usually hardens her position. Forcing an early decision against a stronger hold is a losing attack." },
+      { "text": "Wait until the rival's proposal is approved, then copy its key features into your pitch to catch up.", "correct": false, "why": "Waiting and copying gives up the first move and makes you look derivative. Arriving late with someone else's ideas rarely wins a budget." },
+      { "text": "Spread word through the hallways that the rival's numbers are inflated, so colleagues start doubting his pitch.", "correct": false, "why": "Unverified attacks on a rival are unethical and tend to backfire, leaving you looking like the one with the weaker case." }
+    ],
+    "verses": ["10.8", "10.11"],
+    "tactic": "",
+    "lesson": "When a rival holds the approver's ear, do not charge the position. Reach the decision-maker first, or give them a reason to move toward you."
+  },
+  {
+    "id": "c-estimate-before-bidding",
+    "chapter": 10,
+    "domain": "business",
+    "difficulty": 3,
+    "title": "Estimate Before You Engage",
+    "scenario": "Your twenty-five-person design studio is bidding on a city's three-year branding contract. Two larger agencies are probably competing. You do not know their prices, you have not checked whether the city has favored a supplier before, and the bid is due Friday. Your founder wants to bid anyway, arguing the work would transform the studio.",
+    "options": [
+      { "text": "Gather what you can about likely competitor prices and the city's past awards before deciding whether to bid at all.", "correct": true, "why": "Estimate the enemy before engaging. Knowing the rivals' strength and the ground tells you whether to commit, and how lean the bid should be." },
+      { "text": "Set your walk-away price and the scope you can deliver at it, so you are not drawn into a price war you cannot win.", "correct": true, "why": "Know your own strength. A clear limit protects the studio from the cost of an engagement it is not equipped to win, whatever rivals charge." },
+      { "text": "If the odds look poor, propose a smaller first phase or a partnership that gives the city a reason to choose you.", "correct": true, "why": "Choose ground where your strength counts. A smaller bid or a partner can change the terrain, turning a losing fight into a workable one." },
+      { "text": "Bid at the lowest figure you can imagine to win outright, and worry about the margins afterward.", "correct": false, "why": "Pricing without knowing rivals' costs can sink the studio. Winning the contract at a loss damages the business the work was meant to build." },
+      { "text": "Submit a full bid on Friday without research, trusting that the strength of your passion will carry the proposal.", "correct": false, "why": "Enthusiasm does not estimate the enemy. An uninformed full bid is exactly the unequal engagement that preparation is meant to prevent." }
+    ],
+    "verses": ["10.19", "10.22"],
+    "tactic": "",
+    "lesson": "Before you bid, estimate the rivals and the ground, set your walk-away limit, and choose a shape of bid you can actually win."
+  },
+  {
+    "id": "c-coach-firm-warm-rules",
+    "chapter": 10,
+    "domain": "personal",
+    "difficulty": 1,
+    "title": "Warm Coach, Firm Rules",
+    "scenario": "You coach the under-12 football team on Saturdays. Three players are always late, and one parent keeps shouting at the referee and at the kids from the sideline. You like these families and do not want to upset anyone before the season finals. Meanwhile the team has started ignoring your instructions during games.",
+    "options": [
+      { "text": "Set one clear rule for arrival times and sideline conduct, explain it to families first, and enforce it the same way for everyone.", "correct": true, "why": "Care and authority together. Children follow a coach they trust, but warmth without a firm, consistent rule leaves the team drifting." },
+      { "text": "Let the lateness and the shouting go, so no family feels singled out before the finals.", "correct": false, "why": "Indulgence that cannot make authority felt is not kindness. Players learn the rules do not apply, and instructions during games stop mattering." },
+      { "text": "Bench the three late players for the next match and tell the shouting parent to leave the ground immediately.", "correct": false, "why": "Sudden, public punishment treats the children as the problem and humiliates them. A firm rule shared in advance does the same job without the damage." },
+      { "text": "Hand the coaching of the next match to the most vocal parent, so the sideline stops being a battleground.", "correct": false, "why": "Giving up authority to whoever shouts loudest rewards the behavior you want to stop and abandons the care you owe the team." },
+      { "text": "Hold a long meeting with all parents to vote on arrival and sideline rules before any further game is played.", "correct": false, "why": "Turning every rule into a vote dilutes a leader's responsibility. Parents need a clear standard, not an open-ended debate." }
+    ],
+    "verses": ["10.25", "10.26"],
+    "tactic": "",
+    "lesson": "Regard your team with warmth, but make your rules clear and enforce them the same way for everyone, so authority is felt."
+  }
+]

@@ -4,7 +4,8 @@
 - [x] 13 chapters with 383 verses: Giles English and original Chinese, matched verse by verse (100% coverage, machine-checked)
 - [x] 13 chapter lenses and 52 tactics, including the three founder cases (control the record, silence is consent, deadline unless advised)
 - [x] Ink-wash scroll design: GSAP ScrollTrigger, Lenis, pinned horizontal chapter scroller, ink canvas, brush draws, reduced-motion support
-- [x] Field Challenge: 12 AI options (bring your own key, no key, on device, self-hosted), local retrieval, citation verification, manual-only mode
+- [x] Field Challenge: 20-scenario skill test (multi-select moves, % scoring, Rural → Empire rank)
+- [x] Ask the General: 12 AI options (bring your own key, no key, on device, self-hosted), local retrieval, citation verification, manual-only mode
 - [x] 30-second podcast: Kokoro on device plus Gemini/OpenAI/ElevenLabs keys, singing-bowl intro, MP3 download
 - [x] Community board preview (stored in the browser), relay with tests, Cloudflare Pages config
 - [x] Test deployment: GitHub Pages (built from `main` by GitHub Actions) + relay on Vercel (`suntze-relay.vercel.app`)

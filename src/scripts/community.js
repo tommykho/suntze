@@ -100,7 +100,7 @@ if (draft) {
   $('[data-ntac]').value = draft.tactic || '';
   $('[data-nverses]').value = (draft.verses || []).join(', ');
   safe(() => localStorage.removeItem('sz.community.draft'));
-  $('[data-nstatus]').textContent = 'Draft imported from the Field Challenge. Edit it before posting.';
+  $('[data-nstatus]').textContent = 'Draft imported from Ask the General. Edit it before posting.';
 }
 
 $('[data-new]').addEventListener('submit', (e) => {

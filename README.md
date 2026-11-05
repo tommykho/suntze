@@ -9,7 +9,8 @@ career, business, family and self. It includes:
 
 - **The book**: a scroll-animated, ink-wash edition with 383 numbered verses, each in English and 原文 side by side.
 - **Tactic library**: 52 tactics. Each has a scene, verse citations, moves, a ready-to-send script, a backfire check and signs that it is working.
-- **Field Challenge (AI)**: describe your situation and get a plan. Every verse citation is checked against the dataset: exact quotes, paraphrases and invented IDs are labelled.
+- **Field Challenge**: a 20-scenario skill test. Pick every move Sun Tzu would make; get a score and a rank.
+- **Ask the General (AI)**: describe your situation and get a plan. Every verse citation is checked against the dataset: exact quotes, paraphrases and invented IDs are labelled.
 - **30-second podcast**: the plan becomes a spoken script, voiced on your device (Kokoro-82M) or with your own TTS key, and downloaded as an MP3.
 - **Community board** (preview): post a field report, rate others' reports, flag reckless ones. Phase 2 adds accounts and shared storage.
 

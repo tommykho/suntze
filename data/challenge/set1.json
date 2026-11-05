@@ -1,0 +1,616 @@
+[
+  {
+    "id": "c-compare-two-offers",
+    "chapter": 1,
+    "domain": "career",
+    "difficulty": 2,
+    "title": "Two Offers, One Decision",
+    "scenario": "Two job offers arrived on the same Tuesday. A logistics firm pays 12 percent more, but its last two team leads quit within a year. A smaller software studio pays less, has a manager who answers your questions honestly, and needs someone to rebuild its release process. Your partner wants a decision by Friday, and your gut keeps picking the bigger salary. You have one weekend to think, and you can ask each company three questions before you sign.",
+    "options": [
+      {
+        "text": "List the deciding factors (leadership, pay, workload, growth, timing) and score both offers against each one before you answer.",
+        "correct": true,
+        "why": "Sun Tzu's first step is a structured comparison of the five factors and the conditions behind them. Write them down, weigh them honestly, and let the comparison show which side holds the advantage."
+      },
+      {
+        "text": "Accept the bigger salary now, since money is the one thing you can measure and the other factors feel like guesses.",
+        "correct": false,
+        "why": "Choosing on one visible number means acting before you know the conditions. The turnover history is information the salary hides, and a comparison that skips it is not a comparison."
+      },
+      {
+        "text": "Ask each hiring manager how they handled their last failed project, and compare the answers with what you already know.",
+        "correct": true,
+        "why": "Gathering facts from both sides before committing is knowing the other side. How a leader talks about failure shows how they act under strain, which predicts how the job will go."
+      },
+      {
+        "text": "Tell both companies you hold a second offer that you do not actually have, so the one you prefer raises its number.",
+        "correct": false,
+        "why": "A made-up competing offer is a bluff that can be checked in one phone call. Once exposed, you lose credibility with the firm you want, and the real comparison never happens."
+      },
+      {
+        "text": "Turn down both offers this week and start freelancing, so you never have to pick between two imperfect employers.",
+        "correct": false,
+        "why": "Dropping both options out of frustration is a rash reaction that ignores the facts in front of you. Sun Tzu prefers choosing among real positions after assessment, not leaving the field."
+      }
+    ],
+    "verses": [
+      "1.3",
+      "1.12"
+    ],
+    "tactic": "run-the-five-factor-check",
+    "lesson": "Before a big decision, score the options on the factors that matter, then gather facts from both sides before you commit."
+  },
+  {
+    "id": "c-cool-the-shouting-supplier",
+    "chapter": 1,
+    "domain": "work",
+    "difficulty": 1,
+    "title": "The Shouting Supplier",
+    "scenario": "Your main packaging supplier missed a delivery, and its account manager is shouting on a call. He blames you for an order mix-up that you know was his team's error. Your production line stops in four days unless something moves. The rest of your team is listening on speaker, and his own director has joined the call. You have the order email with his team's written confirmation attached, and you know he hates looking unprofessional in front of his boss.",
+    "options": [
+      {
+        "text": "Keep your voice level, let him finish, then read out the confirmation email and ask what his team can ship by Thursday.",
+        "correct": true,
+        "why": "A hot-tempered opponent overreaches when he meets calm and facts. Let his anger burn out, then anchor the call on evidence and a concrete deadline he can commit to on the spot."
+      },
+      {
+        "text": "Shout back that his team made the mistake, and threaten to move all your volume to a competitor on the spot.",
+        "correct": false,
+        "why": "Matching his anger hands him the stage and turns the fault into a personal fight. Threats you cannot carry out weaken your position, and the shipment still does not arrive."
+      },
+      {
+        "text": "Hang up, email his director a complaint with every shouted sentence quoted, and wait for a formal response.",
+        "correct": false,
+        "why": "Escalating by email while the line stops for four days turns the problem into a slow siege. Sun Tzu warns that long delays drain strength; this shipment needs a fast fix."
+      },
+      {
+        "text": "Agree to his version of the mix-up, apologise at length, and let the call end quickly.",
+        "correct": false,
+        "why": "Accepting blame you know is false to end the noise leaves you carrying the cost. Sun Tzu's approach is to know the facts and act on them, not to surrender the truth to buy calm."
+      },
+      {
+        "text": "Agree to every term he states so the call ends, then sort out the real order details in a separate email later.",
+        "correct": false,
+        "why": "Agreeing to terms you cannot keep creates commitments that come back as penalties. The problem returns with a signed concession attached, and the four-day deadline is still there."
+      }
+    ],
+    "verses": [
+      "1.22"
+    ],
+    "tactic": "",
+    "lesson": "A hot temper is a lever others can pull; stay calm, anchor the talk on evidence, and ask for one concrete next step."
+  },
+  {
+    "id": "c-move-plan-costs-first",
+    "chapter": 1,
+    "domain": "family",
+    "difficulty": 2,
+    "title": "The Transfer Question",
+    "scenario": "Your partner has been offered a transfer to another city, and the family would need to move by June. The kids are mid-way through the school year, and your rent here is cheap. Your parents live two hours from the old house, so visits will change. You have only a rough sense of the moving bill and the new rent. Your sister says you should give notice this week, because the transfer offer expires soon.",
+    "options": [
+      {
+        "text": "Write down the full moving cost, the new rent, and a fallback plan with a date, before you commit to a yes.",
+        "correct": true,
+        "why": "Sun Tzu values many calculations made before the battle. Counting costs, timing and fallbacks in advance shows whether the move is affordable before anyone commits."
+      },
+      {
+        "text": "Ask the school about mid-year places, and check whether the new rental is still available before the deadline.",
+        "correct": true,
+        "why": "Knowing the conditions of the ground you are moving onto is part of the plan. School places and housing decide whether the move works, and both can be checked before you say yes."
+      },
+      {
+        "text": "Give notice this week, since the deadline is pressure and you can sort out the money and schools after the move.",
+        "correct": false,
+        "why": "Acting first and calculating later reverses the order Sun Tzu teaches. Committing before costs and fallbacks are known leaves the family exposed if the rent or school places fall through."
+      },
+      {
+        "text": "Agree a budget ceiling and three conditions, such as school places and housing, that would make you say no.",
+        "correct": true,
+        "why": "Knowing your limits in advance keeps the decision out of the heat of the moment. Clear conditions let you walk away from a bad version of the move."
+      },
+      {
+        "text": "Tell the kids and your parents the move is decided, so the family stops arguing and starts packing.",
+        "correct": false,
+        "why": "Announcing a decision before the plan exists turns a question into a fight and reveals your hand before you can test the numbers. Unity comes from a sound plan the family can join."
+      }
+    ],
+    "verses": [
+      "1.26",
+      "1.12"
+    ],
+    "tactic": "",
+    "lesson": "Weigh the costs, conditions and fallbacks of a big move before you commit, so the family decides on facts, not pressure."
+  },
+  {
+    "id": "c-keep-plan-private",
+    "chapter": 1,
+    "domain": "work",
+    "difficulty": 2,
+    "title": "Your Bid, Their Budget",
+    "scenario": "You are leading a proposal for a three-year platform contract at your company, and the budget is limited to one project. A rival manager, Priya, keeps asking about your pricing and timeline in team meetings. You suspect she wants the same budget and is building her own case. The sponsor director will choose next month, and your pricing work is still in draft. Your deck is good, but two numbers in it are not yet checked.",
+    "options": [
+      {
+        "text": "Share only the public outline in meetings, and keep your pricing, timeline and fallback options in a document you control.",
+        "correct": true,
+        "why": "Sun Tzu says military devices must not be divulged beforehand. Keeping the detailed plan private until the decision protects your advantage, while still being truthful about what the project is."
+      },
+      {
+        "text": "Brief the sponsor director privately first, so the decision-maker hears your full case before anyone else can respond to it.",
+        "correct": true,
+        "why": "Positioning matters: getting your case to the person who decides, on your terms, puts you where you want to be. You win the position by preparation, not by making noise in the open meeting."
+      },
+      {
+        "text": "Answer every question about your numbers in the team channel, so everyone can see you have nothing to hide.",
+        "correct": false,
+        "why": "Revealing the full plan early gives the rival time to prepare a counter. Openness with your team is fine, but broadcasting unchecked pricing before the sponsor decides hands her your strategy."
+      },
+      {
+        "text": "Tell Priya in the hallway that a senior director already promised you the budget, to scare her off the bid.",
+        "correct": false,
+        "why": "A false claim about a promise is a bluff that can be checked and will damage your standing. Sun Tzu keeps plans private; he does not advise inventing commitments others will later find untrue."
+      },
+      {
+        "text": "Spend a week publicly criticising Priya's last project, so the sponsor doubts her judgment before the decision.",
+        "correct": false,
+        "why": "Attacking a rival's record in public is a head-on fight that makes you look petty. It also distracts from the strength of your own proposal, which is what the sponsor must weigh."
+      }
+    ],
+    "verses": [
+      "1.25",
+      "1.26"
+    ],
+    "tactic": "",
+    "lesson": "Keep the detailed plan private, check your numbers, and reach the decision-maker before the contest is played out in public."
+  },
+  {
+    "id": "c-modify-plan-partner-slip",
+    "chapter": 1,
+    "domain": "work",
+    "difficulty": 3,
+    "title": "The Partner Who Slipped",
+    "scenario": "Your product launch depends on a payment integration from a partner company. Three weeks before launch, the partner announces a six-week delay. Your roadmap, the marketing calendar and the sales commissions all assume the original date. The CEO wants to hold the date no matter what. Your engineers say about half the features do not depend on the integration. The marketing lead is already drafting announcements, and you present a plan to leadership on Monday.",
+    "options": [
+      {
+        "text": "Re-check each plan item against the new facts, and move ahead with parts that don't depend on the integration.",
+        "correct": true,
+        "why": "Sun Tzu says plans must change as circumstances change. Keep what still works, re-sequence the rest, and avoid marching on a schedule that the facts have already broken."
+      },
+      {
+        "text": "Propose a two-phase launch, and announce the integration-dependent features only after the partner confirms a firm date.",
+        "correct": true,
+        "why": "Adapting the plan to the terrain means releasing what is ready and holding back what is not. Announcing only what you can deliver keeps trust intact with customers and the sales team."
+      },
+      {
+        "text": "Take the CEO two dated options with their costs, framed as facts, not a plea for a yes or no.",
+        "correct": true,
+        "why": "Giving leaders clear options with costs lets them decide with information. Sun Tzu values a commander who presents the real conditions, not a single hope that the facts contradict."
+      },
+      {
+        "text": "Hold the original date as the CEO asked, and push the team to work weekends to cover the six-week gap.",
+        "correct": false,
+        "why": "Forcing an unchanged plan through exhaustion ignores the facts engineers already gave. Prolonged strain drains strength, so overwork is a cost to be managed, not a plan."
+      },
+      {
+        "text": "Tell the partner you will publicly blame them for the delay in the launch announcement unless they speed up.",
+        "correct": false,
+        "why": "Public threats turn a supply problem into a feud and may cost you a partner you still need. Managing the delay itself is the job; a public fight will not bring the integration sooner."
+      }
+    ],
+    "verses": [
+      "1.16",
+      "1.17"
+    ],
+    "tactic": "",
+    "lesson": "When the facts change, re-check the plan, keep what still works, and present leaders with dated options instead of a single hope."
+  },
+  {
+    "id": "c-refund-dispute-cut-losses",
+    "chapter": 2,
+    "domain": "personal",
+    "difficulty": 1,
+    "title": "The Unfinished Kitchen",
+    "scenario": "A kitchen installer took a $1,800 deposit and has not come back in six weeks. He promised to fix the cabinet order, then went quiet. You have sent eight emails, left two voicemails, and drafted a long review you have not posted. Every week on this costs you a day of work and some sleep. A small-claims filing costs about $90 and takes months, and the installer is hard to pin down. Your partner says the time you have lost is already worth more than the deposit.",
+    "options": [
+      {
+        "text": "Set a written final deadline, then decide within two weeks: file a small-claims case or accept a partial refund.",
+        "correct": true,
+        "why": "Long disputes drain time and energy, which Sun Tzu counts as a real loss. A written deadline stops the drain, and a fixed cutoff keeps the fight's cost bounded."
+      },
+      {
+        "text": "Document every email, receipt and promise now, so a claim is strong if you file and cheap to pursue.",
+        "correct": true,
+        "why": "Preparation makes a claim efficient. Clear records mean a short, cheap process if you need one, and no hours spent reconstructing the history later."
+      },
+      {
+        "text": "Post a detailed review and tag local groups every day until he pays, since public pressure usually works faster.",
+        "correct": false,
+        "why": "Daily public attacks prolong the fight, invite a counter-war, and cost you hours each day. A campaign that keeps going without a clear goal only grows the bill."
+      },
+      {
+        "text": "Hire a lawyer to send a threatening letter and sue for damages, costs and interest, even though the claim is $1,800.",
+        "correct": false,
+        "why": "Escalating a small claim with heavy legal fees spends far more than the deposit. The sum does not justify a long, costly campaign, and the escalation gives the installer a reason to dig in."
+      },
+      {
+        "text": "Keep emailing him every few days, since he will eventually respond if you are persistent enough.",
+        "correct": false,
+        "why": "Repeated pressure without new leverage is a siege that wears you down. Sun Tzu prizes quick results; endless persistence with no deadline is not a strategy, it is a slow loss."
+      }
+    ],
+    "verses": [
+      "2.2",
+      "2.3"
+    ],
+    "tactic": "",
+    "lesson": "Set a deadline on a dispute. A long fight can cost more than the money it is about, so decide while the cost is still small."
+  },
+  {
+    "id": "c-ship-first-version",
+    "chapter": 2,
+    "domain": "work",
+    "difficulty": 2,
+    "title": "Ship the First Version",
+    "scenario": "Your VP wants the customer dashboard rebuilt from scratch, with a full analytics suite and a six-month timeline. Your team already has a working prototype that answers the top three support questions. The VP's team keeps adding requirements each week, and your engineers are doing overtime to keep up. Sales has been asking for something usable since spring. You have a 20-minute slot with the VP on Thursday.",
+    "options": [
+      {
+        "text": "Propose releasing the prototype for the top three support questions in two weeks, then add features only as usage data asks.",
+        "correct": true,
+        "why": "Sun Tzu wants victory, not lengthy campaigns, and says real cleverness shows in speed rather than delay. A narrow release that works beats an ambitious build that stalls for months."
+      },
+      {
+        "text": "Ask for a fixed scope and a named first-release list, so new requests must compete for the next cycle.",
+        "correct": true,
+        "why": "Limiting the scope is how you keep the effort from being spread too thin. A fixed list makes trade-offs visible and stops the cost from growing with each new request."
+      },
+      {
+        "text": "Open with a slide showing what the timeline costs in overtime and missed sales, so the price of delay is visible.",
+        "correct": true,
+        "why": "Understanding the true cost of a long effort is what makes the faster path clear. Making the cost of delay visible gives the VP a reason to change course without a fight."
+      },
+      {
+        "text": "Start the full rebuild now and accept the six-month timeline, since a complete product is worth waiting for.",
+        "correct": false,
+        "why": "A long build with no early release ties up the team and tests nothing until the end. Sun Tzu's warning about prolonged campaigns applies: cost grows while the value stays hidden."
+      },
+      {
+        "text": "Quietly keep the prototype running on a side server and say nothing to the VP, so you avoid the argument.",
+        "correct": false,
+        "why": "Hiding a working tool avoids the conversation but leaves the decision to chance. Concealed work cannot earn the support the team needs, and the requirements keep growing with no limit."
+      }
+    ],
+    "verses": [
+      "2.19",
+      "2.5"
+    ],
+    "tactic": "",
+    "lesson": "In a long build, fight for speed and a fixed scope: ship what works early, show the cost of delay, and let usage data pick the next step."
+  },
+  {
+    "id": "c-reuse-the-dashboard",
+    "chapter": 2,
+    "domain": "work",
+    "difficulty": 2,
+    "title": "The Neighbour's Dashboard",
+    "scenario": "Your team needs a weekly churn dashboard for a retention review in three weeks. Finance has no budget for a new analytics tool until next year. Across the building, the growth team built a dashboard last spring that already calculates most of the churn metrics, though it is designed for their channel data. Their lead, Marcus, is generous but busy. You have a team of two and basic SQL skills. Your director says to find a way without asking for money.",
+    "options": [
+      {
+        "text": "Ask Marcus whether you can adapt their queries, credit his team in the review, and agree who maintains the shared part.",
+        "correct": true,
+        "why": "Using strength you find nearby saves budget and time. Sun Tzu says to feed on the other side's supply, and here that means turning an existing asset into your own with permission and credit."
+      },
+      {
+        "text": "Use their metrics as your baseline and build only the missing segment, so your team's time goes where it is needed.",
+        "correct": true,
+        "why": "Taking what already works and adding only what is missing puts your limited effort at the point of need. Reuse is not cheating; it is the economical way to carry the work forward."
+      },
+      {
+        "text": "Build your own churn pipeline from scratch over the next three weeks, even though it will take most of your team's capacity.",
+        "correct": false,
+        "why": "Rebuilding what already exists consumes all your capacity for a result you could have borrowed. The time pressure is the real constraint, and a full rebuild wastes it."
+      },
+      {
+        "text": "Copy the growth team's raw customer tables without asking, since the data already sits in the company warehouse.",
+        "correct": false,
+        "why": "Taking data you have no permission to use is unethical, even inside one company. The trust lost this way costs far more than the speed it buys you."
+      },
+      {
+        "text": "Ask finance for a three-month exception to buy a churn tool, and pause the review until the purchase is approved.",
+        "correct": false,
+        "why": "Tying the deadline to an approval cycle leaves you waiting while the review date passes. Sun Tzu values speed, and a plan that depends on resources you do not have is not really a plan."
+      }
+    ],
+    "verses": [
+      "2.9",
+      "2.18"
+    ],
+    "tactic": "borrow-the-rivals-grain",
+    "lesson": "Before you ask for budget, look for the supply nearby: borrow what already works with permission, and build only the missing part."
+  },
+  {
+    "id": "c-family-care-budget",
+    "chapter": 2,
+    "domain": "family",
+    "difficulty": 3,
+    "title": "The Cost of Dad's Care",
+    "scenario": "Your father's care at home has cost more than the family planned, and each new need comes with an emergency payment. Your brother covers half the bills but wants to see how things go before setting a monthly figure. Your savings for the kids' education are being used up. Your father has a modest pension, and you and your sister could share the shifts. The care coordinator needs a decision on extra hours by Friday, and the next bill arrives the same day.",
+    "options": [
+      {
+        "text": "Agree a monthly care budget with a cap, review it with your siblings each month, and approve extra hours only within it.",
+        "correct": true,
+        "why": "Open-ended spending drains a household whoever pays first. Sun Tzu warns that costs fall on the people at home; a fixed budget and a shared review stop the bill from landing on one person."
+      },
+      {
+        "text": "Ask the care coordinator for weekly prices per service, and options that fit your father's pension.",
+        "correct": true,
+        "why": "Knowing the real prices and the terrain before choosing is essential. Specific costs let you match care to what the family can sustain, rather than deciding under pressure from each new bill."
+      },
+      {
+        "text": "Write up every unplanned cost so each sibling sees the true total, and decide together rather than one person absorbing it.",
+        "correct": true,
+        "why": "Shared facts build the unity needed to carry a long commitment. When everyone sees the same numbers, the burden is divided by agreement instead of quietly falling on the one who notices first."
+      },
+      {
+        "text": "Approve the extra hours on Friday with no conversation, and sort out the money with your siblings later.",
+        "correct": false,
+        "why": "Committing to spending first and sorting out money later pushes the burden onto whoever pays. Sun Tzu's warning about costs carried by the people applies at your kitchen table too."
+      },
+      {
+        "text": "Tell your brother you will stop covering costs unless he commits to a figure, and let him handle the next crisis.",
+        "correct": false,
+        "why": "An ultimatum made in anger splits the family while the care still needs funding. It treats a shared problem as a contest of wills instead of a plan both siblings can own."
+      }
+    ],
+    "verses": [
+      "2.8",
+      "2.12"
+    ],
+    "tactic": "",
+    "lesson": "A long family cost needs a cap, shared numbers and a regular review, so the burden is divided by plan rather than by who pays first."
+  },
+  {
+    "id": "c-reward-first-risk-taker",
+    "chapter": 2,
+    "domain": "work",
+    "difficulty": 1,
+    "title": "The Backlog Push",
+    "scenario": "Your operations team has a three-week push to clear 900 support tickets before the holiday rush. Morale is low, people are tired, and half of them have already said they will miss the goal. Your manager plans a generic thank-you email at the end. You have a small budget for gift cards and the authority to recognise anyone who clears a hard category, such as the billing tickets nobody wants. Two people have already volunteered for the billing queue.",
+    "options": [
+      {
+        "text": "Tell the team now exactly what recognition is on offer, and reward the people who first take on the hardest tickets.",
+        "correct": true,
+        "why": "Sun Tzu says people fight harder when they know the reward and see it go to those who act first. Clear, prompt recognition for real risk keeps a tired team pushing through the hard queues."
+      },
+      {
+        "text": "Split the gift-card budget equally at the end, so nobody feels left out, regardless of who did the hard work.",
+        "correct": false,
+        "why": "Equal shares at the end blur who took the risk, which weakens the incentive that drives the push. Fairness matters, but rewarding everyone the same tells the team the billing queue was optional."
+      },
+      {
+        "text": "Send a company-wide email praising the whole team once the backlog is cleared, and skip individual recognition.",
+        "correct": false,
+        "why": "A generic thank-you after the fact gives no one a reason to take the hardest tickets early. The effort goes unrewarded in the moments it matters most."
+      },
+      {
+        "text": "Leave the billing queue to the two volunteers alone, with no extra help, so the rest keep the easy tickets.",
+        "correct": false,
+        "why": "Leaving the hardest work to two exhausted people with no support sets them up to fail. A force must be sustained as well as motivated, not run into the ground."
+      },
+      {
+        "text": "Set a daily quota with a penalty for anyone who falls behind, so the pressure is visible and nobody can coast.",
+        "correct": false,
+        "why": "Penalties create resentment, and tired people hide problems rather than surface them. Pressure without reward drains the team and does not reduce the backlog."
+      }
+    ],
+    "verses": [
+      "2.16",
+      "2.17"
+    ],
+    "tactic": "",
+    "lesson": "Make the reward clear before the push starts, and recognise the people who take the hardest risks first."
+  },
+  {
+    "id": "c-pre-brief-decision-maker",
+    "chapter": 3,
+    "domain": "work",
+    "difficulty": 2,
+    "title": "Before the Go/No-Go Vote",
+    "scenario": "Your project faces a go/no-go vote at Thursday's leadership meeting. A senior colleague, Dana, has been telling people your timeline is a fantasy, and two directors seem to agree with her. You have the usage data, a clear cost breakdown, and a realistic risk list. The meeting is in three days, and you are tempted to answer her in the room with a long rebuttal. You know the directors read the pre-read the morning of the meeting.",
+    "options": [
+      {
+        "text": "Meet the sponsoring director one-on-one before the pre-read, and walk through the usage data and the risk list together.",
+        "correct": true,
+        "why": "Winning without fighting means settling the question before it reaches a face-off. A private, fact-based briefing with the decision-maker shapes the outcome before the room ever meets."
+      },
+      {
+        "text": "Talk privately with the two unsure directors, and ask what evidence would change their view before Thursday.",
+        "correct": true,
+        "why": "Sun Tzu's aim is to keep the other side's allies from joining together. Asking the wavering people what would persuade them turns doubt into a list of concrete, answerable questions."
+      },
+      {
+        "text": "Use the meeting to challenge Dana's claims line by line, so the room sees the holes in her argument for itself.",
+        "correct": false,
+        "why": "A public takedown turns a planning discussion into a personal fight and makes you the disruptor. The room will remember the clash, not the data."
+      },
+      {
+        "text": "Send Dana a long email listing every mistake in her comments so far, copied to her manager, so the record is clear.",
+        "correct": false,
+        "why": "A written escalation copied to her manager turns a disagreement into a siege. It hardens positions and gives the directors a reason to take sides."
+      },
+      {
+        "text": "Start building the rollout plan before the vote, so leadership sees the project already moving and feels pressure to say yes.",
+        "correct": false,
+        "why": "Acting as if the decision is made bypasses the people who must decide, and it reads as a bluff they will test. It makes them feel cornered, which rarely produces a yes."
+      }
+    ],
+    "verses": [
+      "3.2",
+      "3.3"
+    ],
+    "tactic": "",
+    "lesson": "Win the decision before the meeting: brief the decision-maker privately, and answer the doubters with evidence rather than a public duel."
+  },
+  {
+    "id": "c-know-limits-before-call",
+    "chapter": 3,
+    "domain": "business",
+    "difficulty": 3,
+    "title": "The Founder's Brand Deadline",
+    "scenario": "A startup founder you freelance for wants a full brand identity by the end of the month. The budget is tight but flexible, and they have shown you two competitor brands they love. You have a standard quote and a rate you will not go below. Two other paying clients could fill your month. You have one call tomorrow, and you have not decided what you would accept or what the founder needs most.",
+    "options": [
+      {
+        "text": "Before the call, write your floor rate and the work you would drop, so your lines are set before numbers arrive.",
+        "correct": true,
+        "why": "Knowing yourself, your limits and your alternatives is half of the victory condition. A clear floor means pressure on the call cannot push you into a regretted deal."
+      },
+      {
+        "text": "On the call, ask what the budget is for, what flexible means, and what success looks like in six months.",
+        "correct": true,
+        "why": "Learning the other side's real constraints before you commit is how you avoid a losing bargain. The answers reveal whether the founder's needs match what you can deliver well."
+      },
+      {
+        "text": "Name your standard quote and lock the timeline before you learn what the founder actually needs.",
+        "correct": false,
+        "why": "Committing before you know the other side means acting without information. You might give away scope or accept a price the founder would have paid happily for more."
+      },
+      {
+        "text": "Agree to the end-of-month deadline without checking your other commitments, so you do not risk losing the client.",
+        "correct": false,
+        "why": "Promising a deadline that collides with your other clients ignores your own limits. An overcommitted freelancer delivers poorly, which is worse for both sides."
+      },
+      {
+        "text": "Tell the founder a larger client is waiting, though none is, so they raise the budget quickly.",
+        "correct": false,
+        "why": "Inventing a bigger client is a bluff a single follow-up question can expose. Sun Tzu's principle is to know the facts; a false claim forces you to keep a lie going."
+      }
+    ],
+    "verses": [
+      "3.17",
+      "3.18"
+    ],
+    "tactic": "",
+    "lesson": "Know your floor and your alternatives before the call, then learn the client's real needs before you name a price."
+  },
+  {
+    "id": "c-permit-office-no-siege",
+    "chapter": 3,
+    "domain": "personal",
+    "difficulty": 2,
+    "title": "The Extension Permit",
+    "scenario": "You want a small single-storey extension for an aging parent to live in. The council rejected the first application over a height rule, and the planning officer's emails have been curt. You have been filing objections and posting about the process in the neighbourhood group. Your architect says a pre-application meeting and a revised design could clear it within a month. The extension must be ready before winter, and every month of delay costs you rent on a temporary flat.",
+    "options": [
+      {
+        "text": "Request a pre-application meeting with the planning officer, and ask exactly which height and design changes would get it approved.",
+        "correct": true,
+        "why": "Sun Tzu avoids costly sieges of walled positions and prefers the route that gets through. A pre-application meeting reveals the officer's real conditions before you spend more time on the wrong fight."
+      },
+      {
+        "text": "Revise the design with your architect to meet the height rule, then resubmit with a short letter explaining each change.",
+        "correct": true,
+        "why": "Adapting your approach to the terrain is faster than attacking the rule itself. A compliant design with a clear explanation gives the council an easy yes and gets your parent home before winter."
+      },
+      {
+        "text": "Collect signatures in the neighbourhood group for a petition against the height rule, and take it to the council.",
+        "correct": false,
+        "why": "A campaign against a rule drags the matter into a long contest with the council, and your parent waits the whole time. Sun Tzu avoids sieges because the cost is high and the outcome uncertain."
+      },
+      {
+        "text": "File a formal complaint about the officer's emails every week until someone senior steps in to intervene.",
+        "correct": false,
+        "why": "A weekly complaint campaign is a siege aimed at one person. It makes the officer defensive and rarely speeds a permit."
+      },
+      {
+        "text": "Appeal the decision as an outdated rule and request a hearing, even though it could take months to be heard.",
+        "correct": false,
+        "why": "Going straight to an appeal ignores the faster route of fixing the design, and a hearing will not finish before winter. It is a head-on contest when an easier path is open."
+      }
+    ],
+    "verses": [
+      "3.4",
+      "3.6"
+    ],
+    "tactic": "win-the-repair-without-siege",
+    "lesson": "Do not besiege a fortified position. Find out what the gatekeeper actually needs, then adapt the plan so the yes comes faster."
+  },
+  {
+    "id": "c-micromanaging-director",
+    "chapter": 3,
+    "domain": "work",
+    "difficulty": 3,
+    "title": "Three Priorities in One Quarter",
+    "scenario": "Your director has changed the team's top priority three times this quarter. Each change brings a new daily status request, and the director reads the updates late at night, then asks why nothing has moved. Your engineers have stopped looking at the priority list. Two of them started a group chat to complain about the director. You lead the team, and the quarterly review is in five weeks.",
+    "options": [
+      {
+        "text": "Ask the director for one priority, a fixed weekly check-in, and written confirmation of the agreement.",
+        "correct": true,
+        "why": "Sun Tzu warns against ordering an army to move when it cannot obey. A single priority and a set rhythm give the team a direction it can actually follow, and written confirmation protects everyone."
+      },
+      {
+        "text": "Tell the director, with specifics, which changes cost the team the most time, and propose that new priorities come through you first.",
+        "correct": true,
+        "why": "Explaining the cost of constant change in concrete terms is the honest way to correct a misunderstanding about how an army works. Routing requests through the lead keeps the team's effort coordinated."
+      },
+      {
+        "text": "Keep one shared priority list, update it only when the director agrees to a change, and explain each change in plain words.",
+        "correct": true,
+        "why": "A team stays united when it knows what matters and why it changed. One visible list, changed only by agreement, is how a commander keeps the ranks aligned instead of scattered."
+      },
+      {
+        "text": "Ignore the director's daily requests and reply that the team is busy, then let the director sort out the rest.",
+        "correct": false,
+        "why": "Silent refusal gives the director no information and invites escalation. It also signals division inside the team, and a restless team is an exposed one."
+      },
+      {
+        "text": "Join the engineers' private group, back their complaints, and promise to protect them from the director's requests.",
+        "correct": false,
+        "why": "Taking a side in a group that complains about leadership creates a faction. Sun Tzu warns that distrust inside the ranks invites trouble, and a split team is weaker than either side alone."
+      }
+    ],
+    "verses": [
+      "3.14",
+      "3.17"
+    ],
+    "tactic": "",
+    "lesson": "When leaders keep changing the plan, ask for one priority and a set rhythm, and keep the team united on a single list."
+  },
+  {
+    "id": "c-friend-loan-irritation",
+    "chapter": 3,
+    "domain": "personal",
+    "difficulty": 1,
+    "title": "The Unpaid Loan",
+    "scenario": "A close friend borrowed $2,000 eight months ago and has repaid nothing, while posting photos from a new trip. Every time you see those photos your irritation spikes. A group chat of friends knows about the loan, and someone just asked, \"So how's the money thing going?\" You have the bank transfer record, and your savings cover only about two months of your own rent if this drags on.",
+    "options": [
+      {
+        "text": "Send one calm, specific message with the amount, a repayment date and a monthly option, then wait.",
+        "correct": true,
+        "why": "Sun Tzu warns that an angry commander charges like swarming ants and loses a third of his men. A calm, specific ask protects your resources and gives a fair path to repay."
+      },
+      {
+        "text": "Post in the group chat that your friend has been dodging the loan, so everyone can see who really owes whom.",
+        "correct": false,
+        "why": "Public shaming turns a private debt into a group fight and damages a friendship and a social circle you rely on. The emotional hit costs more than it recovers."
+      },
+      {
+        "text": "Lend another few hundred dollars to keep the peace, since you do not want to lose the friendship over money.",
+        "correct": false,
+        "why": "Adding new money to an unpaid loan pours more of your own resources into a losing position. You would have more at risk and no firmer promise of repayment."
+      },
+      {
+        "text": "Stop replying and tell the group you are done with your friend, so the loan stops taking up your time.",
+        "correct": false,
+        "why": "Cutting contact in anger closes the one channel where repayment could still be arranged. The money stays gone and the wound stays open."
+      },
+      {
+        "text": "Demand the full sum in one lump payment by Friday, and threaten legal action if it does not arrive.",
+        "correct": false,
+        "why": "An ultimatum with legal threats escalates a friendship into a fight you cannot win quickly. Unrealistic demands make repayment less likely and put your own finances at risk."
+      }
+    ],
+    "verses": [
+      "3.5",
+      "3.7"
+    ],
+    "tactic": "",
+    "lesson": "Irritation makes you charge in and spend what you cannot afford. A calm, specific ask protects your strength and keeps repayment possible."
+  }
+]

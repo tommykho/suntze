@@ -13,6 +13,7 @@ const nav = [
   { href: '/chapters/1/', label: 'The Book', match: '/chapters' },
   { href: '/tactics/', label: 'Tactics', match: '/tactics' },
   { href: '/field/', label: 'Field Challenge', match: '/field' },
+  { href: '/ask/', label: 'Ask the General', match: '/ask', mobileOnly: true },
   { href: '/community/', label: 'Community', match: '/community' },
   { href: '/about/', label: 'About', match: '/about' },
 ];
@@ -51,10 +52,10 @@ const nav = [
         </a>
         <ul class="nav-links" id="nav-links">
           {nav.map((n) => (
-            <li><a href={u(n.href)} aria-current={path.startsWith(u(n.match)) ? 'page' : undefined}>{n.label}</a></li>
+            <li class={n.mobileOnly ? 'mobile-only' : undefined}><a href={u(n.href)} aria-current={path.startsWith(u(n.match)) ? 'page' : undefined}>{n.label}</a></li>
           ))}
         </ul>
-        <a class="btn btn--seal btn--sm" href={u('/field/')}>Ask the General</a>
+        <a class="btn btn--seal btn--sm" href={u('/ask/')}>Ask the General</a>
         <button class="nav-toggle" type="button" aria-controls="nav-links" aria-expanded="false" data-nav-toggle>
           <span class="sr-only">Menu</span>
           <svg width="18" height="14" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 2h16M1 7h16M1 12h11" /></svg>
@@ -83,7 +84,8 @@ const nav = [
             <ul>
               <li><a href={u('/chapters/1/')}>The thirteen chapters</a></li>
               <li><a href={u('/tactics/')}>Tactic library</a></li>
-              <li><a href={u('/field/')}>Field Challenge (AI)</a></li>
+              <li><a href={u('/field/')}>Field Challenge (skill test)</a></li>
+              <li><a href={u('/ask/')}>Ask the General (AI)</a></li>
               <li><a href={u('/community/')}>Community field reports</a></li>
             </ul>
           </div>

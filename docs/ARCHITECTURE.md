@@ -13,7 +13,7 @@
    └──▶ TTS: Kokoro-82M on device (default) · Gemini / OpenAI / ElevenLabs with the visitor's key → MP3 (lamejs)
 ```
 
-## Field Challenge pipeline
+## Ask the General pipeline
 
 1. **Retrieve (local):** MiniSearch over 383 verses and 52 tactics → top tactics, their verses, keyword-matched verses, plus one anchor verse per chapter (about 25–30 verses).
 2. **Prompt:** the system prompt sets the stance (win without fighting), the ethics limits, a strict six-section format, and *cite only listed IDs*. The situation is wrapped as data, not instructions.

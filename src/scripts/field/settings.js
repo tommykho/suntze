@@ -1,6 +1,6 @@
 // Visitor settings. Keys live only in this browser: localStorage when "remember" is on, otherwise
 // sessionStorage (cleared when the tab closes). Every storage access is guarded (private mode etc.).
-const SETTINGS = 'sz.settings.v1';
+const SETTINGS = 'sz.settings.v2'; // v2: new defaults (Puter.js, Kokoro Heart, GPU on)
 const KEYS = 'sz.keys.v1';
 
 const safe = (fn, fallback) => { try { return fn(); } catch { return fallback; } };
@@ -9,11 +9,11 @@ const write = (store, k, v) => safe(() => store.setItem(k, JSON.stringify(v)));
 const remove = (store, k) => safe(() => store.removeItem(k));
 
 export const DEFAULTS = {
-  provider: 'openrouter',
+  provider: 'puter',
   models: {},
   bases: {},
   remember: false,
-  tts: { engine: 'kokoro', voice: 'am_michael', speed: 1, gpu: false, openaiVoice: 'onyx', elevenVoice: 'JBFqnCBsd6RMkjVDRZzb', geminiModel: 'gemini-2.5-flash-preview-tts', geminiVoice: 'Charon', intro: true },
+  tts: { engine: 'kokoro', voice: 'af_heart', speed: 1, gpu: true, openaiVoice: 'onyx', elevenVoice: 'JBFqnCBsd6RMkjVDRZzb', geminiModel: 'gemini-2.5-flash-preview-tts', geminiVoice: 'Charon', intro: true },
 };
 
 export function loadSettings() {

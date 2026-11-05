@@ -153,6 +153,7 @@ if (!reduce) {
   document.fonts?.ready.then(() => ScrollTrigger.refresh());
 }
 
+window.__gsap = gsap;
 root.classList.add('motion-ready');
 window.dispatchEvent(new CustomEvent('motion:ready', { detail: { gsap, ScrollTrigger, reduce } }));
 export { gsap, ScrollTrigger };
