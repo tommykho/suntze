@@ -6,6 +6,8 @@ import ChapterNav from '../../components/ChapterNav.astro';
 import { tactics, chapters, DOMAINS } from '../../lib/content.js';
 ---
 <Base title="Tactic library" description={`${tactics.length} practical Sun Tzu tactics for work, career, business, family and self — each with steps, a ready-to-send script and a backfire check.`}>
+  <div class="wrap chapter-bar"><span class="eyebrow">Tactics by chapter</span><ChapterNav current={0} mode="filter" withAll label="Filter tactics by chapter" /></div>
+
   <header class="lib-hero wrap">
     <p class="eyebrow" data-reveal>Tactic library · 兵法實戰</p>
     <h1 data-reveal>{tactics.length} moves for modern battles.</h1>
@@ -14,10 +16,6 @@ import { tactics, chapters, DOMAINS } from '../../lib/content.js';
 
   <section class="wrap lib">
     <div class="filters panel" data-filters>
-      <div class="pager-row">
-        <span class="label">Chapter</span>
-        <ChapterNav current={0} mode="filter" withAll label="Filter tactics by chapter" />
-      </div>
       <div class="field" style="flex:1 1 260px">
         <label for="q">Search</label>
         <input id="q" class="input" type="search" placeholder="manager, deadline, landlord, salary…" autocomplete="off" data-q />
@@ -116,9 +114,9 @@ import { tactics, chapters, DOMAINS } from '../../lib/content.js';
 </script>
 
 <style>
-  .lib-hero { padding: 140px 0 32px; }
+  .lib-hero { padding: 28px 0 32px; }
+  .chapter-bar { padding-top: 92px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; }
   .filters { display: flex; flex-wrap: wrap; gap: 16px; align-items: end; margin-bottom: 14px; position: relative; z-index: 2; }
-  .pager-row { flex: 1 1 340px; display: grid; gap: 6px; min-width: 0; }
   .domains { display: flex; flex-wrap: wrap; gap: 6px; flex-basis: 100%; }
   .lib { padding-bottom: 100px; }
   .lib .grid { margin-top: 18px; }
