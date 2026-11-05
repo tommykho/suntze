@@ -18,16 +18,32 @@ const id = `cn-${mode}-${Math.random().toString(36).slice(2, 7)}`;
   ) : (
     <a class="cn-step is-off" data-cn-step="prev" data-n="" aria-disabled="true" tabindex="-1">←</a>
   )}
-  <label class="cn-select" for={id}>
-    <span class="sr-only">{label}</span>
-    <select id={id} data-cn-select>
-      {withAll && <option value="" selected={current === 0}>All chapters</option>}
-      {chapters.map((c) => (
-        <option value={c.n} selected={c.n === current}>{c.roman} · {c.title_en} · {c.title_zh}</option>
-      ))}
-    </select>
-    <span class="cn-caret" aria-hidden="true">▾</span>
-  </label>
+  {mode === 'book' ? (
+    <label class="cn-select" for={id}>
+      <span class="sr-only">{label}</span>
+      <select id={id} data-cn-select>
+        {withAll && <option value="" selected={current === 0}>All chapters</option>}
+        {chapters.map((c) => (
+          <option value={c.n} selected={c.n === current}>{c.roman} · {c.title_en}</option>
+        ))}
+      </select>
+      <span class="cn-caret" aria-hidden="true">▾</span>
+    </label>
+  ) : (
+    <form class="cn-form" method="get" action={u('/tactics/')}>
+      <label class="cn-select" for={id}>
+        <span class="sr-only">{label}</span>
+        <select id={id} name="ch" data-cn-select>
+          {withAll && <option value="" selected={current === 0}>All chapters</option>}
+          {chapters.map((c) => (
+            <option value={c.n} selected={c.n === current}>{c.roman} · {c.title_en}</option>
+          ))}
+        </select>
+        <span class="cn-caret" aria-hidden="true">▾</span>
+      </label>
+      <noscript><button class="cn-go" type="submit">Go</button></noscript>
+    </form>
+  )}
   {next ? (
     <a class="cn-step" href={href(next)} data-cn-step="next" data-n={next} aria-label={`Next chapter: ${chapters[next - 1].roman}. ${chapters[next - 1].title_en}`}>→</a>
   ) : (
@@ -74,9 +90,13 @@ const id = `cn-${mode}-${Math.random().toString(36).slice(2, 7)}`;
   }
   .cn-select select:hover { border-color: var(--paper-3); }
   .cn-select select:focus { outline: none; border-color: var(--seal-hi); box-shadow: 0 0 0 3px rgba(217, 68, 47, 0.18); }
+  .cn-select select:focus-visible { outline: 2px solid var(--seal-hi); outline-offset: 3px; }
+  .cn-form { flex: 1; min-width: 0; display: flex; gap: 8px; }
+  .cn-go { padding: 0 14px; border-radius: 999px; border: 1px solid var(--line-2); background: none; color: var(--paper); }
   .cn-select option { background: var(--ink-2); color: var(--paper); }
   .cn-caret { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: var(--paper-3); pointer-events: none; font-size: 0.8rem; }
-  .cn-step { flex: none; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--line-2); text-decoration: none; color: var(--paper); font: 500 1rem var(--f-ui); cursor: pointer; transition: background 0.25s, color 0.25s, border-color 0.25s; }
+  .cn-step { flex: none; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--line-2); text-decoration: none; color: var(--paper); font: 500 1rem var(--f-ui); cursor: pointer; transition: background 0.25s, color 0.25s, border-color 0.25s; }
   .cn-step:hover { background: var(--paper); color: var(--ink-1); }
   .cn-step.is-off { opacity: 0.25; pointer-events: none; }
+  @media (max-width: 640px) { .cn-select select { font-size: 0.85rem; padding-left: 0.95em; } }
 </style>

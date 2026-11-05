@@ -6,7 +6,7 @@ import ChapterNav from '../../components/ChapterNav.astro';
 import { tactics, chapters, DOMAINS } from '../../lib/content.js';
 ---
 <Base title="Tactic library" description={`${tactics.length} practical Sun Tzu tactics for work, career, business, family and self — each with steps, a ready-to-send script and a backfire check.`}>
-  <div class="wrap chapter-bar"><span class="eyebrow">Tactics by chapter</span><ChapterNav current={0} mode="filter" withAll label="Filter tactics by chapter" /></div>
+  <div class="wrap chapter-bar"><span class="eyebrow">Chapter · 篇</span><ChapterNav current={0} mode="filter" withAll label="Filter tactics by chapter" /></div>
 
   <header class="lib-hero wrap">
     <p class="eyebrow" data-reveal>Tactic library · 兵法實戰</p>
@@ -55,7 +55,7 @@ import { tactics, chapters, DOMAINS } from '../../lib/content.js';
   const MAX = 13;
   const params = new URLSearchParams(location.search);
   let domain = params.get('domain') || '';
-  let chapter = /^\d+$/.test(params.get('ch') || '') && Number(params.get('ch')) <= MAX ? params.get('ch') : '';
+  const chParam = Number(params.get('ch')); let chapter = Number.isInteger(chParam) && chParam >= 1 && chParam <= MAX ? String(chParam) : '';
   if (params.get('q')) q.value = params.get('q');
 
   const syncPager = () => {
@@ -67,6 +67,7 @@ import { tactics, chapters, DOMAINS } from '../../lib/content.js';
       target ? el.removeAttribute('aria-disabled') : el.setAttribute('aria-disabled', 'true');
       el.tabIndex = target ? 0 : -1;
       if (target) el.setAttribute('href', `?ch=${target}`); else el.removeAttribute('href');
+      if (target) el.setAttribute('aria-label', `${el.dataset.cnStep === 'prev' ? 'Previous' : 'Next'} chapter: ${select.querySelector(`option[value="${target}"]`).textContent.trim()}`); else el.removeAttribute('aria-label');
     };
     setStep(prevBtn, n > 1 ? n - 1 : null);
     setStep(nextBtn, n ? (n < MAX ? n + 1 : null) : 1);
@@ -99,6 +100,7 @@ import { tactics, chapters, DOMAINS } from '../../lib/content.js';
 
   // Dropdown and arrows filter instantly (arrow links still work without JS).
   select.addEventListener('change', () => { chapter = select.value; run(); setUrl(); });
+  nav.querySelector('form')?.addEventListener('submit', (e) => e.preventDefault());
   [prevBtn, nextBtn].forEach((btn) =>
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -114,8 +116,9 @@ import { tactics, chapters, DOMAINS } from '../../lib/content.js';
 </script>
 
 <style>
-  .lib-hero { padding: 28px 0 32px; }
-  .chapter-bar { padding-top: 92px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; }
+  .lib-hero { padding: 40px 0 32px; }
+  .chapter-bar { padding: 88px 0 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; border-bottom: 1px solid var(--line); }
+  .chapter-bar .eyebrow { color: var(--paper-2); font-size: 0.75rem; }
   .filters { display: flex; flex-wrap: wrap; gap: 16px; align-items: end; margin-bottom: 14px; position: relative; z-index: 2; }
   .domains { display: flex; flex-wrap: wrap; gap: 6px; flex-basis: 100%; }
   .lib { padding-bottom: 100px; }
