@@ -1,14 +1,16 @@
-// Field Challenge: 20 scenarios, multi-select moves, percentage scoring, General rank at the end.
+// Field Challenge: exam modes 探花 6 · 榜眼 12 · 狀元 20, multi-select moves, percentage scoring,
+// General rank at the end. Questions cycle through the bank (unseen first) across runs.
 import { BASE as B } from '../lib/url.js';
 import { RANKS, rankForScore } from '../lib/ranks.js';
+import { MODES, modeById } from '../lib/modes.js';
 
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const DOMAIN = { work: 'Work', career: 'Career', business: 'Business', personal: 'Personal', family: 'Family', self: 'Self' };
 const LETTERS = ['A', 'B', 'C', 'D', 'E'];
-const ROUND = 20;
-const STORE = 'sz.challenge.v1';
+const STORE = 'sz.challenge.v2';
+let mode = MODES[1];
 
 const stages = { intro: $('[data-stage="intro"]'), quiz: $('[data-stage="quiz"]'), results: $('[data-stage="results"]') };
 const show = (name) => {
@@ -18,24 +20,42 @@ const show = (name) => {
 };
 
 const shuffle = (a) => { a = [...a]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
-const readStore = () => { try { return JSON.parse(localStorage.getItem(STORE)) || { best: null, runs: [] }; } catch { return { best: null, runs: [] }; } };
+const emptyStore = () => ({ best: {}, runs: [], seen: [] });
+const readStore = () => { try { return { ...emptyStore(), ...(JSON.parse(localStorage.getItem(STORE)) || {}) }; } catch { return emptyStore(); } };
 const writeStore = (s) => { try { localStorage.setItem(STORE, JSON.stringify(s)); } catch { /* storage blocked */ } };
 
-/** Score for one question: share of right moves found, minus half a share per wrong pick, floored at 0. */
+/**
+ * Score for one question = correct ÷ (correct + missed).
+ * "Correct" = right moves picked. "Missed" = right moves left out + wrong moves picked.
+ */
 export function scoreQuestion(options, picked) {
   const correct = options.filter((o) => o.correct).length;
   const hits = options.filter((o, i) => o.correct && picked.has(i)).length;
   const wrong = options.filter((o, i) => !o.correct && picked.has(i)).length;
-  return { correct, hits, wrong, pct: Math.max(0, (hits - 0.5 * wrong) / correct) };
+  const missed = correct - hits + wrong;
+  return { correct, hits, wrong, missed, pct: hits / (hits + missed) };
 }
 
-/** 20 questions: one from every chapter first, the rest at random, in book order. */
-function pickRound(bank) {
+/**
+ * Pick n questions. Unseen questions come first (the bank cycles across runs; when fewer than n are
+ * unseen, the cycle restarts). Within the pool, spread across chapters, then show in book order.
+ */
+function pickRound(bank, n) {
+  const store = readStore();
+  let seen = new Set(store.seen);
+  let pool = bank.filter((q) => !seen.has(q.id));
+  let carry = [];
+  if (pool.length < n) { carry = pool; seen = new Set(carry.map((q) => q.id)); pool = bank.filter((q) => !seen.has(q.id)); }
+  const chosen = [...carry];
   const byCh = new Map();
-  for (const q of shuffle(bank)) { if (!byCh.has(q.chapter)) byCh.set(q.chapter, q); }
-  const chosen = new Set(byCh.values());
-  for (const q of shuffle(bank)) { if (chosen.size >= Math.min(ROUND, bank.length)) break; chosen.add(q); }
-  return [...chosen]
+  for (const q of shuffle(pool)) { if (!byCh.has(q.chapter)) byCh.set(q.chapter, []); byCh.get(q.chapter).push(q); }
+  const chapters = shuffle([...byCh.keys()]);
+  while (chosen.length < Math.min(n, bank.length) && chapters.some((c) => byCh.get(c).length)) {
+    for (const c of chapters) { if (chosen.length >= n) break; const q = byCh.get(c).shift(); if (q) chosen.push(q); }
+  }
+  store.seen = [...seen, ...chosen.filter((q) => !carry.includes(q)).map((q) => q.id)];
+  writeStore(store);
+  return chosen
     .sort((a, b) => a.chapter - b.chapter)
     .map((q) => ({ ...q, options: shuffle(q.options) }));
 }
@@ -49,10 +69,17 @@ let locked = false;
 
 function renderBest() {
   const s = readStore();
-  $('[data-best]').textContent = s.best != null ? `Your best: ${s.best}% · ${rankForScore(s.best).en} ${rankForScore(s.best).zh} · ${s.runs.length} campaign${s.runs.length === 1 ? '' : 's'} fought` : '';
+  for (const m of MODES) {
+    const el = $(`[data-mode-best="${m.id}"]`);
+    const b = s.best[m.id];
+    if (el) el.textContent = b != null ? `Best ${b}% · ${rankForScore(b).en} ${rankForScore(b).zh}` : '';
+  }
+  const bankSize = bank.length || 30;
+  $('[data-best]').textContent = s.runs.length ? `${s.runs.length} exam${s.runs.length === 1 ? '' : 's'} taken · ${Math.min(s.seen.length, bankSize)} of ${bankSize} scenarios seen this cycle` : '';
 }
 
 function renderPips() {
+  $('[data-pips]').style.gridTemplateColumns = `repeat(${round.length}, 1fr)`;
   $('[data-pips]').innerHTML = round
     .map((_, i) => {
       const r = results[i];
@@ -68,7 +95,7 @@ function renderQuestion() {
   const q = round[idx];
   picked = new Set();
   locked = false;
-  $('[data-counter]').textContent = `Scenario ${idx + 1} / ${round.length}`;
+  $('[data-counter]').textContent = `${mode.zh} ${mode.en} · Scenario ${idx + 1} / ${round.length}`;
   $('[data-q-seal]').textContent = q.chapterZh;
   $('[data-q-chapter]').textContent = `Chapter ${q.roman} · ${q.chapterTitle} ${q.chapterZh}`;
   $('[data-q-domain]').textContent = DOMAIN[q.domain] || q.domain;
@@ -135,9 +162,10 @@ function confirm() {
     $('input', el).disabled = true;
   });
   const pct = Math.round(r.pct * 100);
-  const v = q.verses[0];
-  const parts = [`Found ${r.hits} of ${r.correct} right move${r.correct === 1 ? '' : 's'}`];
-  if (r.wrong) parts.push(`${r.wrong} reckless pick${r.wrong === 1 ? '' : 's'} (−${Math.round((0.5 / r.correct) * 100 * r.wrong)}%)`);
+  const missParts = [];
+  if (r.correct - r.hits) missParts.push(`${r.correct - r.hits} right move${r.correct - r.hits === 1 ? '' : 's'} left out`);
+  if (r.wrong) missParts.push(`${r.wrong} reckless pick${r.wrong === 1 ? '' : 's'}`);
+  const parts = [`${r.hits} correct`, `${r.missed} missed${missParts.length ? ` (${missParts.join(', ')})` : ''}`, `${r.hits} ÷ ${r.hits + r.missed}`];
   const out = $('[data-outcome]');
   out.innerHTML = `
     <div class="oc-score"><strong>${pct}%</strong><span>${esc(parts.join(' · '))}</span></div>
@@ -153,7 +181,6 @@ function confirm() {
   renderPips();
   window.__gsap?.from('.oc-score strong', { scale: 1.4, opacity: 0, duration: 0.5, ease: 'back.out(2)' });
   if (innerWidth < 900) out.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  void v;
 }
 
 function next() {
@@ -166,10 +193,12 @@ function finish() {
   const pct = Math.round(avg * 100);
   const rank = rankForScore(pct);
   const store = readStore();
-  store.runs.push({ date: new Date().toISOString().slice(0, 10), score: pct });
+  store.runs.push({ date: new Date().toISOString().slice(0, 10), mode: mode.id, score: pct });
   store.runs = store.runs.slice(-50);
-  store.best = Math.max(store.best ?? 0, pct);
+  store.best[mode.id] = Math.max(store.best[mode.id] ?? 0, pct);
   writeStore(store);
+  const best = store.best[mode.id];
+  $('[data-res-mode]').textContent = `${mode.zh} ${mode.en} exam · ${round.length} battles`;
 
   $('[data-res-seal]').textContent = rank.zh;
   $('[data-res-rank]').textContent = `${rank.en} ${rank.zh}`;
@@ -177,13 +206,12 @@ function finish() {
   $('[data-res-blurb]').textContent = `${rank.blurb}${nextRank ? ` Reach ${nextRank.min}% to become a ${nextRank.en}.` : ' The highest rank. Sun Tzu would hire you.'}`;
   const perfect = results.filter((r) => r.pct >= 0.999).length;
   const hits = results.reduce((a, r) => a + r.hits, 0);
-  const total = results.reduce((a, r) => a + r.correct, 0);
-  const wrong = results.reduce((a, r) => a + r.wrong, 0);
+  const missed = results.reduce((a, r) => a + r.missed, 0);
   $('[data-res-stats]').innerHTML = `
     <div><strong>${perfect}/${results.length}</strong><span>Perfect battles</span></div>
-    <div><strong>${hits}/${total}</strong><span>Right moves found</span></div>
-    <div><strong>${wrong}</strong><span>Reckless picks</span></div>
-    <div><strong>${store.best}%</strong><span>Your best</span></div>`;
+    <div><strong>${hits}</strong><span>Correct moves</span></div>
+    <div><strong>${missed}</strong><span>Missed (left out or reckless)</span></div>
+    <div><strong>${best}%</strong><span>Your best ${mode.zh}</span></div>`;
   $('[data-res-list]').innerHTML = round
     .map((q, i) => {
       const p = Math.round(results[i].pct * 100);
@@ -200,7 +228,7 @@ function finish() {
     g.from('[data-res-seal]', { scale: 2.4, rotate: -40, opacity: 0, duration: 0.8, ease: 'back.out(2)', delay: 0.4 });
   } else el.textContent = pct;
   $('[data-copy-result]').onclick = async (e) => {
-    const text = `I scored ${pct}% in the Sun Tzu Field Challenge and earned the rank of ${rank.en} ${rank.zh}. ${perfect}/${results.length} perfect battles. ${location.origin}${B}/field/`;
+    const text = `I scored ${pct}% in the ${mode.zh} (${mode.en}, ${round.length} battles) Sun Tzu Field Challenge and earned the rank of ${rank.en} ${rank.zh}. ${perfect}/${results.length} perfect battles. ${location.origin}${B}/field/`;
     try { await navigator.clipboard.writeText(text); e.target.textContent = 'Copied'; } catch { /* clipboard blocked */ }
   };
 }
@@ -215,7 +243,8 @@ async function start() {
       if (!res.ok) throw new Error('Could not load the scenarios.');
       bank = (await res.json()).questions;
     }
-    round = pickRound(bank);
+    mode = modeById($('[data-mode]:checked')?.value);
+    round = pickRound(bank, mode.n);
     idx = 0;
     results = [];
     show('quiz');
@@ -224,12 +253,14 @@ async function start() {
     btn.textContent = err.message;
   } finally {
     btn.disabled = false;
-    if (btn.textContent.startsWith('Preparing')) btn.textContent = 'Begin the campaign';
+    if (btn.textContent.startsWith('Preparing')) btn.textContent = 'Begin the exam';
+    renderBest();
   }
 }
 
 $('[data-start]').addEventListener('click', start);
 $('[data-restart]').addEventListener('click', start);
+$('[data-change-mode]').addEventListener('click', () => { renderBest(); show('intro'); });
 $('[data-confirm]').addEventListener('click', confirm);
 $('[data-next]').addEventListener('click', next);
 document.addEventListener('keydown', (e) => {

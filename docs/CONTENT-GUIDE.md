@@ -92,9 +92,10 @@ Domain mix per batch: ≥ 40% `work`/`career`, ≥ 25% `personal`/`family`/`self
 
 ## 4. Field Challenge questions — `data/challenge/setN.json` (array)
 
-The Field Challenge is a 20-question skill test. Each question is a modern scenario with **5 candidate moves**;
-the player selects every move Sun Tzu would make. Score per question = share of correct moves found, minus half a
-share per wrong pick (never below 0).
+The Field Challenge has three exams: 探花 Simple (6), 榜眼 Medium (12) and 狀元 Full (20), drawn from a bank of
+**30 scenarios** (`set1.json`; 31 more wait in `reserve/`, not loaded). Questions cycle: unseen ones come first.
+Each question is a modern scenario with **5 candidate moves**; the player selects every move Sun Tzu would make.
+Score per question = correct ÷ (correct + missed), where *missed* = right moves left out + wrong moves picked.
 
 ```json
 [

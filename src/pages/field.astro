@@ -3,26 +3,40 @@ import Base from '../layouts/Base.astro';
 import Seal from '../components/Seal.astro';
 import { u } from '../lib/url.js';
 import { RANKS } from '../lib/ranks.js';
+import { MODES } from '../lib/modes.js';
 ---
-<Base title="Field Challenge" description="Twenty modern battles. Pick every move Sun Tzu would make, get a score and earn your rank, from Rural General to Empire General.">
+<Base title="Field Challenge" description="Modern battles in three exams (探花 6, 榜眼 12, 狀元 20). Pick every move Sun Tzu would make, get a score and earn your rank, from Rural General to Empire General.">
   <!-- ================= INTRO ================= -->
   <section class="wrap fc-intro" data-stage="intro">
     <div class="fc-intro-grid">
       <div>
         <p class="eyebrow" data-reveal>Field Challenge · 兵法試煉</p>
-        <h1 data-reveal>Twenty battles. <em>How would Sun Tzu fight them?</em></h1>
+        <h1 data-reveal>Modern battles. <em>How would Sun Tzu fight them?</em></h1>
         <p class="lede" data-reveal>
           Each scenario is a real modern conflict. Pick <strong>every</strong> move Sun Tzu would make: there may be one, two or three.
-          Your score is the share of right moves you find, and every reckless move you pick costs you.
+          Your score is what you got right against what you missed, as a percentage.
         </p>
+        <div class="modes" role="radiogroup" aria-label="Exam" data-reveal>
+          {MODES.map((m, i) => (
+            <label class="mode">
+              <input type="radio" name="mode" value={m.id} checked={i === 1} data-mode />
+              <span class="mode-zh brush">{m.zh}</span>
+              <span class="mode-body">
+                <strong>{m.en} · {m.n} battles</strong>
+                <span>{m.blurb}</span>
+                <em data-mode-best={m.id}></em>
+              </span>
+            </label>
+          ))}
+        </div>
         <ul class="fc-rules" data-reveal>
-          <li><b>20</b> scenarios, one or more from every chapter of the book</li>
-          <li>Each right move found = an equal share of that scenario's 100%</li>
-          <li>Each wrong move picked = minus half a share (never below 0%)</li>
+          <li>Scenarios cycle: you see new ones each time until the whole bank has been fought</li>
+          <li>Score per battle = correct ÷ (correct + missed)</li>
+          <li>Missed = a right move you left out, or a reckless move you picked</li>
           <li>Your average decides your rank, from Rural General 鄉 to Empire General 帝</li>
         </ul>
         <div class="fc-cta" data-reveal>
-          <button class="btn btn--seal" type="button" data-start>Begin the campaign</button>
+          <button class="btn btn--seal" type="button" data-start>Begin the exam</button>
           <a class="btn" href={u('/chapters/1/')}>Study the book first</a>
         </div>
         <p class="hint" data-best></p>
@@ -82,19 +96,20 @@ import { RANKS } from '../lib/ranks.js';
     <div class="res-hero">
       <div class="res-seal" data-res-seal>州</div>
       <div>
-        <p class="eyebrow">Campaign complete · 戰果</p>
+        <p class="eyebrow">Exam complete · 戰果 · <span data-res-mode></span></p>
         <h1><span data-res-score>0</span>%</h1>
         <p class="res-rank" data-res-rank>Province General</p>
         <p class="lede" data-res-blurb></p>
         <div class="fc-cta">
-          <button class="btn btn--seal" type="button" data-restart>Fight 20 new battles</button>
+          <button class="btn btn--seal" type="button" data-restart>Same exam, new battles</button>
+          <button class="btn" type="button" data-change-mode>Choose another exam</button>
           <button class="btn" type="button" data-copy-result>Copy my result</button>
           <a class="btn" href={u('/ask/')}>Ask the General about a real battle</a>
         </div>
       </div>
     </div>
     <div class="res-stats" data-res-stats></div>
-    <h2 class="res-h">Your campaign</h2>
+    <h2 class="res-h">Your battles</h2>
     <ol class="res-list" data-res-list></ol>
   </section>
 </Base>
@@ -109,6 +124,18 @@ import { RANKS } from '../lib/ranks.js';
   .fc-rules li { padding-left: 26px; position: relative; }
   .fc-rules li::before { content: ''; position: absolute; left: 0; top: 0.5em; width: 12px; height: 12px; border-radius: 3px; background: var(--seal); transform: rotate(-6deg); }
   .fc-rules b { color: var(--paper); }
+  .modes { display: grid; gap: 10px; margin: 0 0 24px; }
+  .mode { display: grid; grid-template-columns: 74px 1fr; gap: 14px; align-items: center; padding: 14px 16px; border: 1px solid var(--line-2); border-radius: 14px; background: rgba(23, 20, 15, 0.8); cursor: pointer; transition: border-color 0.25s, background 0.25s, transform 0.25s var(--ease); }
+  .mode:hover { border-color: var(--paper-3); transform: translateX(3px); }
+  .mode input { position: absolute; opacity: 0; pointer-events: none; }
+  .mode:has(input:checked) { border-color: var(--seal-hi); background: rgba(179, 38, 30, 0.1); }
+  .mode:has(input:focus-visible) { outline: 2px solid var(--seal-hi); outline-offset: 2px; }
+  .mode-zh { font-size: 1.9rem; font-weight: 700; color: var(--paper-3); text-align: center; letter-spacing: 0.04em; }
+  .mode:has(input:checked) .mode-zh { color: var(--seal-hi); }
+  .mode-body { display: grid; gap: 2px; font: 400 0.88rem/1.45 var(--f-ui); color: var(--paper-2); }
+  .mode-body strong { font: 600 1.15rem var(--f-display); color: var(--paper); }
+  .mode-body em { font-style: normal; font-size: 0.78rem; color: var(--gold); }
+  .mode-body em:empty { display: none; }
   .fc-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 14px; }
   .ladder { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
   .ladder-step { display: grid; grid-template-columns: 44px 1fr auto; gap: 14px; align-items: center; padding: 10px 14px; border: 1px solid var(--line); border-radius: 12px; background: rgba(239, 229, 207, 0.03); }

@@ -4,7 +4,7 @@
 - [x] 13 chapters with 383 verses: Giles English and original Chinese, matched verse by verse (100% coverage, machine-checked)
 - [x] 13 chapter lenses and 52 tactics, including the three founder cases (control the record, silence is consent, deadline unless advised)
 - [x] Ink-wash scroll design: GSAP ScrollTrigger, Lenis, pinned horizontal chapter scroller, ink canvas, brush draws, reduced-motion support
-- [x] Field Challenge: 20-scenario skill test (multi-select moves, % scoring, Rural → Empire rank)
+- [x] Field Challenge: exams 探花 6 · 榜眼 12 · 狀元 20 from a cycling 30-scenario bank; score = correct ÷ (correct + missed); Rural → Empire rank
 - [x] Ask the General: 12 AI options (bring your own key, no key, on device, self-hosted), local retrieval, citation verification, manual-only mode
 - [x] 30-second podcast: Kokoro on device plus Gemini/OpenAI/ElevenLabs keys, singing-bowl intro, MP3 download
 - [x] Community board preview (stored in the browser), relay with tests, Cloudflare Pages config
