@@ -1,0 +1,82 @@
+---
+// Chapter navigation: ← [ III · Attack by Stratagem · 謀攻 ▾ ] →
+// mode "book"    → chapter pages (also ←/→ keyboard keys)
+// mode "tactics" → tactic library filtered by chapter (navigates)
+// mode "filter"  → in-page filter on the tactic library (the page script handles it)
+import { chapters } from '../lib/content.js';
+import { u } from '../lib/url.js';
+
+const { current = 0, mode = 'book', withAll = false, label = 'Chapter', class: cls = '' } = Astro.props;
+const href = (n) => (mode === 'book' ? u(`/chapters/${n}/`) : n ? u(`/tactics/?ch=${n}`) : u('/tactics/'));
+const prev = current > 1 ? current - 1 : null;
+const next = current ? (current < chapters.length ? current + 1 : null) : withAll ? 1 : null;
+const id = `cn-${mode}-${Math.random().toString(36).slice(2, 7)}`;
+---
+<nav class={`cnav ${cls}`} aria-label={label} data-cnav={mode} data-base={u('')}>
+  {prev ? (
+    <a class="cn-step" href={href(prev)} data-cn-step="prev" data-n={prev} aria-label={`Previous chapter: ${chapters[prev - 1].roman}. ${chapters[prev - 1].title_en}`}>←</a>
+  ) : (
+    <a class="cn-step is-off" data-cn-step="prev" data-n="" aria-disabled="true" tabindex="-1">←</a>
+  )}
+  <label class="cn-select" for={id}>
+    <span class="sr-only">{label}</span>
+    <select id={id} data-cn-select>
+      {withAll && <option value="" selected={current === 0}>All chapters</option>}
+      {chapters.map((c) => (
+        <option value={c.n} selected={c.n === current}>{c.roman} · {c.title_en} · {c.title_zh}</option>
+      ))}
+    </select>
+    <span class="cn-caret" aria-hidden="true">▾</span>
+  </label>
+  {next ? (
+    <a class="cn-step" href={href(next)} data-cn-step="next" data-n={next} aria-label={`Next chapter: ${chapters[next - 1].roman}. ${chapters[next - 1].title_en}`}>→</a>
+  ) : (
+    <a class="cn-step is-off" data-cn-step="next" data-n="" aria-disabled="true" tabindex="-1">→</a>
+  )}
+</nav>
+
+<script>
+  // Navigating modes: the dropdown jumps straight to the chosen chapter.
+  document.querySelectorAll('[data-cnav="book"], [data-cnav="tactics"]').forEach((nav) => {
+    const base = nav.dataset.base || '';
+    nav.querySelector('[data-cn-select]').addEventListener('change', (e) => {
+      const v = e.target.value;
+      location.href = nav.dataset.cnav === 'book' ? `${base}/chapters/${v}/` : v ? `${base}/tactics/?ch=${v}` : `${base}/tactics/`;
+    });
+  });
+  // Book: ← / → keys turn the chapter (ignored while typing or using a form control).
+  const book = document.querySelector('[data-cnav="book"]');
+  if (book) {
+    document.addEventListener('keydown', (e) => {
+      if (e.altKey || e.ctrlKey || e.metaKey || e.target.closest('input, textarea, select, [contenteditable]')) return;
+      const dir = e.key === 'ArrowLeft' ? 'prev' : e.key === 'ArrowRight' ? 'next' : null;
+      const link = dir && book.querySelector(`[data-cn-step="${dir}"]:not(.is-off)`);
+      if (link) location.href = link.href;
+    });
+  }
+</script>
+
+<style>
+  .cnav { display: flex; align-items: center; gap: 10px; max-width: 560px; }
+  .cn-select { position: relative; flex: 1; min-width: 0; }
+  .cn-select select {
+    width: 100%;
+    appearance: none;
+    padding: 0.75em 2.6em 0.75em 1.1em;
+    border-radius: 999px;
+    border: 1px solid var(--line-2);
+    background: rgba(9, 8, 7, 0.6);
+    color: var(--paper);
+    font: 500 0.92rem/1.3 var(--f-ui);
+    cursor: pointer;
+    text-overflow: ellipsis;
+    transition: border-color 0.25s, box-shadow 0.25s;
+  }
+  .cn-select select:hover { border-color: var(--paper-3); }
+  .cn-select select:focus { outline: none; border-color: var(--seal-hi); box-shadow: 0 0 0 3px rgba(217, 68, 47, 0.18); }
+  .cn-select option { background: var(--ink-2); color: var(--paper); }
+  .cn-caret { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: var(--paper-3); pointer-events: none; font-size: 0.8rem; }
+  .cn-step { flex: none; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--line-2); text-decoration: none; color: var(--paper); font: 500 1rem var(--f-ui); cursor: pointer; transition: background 0.25s, color 0.25s, border-color 0.25s; }
+  .cn-step:hover { background: var(--paper); color: var(--ink-1); }
+  .cn-step.is-off { opacity: 0.25; pointer-events: none; }
+</style>

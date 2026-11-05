@@ -23,6 +23,26 @@ const onScroll = (y) => {
 };
 window.addEventListener('scroll', () => onScroll(window.scrollY), { passive: true });
 
+// ---------- floating back-to-top ----------
+const toTop = document.querySelector('[data-to-top]');
+if (toTop) {
+  let shown = false;
+  const update = () => {
+    const want = window.scrollY > 600;
+    if (want === shown) return;
+    shown = want;
+    if (want) { toTop.hidden = false; requestAnimationFrame(() => toTop.classList.add('is-shown')); }
+    else { toTop.classList.remove('is-shown'); setTimeout(() => { if (!shown) toTop.hidden = true; }, 350); }
+  };
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+  toTop.addEventListener('click', () => {
+    if (window.__lenis && !reduce) window.__lenis.scrollTo(0, { duration: 1.2 });
+    else window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    document.getElementById('main')?.focus?.({ preventScroll: true });
+  });
+}
+
 // ---------- reading progress ----------
 const bar = document.querySelector('[data-progress]');
 if (bar) {

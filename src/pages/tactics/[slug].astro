@@ -4,7 +4,7 @@ import Base from '../../layouts/Base.astro';
 import Seal from '../../components/Seal.astro';
 import VerseQuote from '../../components/VerseQuote.astro';
 import TacticCard from '../../components/TacticCard.astro';
-import ChapterPager from '../../components/ChapterPager.astro';
+import ChapterNav from '../../components/ChapterNav.astro';
 import { tactics, chapterOf, relatedTactics, DOMAINS, ZH_NUMERALS } from '../../lib/content.js';
 
 export function getStaticPaths() {
@@ -108,7 +108,7 @@ const diffLabel = ['', 'Easy', 'Moderate', 'Advanced'][t.difficulty];
       {nextT ? <a class="card next" href={u(`/tactics/${nextT.slug}/`)}><span class="eyebrow">Next tactic · {chapterOf(nextT.chapter).roman} →</span><h3>{nextT.title}</h3></a> : <a class="card next" href={u('/field/')}><span class="eyebrow">Last tactic →</span><h3>Test yourself in the Field Challenge</h3></a>}
     </div>
     <p class="label" style="margin:22px 0 10px">Skip to another chapter's tactics</p>
-    <ChapterPager current={t.chapter} mode="tactics" label="Tactics by chapter" />
+    <ChapterNav current={t.chapter} mode="tactics" withAll label="Tactics by chapter" />
   </nav>
 
   <section class="section wrap" aria-labelledby="related-title">

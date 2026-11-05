@@ -238,6 +238,35 @@ button.chip { cursor: pointer; }
 
 main { position: relative; z-index: 1; }
 
+/* Floating back-to-top */
+.to-top {
+  position: fixed;
+  right: clamp(14px, 3vw, 28px);
+  bottom: clamp(14px, 3vw, 28px);
+  z-index: 70;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  gap: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(243, 233, 210, 0.35);
+  background: var(--seal);
+  color: var(--paper);
+  cursor: pointer;
+  box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.8), 0 0 0 4px rgba(179, 38, 30, 0.15);
+  opacity: 0;
+  transform: translateY(16px) scale(0.9);
+  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease), background 0.25s;
+}
+.to-top.is-shown { opacity: 1; transform: none; }
+.to-top:hover { background: var(--seal-hi); transform: translateY(-3px); }
+.to-top svg { grid-area: 1 / 1; transition: opacity 0.25s; }
+.to-top-zh { grid-area: 1 / 1; font: 700 1.1rem/1 var(--f-brush); opacity: 0; transition: opacity 0.25s; }
+.to-top:hover svg { opacity: 0; }
+.to-top:hover .to-top-zh { opacity: 1; }
+@media print { .to-top { display: none; } }
+
 /* ==========================================================================
    Brush strokes, dividers, ink
    ========================================================================== */
