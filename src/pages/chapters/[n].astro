@@ -4,6 +4,7 @@ import Base from '../../layouts/Base.astro';
 import Seal from '../../components/Seal.astro';
 import TacticCard from '../../components/TacticCard.astro';
 import BrushDivider from '../../components/BrushDivider.astro';
+import ChapterPager from '../../components/ChapterPager.astro';
 import { chapters, ZH_NUMERALS, verseHref } from '../../lib/content.js';
 
 export function getStaticPaths() {
@@ -32,6 +33,8 @@ const principleVerses = new Set(c.principles.flatMap((p) => p.verses));
       </div>
     </div>
   </header>
+
+  <div class="wrap pager-top"><ChapterPager current={c.n} label="Jump to chapter" /></div>
 
   <section class="wrap principles" aria-labelledby="principles-title">
     <h2 id="principles-title" class="sr-only">Key principles</h2>
@@ -87,6 +90,7 @@ const principleVerses = new Set(c.principles.flatMap((p) => p.verses));
     </section>
   )}
 
+  <div class="wrap pager-bottom"><ChapterPager current={c.n} label="Jump to chapter (bottom)" /></div>
   <nav class="wrap ch-nav" aria-label="Chapter navigation">
     {prev ? <a class="card" href={u(`/chapters/${prev.n}/`)}><span class="eyebrow">← Previous</span><h3>{prev.roman}. {prev.title_en} <span class="zh muted">{prev.title_zh}</span></h3></a> : <span></span>}
     {next ? <a class="card next" href={u(`/chapters/${next.n}/`)}><span class="eyebrow">Next →</span><h3>{next.roman}. {next.title_en} <span class="zh muted">{next.title_zh}</span></h3></a> : <a class="card next" href={u('/field/')}><span class="eyebrow">Finished the book →</span><h3>Test your strategy in the Field Challenge</h3></a>}
@@ -126,6 +130,8 @@ const principleVerses = new Set(c.principles.flatMap((p) => p.verses));
   .principles { padding-bottom: 40px; }
   .principle-n { font: 600 2.4rem/1 var(--f-display); color: var(--seal); }
   .text-section { padding-block: 56px 24px; }
+  .pager-top { margin: -20px auto 36px; }
+  .pager-bottom { margin: 8px auto 24px; }
   .text-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; flex-wrap: wrap; margin-bottom: 12px; position: sticky; top: 0; z-index: 5; padding: 80px 0 14px; background: linear-gradient(var(--ink-1) 82%, transparent); }
   .text-head h2 { margin: 0; }
   .lang-toggle { display: flex; gap: 6px; }

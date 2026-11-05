@@ -4,6 +4,7 @@ import Base from '../../layouts/Base.astro';
 import Seal from '../../components/Seal.astro';
 import VerseQuote from '../../components/VerseQuote.astro';
 import TacticCard from '../../components/TacticCard.astro';
+import ChapterPager from '../../components/ChapterPager.astro';
 import { tactics, chapterOf, relatedTactics, DOMAINS, ZH_NUMERALS } from '../../lib/content.js';
 
 export function getStaticPaths() {
@@ -11,6 +12,11 @@ export function getStaticPaths() {
 }
 const { t } = Astro.props;
 const ch = chapterOf(t.chapter);
+const pos = tactics.findIndex((x) => x.slug === t.slug);
+const prevT = tactics[pos - 1];
+const nextT = tactics[pos + 1];
+const inChapter = tactics.filter((x) => x.chapter === t.chapter);
+const chPos = inChapter.findIndex((x) => x.slug === t.slug) + 1;
 const related = relatedTactics(t, 3);
 const effortLabel = { minutes: 'Minutes to apply', hours: 'A few hours', days: 'Over several days' }[t.effort];
 const diffLabel = ['', 'Easy', 'Moderate', 'Advanced'][t.difficulty];
@@ -20,7 +26,7 @@ const diffLabel = ['', 'Easy', 'Moderate', 'Advanced'][t.difficulty];
     <header class="t-hero">
       <div class="wrap t-hero-grid">
         <div>
-          <nav class="crumbs" aria-label="Breadcrumb"><a href={u('/tactics/')}>Tactics</a> / <a href={u(`/chapters/${ch.n}/`)}>{ch.roman}. {ch.title_en}</a></nav>
+          <nav class="crumbs" aria-label="Breadcrumb"><a href={u('/tactics/')}>Tactics</a> / <a href={u(`/tactics/?ch=${ch.n}`)}>{ch.roman}. {ch.title_en}</a> / <span>{chPos} of {inChapter.length}</span></nav>
           <h1 data-reveal>{t.title}</h1>
           <p class="t-situation" data-reveal>{t.situation}</p>
           <div class="card-meta" data-reveal>
@@ -96,6 +102,15 @@ const diffLabel = ['', 'Easy', 'Moderate', 'Advanced'][t.difficulty];
     </section>
   </article>
 
+  <nav class="wrap t-pager" aria-label="Tactic navigation">
+    <div class="t-prevnext">
+      {prevT ? <a class="card" href={u(`/tactics/${prevT.slug}/`)}><span class="eyebrow">← Previous tactic · {chapterOf(prevT.chapter).roman}</span><h3>{prevT.title}</h3></a> : <span></span>}
+      {nextT ? <a class="card next" href={u(`/tactics/${nextT.slug}/`)}><span class="eyebrow">Next tactic · {chapterOf(nextT.chapter).roman} →</span><h3>{nextT.title}</h3></a> : <a class="card next" href={u('/field/')}><span class="eyebrow">Last tactic →</span><h3>Test yourself in the Field Challenge</h3></a>}
+    </div>
+    <p class="label" style="margin:22px 0 10px">Skip to another chapter's tactics</p>
+    <ChapterPager current={t.chapter} mode="tactics" label="Tactics by chapter" />
+  </nav>
+
   <section class="section wrap" aria-labelledby="related-title">
     <p class="eyebrow">Related</p>
     <h2 id="related-title">Next moves</h2>
@@ -136,4 +151,10 @@ const diffLabel = ['', 'Easy', 'Moderate', 'Advanced'][t.difficulty];
   .cta-panel h3 { margin-bottom: 4px; }
   .cta-panel p { margin: 0; }
   .cta-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+  .t-pager { padding-top: 40px; }
+  .t-prevnext { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .t-prevnext .next { text-align: right; }
+  .t-prevnext .next .eyebrow { justify-content: flex-end; }
+  @media (max-width: 700px) { .t-prevnext { grid-template-columns: 1fr; } }
+  .crumbs span { color: var(--paper-3); }
 </style>
